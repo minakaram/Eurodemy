@@ -1,7 +1,22 @@
-*{
-    box-sizing: border-box;
+@font-face {
+  font-family: regular-400;
+  src: url(../Assets//Rubik/Rubik-Regular.ttf);
 }
-.header-section .logo-image{
-    width: 8.75rem;
-    height: 3.125rem;
+@font-face {
+  font-family: semiBold-600;
+  src: url(../Assets//Rubik/Rubik-SemiBold.ttf);
+}
+@font-face {
+  font-family: bold-700;
+  src: url(../Assets//Rubik/Rubik-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header-section .logo-image {
+  width: 8.75rem;
+  height: 3.125rem;
 }
