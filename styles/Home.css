@@ -16,6 +16,9 @@
   padding: 0;
   margin: 0;
 }
+:root {
+  color: var(--Ternary-Ternary, #140000);
+}
 .header-section .logo-image {
   width: 8.75rem;
   height: 3.125rem;
@@ -42,8 +45,11 @@
   text-decoration: none;
   color: white;
   margin-right: 15px;
+  font-family: regular-400;
 }
 .header-section nav .header-search-bar {
   height: 2rem;
   width: 2rem;
 }
+
+/*                                        UPCOMING TRAINING COURSES SECTION                              */
