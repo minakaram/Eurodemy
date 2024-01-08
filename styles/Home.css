@@ -1,7 +1,36 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-.header-section .logo-image{
-    width: 8.75rem;
-    height: 3.125rem;
+.header-section .logo-image {
+  width: 8.75rem;
+  height: 3.125rem;
+}
+.header-section nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px 2.2rem;
+  background-color: #46586A;
+}
+.header-section nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.2rem;
+}
+.header-section nav ul li{
+    margin: 0px 0px;
+    padding:1.563rem 1.25rem;
+}
+.header-section nav ul li a{
+    text-decoration: none;
+    color: white;
+   margin-right: 15px;
+}
+.header-section nav .header-search-bar{
+    height: 2rem;
+    width: 2rem;
 }
