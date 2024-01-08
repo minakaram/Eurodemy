@@ -16,6 +16,10 @@
   padding: 0;
   margin: 0;
 }
+.header-section {
+  position: relative;
+  height: 100vh;
+}
 .header-section .logo-image {
   width: 8.75rem;
   height: 3.125rem;
@@ -42,9 +46,29 @@
 .navigationBar ul li a {
   text-decoration: none;
   color: white;
-  margin-right: 15px;
 }
 .navigationBar .header-search-bar {
   height: 2rem;
   width: 2rem;
+}
+.header-section .header-social-icons {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header-section .header-social-icons .left-side-icons,
+.header-section .header-social-icons .right-side-icons {
+  display: flex;
+  padding: 15px;
+}
+.icon-header-container {
+  margin-right: 10px;
+  background-color: #716a6744;
+  border-radius: 50%;
+  padding: 10px;
 }
