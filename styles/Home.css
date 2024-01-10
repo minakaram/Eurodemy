@@ -45,6 +45,8 @@
   --Nuturals-White: #fff;
   --Primary-Primary: #ad1519;
   --Ternary-Ternary: #140000;
+  --NuturalsN-5: #bfb6b6;
+  --secondary:#FEE1E1;
 }
 
 .navigationBar .nav-icon-toggler {
@@ -53,8 +55,16 @@
 }
 .navigationBar .nav-icon-toggler p {
   color: #ad1519;
+  padding: 1.563rem 1.25rem;
+  font-family: rethinkExtraBold-800;
+  background-color: var(--secondary);
 }
+.navigationBar .nav-icon-toggler svg{
 
+margin-left: 10px;
+
+height: 25px;
+}
 .header-section {
   position: relative;
   height: 100vh;
@@ -71,7 +81,8 @@
   padding: 0px 2.2rem;
   position: absolute;
   z-index: 100;
-  background-color: ;
+  background: rgba(128, 128, 128, 0.486);
+  /* background: rgba(128, 128, 128, 0.589); */
 }
 .navigationBar ul {
   list-style: none;
