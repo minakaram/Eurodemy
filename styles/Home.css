@@ -1,20 +1,39 @@
 @font-face {
-  font-family: regular-400;
+  font-family: rubikRegular-400;
   src: url(../Assets//Rubik/Rubik-Regular.ttf);
 }
 @font-face {
-  font-family: semiBold-600;
+  font-family: rubikMedium-500;
+  src: url(../Assets//Rubik/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: rubikSemiBold-600;
   src: url(../Assets//Rubik/Rubik-SemiBold.ttf);
 }
 @font-face {
-  font-family: bold-700;
+  font-family: rubikBold-700;
   src: url(../Assets//Rubik/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkMedium-500;
+  src: url(../Assets/Rethink_sans/RethinkSans-Medium.ttf);
+}
+@font-face {
+  font-family: rethinkBold-700;
+  src: url(../Assets/Rethink_sans/RethinkSans-Bold.ttf);
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+:root {
+  --Ternary-Ternary: #140000;
+  --Nuturals-N-3: #594e4e;
+  --Nuturals-N-7: #fcfcfc;
+  --Nuturals-N-6: #f2eded;
+  --Nuturals-White: #fff;
 }
 .header-section {
   position: relative;
@@ -45,7 +64,7 @@
 }
 .navigationBar ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--Nuturals-White);
 }
 .navigationBar .header-search-bar {
   height: 2rem;
@@ -71,4 +90,132 @@
   background-color: #716a6744;
   border-radius: 50%;
   padding: 10px;
+}
+/*                                        UPCOMING TRAINING COURSES                                */
+.coming-training-section {
+  padding: 0 5.25rem;
+}
+.q-scroll-chat {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 1rem 1.25rem;
+}
+
+.header-teritary {
+  text-align: center;
+  color: var(--Ternary-Ternary);
+  font-family: rubikSemiBold-600;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  padding-bottom: 1.25rem;
+}
+
+.coming-training-heading img {
+  display: block;
+  margin: 0 auto;
+}
+.coming-training-heading {
+  position: relative;
+}
+.comingSoon-container {
+  text-align: center;
+}
+.comingSoon {
+  padding: 2.688rem 0;
+  font-family: rubikBold-700;
+}
+/* .coming-training-card-container {
+  gap: 1.5rem;
+} */
+.coming-training-card {
+  padding: 0;
+  /* margin: 0 0.75rem; */
+  border-radius: 2px;
+  border-bottom: 4px solid var(--Nuturals-N-3);
+  background: var(--Nuturals-N-7);
+  font-size: 0.875rem;
+  transition: 400ms;
+}
+.coming-training-card:hover {
+  background: var(--Nuturals-N-6);
+}
+.coming-training-card-header,
+.coming-training-card-img {
+  width: 100%;
+}
+.coming-training-card-content {
+  text-align: center;
+}
+.coming-training-card-content .card-paragraph {
+  font-family: rubikMedium-500;
+  line-height: 1.313rem;
+  color: var(--Nuturals-N-3);
+  padding: 0.625rem 0.875rem;
+}
+.card-date-container,
+.card-details-container {
+  font-family: rethinkMedium-500;
+  display: flex;
+  padding: 0 1.25rem;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.875rem;
+}
+.card-details-container {
+  padding: 1.125rem 0 0.813rem;
+}
+.card-details-city {
+  border-left: 1px solid #ddd9d9;
+  border-right: 1px solid #ddd9d9;
+  padding: 0 0.625rem;
+}
+.card-details-container :nth-child(3) {
+  font-family: rethinkBold-700;
+  font-size: 1rem;
+}
+.coming-training-card-footer {
+  background-color: var(--Nuturals-N-3);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0;
+  padding-top: 0.563rem;
+  transition: 400ms;
+  margin-bottom: 0.313rem;
+}
+.view-course-box {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  font-family: rubikRegular-400;
+  line-height: 2.6rem;
+  padding: 0 0.75rem;
+  color: var(--Nuturals-White);
+}
+.coming-training-card:hover .coming-training-card-footer {
+  opacity: 1;
+}
+.coming-training-card:hover .coming-training-card-content .card-paragraph {
+  font-family: rubikSemiBold-600;
+}
+.swiper-pagination-bullet {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 16px;
+  color: #b2b5be;
+  opacity: 1;
+  background: transparent;
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #dee3ff;
+  color: #19224c;
 }
