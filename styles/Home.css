@@ -160,9 +160,16 @@
   font-family: rethinkMedium-500;
   display: flex;
   padding: 0 1.25rem;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   gap: 0.875rem;
+}
+.card-date-container img {
+  width: 2.8rem !important;
+  height: 1rem;
+}
+.card-date-container p {
+  margin: 0;
 }
 .card-details-container {
   padding: 1.125rem 0 0.813rem;
@@ -179,21 +186,33 @@
 .coming-training-card-footer {
   background-color: var(--Nuturals-N-3);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   opacity: 0;
-  padding-top: 0.563rem;
+  padding: 0.8rem 0rem;
   transition: 400ms;
   margin-bottom: 0.313rem;
+  position: relative;
 }
 .view-course-box {
-  width: 65%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   font-family: rubikRegular-400;
-  line-height: 2.6rem;
-  padding: 0 0.75rem;
   color: var(--Nuturals-White);
+}
+.view-course-box p {
+  margin: 0;
+}
+.coming-training-card-footer .right-arrow {
+  /* margin-left: 1rem; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+  right: 5px;
+  top: 30%;
 }
 .coming-training-card:hover .coming-training-card-footer {
   opacity: 1;
@@ -233,29 +252,31 @@
   width: 2.5rem;
   height: 0.5rem;
 }
-.owl-carousel .owl-nav {
+.coming-training-section .owl-carousel .owl-nav {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.owl-carousel .owl-dots {
+.coming-training-section .owl-carousel .owl-dots {
   margin-top: -30px !important;
 }
-.owl-carousel .owl-nav button.owl-prev {
+.coming-training-section .owl-carousel .owl-nav button.owl-prev {
   margin-right: 150px;
   height: 2rem;
   width: 3rem;
   color: #fff;
   padding-bottom: 15px !important;
 }
-.owl-carousel .owl-nav button.owl-next {
+.coming-training-section .owl-carousel .owl-nav button.owl-next {
   height: 2rem;
   width: 3rem;
   color: #fff;
   padding-bottom: 15px !important;
 }
-.owl-dot.active span{
+.coming-training-section .owl-dot.active span {
   color: black !important;
   background-color: black !important;
 }
+
+/* ----------------------------------------- courses-category-section ------------------------------------------ */

@@ -22,7 +22,7 @@
 
 <body>
     <!----------------------------------------------------- nav bar ---------------------------------------------->
-    <nav class="navigationBar">
+    <!-- <nav class="navigationBar">
         <img src="Assets/Logo.png" alt="" class="logo-image" />
         <ul>
             <li style="background-color: red" class="d-flex justify-content-between align-items-center">
@@ -58,7 +58,7 @@
             <li><a href="">Careers</a></li>
         </ul>
         <img src="Assets/SearchBar.png" alt="" class="header-search-bar" />
-    </nav>
+    </nav> -->
     <!--------------------------------------------------- hero section ------------------------------------------->
     <section class="header-section">
         <section class="slide">
@@ -192,13 +192,104 @@
         </div>
         <div class="coming-training-heading">
             <h3 class="header-teritary">Upcoming Training Courses</h3>
-            <img src="Assets/Vector.svg" alt="vector" />
+            <img src="Assets/Vector.svg" alt="vector" style="width: 50%" />
         </div>
         <div class="comingSoon-container">
             <img class="comingSoon" src="./Assets/COMMING SOON.png" />
         </div>
 
         <div class="owl-carousel owl-theme carousel1 coming-training-card-container">
+            <div class="coming-training-card">
+                <div class="coming-training-card-header">
+                    <img src="./Assets/Course Category Image.png" alt="Category Image.png"
+                        class="coming-training-card-img" />
+                </div>
+                <div class="coming-training-card-content">
+                    <p class="card-paragraph">
+                        Building Personal Leadership Skills : Creating Stronger
+                        Relationships for a Stronger Organisation
+                    </p>
+                    <div class="card-date-container">
+                        <p>14 Aug, 2024</p>
+                        <img src="./Assets/duration.svg" alt="duration" />
+                        <p>18 Aug, 2024</p>
+                    </div>
+                    <div class="card-details-container">
+                        <p>Offline</p>
+                        <p class="card-details-city">Sharm Elshiekh</p>
+                        <p>4,950 $</p>
+                    </div>
+                </div>
+                <div class="coming-training-card-footer">
+                    <div class="right-arrow">
+                        <img src="./Assets/Right Arrow.svg" />
+                    </div>
+                    <div class="view-course-box d-flex">
+                        <p class="view-course-text">View Course</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="coming-training-card">
+                <div class="coming-training-card-header">
+                    <img src="./Assets/Course Category Image.png" alt="Category Image.png"
+                        class="coming-training-card-img" />
+                </div>
+                <div class="coming-training-card-content">
+                    <p class="card-paragraph">
+                        Building Personal Leadership Skills : Creating Stronger
+                        Relationships for a Stronger Organisation
+                    </p>
+                    <div class="card-date-container">
+                        <p>14 Aug, 2024</p>
+                        <img src="./Assets/duration.svg" alt="duration" />
+                        <p>18 Aug, 2024</p>
+                    </div>
+                    <div class="card-details-container">
+                        <p>Offline</p>
+                        <p class="card-details-city">Sharm Elshiekh</p>
+                        <p>4,950 $</p>
+                    </div>
+                </div>
+                <div class="coming-training-card-footer">
+                    <div class="view-course-box">
+                        <p class="view-course-text">View Course</p>
+                        <div class="right-arrow">
+                            <img src="./Assets/Right Arrow.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coming-training-card">
+                <div class="coming-training-card-header">
+                    <img src="./Assets/Course Category Image.png" alt="Category Image.png"
+                        class="coming-training-card-img" />
+                </div>
+                <div class="coming-training-card-content">
+                    <p class="card-paragraph">
+                        Building Personal Leadership Skills : Creating Stronger
+                        Relationships for a Stronger Organisation
+                    </p>
+                    <div class="card-date-container">
+                        <p>14 Aug, 2024</p>
+                        <img src="./Assets/duration.svg" alt="duration" />
+                        <p>18 Aug, 2024</p>
+                    </div>
+                    <div class="card-details-container">
+                        <p>Offline</p>
+                        <p class="card-details-city">Sharm Elshiekh</p>
+                        <p>4,950 $</p>
+                    </div>
+                </div>
+                <div class="coming-training-card-footer">
+                    <div class="view-course-box">
+                        <p class="view-course-text">View Course</p>
+                        <div class="right-arrow">
+                            <img src="./Assets/Right Arrow.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="coming-training-card">
                 <div class="coming-training-card-header">
                     <img src="./Assets/Course Category Image.png" alt="Category Image.png"
@@ -351,6 +442,8 @@
             </div>
         </div>
     </section>
+    <!------------------------------------------------- courses category section ---------------------------------->
+
     <script>
         $(document).ready(function ($) {
             $('#slider').QCslider({
