@@ -46,6 +46,11 @@
   --Primary-Primary: #ad1519;
   --Ternary-Ternary: #140000;
 }
+
+.navigationBar .nav-icon-toggler{
+  display: none;
+}
+
 .header-section {
   position: relative;
   height: 100vh;
