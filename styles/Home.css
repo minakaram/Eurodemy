@@ -49,7 +49,15 @@
 }
 
 .navigationBar .nav-icon-toggler {
+<<<<<<< HEAD
   display: none;
+=======
+  /* display: none; */
+  margin-left: 1rem;
+}
+.navigationBar .nav-icon-toggler p {
+  color: #ad1519;
+>>>>>>> 87159e517fd4d62ec121def516efa5345e33a88e
 }
 
 .header-section {
@@ -68,6 +76,7 @@
   padding: 0px 2.2rem;
   position: absolute;
   z-index: 100;
+  background-color: ;
 }
 .navigationBar ul {
   list-style: none;
