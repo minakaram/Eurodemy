@@ -200,22 +200,3 @@
 .coming-training-card:hover .coming-training-card-content .card-paragraph {
   font-family: rubikSemiBold-600;
 }
-.swiper-pagination-bullet {
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  line-height: 24px;
-  font-size: 16px;
-  color: #b2b5be;
-  opacity: 1;
-  background: transparent;
-  display: flex;
-  border-radius: 50%;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #dee3ff;
-  color: #19224c;
-}

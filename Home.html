@@ -22,7 +22,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="image-video-carousel-qc/qcslider.jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="Home.js"></script>
     <title>Eorodemy</title>
   </head>
@@ -483,37 +482,7 @@
         });
       });
     </script>
-    <script>
-      var swiper = new Swiper('#snp-swiper', {
-        a11y: false,
-        grabCursor: true,
-        navigation: {
-          nextEl: '#right-button',
-          prevEl: '#left-button',
-        },
-        pagination: {
-          el: '.snp-pagination',
-          clickable: true,
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          },
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1.1,
-            spaceBetween: 20,
-          },
-          767: {
-            slidesPerView: 2.5,
-            spaceBetween: 24,
-          },
-          988: {
-            slidesPerView: 3,
-            spaceBetween: 48,
-          },
-        },
-      });
-    </script>
+
     <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
     <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
   </body>
