@@ -47,8 +47,12 @@
   --Ternary-Ternary: #140000;
 }
 
-.navigationBar .nav-icon-toggler{
-  display: none;
+.navigationBar .nav-icon-toggler {
+  /* display: none; */
+  margin-left: 1rem;
+}
+.navigationBar .nav-icon-toggler p {
+  color: #ad1519;
 }
 
 .header-section {
@@ -67,6 +71,7 @@
   padding: 0px 2.2rem;
   position: absolute;
   z-index: 100;
+  background-color: ;
 }
 .navigationBar ul {
   list-style: none;
