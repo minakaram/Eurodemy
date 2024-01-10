@@ -45,9 +45,10 @@
   --Nuturals-White: #fff;
   --Primary-Primary: #ad1519;
   --Ternary-Ternary: #140000;
+  --NuturalsN-5: #bfb6b6;
 }
 
-.navigationBar .nav-icon-toggler{
+.navigationBar .nav-icon-toggler {
   display: none;
 }
 
@@ -149,12 +150,12 @@
 } */
 .coming-training-card {
   padding: 0;
-  /* margin: 0 0.75rem; */
+  margin: 0 0.75rem;
   border-radius: 2px;
   border-bottom: 4px solid var(--Nuturals-N-3);
   background: var(--Nuturals-N-7);
   font-size: 0.875rem;
-  transition: 400ms;
+  transition: 500ms;
 }
 .coming-training-card:hover {
   background: var(--Nuturals-N-6);
@@ -211,7 +212,7 @@
   align-items: center;
   opacity: 0;
   padding: 0.8rem 0rem;
-  transition: 400ms;
+  transition: 500ms;
   margin-bottom: 0.313rem;
   position: relative;
 }
@@ -385,4 +386,79 @@
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-family: rethinkExtraBold-800;
+}
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 91.5%;
+  justify-content: center;
+  justify-items: center;
+}
+.j,
+.h,
+.i,
+.g,
+.f {
+  margin-top: -110px;
+}
+.item {
+  padding: 10px;
+  width: 240px;
+  border: 1px solid black;
+  height: 240px;
+}
+.a,
+.b,
+.c {
+  background: orange;
+}
+.b,
+.g,
+.n,
+.l,
+.d,
+.i {
+  margin-top: 120px;
+}
+.d,
+.e,
+.f {
+  background: violet;
+}
+
+.g,
+.h,
+.i {
+  background: lightgreen;
+}
+
+.j,
+.k,
+.l {
+  background: cornflowerblue;
+}
+@media screen and (max-width: 1000px) {
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8px;
+  }
+  .b,
+  .f,
+  .i,
+  .l,
+  .o {
+    margin-top: 120px;
+  }
+  .g,
+  .m,
+  .d,
+  .j,
+  .n {
+    margin-top: 0;
+  }
+  .d {
+    order: 7;
+  }
 }
