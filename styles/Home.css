@@ -15,12 +15,20 @@
   src: url(../Assets//Rubik/Rubik-Bold.ttf);
 }
 @font-face {
+  font-family: rethinkRegular-400;
+  src: url(../Assets/Rethink_sans/RethinkSans-Regular.ttf);
+}
+@font-face {
   font-family: rethinkMedium-500;
   src: url(../Assets/Rethink_sans/RethinkSans-Medium.ttf);
 }
 @font-face {
   font-family: rethinkBold-700;
   src: url(../Assets/Rethink_sans/RethinkSans-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkExtraBold-800;
+  src: url(../Assets/Rethink_sans/RethinkSans-ExtraBold.ttf);
 }
 
 * {
@@ -29,11 +37,14 @@
   margin: 0;
 }
 :root {
-  --Ternary-Ternary: #140000;
+  --Nuturals-N-1: #140000;
+  --Nuturals-N-2: #262121;
   --Nuturals-N-3: #594e4e;
   --Nuturals-N-7: #fcfcfc;
   --Nuturals-N-6: #f2eded;
   --Nuturals-White: #fff;
+  --Primary-Primary: #ad1519;
+  --Ternary-Ternary: #140000;
 }
 
 .navigationBar .nav-icon-toggler{
@@ -118,11 +129,11 @@
   padding-bottom: 1.25rem;
 }
 
-.coming-training-heading img {
+.home-heading img {
   display: block;
   margin: 0 auto;
 }
-.coming-training-heading {
+.home-heading {
   position: relative;
 }
 .comingSoon-container {
@@ -179,6 +190,10 @@
 .card-details-container {
   padding: 1.125rem 0 0.813rem;
 }
+.card-date-container img {
+  width: 46px !important;
+  height: 16px !important;
+}
 .card-details-city {
   border-left: 1px solid #ddd9d9;
   border-right: 1px solid #ddd9d9;
@@ -219,6 +234,10 @@
   right: 5px;
   top: 30%;
 }
+.coming-training-section .owl-dot.active span {
+  color: black !important;
+  background-color: black !important;
+}
 .coming-training-card:hover .coming-training-card-footer {
   opacity: 1;
 }
@@ -227,10 +246,12 @@
 }
 
 .coming-training-section .owl-prev,
-.coming-training-section .owl-next {
+.coming-training-section .owl-next,
+.top-courses-section .owl-next,
+.top-courses-section .owl-prev,
+.courses-category .owl-next,
+.courses-category .owl-prev {
   position: relative;
-  /* top: 35%; */
-  /* transform: translateY(-50%); */
   color: #fff !important ;
   font-size: 50px !important;
   display: flex !important;
@@ -240,48 +261,127 @@
   background-color: black !important;
   padding-bottom: 10px !important;
   margin-right: 200px;
-  height: 3rem;
-  width: 3rem;
-  color: #fff;
+  height: 1rem;
+  width: 1rem;
 }
-.coming-training-section .owl-carousel {
-  width: 90%;
+
+.coming-training-section .owl-carousel,
+.courses-category .owl-carousel,
+.top-courses-section .owl-carousel {
+  width: 91.5%;
   margin: auto;
   padding: 20px 0px;
 }
-.coming-training-section .owl-carousel .owl-dots {
+.coming-training-section .owl-carousel .owl-dots,
+.courses-category .owl-dot .owl-dot {
   display: block;
   margin-top: 40px;
 }
-.coming-training-section .owl-carousel .owl-dots span {
+.coming-training-section .owl-carousel .owl-dots span,
+.top-courses-section .owl-carousel .owl-dots span,
+.courses-category .owl-dot .owl-dot {
   width: 2.5rem;
   height: 0.5rem;
 }
-.coming-training-section .owl-carousel .owl-nav {
+.owl-carousel .owl-nav,
+.courses-category .custom-navigation {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.coming-training-section .owl-carousel .owl-dots {
+.owl-carousel .owl-dots,
+.courses-category .owl-dot .owl-dot {
   margin-top: -30px !important;
 }
-.coming-training-section .owl-carousel .owl-nav button.owl-prev {
+.owl-carousel .owl-nav button.owl-prev,
+.custom-navigation button.owl-prev {
   margin-right: 150px;
   height: 2rem;
   width: 3rem;
   color: #fff;
   padding-bottom: 15px !important;
 }
-.coming-training-section .owl-carousel .owl-nav button.owl-next {
+.owl-carousel .owl-nav button.owl-next,
+.custom-navigation button.owl-next {
   height: 2rem;
   width: 3rem;
   color: #fff;
   padding-bottom: 15px !important;
 }
-.coming-training-section .owl-dot.active span {
+.owl-dot.active span,
+.courses-category .owl-dot .owl-dot {
   color: black !important;
   background-color: black !important;
 }
+#carousel-row-1 .owl-dots,
+#carousel-row-2 .owl-dots {
+  display: none;
+}
+/*                                                 two rows slider                                      */
 
-/* ----------------------------------------- courses-category-section ------------------------------------------ */
+/* 
+.custom-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; 
+} */
+
+/* .custom-navigation button {
+  height: 2rem;
+  width: 5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+} */
+/*------------------------------------------ top courses section ------------------------------------------ */
+.top-courses-section {
+  background-image: url(../Assets/topCoursesOverlay.png);
+  padding: 4rem 0;
+}
+.top-courses-heading {
+  color: var(--Nuturals-White);
+}
+.top-courses-heading-paragraph {
+  color: var(--Nuturals-N-7);
+  text-align: center;
+  font-family: rethinkMedium-500;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  margin: 4rem;
+  padding: 0 9.2rem;
+}
+.top-courses-section .coming-training-card-footer {
+  background-color: var(--Primary-Primary);
+}
+.top-courses-section .coming-training-card {
+  border-bottom: 4px solid var(--Primary-Primary);
+}
+.top-courses-section .owl-next,
+.top-courses-section .owl-prev {
+  background-color: var(--Nuturals-N-6) !important;
+  color: var(--Nuturals-N-1) !important;
+}
+.top-courses-section .owl-dot.active span {
+  color: var(--Nuturals-N-6);
+  background-color: var(--Nuturals-N-6) !important;
+}
+/*------------------------------------------ cities and venues section ------------------------------------------ */
+.cities-venues-section {
+  padding: 7.5rem 0 5rem;
+}
+.cities-heading-paragraph {
+  font-family: rethinkRegular-400;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: var(--Nuturals-N-2);
+  text-align: center;
+  padding: 4rem 0;
+}
+.cities-heading-paragraph span {
+  color: var(--Primary-Primary);
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-family: rethinkExtraBold-800;
+}
