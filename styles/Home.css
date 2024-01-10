@@ -35,6 +35,11 @@
   --Nuturals-N-6: #f2eded;
   --Nuturals-White: #fff;
 }
+
+.navigationBar .nav-icon-toggler{
+  display: none;
+}
+
 .header-section {
   position: relative;
   height: 100vh;
