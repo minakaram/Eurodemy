@@ -16,6 +16,7 @@ $('.carousel1').owlCarousel({
     },
   },
 });
+
 // Function to initialize Owl Carousel
 function initializeCarousel(carousel, items) {
   carousel.owlCarousel({
