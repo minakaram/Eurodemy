@@ -6,10 +6,28 @@ $('.carousel1').owlCarousel({
   slideBy: 4,
   responsive: {
     0: {
-      items: 2,
+      items: 1,
     },
     610: {
-      items: 3,
+      items: 2,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});
+$('.carousel2').owlCarousel({
+  loop: false,
+  margin: 24,
+  nav: true,
+  dots: true,
+  slideBy: 4,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    610: {
+      items: 2,
     },
     1000: {
       items: 4,
