@@ -8,10 +8,11 @@ $('.carousel1').owlCarousel({
     0: {
       items: 1,
     },
-    610: {
-      items: 2,
+    600: { items: 2 },
+    900: {
+      items: 3,
     },
-    1000: {
+    1200: {
       items: 4,
     },
   },
@@ -98,3 +99,6 @@ initializeCarousel(carouselRow2, 4);
 
 customNavigation(carouselRow1, carouselRow2);
 customDots(carouselRow1, carouselRow2);
+
+//------------------------------------ cities slider---------------------------------
+
