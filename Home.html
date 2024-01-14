@@ -1,102 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="image-video-carousel-qc/css/qc.slider.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"
-    />
-    <link
-      rel="stylesheet"
-      href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
-    />
-    <link rel="stylesheet" href="styles/Home.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="image-video-carousel-qc/qcslider.jquery.js"></script>
-    <script defer src="Home.js"></script>
-    <title>Eorodemy</title>
-  </head>
 
-  <body>
-    <!----------------------------------------------------- nav bar ---------------------------------------------->
-    <nav class="navigationBar">
-      <img src="Assets/Logo.png" alt="logo" class="logo-image" />
-      <div class="nav-icon-toggler d-flex align-items-center">
-        <p class="my-0">Home</p>
-        <div class="navbar-toggle-container">
-          <img
-            src="./Assets/toggler-icon.svg"
-            alt="toggler-icon"
-            class="toggler-icon"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="image-video-carousel-qc/css/qc.slider.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="styles/Home.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="image-video-carousel-qc/qcslider.jquery.js"></script>
+  <script defer src="Home.js"></script>
+  <title>Eorodemy</title>
+</head>
+
+<body>
+  <!----------------------------------------------------- nav bar ---------------------------------------------->
+  <nav class="navigationBar">
+    <img src="Assets/Logo.png" alt="logo" class="logo-image" />
+    <div class="nav-items-container" id="navbar-toggler-items">
+      <div class="nav-toggler-item">Home</div>
+      <div class="nav-toggler-item">Categories</div>
+      <div class="nav-toggler-item">Cities</div>
+      <div class="nav-toggler-item">Tailored Courses</div>
+      <div class="nav-toggler-item">About Us</div>
+      <div class="nav-toggler-item">Contact Us</div>
+      <div class="nav-toggler-item careers">Careers</div>
+    </div>
+    <div class="nav-list-container d-flex align-items-center justify-content-center">
+      <div class="nav-icon-toggler d-flex align-items-center justify-content-center">
+        <div style="overflow: hidden;" class="navbar-home-item d-flex align-items-center justify-content-center">
+          <p class="my-0">Home</p>
+        </div>
+        <div class="navbar-toggle-container" id="navbar-toggler-id">
+          <img src="./Assets/toggler-icon.svg" alt="toggler-icon" class="toggler-icon w-100" />
+
         </div>
       </div>
       <ul>
-        <li
-          style="background-color: #fee1e1"
-          class="d-flex justify-content-between align-items-center"
-        >
+        <li style="background-color: #fee1e1" class="d-flex justify-content-between align-items-center">
           <a style="color: #ad1519; font-weight: 700" href="">Home</a>
         </li>
         <li>
           <a href="">Categories</a>
-          <svg
-            style="margin-left: 1rem"
-            width="14"
-            height="14"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg style="margin-left: 1rem" width="14" height="14" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
-              fill="white"
-            />
+              fill="white" />
             <path
               d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
-              fill="white"
-            />
+              fill="white" />
           </svg>
         </li>
         <li>
           <a href="">Cities</a>
-          <svg
-            style="margin-left: 1rem"
-            width="14"
-            height="14"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg style="margin-left: 1rem" width="14" height="14" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
-              fill="white"
-            />
+              fill="white" />
             <path
               d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
-              fill="white"
-            />
+              fill="white" />
           </svg>
         </li>
         <li><a href="">Tailored Courses</a></li>
@@ -104,6 +76,8 @@
         <li><a href="">Contact Us</a></li>
         <li><a href="">Careers</a></li>
       </ul>
+    </div>
+    <div class="navigation-bar-right-side">
       <img src="Assets/SearchBar.png" alt="" class="header-search-bar" />
       <div class="changeTo-arabic-courses-box">
         <div class="arabic-icon">
@@ -111,1073 +85,784 @@
         </div>
         <p class="arabic-course-txt">Arabic <br />Courses</p>
       </div>
-    </nav>
-    <!--------------------------------------------------- hero section ------------------------------------------->
-    <section class="header-section">
-      <section class="slide h-100">
-        <div class="slider-container">
-          <ul class="slider-wrapper" id="slider">
-            <li class="slide-current">
-              <img src="Assets/slider1.png" />
-            </li>
-            <li class="">
-              <img src="Assets/slider2.jpg" />
-            </li>
-          </ul>
-          <div
-            class="drt-control control-left d-flex justify-content-center align-items-center"
-            id="lft-control"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M10.0125 1.13822C10.1102 1.04059 10.2685 1.04059 10.3661 1.13822L11.4268 2.19888C11.5244 2.29651 11.5244 2.4548 11.4268 2.55243L4.70924 9.26995C4.61161 9.36758 4.45332 9.36758 4.35569 9.26995L3.29503 8.20929C3.19739 8.11166 3.19739 7.95336 3.29503 7.85573L10.0125 1.13822Z"
-                fill="white"
-              />
-              <path
-                d="M3.29503 8.20929C3.19739 8.11166 3.19739 7.95336 3.29503 7.85573L4.35571 6.79505C4.45334 6.69742 4.61163 6.69742 4.70926 6.79505L11.4268 13.5126C11.5244 13.6102 11.5244 13.7685 11.4268 13.8661L10.3661 14.9268C10.2685 15.0244 10.1102 15.0244 10.0126 14.9268L3.29503 8.20929Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-          <div
-            class="drt-control control-right d-flex justify-content-center align-items-center"
-            id="rht-control"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M5.98746 1.13822C5.88983 1.04059 5.73154 1.04059 5.63391 1.13822L4.57325 2.19888C4.47562 2.29651 4.47562 2.4548 4.57325 2.55243L11.2908 9.26995C11.3884 9.36758 11.5467 9.36758 11.6443 9.26995L12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L5.98746 1.13822Z"
-                fill="white"
-              />
-              <path
-                d="M12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L11.6443 6.79505C11.5467 6.69742 11.3884 6.69742 11.2907 6.79505L4.57322 13.5126C4.47559 13.6102 4.47559 13.7685 4.57322 13.8661L5.63388 14.9268C5.73151 15.0244 5.88981 15.0244 5.98744 14.9268L12.705 8.20929Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-          <ul class="slider-controls" id="slider-controls"></ul>
-        </div>
-      </section>
-      <div class="header-social-icons">
-        <div class="left-side-icons">
-          <div class="icon-header-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              width="20"
-              viewBox="0 0 512 512"
-            >
-              <path
-                opacity="1"
-                fill="#B4B3B5"
-                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-              />
-            </svg>
-          </div>
-          <div class="icon-header-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              width="20"
-              viewBox="0 0 448 512"
-            >
-              <path
-                opacity="1"
-                fill="#B4B3B5"
-                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
-              />
-            </svg>
-          </div>
-          <div class="icon-header-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              width="20"
-              viewBox="0 0 512 512"
-            >
-              <path
-                opacity="1"
-                fill="#B4B3B5"
-                d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="right-side-icons">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="36"
-            viewBox="0 0 36 36"
-            fill="none"
-          >
-            <g filter="url(#filter0_b_221_25992)">
-              <path
-                d="M18.0059 0C10.491 0 8.29324 0.0077545 7.86603 0.0432037C6.32386 0.17143 5.36422 0.414312 4.31876 0.934971C3.51306 1.33516 2.87764 1.79904 2.25053 2.44931C1.10844 3.6352 0.41626 5.09415 0.165692 6.82839C0.0438687 7.67031 0.00842918 7.84202 0.00123054 12.1424C-0.00153817 13.5759 0.00123054 15.4625 0.00123054 17.9929C0.00123054 25.5037 0.00953667 27.6999 0.0455299 28.1264C0.170122 29.6275 0.405462 30.5718 0.90383 31.6049C1.85627 33.5823 3.67531 35.0667 5.81829 35.6206C6.56031 35.8117 7.37984 35.9169 8.43195 35.9668C8.87772 35.9862 13.4212 36 17.9674 36C22.5136 36 27.0598 35.9945 27.4945 35.9723C28.7128 35.915 29.4202 35.82 30.2023 35.6178C32.3591 35.0611 34.145 33.5989 35.1168 31.5938C35.6055 30.5857 35.8533 29.6053 35.9654 28.1826C35.9898 27.8725 36 22.927 36 17.9882C36 13.0486 35.9889 8.11232 35.9646 7.80214C35.851 6.35648 35.6032 5.38439 35.0988 4.35692C34.6849 3.51584 34.2253 2.88772 33.558 2.24548C32.3672 1.10779 30.9108 0.41542 29.1754 0.16506C28.3345 0.0434806 28.167 0.00747756 23.8645 0H18.0059Z"
-                fill="white"
-                fill-opacity="0.11"
-              />
-            </g>
+    </div>
+  </nav>
+  <!---------------------------------------------- hero section ---------------------------------------------------->
+  <section class="header-section">
+    <section class="slide h-100">
+      <div class="slider-container">
+        <ul class="slider-wrapper" id="slider">
+          <li class="slide-current">
+            <img src="Assets/slider1.png" />
+          </li>
+          <li class="">
+            <img src="Assets/slider2.jpg" />
+          </li>
+        </ul>
+        <div class="drt-control control-left d-flex justify-content-center align-items-center" id="lft-control">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
-              d="M17.9979 4.70801C14.3887 4.70801 13.9357 4.72379 12.5181 4.78832C11.1033 4.85313 10.1376 5.07718 9.29257 5.40591C8.41849 5.74545 7.67703 6.19964 6.93833 6.93881C6.19909 7.67771 5.74502 8.41937 5.40447 9.29341C5.07499 10.1389 4.85073 11.1052 4.78705 12.5198C4.72364 13.9378 4.70703 14.3912 4.70703 18.0014C4.70703 21.6117 4.72309 22.0634 4.78732 23.4814C4.85239 24.8966 5.07638 25.8626 5.40475 26.7078C5.74447 27.5821 6.19854 28.3238 6.9375 29.0627C7.67592 29.8021 8.41738 30.2574 9.29091 30.597C10.1365 30.9257 11.1025 31.1498 12.517 31.2146C13.9346 31.2791 14.3873 31.2949 17.9963 31.2949C21.6059 31.2949 22.0574 31.2791 23.475 31.2146C24.8898 31.1498 25.8567 30.9257 26.7022 30.597C27.576 30.2574 28.3164 29.8021 29.0548 29.0627C29.794 28.3238 30.2481 27.5821 30.5887 26.7081C30.9154 25.8626 31.1396 24.8963 31.2061 23.4817C31.2698 22.0637 31.2864 21.6117 31.2864 18.0014C31.2864 14.3912 31.2698 13.9381 31.2061 12.5201C31.1396 11.1049 30.9154 10.1389 30.5887 9.29369C30.2481 8.41937 29.794 7.67771 29.0548 6.93881C28.3155 6.19936 27.5763 5.74517 26.7014 5.40591C25.8542 5.07718 24.8879 4.85313 23.4731 4.78832C22.0555 4.72379 21.6042 4.70801 17.9938 4.70801H17.9979ZM16.8057 7.1036C17.1596 7.10304 17.5544 7.1036 17.9979 7.1036C21.5463 7.1036 21.9669 7.11633 23.3681 7.18003C24.6639 7.2393 25.3671 7.45587 25.8356 7.63783C26.4558 7.87877 26.898 8.16679 27.3628 8.63206C27.828 9.09733 28.1159 9.54045 28.3574 10.1608C28.5393 10.6288 28.756 11.3323 28.815 12.6284C28.8787 14.0297 28.8925 14.4507 28.8925 17.9984C28.8925 21.5461 28.8787 21.967 28.815 23.3684C28.7558 24.6645 28.5393 25.3679 28.3574 25.836C28.1165 26.4563 27.828 26.8981 27.3628 27.3631C26.8977 27.8283 26.4561 28.1164 25.8356 28.3573C25.3677 28.5401 24.6639 28.7561 23.3681 28.8154C21.9672 28.8791 21.5463 28.8929 17.9979 28.8929C14.4493 28.8929 14.0287 28.8791 12.6278 28.8154C11.332 28.7556 10.6287 28.539 10.16 28.357C9.53981 28.1161 9.09682 27.8281 8.63168 27.3628C8.16653 26.8975 7.87859 26.4555 7.63716 25.8349C7.45525 25.3668 7.23846 24.6634 7.17949 23.3673C7.11581 21.9659 7.10307 21.545 7.10307 17.9951C7.10307 14.4452 7.11581 14.0264 7.17949 12.6251C7.23874 11.329 7.45525 10.6255 7.63716 10.1569C7.87803 9.53657 8.16653 9.09346 8.63168 8.62819C9.09682 8.16292 9.53981 7.87489 10.16 7.63339C10.6285 7.45061 11.332 7.23459 12.6278 7.17505C13.8537 7.11966 14.3289 7.10304 16.8057 7.10027V7.1036ZM25.0919 9.31086C24.2115 9.31086 23.4972 10.0245 23.4972 10.9055C23.4972 11.7862 24.2115 12.5007 25.0919 12.5007C25.9724 12.5007 26.6867 11.7862 26.6867 10.9055C26.6867 10.0248 25.9724 9.31031 25.0919 9.31031V9.31086ZM17.9979 11.1747C14.2289 11.1747 11.1731 14.2314 11.1731 18.0014C11.1731 21.7715 14.2289 24.8268 17.9979 24.8268C21.767 24.8268 24.8217 21.7715 24.8217 18.0014C24.8217 14.2314 21.767 11.1747 17.9979 11.1747ZM17.9979 13.5703C20.4444 13.5703 22.4279 15.5541 22.4279 18.0014C22.4279 20.4485 20.4444 22.4326 17.9979 22.4326C15.5512 22.4326 13.568 20.4485 13.568 18.0014C13.568 15.5541 15.5512 13.5703 17.9979 13.5703Z"
-              fill="white"
-              fill-opacity="0.6"
-            />
-            <defs>
-              <filter
-                id="filter0_b_221_25992"
-                x="-2"
-                y="-2"
-                width="40"
-                height="40"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
-                <feComposite
-                  in2="SourceAlpha"
-                  operator="in"
-                  result="effect1_backgroundBlur_221_25992"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_backgroundBlur_221_25992"
-                  result="shape"
-                />
-              </filter>
-            </defs>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="36"
-            viewBox="0 0 36 26"
-            fill="none"
-          >
-            <g filter="url(#filter0_b_221_25995)">
-              <path
-                d="M35.2012 4.35412C34.7818 2.80333 33.572 1.58898 32.0213 1.17421C29.9382 0.370014 9.76191 -0.0240178 3.90904 1.19725C2.35825 1.61663 1.1439 2.82638 0.729128 4.37716C-0.211019 8.50182 -0.282451 17.4194 0.752171 21.6362C1.17155 23.187 2.3813 24.4014 3.93208 24.8161C8.05674 25.7655 27.6662 25.8991 32.0443 24.8161C33.5951 24.3968 34.8094 23.187 35.2242 21.6362C36.2266 17.1429 36.298 8.77834 35.2012 4.35412Z"
-                fill="white"
-                fill-opacity="0.11"
-              />
-            </g>
+              d="M10.0125 1.13822C10.1102 1.04059 10.2685 1.04059 10.3661 1.13822L11.4268 2.19888C11.5244 2.29651 11.5244 2.4548 11.4268 2.55243L4.70924 9.26995C4.61161 9.36758 4.45332 9.36758 4.35569 9.26995L3.29503 8.20929C3.19739 8.11166 3.19739 7.95336 3.29503 7.85573L10.0125 1.13822Z"
+              fill="white" />
             <path
-              d="M23.9093 12.9946L14.5078 7.60254V18.3866L23.9093 12.9946Z"
-              fill="white"
-              fill-opacity="0.65"
-            />
-            <defs>
-              <filter
-                id="filter0_b_221_25995"
-                x="-2"
-                y="-1.58008"
-                width="40"
-                height="29.1592"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
-                <feComposite
-                  in2="SourceAlpha"
-                  operator="in"
-                  result="effect1_backgroundBlur_221_25995"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_backgroundBlur_221_25995"
-                  result="shape"
-                />
-              </filter>
-            </defs>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="36"
-            viewBox="0 0 36 36"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_221_25998)">
-              <g filter="url(#filter0_b_221_25998)">
-                <path
-                  d="M0.767891 17.7844C0.767047 20.8091 1.56355 23.7625 3.07808 26.3657L0.623047 35.2599L9.7963 32.8733C12.3335 34.2439 15.1762 34.962 18.065 34.9622H18.0726C27.6091 34.9622 35.372 27.2622 35.3761 17.798C35.378 13.2119 33.5796 8.89942 30.3124 5.65495C27.0456 2.41077 22.701 0.623187 18.0719 0.621094C8.53433 0.621094 0.771969 8.32063 0.768031 17.7844"
-                  fill="white"
-                  fill-opacity="0.11"
-                />
-              </g>
-              <path
-                d="M13.5948 10.3466C13.2592 9.60661 12.9061 9.59168 12.587 9.5787C12.3258 9.56754 12.0271 9.56837 11.7287 9.56837C11.43 9.56837 10.9447 9.67986 10.5345 10.1243C10.1239 10.5691 8.9668 11.6441 8.9668 13.8305C8.9668 16.017 10.5718 18.13 10.7955 18.4267C11.0195 18.723 13.8939 23.3533 18.4462 25.1346C22.2296 26.6149 22.9995 26.3205 23.8206 26.2463C24.6418 26.1723 26.4705 25.1716 26.8436 24.1339C27.217 23.0963 27.217 22.2069 27.105 22.021C26.9931 21.8359 26.6944 21.7247 26.2465 21.5025C25.7985 21.2802 23.5966 20.2051 23.1861 20.0568C22.7755 19.9086 22.4769 19.8347 22.1782 20.2796C21.8795 20.7239 21.0219 21.7247 20.7605 22.021C20.4993 22.3181 20.2379 22.3551 19.7901 22.1328C19.342 21.9098 17.8996 21.4411 16.1883 19.9273C14.8569 18.7494 13.958 17.2947 13.6967 16.8497C13.4354 16.4054 13.6687 16.1646 13.8933 15.9432C14.0945 15.744 14.3413 15.4242 14.5655 15.1648C14.7888 14.9053 14.8633 14.7201 15.0127 14.4238C15.1622 14.1271 15.0874 13.8676 14.9756 13.6453C14.8633 13.423 13.993 11.2252 13.5948 10.3466Z"
-                fill="white"
-                fill-opacity="0.65"
-              />
-            </g>
-            <defs>
-              <filter
-                id="filter0_b_221_25998"
-                x="-1.37695"
-                y="-1.37891"
-                width="38.7539"
-                height="38.6387"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
-                <feComposite
-                  in2="SourceAlpha"
-                  operator="in"
-                  result="effect1_backgroundBlur_221_25998"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_backgroundBlur_221_25998"
-                  result="shape"
-                />
-              </filter>
-              <clipPath id="clip0_221_25998">
-                <rect width="36" height="36" fill="white" />
-              </clipPath>
-            </defs>
+              d="M3.29503 8.20929C3.19739 8.11166 3.19739 7.95336 3.29503 7.85573L4.35571 6.79505C4.45334 6.69742 4.61163 6.69742 4.70926 6.79505L11.4268 13.5126C11.5244 13.6102 11.5244 13.7685 11.4268 13.8661L10.3661 14.9268C10.2685 15.0244 10.1102 15.0244 10.0126 14.9268L3.29503 8.20929Z"
+              fill="white" />
           </svg>
         </div>
-      </div>
-      <div class="searchCourseByName-hero-section-container">
-        <input
-          type="text"
-          id="courseByName|code"
-          name="courseByName|code"
-          placeholder="Search for a course by name or course #code"
-        />
-        <img
-          src="./Assets/searchIcon.svg"
-          alt="search"
-          class="searchIcon-courseByName"
-        />
+        <div class="drt-control control-right d-flex justify-content-center align-items-center" id="rht-control">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M5.98746 1.13822C5.88983 1.04059 5.73154 1.04059 5.63391 1.13822L4.57325 2.19888C4.47562 2.29651 4.47562 2.4548 4.57325 2.55243L11.2908 9.26995C11.3884 9.36758 11.5467 9.36758 11.6443 9.26995L12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L5.98746 1.13822Z"
+              fill="white" />
+            <path
+              d="M12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L11.6443 6.79505C11.5467 6.69742 11.3884 6.69742 11.2907 6.79505L4.57322 13.5126C4.47559 13.6102 4.47559 13.7685 4.57322 13.8661L5.63388 14.9268C5.73151 15.0244 5.88981 15.0244 5.98744 14.9268L12.705 8.20929Z"
+              fill="white" />
+          </svg>
+        </div>
+        <ul class="slider-controls" id="slider-controls"></ul>
       </div>
     </section>
-    <!-------------------------------------- comming soon section ------------------------------------------------>
-    <section class="coming-training-section container-fluid">
-      <!-- <div class="q-scroll-chat">
+    <div class="header-social-icons">
+      <div class="left-side-icons">
+        <div class="icon-header-container">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512">
+            <path opacity="1" fill="#B4B3B5"
+              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+          </svg>
+        </div>
+        <div class="icon-header-container">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 448 512">
+            <path opacity="1" fill="#B4B3B5"
+              d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+          </svg>
+        </div>
+        <div class="icon-header-container">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512">
+            <path opacity="1" fill="#B4B3B5"
+              d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+          </svg>
+        </div>
+      </div>
+      <div class="right-side-icons">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <g filter="url(#filter0_b_221_25992)">
+            <path
+              d="M18.0059 0C10.491 0 8.29324 0.0077545 7.86603 0.0432037C6.32386 0.17143 5.36422 0.414312 4.31876 0.934971C3.51306 1.33516 2.87764 1.79904 2.25053 2.44931C1.10844 3.6352 0.41626 5.09415 0.165692 6.82839C0.0438687 7.67031 0.00842918 7.84202 0.00123054 12.1424C-0.00153817 13.5759 0.00123054 15.4625 0.00123054 17.9929C0.00123054 25.5037 0.00953667 27.6999 0.0455299 28.1264C0.170122 29.6275 0.405462 30.5718 0.90383 31.6049C1.85627 33.5823 3.67531 35.0667 5.81829 35.6206C6.56031 35.8117 7.37984 35.9169 8.43195 35.9668C8.87772 35.9862 13.4212 36 17.9674 36C22.5136 36 27.0598 35.9945 27.4945 35.9723C28.7128 35.915 29.4202 35.82 30.2023 35.6178C32.3591 35.0611 34.145 33.5989 35.1168 31.5938C35.6055 30.5857 35.8533 29.6053 35.9654 28.1826C35.9898 27.8725 36 22.927 36 17.9882C36 13.0486 35.9889 8.11232 35.9646 7.80214C35.851 6.35648 35.6032 5.38439 35.0988 4.35692C34.6849 3.51584 34.2253 2.88772 33.558 2.24548C32.3672 1.10779 30.9108 0.41542 29.1754 0.16506C28.3345 0.0434806 28.167 0.00747756 23.8645 0H18.0059Z"
+              fill="white" fill-opacity="0.11" />
+          </g>
+          <path
+            d="M17.9979 4.70801C14.3887 4.70801 13.9357 4.72379 12.5181 4.78832C11.1033 4.85313 10.1376 5.07718 9.29257 5.40591C8.41849 5.74545 7.67703 6.19964 6.93833 6.93881C6.19909 7.67771 5.74502 8.41937 5.40447 9.29341C5.07499 10.1389 4.85073 11.1052 4.78705 12.5198C4.72364 13.9378 4.70703 14.3912 4.70703 18.0014C4.70703 21.6117 4.72309 22.0634 4.78732 23.4814C4.85239 24.8966 5.07638 25.8626 5.40475 26.7078C5.74447 27.5821 6.19854 28.3238 6.9375 29.0627C7.67592 29.8021 8.41738 30.2574 9.29091 30.597C10.1365 30.9257 11.1025 31.1498 12.517 31.2146C13.9346 31.2791 14.3873 31.2949 17.9963 31.2949C21.6059 31.2949 22.0574 31.2791 23.475 31.2146C24.8898 31.1498 25.8567 30.9257 26.7022 30.597C27.576 30.2574 28.3164 29.8021 29.0548 29.0627C29.794 28.3238 30.2481 27.5821 30.5887 26.7081C30.9154 25.8626 31.1396 24.8963 31.2061 23.4817C31.2698 22.0637 31.2864 21.6117 31.2864 18.0014C31.2864 14.3912 31.2698 13.9381 31.2061 12.5201C31.1396 11.1049 30.9154 10.1389 30.5887 9.29369C30.2481 8.41937 29.794 7.67771 29.0548 6.93881C28.3155 6.19936 27.5763 5.74517 26.7014 5.40591C25.8542 5.07718 24.8879 4.85313 23.4731 4.78832C22.0555 4.72379 21.6042 4.70801 17.9938 4.70801H17.9979ZM16.8057 7.1036C17.1596 7.10304 17.5544 7.1036 17.9979 7.1036C21.5463 7.1036 21.9669 7.11633 23.3681 7.18003C24.6639 7.2393 25.3671 7.45587 25.8356 7.63783C26.4558 7.87877 26.898 8.16679 27.3628 8.63206C27.828 9.09733 28.1159 9.54045 28.3574 10.1608C28.5393 10.6288 28.756 11.3323 28.815 12.6284C28.8787 14.0297 28.8925 14.4507 28.8925 17.9984C28.8925 21.5461 28.8787 21.967 28.815 23.3684C28.7558 24.6645 28.5393 25.3679 28.3574 25.836C28.1165 26.4563 27.828 26.8981 27.3628 27.3631C26.8977 27.8283 26.4561 28.1164 25.8356 28.3573C25.3677 28.5401 24.6639 28.7561 23.3681 28.8154C21.9672 28.8791 21.5463 28.8929 17.9979 28.8929C14.4493 28.8929 14.0287 28.8791 12.6278 28.8154C11.332 28.7556 10.6287 28.539 10.16 28.357C9.53981 28.1161 9.09682 27.8281 8.63168 27.3628C8.16653 26.8975 7.87859 26.4555 7.63716 25.8349C7.45525 25.3668 7.23846 24.6634 7.17949 23.3673C7.11581 21.9659 7.10307 21.545 7.10307 17.9951C7.10307 14.4452 7.11581 14.0264 7.17949 12.6251C7.23874 11.329 7.45525 10.6255 7.63716 10.1569C7.87803 9.53657 8.16653 9.09346 8.63168 8.62819C9.09682 8.16292 9.53981 7.87489 10.16 7.63339C10.6285 7.45061 11.332 7.23459 12.6278 7.17505C13.8537 7.11966 14.3289 7.10304 16.8057 7.10027V7.1036ZM25.0919 9.31086C24.2115 9.31086 23.4972 10.0245 23.4972 10.9055C23.4972 11.7862 24.2115 12.5007 25.0919 12.5007C25.9724 12.5007 26.6867 11.7862 26.6867 10.9055C26.6867 10.0248 25.9724 9.31031 25.0919 9.31031V9.31086ZM17.9979 11.1747C14.2289 11.1747 11.1731 14.2314 11.1731 18.0014C11.1731 21.7715 14.2289 24.8268 17.9979 24.8268C21.767 24.8268 24.8217 21.7715 24.8217 18.0014C24.8217 14.2314 21.767 11.1747 17.9979 11.1747ZM17.9979 13.5703C20.4444 13.5703 22.4279 15.5541 22.4279 18.0014C22.4279 20.4485 20.4444 22.4326 17.9979 22.4326C15.5512 22.4326 13.568 20.4485 13.568 18.0014C13.568 15.5541 15.5512 13.5703 17.9979 13.5703Z"
+            fill="white" fill-opacity="0.6" />
+          <defs>
+            <filter id="filter0_b_221_25992" x="-2" y="-2" width="40" height="40" filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_221_25992" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_221_25992" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 26" fill="none">
+          <g filter="url(#filter0_b_221_25995)">
+            <path
+              d="M35.2012 4.35412C34.7818 2.80333 33.572 1.58898 32.0213 1.17421C29.9382 0.370014 9.76191 -0.0240178 3.90904 1.19725C2.35825 1.61663 1.1439 2.82638 0.729128 4.37716C-0.211019 8.50182 -0.282451 17.4194 0.752171 21.6362C1.17155 23.187 2.3813 24.4014 3.93208 24.8161C8.05674 25.7655 27.6662 25.8991 32.0443 24.8161C33.5951 24.3968 34.8094 23.187 35.2242 21.6362C36.2266 17.1429 36.298 8.77834 35.2012 4.35412Z"
+              fill="white" fill-opacity="0.11" />
+          </g>
+          <path d="M23.9093 12.9946L14.5078 7.60254V18.3866L23.9093 12.9946Z" fill="white" fill-opacity="0.65" />
+          <defs>
+            <filter id="filter0_b_221_25995" x="-2" y="-1.58008" width="40" height="29.1592"
+              filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_221_25995" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_221_25995" result="shape" />
+            </filter>
+          </defs>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <g clip-path="url(#clip0_221_25998)">
+            <g filter="url(#filter0_b_221_25998)">
+              <path
+                d="M0.767891 17.7844C0.767047 20.8091 1.56355 23.7625 3.07808 26.3657L0.623047 35.2599L9.7963 32.8733C12.3335 34.2439 15.1762 34.962 18.065 34.9622H18.0726C27.6091 34.9622 35.372 27.2622 35.3761 17.798C35.378 13.2119 33.5796 8.89942 30.3124 5.65495C27.0456 2.41077 22.701 0.623187 18.0719 0.621094C8.53433 0.621094 0.771969 8.32063 0.768031 17.7844"
+                fill="white" fill-opacity="0.11" />
+            </g>
+            <path
+              d="M13.5948 10.3466C13.2592 9.60661 12.9061 9.59168 12.587 9.5787C12.3258 9.56754 12.0271 9.56837 11.7287 9.56837C11.43 9.56837 10.9447 9.67986 10.5345 10.1243C10.1239 10.5691 8.9668 11.6441 8.9668 13.8305C8.9668 16.017 10.5718 18.13 10.7955 18.4267C11.0195 18.723 13.8939 23.3533 18.4462 25.1346C22.2296 26.6149 22.9995 26.3205 23.8206 26.2463C24.6418 26.1723 26.4705 25.1716 26.8436 24.1339C27.217 23.0963 27.217 22.2069 27.105 22.021C26.9931 21.8359 26.6944 21.7247 26.2465 21.5025C25.7985 21.2802 23.5966 20.2051 23.1861 20.0568C22.7755 19.9086 22.4769 19.8347 22.1782 20.2796C21.8795 20.7239 21.0219 21.7247 20.7605 22.021C20.4993 22.3181 20.2379 22.3551 19.7901 22.1328C19.342 21.9098 17.8996 21.4411 16.1883 19.9273C14.8569 18.7494 13.958 17.2947 13.6967 16.8497C13.4354 16.4054 13.6687 16.1646 13.8933 15.9432C14.0945 15.744 14.3413 15.4242 14.5655 15.1648C14.7888 14.9053 14.8633 14.7201 15.0127 14.4238C15.1622 14.1271 15.0874 13.8676 14.9756 13.6453C14.8633 13.423 13.993 11.2252 13.5948 10.3466Z"
+              fill="white" fill-opacity="0.65" />
+          </g>
+          <defs>
+            <filter id="filter0_b_221_25998" x="-1.37695" y="-1.37891" width="38.7539" height="38.6387"
+              filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
+              <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_221_25998" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_221_25998" result="shape" />
+            </filter>
+            <clipPath id="clip0_221_25998">
+              <rect width="36" height="36" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div class="searchCourseByName-hero-section-container">
+      <input type="text" id="courseByName|code" name="courseByName|code"
+        placeholder="Search for a course by name or course #code" />
+      <img src="./Assets/searchIcon.svg" alt="search" class="searchIcon-courseByName" />
+    </div>
+  </section>
+  <!------------------------------------------- comming soon section ----------------------------------------------->
+  <section class="coming-training-section container-fluid">
+    <!-- <div class="q-scroll-chat">
             <img src="Assets/Integrated chat.svg" alt="chat" />
             <img src="Assets/Quick Scroll buttons.svg" alt="scroll" />
         </div> -->
-      <div class="coming-training-heading">
-        <h3 class="header-teritary">Upcoming Training Courses</h3>
-        <img src="Assets/Vector.svg" alt="vector" class="vector" />
-      </div>
-      <div class="comingSoon-container">
-        <img class="comingSoon" src="./Assets/COMMING SOON.png" />
-      </div>
+    <div class="coming-training-heading">
+      <h3 class="header-teritary">Upcoming Training Courses</h3>
+      <img src="Assets/Vector.svg" alt="vector" class="vector" />
+    </div>
+    <div class="comingSoon-container">
+      <img class="comingSoon" src="./Assets/COMMING SOON.png" />
+    </div>
 
-      <div
-        class="owl-carousel owl-theme carousel1 coming-training-card-container"
-      >
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
+    <div class="owl-carousel owl-theme carousel1 coming-training-card-container">
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" />
+            <p>18 Aug, 2024</p>
           </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img src="./Assets/duration.svg" alt="duration" />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
           </div>
-          <div class="coming-training-card-footer">
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="right-arrow">
+            <img src="./Assets/Right Arrow.svg" />
+          </div>
+          <div class="view-course-box d-flex">
+            <p class="view-course-text">View Course</p>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
             <div class="right-arrow">
               <img src="./Assets/Right Arrow.svg" />
             </div>
-            <div class="view-course-box d-flex">
-              <p class="view-course-text">View Course</p>
-            </div>
           </div>
         </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" />
+            <p>18 Aug, 2024</p>
           </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img src="./Assets/duration.svg" alt="duration" />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
           </div>
         </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img src="./Assets/duration.svg" alt="duration" />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img src="./Assets/duration.svg" alt="duration" />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img src="./Assets/duration.svg" alt="duration" />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <div class="separator-box w-100">
-      <img src="./Assets/Seaparator.svg" alt="separator" class="w-100" />
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-------------------------------------- courses category section ------------------------------------------------>
+  </section>
+  <div class="separator-box w-100">
+    <img src="./Assets/Seaparator.svg" alt="separator" class="w-100" />
+  </div>
+  <!-------------------------------------- courses category section ------------------------------------------------>
 
-    <section class="courses-category" style="padding: 4.8rem 2.5rem">
-      <div
-        class="owl-carousel owl-theme coming-training-card-container"
-        id="carousel-row-1"
-      >
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
+  <section class="courses-category" style="padding: 4.8rem 2.5rem">
+    <div class="owl-carousel owl-theme coming-training-card-container" id="carousel-row-1">
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
           </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
           </div>
         </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="owl-carousel owl-theme coming-training-card-container"
-        id="carousel-row-2"
-      >
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
           </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
           </div>
         </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coming-training-card">
-          <div class="coming-training-card-header">
-            <img
-              src="./Assets/Course Category Image.png"
-              alt="Category Image.png"
-              class="coming-training-card-img"
-            />
-          </div>
-          <div class="coming-training-card-content">
-            <p class="card-paragraph">
-              Building Personal Leadership Skills : Creating Stronger
-              Relationships for a Stronger Organisation
-            </p>
-            <div class="card-date-container">
-              <p>14 Aug, 2024</p>
-              <img
-                src="./Assets/duration.svg"
-                alt="duration"
-                class="duration-icon"
-              />
-              <p>18 Aug, 2024</p>
-            </div>
-            <div class="card-details-container">
-              <p>Offline</p>
-              <p class="card-details-city">Sharm Elshiekh</p>
-              <p>4,950 $</p>
-            </div>
-          </div>
-          <div class="coming-training-card-footer">
-            <div class="view-course-box">
-              <p class="view-course-text">View Course</p>
-              <div class="right-arrow">
-                <img src="./Assets/Right Arrow.svg" />
-              </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
             </div>
           </div>
         </div>
       </div>
-      <div class="custom-navigation owl-nav">
-        <button class="owl-prev custom-prev">
-          <sapn><img src="./Assets/Left Arrow.svg" /></sapn>
-        </button>
-        <div class="owl-dot" id="custom-dots">
-          <button class="owl-dot"><span></span></button>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
         </div>
-        <button class="owl-next custom-next">
-          <sapn><img src="./Assets/Right Arrow.svg" /></sapn>
-        </button>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-    <!---------------------------------------- top courses section ------------------------------------------------>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme coming-training-card-container" id="carousel-row-2">
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coming-training-card">
+        <div class="coming-training-card-header">
+          <img src="./Assets/Course Category Image.png" alt="Category Image.png" class="coming-training-card-img" />
+        </div>
+        <div class="coming-training-card-content">
+          <p class="card-paragraph">
+            Building Personal Leadership Skills : Creating Stronger
+            Relationships for a Stronger Organisation
+          </p>
+          <div class="card-date-container">
+            <p>14 Aug, 2024</p>
+            <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
+            <p>18 Aug, 2024</p>
+          </div>
+          <div class="card-details-container">
+            <p>Offline</p>
+            <p class="card-details-city">Sharm Elshiekh</p>
+            <p>4,950 $</p>
+          </div>
+        </div>
+        <div class="coming-training-card-footer">
+          <div class="view-course-box">
+            <p class="view-course-text">View Course</p>
+            <div class="right-arrow">
+              <img src="./Assets/Right Arrow.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-navigation owl-nav">
+      <button class="owl-prev custom-prev">
+        <sapn><img src="./Assets/Left Arrow.svg" /></sapn>
+      </button>
+      <div class="owl-dot" id="custom-dots">
+        <button class="owl-dot"><span></span></button>
+      </div>
+      <button class="owl-next custom-next">
+        <sapn><img src="./Assets/Right Arrow.svg" /></sapn>
+      </button>
+    </div>
+  </section>
+  <!---------------------------------------- top courses section --------------------------------------------------->
 
-    <section class="top-courses-section container-fluid">
+<section class="top-courses-section container-fluid">
       <div class="home-heading">
         <h3 class="header-teritary top-courses-heading">Top Courses</h3>
         <img src="Assets/VectorWhite.png" alt="vector" class="vector" />
@@ -1227,38 +912,6 @@
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div class="owl-carousel owl-theme carousel2 coming-training-card-container">
-            <div class="coming-training-card">
-                <div class="coming-training-card-header">
-                    <img src="./Assets/Course Category Image.png" alt="Category Image.png"
-                        class="coming-training-card-img" />
-                </div>
-                <div class="coming-training-card-content">
-                    <p class="card-paragraph">
-                        Building Personal Leadership Skills : Creating Stronger
-                        Relationships for a Stronger Organisation
-                    </p>
-                    <div class="card-date-container">
-                        <p>14 Aug, 2024</p>
-                        <img src="./Assets/duration.svg" alt="duration" class="duration-icon" />
-                        <p>18 Aug, 2024</p>
-                    </div>
-                    <div class="card-details-container">
-                        <p>Offline</p>
-                        <p class="card-details-city">Sharm Elshiekh</p>
-                        <p>4,950 $</p>
-                    </div>
-                </div>
-                <div class="coming-training-card-footer">
-                    <div class="view-course-box">
-                        <p class="view-course-text">View Course</p>
-                        <div class="right-arrow">
-                            <img src="./Assets/Right Arrow.svg" />
-                        </div>
-                    </div>
-                </div>
-=======
         <div class="coming-training-card">
           <div class="coming-training-card-header">
             <img
@@ -1280,7 +933,6 @@
                 class="duration-icon"
               />
               <p>18 Aug, 2024</p>
->>>>>>> 6502926126a446f23de54060cc59681397685345
             </div>
             <div class="card-details-container">
               <p>Offline</p>
@@ -1406,254 +1058,353 @@
         </div>
       </div>
     </section>
-    <!---------------------------------------- cities and venues section ------------------------------------------------>
-    <section class="cities-venues-section">
-      <div class="home-heading">
-        <h3 class="header-teritary">Cities & Venues</h3>
-        <img src="Assets/Vector.svg" alt="vector" class="vector" />
-        <p class="cities-heading-paragraph">
-          EURODEMY provides professional courses and training in <span>37</span>
-          city around the world in addition to our online trainings and courses.
-        </p>
-        <div class="container-cards">
-          <div class="item a">
+  <!---------------------------------------- cities and venues section --------------------------------------------->
+  <section class="cities-venues-section">
+    <div class="home-heading">
+      <h3 class="header-teritary">Cities & Venues</h3>
+      <img src="Assets/Vector.svg" alt="vector" class="vector" />
+      <p class="cities-heading-paragraph">
+        EURODEMY provides professional courses and training in <span>37</span>
+        city around the world in addition to our online trainings and courses.
+      </p>
+    </div>
+    <div class="wrapper-container">
+      <div class="cities-wrapper">
+        <div class="container-cards swiper-slide">
+          <div class="cities-courses-card a card-city-width">
             <div class="courses-city-details">
               <p class="courses-city">A</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item b">
+          <div class="cities-courses-card b">
             <div class="courses-city-details">
               <p class="courses-city">B</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item c">
+          <div class="cities-courses-card c">
             <div class="courses-city-details">
               <p class="courses-city">C</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item d">
+          <div class="cities-courses-card d">
             <div class="courses-city-details">
               <p class="courses-city">D</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item e">
+          <div class="cities-courses-card e">
             <div class="courses-city-details">
               <p class="courses-city">E</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item f">
+          <div class="cities-courses-card f">
             <div class="courses-city-details">
               <p class="courses-city">F</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item g">
+          <div class="cities-courses-card g">
             <div class="courses-city-details">
               <p class="courses-city">G</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item h">
+          <div class="cities-courses-card h">
             <div class="courses-city-details">
               <p class="courses-city">H</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item i">
+          <div class="cities-courses-card i">
             <div class="courses-city-details">
               <p class="courses-city">I</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item j">
+          <div class="cities-courses-card j">
             <div class="courses-city-details">
               <p class="courses-city">J</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item k">
+          <div class="cities-courses-card k">
             <div class="courses-city-details">
               <p class="courses-city">K</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item l">
+          <div class="cities-courses-card l">
             <div class="courses-city-details">
               <p class="courses-city">L</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item m">
+          <div class="cities-courses-card m">
             <div class="courses-city-details">
               <p class="courses-city">M</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item n">
+          <div class="cities-courses-card n">
             <div class="courses-city-details">
               <p class="courses-city">N</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
-          <div class="item o">
+          <div class="cities-courses-card o">
             <div class="courses-city-details">
               <p class="courses-city">O</p>
               <p class="courses-city-average">16 Course</p>
               <div class="view-course-city">
                 <p>View Course</p>
-                <img
-                  src="./Assets/Right Arrow - mini.svg"
-                  alt="view course"
-                  class="right-arrow-mini"
-                />
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
               </div>
             </div>
           </div>
         </div>
-        <div class="item online-courses-bookmark-box">
-          <img
-            src="./Assets/Rectangle 70.svg"
-            alt="bookmark"
-            class="bookmark-icon"
-          />
-          <div class="online-courses-bookmark-content">
-            <div class="bookmark-img-container">
-              <img src="./Assets/online-course-icon2.svg"
-              alt='online-course-img' class="online-course-img"/ >
+        <div class="container-cards swiper-slide">
+          <div class="cities-courses-card a card-city-width">
+            <div class="courses-city-details">
+              <p class="courses-city">A</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
             </div>
-            <p class="online-courses-bookmark-header">ONLINE COURSES</p>
-            <p class="online-courses-bookmark-txt">16 Course</p>
+          </div>
+          <div class="cities-courses-card b">
+            <div class="courses-city-details">
+              <p class="courses-city">B</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card c">
+            <div class="courses-city-details">
+              <p class="courses-city">C</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card d">
+            <div class="courses-city-details">
+              <p class="courses-city">D</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card e">
+            <div class="courses-city-details">
+              <p class="courses-city">E</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card f">
+            <div class="courses-city-details">
+              <p class="courses-city">F</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card g">
+            <div class="courses-city-details">
+              <p class="courses-city">G</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card h">
+            <div class="courses-city-details">
+              <p class="courses-city">H</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card i">
+            <div class="courses-city-details">
+              <p class="courses-city">I</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card j">
+            <div class="courses-city-details">
+              <p class="courses-city">J</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card k">
+            <div class="courses-city-details">
+              <p class="courses-city">K</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card l">
+            <div class="courses-city-details">
+              <p class="courses-city">L</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card m">
+            <div class="courses-city-details">
+              <p class="courses-city">M</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card n">
+            <div class="courses-city-details">
+              <p class="courses-city">N</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
+          </div>
+          <div class="cities-courses-card o">
+            <div class="courses-city-details">
+              <p class="courses-city">O</p>
+              <p class="courses-city-average">16 Course</p>
+              <div class="view-course-city">
+                <p>View Course</p>
+                <img src="./Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <script>
-      $(document).ready(function ($) {
-        $('#slider').QCslider({
-          start: 0,
-        });
+    </div>
+    <div class="online-courses-bookmark-box view-courses-width">
+      <div class="onlineCourse-bookmarkIcon">
+        <img src="./Assets/Rectangle 70.svg" alt="bookmark" class="bookmark-icon" />
+        <div class="online-courses-bookmark-content">
+          <div class="bookmark-img-container">
+            <img src="./Assets/online-course-icon2.svg" alt='online-course-img' class="online-course-img" />
+          </div>
+          <p class="online-courses-bookmark-header">ONLINE COURSES</p>
+          <p class="online-courses-bookmark-txt">16 Course</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="swiper-button-prev" onclick="prevSlide()">&#10094;</div>
+      <div class="swiper-button-next" onclick="nextSlide()">&#10095;</div>
+    </div>
+  </section>
+
+  <script>
+    $(document).ready(function ($) {
+      $('#slider').QCslider({
+        start: 0,
       });
-    </script>
-    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    });
+  </script>
+  <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
