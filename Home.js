@@ -101,4 +101,37 @@ customNavigation(carouselRow1, carouselRow2);
 customDots(carouselRow1, carouselRow2);
 
 //------------------------------------ cities slider---------------------------------
+let currentIndex = 0;
 
+function showSlide(index) {
+  const slides = document.querySelector('.cities-wrapper');
+  const slideWidth = document.querySelector('.swiper-slide').offsetWidth;
+  const newPosition = -index * slideWidth;
+  slides.style.transform = `translateX(${newPosition}px)`;
+  currentIndex = index;
+}
+
+function nextSlide() {
+  currentIndex =
+    (currentIndex + 1) % document.querySelectorAll('.swiper-slide').length;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex =
+    (currentIndex - 1 + document.querySelectorAll('.swiper-slide').length) %
+    document.querySelectorAll('.swiper-slide').length;
+  showSlide(currentIndex);
+}
+
+function setSecondContainerWidth() {
+  const cityWidth = document.querySelector('.card-city-width');
+  const cityCurrentWidth = cityWidth.offsetWidth;
+
+  const loadCourses = document.querySelector('.view-courses-width');
+  loadCourses.style.width = `${cityCurrentWidth}px`;
+}
+
+setSecondContainerWidth();
+
+window.addEventListener('resize', setSecondContainerWidth);

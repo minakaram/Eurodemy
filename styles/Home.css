@@ -442,19 +442,13 @@ p {
 /*------------------------------------------ cities and venues section ------------------------------------------ */
 .cities-venues-section {
   padding: 7.5rem 0 5rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
-
 .cities-heading-paragraph {
   font-family: rethinkRegular-400;
   font-size: 1.125rem;
   line-height: 1.875rem;
   color: var(--Nuturals-N-2);
   text-align: center;
-  padding: 4rem 0;
 }
 .cities-heading-paragraph span {
   color: var(--Primary-Primary);
@@ -462,15 +456,31 @@ p {
   line-height: 1.875rem;
   font-family: rethinkExtraBold-800;
 }
-.cities-courses-cards-container {
+.wrapper-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cities-venues-section .wrapper-container .cities-wrapper {
+  display: flex !important;
+  transition: transform 0.5s ease-in-out;
+  padding-top: 4rem;
+}
+.container-cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 8px;
-  /* max-width: 100%; */
+  max-width: 80%;
   justify-content: center;
   justify-items: center;
-  margin: 0 auto;
-  padding-bottom: 4rem;
+  margin: auto;
+  padding: 4rem 0;
+  min-width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 60px;
 }
 .j,
 .h,
@@ -482,8 +492,8 @@ p {
 .m {
   margin-top: -120px;
 }
-.city-courses-card {
-  width: 15rem;
+.cities-courses-card {
+  width: 100%;
   border: 1px solid black;
   height: 15rem;
   display: flex;
@@ -492,21 +502,14 @@ p {
   flex-direction: column;
   text-align: center;
   color: var(--NuturalsN-5);
+
   font-family: rubikRegular-400;
 }
-/* .wrap {
-  max-width: 100% !important;
-} */
-.city-courses-card:hover {
+.cities-courses-card:hover {
   background: rgba(38, 33, 33, 0.95);
 }
-.city-courses-card .courses-city-details {
-  opacity: 0;
-}
-.city-courses-card:hover .courses-city-details {
-  opacity: 1;
-}
-.city-courses-card .courses-city {
+
+.courses-city-details .courses-city {
   margin-bottom: 4px;
   padding: 5rem 0 1.875rem;
   font-family: rubikMedium-500;
@@ -518,8 +521,9 @@ p {
   font-family: rubikRegular-400;
   font-size: 1rem;
   line-height: 1rem;
+  margin-bottom: 2.125rem;
 }
-.city-courses-card .view-course-city {
+.courses-city-details .view-course-city {
   border-radius: 1px;
   border: 0.25px solid rgba(191, 182, 182, 0.5);
   background: rgba(255, 255, 255, 0);
@@ -527,13 +531,12 @@ p {
   font-size: 0.75rem;
   position: relative;
   height: 1.75rem;
-  margin-top: 2.313rem;
 }
 .view-course-city p {
+  /* line-height: 1.375rem; */
   padding: 3px 2.625rem;
-  font-size: var(--NuturalsN-5);
 }
-.city-courses-card .view-course-city .right-arrow-mini {
+.courses-city-details .view-course-city .right-arrow-mini {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -551,56 +554,51 @@ p {
 .g {
   margin-top: 0px;
 }
-
-.j,
-.k,
-.l,
-.g,
-.h,
-.i,
 .d,
 .e,
 .f {
+  background: violet;
+}
+
+.g,
+.h,
+.i {
+  background: lightgreen;
+}
+
+.j,
+.k,
+.l {
   background: cornflowerblue;
 }
 .online-courses-bookmark-box {
-  margin: -175px auto;
+  margin: 0 auto;
   position: relative;
-  margin-bottom: 4rem;
-  padding: 1.5rem 0 3px;
-}
-.online-courses-bookmark-box:hover .online-courses-bookmark-header,
-.online-courses-bookmark-box:hover .online-courses-bookmark-txt {
-  color: var(--Nuturals-N-6);
-}
-.online-courses-bookmark-box:hover .bookmark-icon > * {
-  fill: var(--Nuturals-N-6);
-}
-.online-courses-bookmark-box:hover .view-course-city p {
-  color: var(--NuturalsN-5);
+  z-index: 100;
+  background-color: white;
 }
 .bookmark-icon {
   position: absolute;
   top: 0;
   left: 0.438rem;
 }
-.bookmark-icon > * {
-  fill: var(--Nuturals-N-2);
+.onlineCourse-bookmarkIcon {
+  margin-top: -170px;
+  border: 1px solid black;
 }
 .online-courses-bookmark-content {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 1.5rem 0 4.375rem;
   color: var(--Nuturals-N-2);
+  /* margin-top: -200px; */
 }
 .online-course-img {
   margin-bottom: 0.75rem;
 }
-.online-course-img > * {
-  fill: var(--Nuturals-N-2);
-}
-.online-courses-bookmark-box:hover .online-course-img > * {
-  fill: var(--Nuturals-N-6);
+.online-courses-bookmark-box {
+  /* margin-top: -10px; */
 }
 .online-courses-bookmark-header {
   font-family: rubikMedium-500;
@@ -614,78 +612,14 @@ p {
   font-family: rubikRegular-400;
   font-size: 1rem;
 }
-.view-cities-venus {
-  border-radius: 1px;
-  border: 0.5px solid var(--Nuturals-N-2);
-  background: var(--Nuturals-N-7);
-  backdrop-filter: blur(2.5px);
-  display: flex;
-  justify-content: center;
-  padding: 0.938rem 2.25rem;
-  width: 23.375rem;
-  position: relative;
-}
-.view-cities-venus-txt {
-  color: var(--Nuturals-N-2);
-  font-family: rubikMedium-500;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-}
-.view-cities-venus .right-arrow-black {
-  position: absolute;
-  right: 1.125rem;
-  top: 1.125rem;
-}
-.watermark-controllers-city-venues {
-  align-self: flex-start;
-  /* position: relative; */
-}
-.watermark-city-venues {
-  /* position: absolute; */
-  /* left: 0; */
-  /* top: 0; */
-}
-.tartist-tiny-slider-wrap {
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 0;
-}
-.tartist-tiny-slider .wrap {
-  display: inline-grid !important;
-  width: 100%;
-  gap: 20px;
-}
-.tns-nav {
-  text-align: center;
-  margin-top: 30px;
-}
-.tns-nav button {
-  width: 15px;
-  height: 15px;
-  border-radius: 20px;
-  border: none;
-  margin: 0 5px;
-  background-color: #dddddd;
-}
-.tns-nav button.tns-nav-active {
-  background-color: #2779a8;
-}
 
-@media (min-width: 800px) {
-  .tartist-tiny-slider__item {
-    font-size: 2em;
-  }
-  .tartist-tiny-slider[data-chunksize='1'] .wrap {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
 @media (768px < width <1024px) {
-  .cities-courses-cards-container {
+  .container-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 8px;
     padding: 5rem 2rem;
-    max-width: 95%;
+    max-width: 80%;
   }
   .b {
     margin-top: -120px;
@@ -725,18 +659,15 @@ p {
   .o {
     margin-top: -250px;
   }
-  .online-courses-bookmark-box {
-    /* width: 29%; */
-    margin: -200px auto;
+  .onlineCourse-bookmarkIcon {
+    margin-top: -200px;
+    border: 1px solid black;
   }
 }
 
 @media (width<768px) {
-  .cities-courses-cards-container {
+  .container-cards {
     grid-template-columns: 1fr;
-  }
-  .online-courses-bookmark-box {
-    margin: -55px auto;
   }
   .b,
   .d,
@@ -749,5 +680,10 @@ p {
   .k,
   .m {
     margin: 0;
+  }
+
+  .onlineCourse-bookmarkIcon {
+    margin-top: -50px;
+    border: 1px solid black;
   }
 }
