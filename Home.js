@@ -1,125 +1,94 @@
-$('.carousel1').owlCarousel({
-  loop: false,
-  margin: 24,
-  nav: true,
-  dots: true,
-  slideBy: 4,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: { items: 2 },
-    900: {
-      items: 3,
-    },
-    1200: {
-      items: 4,
-    },
-  },
+var navbarToggler = document.getElementById('navbar-toggler-id');
+var navbarDropdown = document.getElementById('navbar-toggler-items');
+// Toggle visibility when the toggler is clicked
+navbarToggler.addEventListener('click', event => {
+  event.stopPropagation(); // Prevents the click event from reaching the document
+  navbarDropdown.style.visibility =
+    navbarDropdown.style.visibility === 'hidden' ? 'visible' : 'hidden';
+  navbarDropdown.style.opacity =
+    navbarDropdown.style.opacity === '0' ? '1' : '0';
 });
-$('.category-courses-xl-carousel').owlCarousel({
-  loop: false,
-  margin: 12,
-  nav: true,
-  dots: true,
-  slideBy: 4,
-  items: 7,
-  responsive: {
-    0: {
-      items: 1, // Display one item on smaller screens
-    },
-    768: {
-      items: 3, // Display two items on tablets
-    },
-  },
+// Hide dropdown when clicking outside of it
+document.addEventListener('click', event => {
+  if (
+    navbarDropdown.style.visibility === 'visible' &&
+    !navbarDropdown.contains(event.target)
+  ) {
+    navbarDropdown.style.visibility = 'hidden';
+    navbarDropdown.style.opacity = '0';
+  }
 });
-// Function to initialize Owl Carousel
-function initializeCarousel(carousel, items) {
+// Stop propagation when clicking inside the dropdown
+navbarDropdown.addEventListener('click', event => {
+  event.stopPropagation(); // Prevents the click event from reaching the document
+});
+// ----------------------------------------------------------------------------------------------------------------
+
+function initializeCarousel(carousel) {
   carousel.owlCarousel({
-    loop: true,
-    // autoplay: true,
-    // autoplayTimeout: 2000,
+    loop: false,
     margin: 24,
-    nav: false,
+    nav: true,
     dots: true,
-    items: 3,
+    slideBy: 1,
     responsive: {
       0: {
         items: 1,
       },
-      610: {
+      681: {
         items: 2,
       },
-      1000: {
-        items: 3,
+      1024: {
+        items: 2,
+      },
+      1025: {
+        items: 4,
       },
     },
   });
-}
-// -----------------------------------------category course slide --------------------------------------
 
-// Function to handle custom navigation events----------------------------------------
-function customNavigation(carousel1, carousel2) {
-  $('.custom-next').click(function () {
-    carousel1.trigger('next.owl.carousel');
-    carousel2.trigger('next.owl.carousel');
-  });
+  let customDotsContainer = carousel.find('.owl-dots');
+  let customDots = customDotsContainer.find('.owl-dot');
+  let maxVisibleDots = 4; // Set the maximum number of visible dots
 
-  $('.custom-prev').click(function () {
-    carousel1.trigger('prev.owl.carousel');
-    carousel2.trigger('prev.owl.carousel');
-  });
-}
-
-// Function to generate and handle custom dots
-function customDots(carousel1, carousel2) {
-  var customDotsContainer = $('#custom-dots');
-  var dotCount = carousel1.find('.owl-dot').length;
-
-  for (var i = 0; i < dotCount; i++) {
-    customDotsContainer.append(
-      '<div class="custom-dot" data-dot-index="' + i + '"></div>'
-    );
+  if (customDots.length > maxVisibleDots) {
+    // Set the width for the extra dots to 10px
+    for (let i = maxVisibleDots; i < customDots.length; i++) {
+      // Get the span inside the dot and set its style
+      customDots.eq(i).find('span').css('width', '10px');
+    }
   }
-
-  $('.custom-dot').click(function () {
-    var dotIndex = $(this).data('dot-index');
-    carousel1.trigger('to.owl.carousel', dotIndex);
-    carousel2.trigger('to.owl.carousel', dotIndex);
-  });
-
-  // Update custom dots on changing the slide
-  carousel1.on('changed.owl.carousel', function (event) {
-    updateCustomDots(event.item.index);
-  });
-
-  carousel2.on('changed.owl.carousel', function (event) {
-    updateCustomDots(event.item.index);
-  });
-
-  // Function to update custom dots
-  function updateCustomDots(currentIndex) {
-    $('.custom-dot').removeClass('active');
-    $('.custom-dot[data-dot-index="' + currentIndex + '"]').addClass('active');
-  }
-
-  // Initialize dots for the initial state
-  updateCustomDots(0);
 }
 
-var carouselRow1 = $('#carousel-row-1');
-var carouselRow2 = $('#carousel-row-2');
+initializeCarousel($('.carousel1'));
+initializeCarousel($('.carousel2'));
 
-initializeCarousel(carouselRow1, 4);
-initializeCarousel(carouselRow2, 4);
-
-customNavigation(carouselRow1, carouselRow2);
-customDots(carouselRow1, carouselRow2);
+// $(".carousel2").owlCarousel({
+//   loop: false,
+//   margin: 24,
+//   nav: true,
+//   dots: true,
+//   slideBy: 4,
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     681: {
+//       items: 2,
+//     },
+//     1024: {
+//       items: 2,
+//     },
+//     1025: {
+//       items: 4,
+//     },
+//   },
+// });
 
 //------------------------------------ cities slider---------------------------------
 let currentIndex = 0;
 
-function showCitiesSlide(index) {
+function showSlide(index) {
   const slides = document.querySelector('.cities-wrapper');
   const slideWidth = document.querySelector('.swiper-slide').offsetWidth;
   const newPosition = -index * slideWidth;
@@ -127,17 +96,17 @@ function showCitiesSlide(index) {
   currentIndex = index;
 }
 
-function nextCitiesSlide() {
+function nextSlide() {
   currentIndex =
     (currentIndex + 1) % document.querySelectorAll('.swiper-slide').length;
-  showCitiesSlide(currentIndex);
+  showSlide(currentIndex);
 }
 
-function prevCitiesSlide() {
+function prevSlide() {
   currentIndex =
     (currentIndex - 1 + document.querySelectorAll('.swiper-slide').length) %
     document.querySelectorAll('.swiper-slide').length;
-  showCitiesSlide(currentIndex);
+  showSlide(currentIndex);
 }
 
 function setSecondContainerWidth() {

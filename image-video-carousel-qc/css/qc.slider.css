@@ -132,11 +132,9 @@ section.slide .slider-container .drt-control:hover {
 }
 section.slide .slider-container .drt-control.control-left {
   left: 0px;
-  /* border-radius: 0px 50px 50px 0px; */
 }
 section.slide .slider-container .drt-control.control-right {
   right: 0px;
-  /* border-radius: 50px 0 0 50px; */
 }
 section.slide .slider-container .slider-controls {
   z-index: 90;
@@ -144,20 +142,25 @@ section.slide .slider-container .slider-controls {
   bottom: 0px;
   padding: 5px;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   position: absolute;
   padding-bottom: 15px;
   z-index: 110;
-  /* background: rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2); */
 }
 section.slide .slider-container .slider-controls li.active {
   background: #fabd00 !important;
 }
-@media only screen and (max-width: 766px) {
-  section.slide .slider-container .slider-controls {
-    background: rgb(0, 0, 0);
+@media (681px < width <1025px) {
+  section.slide .slider-container .slider-controls{
+    margin-bottom: 3rem;
+  }
+  section.slide .slider-container .slider-controls li{
+    width: 35px !important;
+  }
+}
+@media(width<681px){
+  section.slide .slider-container .slider-controls{
+    margin-bottom: 1.2rem;
   }
 }
 section.slide .slider-container .slider-controls li {
