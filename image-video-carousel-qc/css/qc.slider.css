@@ -179,8 +179,10 @@ section.slide .slider-container .slider-controls li {
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
 }
-@media only screen and (max-width: 681px) {
-
+@media only screen and (max-width: 766px) {
+  section.slide .slider-container .slider-controls li {
+    width: calc(25% - 40px);
+  }
 }
 section.slide .slider-container .slider-controls li.active {
   background: var(--color-slider);
