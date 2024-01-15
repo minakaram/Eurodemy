@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="styles/Home.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="image-video-carousel-qc/qcslider.jquery.js"></script>
@@ -21,7 +22,7 @@
 </head>
 
 <body>
-  <!----------------------------------------------------- nav bar ---------------------------------------------->
+  <!----------------------------------------------------- nav bar -------------------------------------------------->
   <nav class="navigationBar">
     <img src="Assets/Logo.png" alt="logo" class="logo-image" />
     <div class="nav-items-container" id="navbar-toggler-items">
@@ -419,7 +420,35 @@
     <img src="./Assets/Seaparator.svg" alt="separator" class="w-100" />
   </div>
   <!-------------------------------------- courses category section ------------------------------------------------>
-
+  <div class="swiper-container">
+    <div class="swiper-wrapper grid-container">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide">Slide 11</div>
+      <div class="swiper-slide">Slide 12</div>
+      <div class="swiper-slide">Slide 13</div>
+      <div class="swiper-slide">Slide 14</div>
+      <div class="swiper-slide">Slide 15</div>
+      <div class="swiper-slide">Slide 16</div>
+      <div class="swiper-slide">Slide 17</div>
+      <div class="swiper-slide">Slide 18</div>
+      <div class="swiper-slide">Slide 19</div>
+      <div class="swiper-slide">Slide 20</div>
+      <div class="swiper-slide">Slide 20</div>
+    </div>
+    <!-- Add Pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+  
+  <!------------------------------------------ top courses section ------------------------------------------------->
   <section class="top-courses-section container-fluid">
     <div class="home-heading">
       <h3 class="header-teritary top-courses-heading">Top Courses</h3>
@@ -590,7 +619,7 @@
     </div>
     <div class="wrapper-container">
       <div class="cities-wrapper">
-        <div class="container-cards swiper-slide">
+        <div class="container-cards swiper-slide-cities">
           <div class="cities-courses-card a card-city-width">
             <div class="courses-city-details">
               <p class="courses-city">A</p>
@@ -742,7 +771,7 @@
             </div>
           </div>
         </div>
-        <div class="container-cards swiper-slide">
+        <div class="container-cards swiper-slide-cities">
           <div class="cities-courses-card a card-city-width">
             <div class="courses-city-details">
               <p class="courses-city">A</p>
@@ -910,8 +939,8 @@
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <div class="swiper-button-prev" onclick="prevSlide()">&#10094;</div>
-      <div class="swiper-button-next" onclick="nextSlide()">&#10095;</div>
+      <div class="cities-button-prev" onclick="prevSlide()">&#10094;</div>
+      <div class="cities-button-next" onclick="nextSlide()">&#10095;</div>
     </div>
   </section>
 
@@ -922,6 +951,8 @@
       });
     });
   </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
   <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
   <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>

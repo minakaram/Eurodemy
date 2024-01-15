@@ -65,34 +65,12 @@ function initializeCarousel(carousel) {
 initializeCarousel($(".carousel1"));
 initializeCarousel($(".carousel2"));
 
-// $(".carousel2").owlCarousel({
-//   loop: false,
-//   margin: 24,
-//   nav: true,
-//   dots: true,
-//   slideBy: 4,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     681: {
-//       items: 2,
-//     },
-//     1024: {
-//       items: 2,
-//     },
-//     1025: {
-//       items: 4,
-//     },
-//   },
-// });
-
 //------------------------------------ cities slider---------------------------------
 let currentIndex = 0;
 
 function showSlide(index) {
   const slides = document.querySelector('.cities-wrapper');
-  const slideWidth = document.querySelector('.swiper-slide').offsetWidth;
+  const slideWidth = document.querySelector('.swiper-slide-cities').offsetWidth;
   const newPosition = -index * slideWidth;
   slides.style.transform = `translateX(${newPosition}px)`;
   currentIndex = index;
@@ -100,14 +78,14 @@ function showSlide(index) {
 
 function nextSlide() {
   currentIndex =
-    (currentIndex + 1) % document.querySelectorAll('.swiper-slide').length;
+    (currentIndex + 1) % document.querySelectorAll('.swiper-slide-cities').length;
   showSlide(currentIndex);
 }
 
 function prevSlide() {
   currentIndex =
-    (currentIndex - 1 + document.querySelectorAll('.swiper-slide').length) %
-    document.querySelectorAll('.swiper-slide').length;
+    (currentIndex - 1 + document.querySelectorAll('.swiper-slide-cities').length) %
+    document.querySelectorAll('.swiper-slide-cities').length;
   showSlide(currentIndex);
 }
 
@@ -122,3 +100,35 @@ function setSecondContainerWidth() {
 setSecondContainerWidth();
 
 window.addEventListener("resize", setSecondContainerWidth);
+
+// category-courses-section----------------------------------------------------------------------------------
+
+// swiper-------------------------
+
+const mySwiper = new Swiper('.swiper-container', {
+  slidesPerGroup: 2,
+  slidesPerView : 3,
+  grid: {
+    rows: 1,
+  },
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+      
+    },
+    768: {
+      slidesPerView: 3,
+      grid:{
+        rows:2
+      }
+    },
+    576: {
+      slidesPerView: 1,
+    }
+  }
+});
