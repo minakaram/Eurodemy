@@ -96,13 +96,13 @@ function showSlide(index) {
   currentIndex = index;
 }
 
-function nextSlide() {
+function nextCitiesSlide() {
   currentIndex =
     (currentIndex + 1) % document.querySelectorAll('.swiper-slide').length;
   showSlide(currentIndex);
 }
 
-function prevSlide() {
+function prevCitiesSlide() {
   currentIndex =
     (currentIndex - 1 + document.querySelectorAll('.swiper-slide').length) %
     document.querySelectorAll('.swiper-slide').length;
