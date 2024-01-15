@@ -17,7 +17,22 @@ $('.carousel1').owlCarousel({
     },
   },
 });
-
+$('.category-courses-xl-carousel').owlCarousel({
+  loop: false,
+  margin: 12,
+  nav: true,
+  dots: true,
+  slideBy: 4,
+  items: 7,
+  responsive: {
+    0: {
+      items: 1, // Display one item on smaller screens
+    },
+    768: {
+      items: 3, // Display two items on tablets
+    },
+  },
+});
 // Function to initialize Owl Carousel
 function initializeCarousel(carousel, items) {
   carousel.owlCarousel({
@@ -33,16 +48,17 @@ function initializeCarousel(carousel, items) {
         items: 1,
       },
       610: {
-        items: 3,
+        items: 2,
       },
       1000: {
-        items: 4,
+        items: 3,
       },
     },
   });
 }
+// -----------------------------------------category course slide --------------------------------------
 
-// Function to handle custom navigation events
+// Function to handle custom navigation events----------------------------------------
 function customNavigation(carousel1, carousel2) {
   $('.custom-next').click(function () {
     carousel1.trigger('next.owl.carousel');
@@ -103,7 +119,7 @@ customDots(carouselRow1, carouselRow2);
 //------------------------------------ cities slider---------------------------------
 let currentIndex = 0;
 
-function showSlide(index) {
+function showCitiesSlide(index) {
   const slides = document.querySelector('.cities-wrapper');
   const slideWidth = document.querySelector('.swiper-slide').offsetWidth;
   const newPosition = -index * slideWidth;
@@ -111,17 +127,17 @@ function showSlide(index) {
   currentIndex = index;
 }
 
-function nextSlide() {
+function nextCitiesSlide() {
   currentIndex =
     (currentIndex + 1) % document.querySelectorAll('.swiper-slide').length;
-  showSlide(currentIndex);
+  showCitiesSlide(currentIndex);
 }
 
-function prevSlide() {
+function prevCitiesSlide() {
   currentIndex =
     (currentIndex - 1 + document.querySelectorAll('.swiper-slide').length) %
     document.querySelectorAll('.swiper-slide').length;
-  showSlide(currentIndex);
+  showCitiesSlide(currentIndex);
 }
 
 function setSecondContainerWidth() {

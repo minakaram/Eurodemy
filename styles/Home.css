@@ -190,20 +190,19 @@ p {
   justify-content: space-between;
   padding: 2.5rem 1rem 1.25rem;
 }
-
-.header-teritary {
+.coming-training-heading,
+.top-courses-section-heading,
+.cities-venues-section-heading {
   text-align: center;
+}
+.header-teritary {
   color: var(--Ternary-Ternary);
   font-family: rubikSemiBold-600;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px;
-  padding-bottom: 1.25rem;
+  font-size: 1.75rem;
+  line-height: 1.625rem;
 }
 .vector {
-  display: block;
-  margin: 0 auto;
+  padding-top: 1.25rem;
   width: 50%;
 }
 
@@ -391,23 +390,102 @@ p {
 #carousel-row-2 .owl-dots {
   display: none;
 }
-/*                                                 two rows slider                                      */
 
-/* 
-.custom-navigation {
+/*--------------------------------------------- courses category section ---------------------------*/
+
+.courses-category-section {
+  padding: 5rem 5.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.courses-category-article {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  gap: 8rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+.underline {
+  margin-top: 0.5rem;
+  padding: 0 !important;
+}
+.courses-category-section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.courses-category-yellow-vector {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.courses-category-heading-paragraph {
+  color: var(--Nuturals-N-2);
+  font-size: 1.125rem;
+  font-family: rethinkRegular-400;
+  line-height: 1.875rem;
+  padding: 1.5rem 0 1rem;
+}
+.view-courses-category {
+  border-radius: 1px;
+  border: 0.5px solid var(--Nuturals-N-2);
+  background: var(--Nuturals-N-7);
+  backdrop-filter: blur(2.5px);
+  padding: 0.938rem 1.25rem;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px; 
-} */
+  width: 16.25rem;
+  font-size: 1.125rem;
+  font-family: rubikRegular-400;
+  line-height: 1.375rem;
+}
+.course-category-topOne {
+  display: flex;
+  gap: 0.75rem;
+}
+.course-category-card {
+  border-radius: 0px 0px 2px 2px;
+  border-bottom: 0.5px solid var(--Nuturals-N-3);
+  background: var(--Nuturals-N-7);
+  width: 15.5rem;
+  min-height: 15.5rem;
+}
+.course-category-card-title {
+  text-align: center;
+  color: var(--Nuturals-N-2);
+  font-family: rubikMedium-500;
+  font-size: 1rem;
+  height: 5rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-/* .custom-navigation button {
-  height: 2rem;
-  width: 5rem;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-} */
+#carousel-row-1 {
+  margin-bottom: 1rem;
+}
+#carousel-row-1,
+#carousel-row-2,
+.custom-navigation {
+  display: none;
+}
+
+@media screen and (max-width: 90em) {
+  .course-category-topOne,
+  .courses-category-section
+    .category-courses-xl-carousel.owl-carousel.owl-loaded {
+    display: none !important;
+  }
+  #carousel-row-1,
+  #carousel-row-2,
+  .custom-navigation {
+    display: block;
+  }
+}
 /*------------------------------------------ top courses section ------------------------------------------ */
 .top-courses-section {
   background-image: url(../Assets/topCoursesOverlay.png);
@@ -450,7 +528,7 @@ p {
   color: var(--Nuturals-N-2);
   text-align: center;
 }
-.cities-heading-paragraph span {
+.highligth-red {
   color: var(--Primary-Primary);
   font-size: 1.5rem;
   line-height: 1.875rem;
