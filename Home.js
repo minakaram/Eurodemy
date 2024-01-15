@@ -76,13 +76,16 @@ function showSlide(index) {
 
 function nextCitiesSlide() {
   currentIndex =
-    (currentIndex + 1) % document.querySelectorAll('.swiper-slide-cities').length;
+    (currentIndex + 1) %
+    document.querySelectorAll('.swiper-slide-cities').length;
   showSlide(currentIndex);
 }
 
 function prevCitiesSlide() {
   currentIndex =
-    (currentIndex - 1 + document.querySelectorAll('.swiper-slide-cities').length) %
+    (currentIndex -
+      1 +
+      document.querySelectorAll('.swiper-slide-cities').length) %
     document.querySelectorAll('.swiper-slide-cities').length;
   showSlide(currentIndex);
 }
@@ -97,7 +100,7 @@ function setSecondContainerWidth() {
 
 setSecondContainerWidth();
 
-window.addEventListener("resize", setSecondContainerWidth);
+window.addEventListener('resize', setSecondContainerWidth);
 
 // category-courses-section----------------------------------------------------------------------------------
 
@@ -105,7 +108,7 @@ window.addEventListener("resize", setSecondContainerWidth);
 
 const mySwiper = new Swiper('.swiper-container', {
   slidesPerGroup: 2,
-  slidesPerView : 3,
+  slidesPerView: 3,
   grid: {
     rows: 1,
   },
@@ -117,16 +120,18 @@ const mySwiper = new Swiper('.swiper-container', {
   breakpoints: {
     1024: {
       slidesPerView: 5,
-      
     },
     768: {
       slidesPerView: 3,
-      grid:{
-        rows:2
-      }
+      grid: {
+        rows: 2,
+      },
     },
     576: {
       slidesPerView: 1,
-    }
-  }
+      grid: {
+        rows: 1,
+      },
+    },
+  },
 });
