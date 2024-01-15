@@ -595,6 +595,14 @@ html {
     width: 2rem;
     height: 0.5rem;
   }
+  .coming-training-section .coming-training-heading h3{
+    padding: 10px;
+  }
+}
+@media(width<400px){
+  .coming-training-section .coming-training-heading h3{
+    line-height: 40px;
+  }
 }
 /*------------------------------------------ course cartegory section ------------------------------------------ */
 .swiper-container {
