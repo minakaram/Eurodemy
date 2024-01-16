@@ -333,14 +333,23 @@ html {
   transform: translateX(-50%);
   z-index: 99;
 }
-.searchCourseByName-hero-section-container input {
+.searchCourseByName-hero-section-container .searchInput,
+.search-certificate-container .searchInput {
   width: 100%;
   padding: 0.688rem 0.25rem 0.688rem 0.875rem;
+  border: none !important;
 }
-.searchCourseByName-hero-section-container input:focus {
+.searchCourseByName-hero-section-container .searchInput:focus,
+.search-certificate-container .searchInput:focus {
   outline: none;
 }
-.searchIcon-courseByName {
+.searchCourseByName-hero-section-container .searchInput::placeholder {
+  color: var(--Nuturals-N-4);
+  font-family: rethinkRegular-400;
+  font-size: 0.875rem;
+}
+.searchIcon-courseByName,
+.searchIcon-certificate {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -635,6 +644,7 @@ html {
 .underline {
   margin-top: 0.5rem;
   padding: 0 !important;
+  width: 100%;
 }
 .courses-category-section-heading {
   display: flex;
@@ -750,8 +760,9 @@ html {
   line-height: 1.875rem;
   color: var(--Nuturals-N-2);
   text-align: center;
+  padding: 4rem 0;
 }
-.cities-heading-paragraph span {
+.hightlight-red {
   color: var(--Primary-Primary);
   font-size: 1.5rem;
   line-height: 1.875rem;
@@ -809,9 +820,6 @@ html {
 .cities-courses-card:hover {
   background: rgba(38, 33, 33, 0.95);
 }
-.cities-courses-card:last-of-type:hover {
-  background-color: #fff;
-}
 .courses-city-details .courses-city {
   margin-bottom: 4px;
   padding: 5rem 0 1.875rem;
@@ -836,7 +844,6 @@ html {
   height: 1.75rem;
 }
 .view-course-city p {
-  /* line-height: 1.375rem; */
   padding: 3px 2.625rem;
 }
 .courses-city-details .view-course-city .right-arrow-mini {
@@ -985,4 +992,131 @@ html {
     margin-top: -50px;
     border: 1px solid black;
   }
+}
+/* -------------------------------------partners & companions---------------------------- -----*/
+.partners-companion-section {
+  padding: 7.5rem 0;
+  position: relative;
+}
+.container-home {
+  max-width: 85%;
+  margin: 0 auto;
+}
+.partners-cards-container {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 8px;
+}
+.partners-comanions-paragraph {
+  max-width: 55%;
+  margin: auto;
+}
+.partner-card {
+  width: 100%;
+  height: 10rem;
+  border: 1px solid black;
+}
+
+.up-card-partners {
+  margin-top: -10.5rem;
+}
+.arrow-up-large {
+  position: absolute;
+  bottom: 8.125rem;
+  left: 0;
+}
+@media (767px< width< 1024px) {
+  .partners-cards-container {
+    grid-template-columns: repeat(4, auto);
+  }
+  .up-card-partners {
+    margin-top: 0;
+  }
+  .centered-partner-card {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-self: center;
+    width: 50%;
+  }
+}
+
+@media (width< 767px) {
+  .partners-cards-container {
+    grid-template-columns: repeat(2, auto);
+  }
+  .up-card-partners {
+    margin-top: 0;
+  }
+  .centered-partner-card {
+    justify-self: center;
+    grid-column: span 2;
+    width: 50%;
+  }
+}
+/* --------------------------------------------- Training Memories-------------------------------------- */
+.training-memories-section {
+  padding: 7.5rem 0;
+  position: relative;
+}
+.courses-category-yellow-vector {
+  position: absolute;
+  left: 0;
+  top: 7.875rem;
+}
+.training-memeory-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.training-memories-main {
+  padding-left: 5.5rem;
+}
+.training-memories-paragraph {
+  color: var(--Nuturals-N-2);
+  font-size: 1.125rem;
+  font-family: rethinkRegular-400;
+  line-height: 1.875rem;
+  padding: 1.5rem 0 1.875rem;
+}
+.trainee-certificates {
+  height: 18.625rem;
+  border-radius: 1px;
+  border: 0.5px solid var(--Nuturals-N-2);
+  position: relative;
+}
+.trainee-certificate-txt-container {
+  border-bottom: 0.5px solid var(--Nuturals-N-2);
+  padding: 1.25rem 8.531rem;
+  text-align: center;
+}
+.trainee-certificate-txt {
+  color: var(--Nuturals-N-2);
+  text-align: center;
+  font-family: rubikMedium-500;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+.search-certificate-container {
+  background-color: var(--Nuturals-White);
+  border: 0.5px solid var(--Nuturals-N-2);
+  border-radius: 1px;
+  max-width: 88%;
+  margin: auto;
+  position: relative;
+  margin-top: 1.25rem;
+}
+.search-certificate-container .searchInput::placeholder {
+  color: var(--Nuturals-N-4);
+  font-family: rethinkRegular-400;
+  font-size: 0.875rem;
+}
+.searchIcon-certificate {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.certificate-pana-container {
+  text-align: center;
 }
