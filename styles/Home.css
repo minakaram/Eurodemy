@@ -64,6 +64,7 @@ p {
   top: 0;
   left: 0; */
   display: flex;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   padding: 0px 2.5rem;
@@ -132,6 +133,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-self: flex-end !important; 
+  margin-left: auto;
 }
 .logo-image {
   padding: 0.938rem 2rem 0.938rem 0;
@@ -1032,6 +1035,10 @@ p {
 }
 
 @media (768px < width <1025px) {
+  .cities-venues-section{
+    padding: 7.5rem 3rem 5rem;
+
+  }
   .cities-venues-section .container-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
