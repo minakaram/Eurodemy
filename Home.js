@@ -101,36 +101,64 @@ function setSecondContainerWidth() {
 setSecondContainerWidth();
 
 window.addEventListener('resize', setSecondContainerWidth);
+// course catogries -----------------------------------------------------------------
+
+function setCategoriesWidth() {
+  const categoryWidth = document.querySelector('.course-category-item');
+  const categoryCurrentWidth = categoryWidth.offsetWidth;
+  const categoryCurrentHeight = categoryWidth.offsetHeight;
+
+  const topCategoryWidth = document.querySelectorAll('.top-category-item');
+
+  topCategoryWidth.forEach(function (element) {
+    element.style.width = `${categoryCurrentWidth}px`;
+    element.style.height = `${categoryCurrentHeight}px`;
+  });
+}
+
+setCategoriesWidth();
+
+window.addEventListener('resize', setCategoriesWidth);
 
 // category-courses-section----------------------------------------------------------------------------------
 
 // swiper-------------------------
 
 const mySwiper = new Swiper('.swiper-container', {
-  slidesPerGroup: 2,
-  slidesPerView: 3,
+  spaceBetween: 30,
   grid: {
     rows: 1,
   },
-  spaceBetween: 30,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
+  navigation: {
+    nextEl: '.swiper-button-next', // CSS class or HTML element for next arrow
+    prevEl: '.swiper-button-prev', // CSS class or HTML element for prev arrow
+  },
   breakpoints: {
-    1024: {
+    1300: {
       slidesPerView: 5,
+      spaceBetween: 70,
+    },
+    1024: {
+      slidesPerView: 4,
     },
     768: {
       slidesPerView: 3,
+      spaceBetween: 20,
+      slideBy: 1,
       grid: {
         rows: 2,
       },
     },
     576: {
       slidesPerView: 1,
+      spaceBetween: 70,
+      slideBy: 1,
       grid: {
-        rows: 1,
+        rows: 2,
       },
     },
   },
