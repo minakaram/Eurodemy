@@ -133,7 +133,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: flex-end !important; 
+  justify-self: flex-end !important;
   margin-left: auto;
 }
 .logo-image {
@@ -334,7 +334,7 @@ p {
   align-items: center;
   width: 61%;
   position: absolute;
-  bottom: -3rem;
+  bottom: -2.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
@@ -747,7 +747,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* overflow: hidden; */
 }
 
 .courses-category-heading-paragraph {
@@ -889,7 +888,6 @@ p {
 .cities-venues-section .wrapper-container .cities-wrapper {
   display: flex !important;
   transition: transform 0.5s ease-in-out;
-  padding-top: rem;
 }
 .cities-venues-section .container-cards {
   display: grid;
@@ -904,6 +902,17 @@ p {
   box-sizing: border-box;
   flex-shrink: 0;
   padding: 60px;
+}
+.cities-venues-section
+  .wrapper-container
+  .cities-wrapper
+  .container-cards
+  .cities-image-abslute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 .j,
 .h,
@@ -924,12 +933,22 @@ p {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  color: var(--NuturalsN-5);
-
+  color: var(--Nuturals-N-6);
+  position: relative;
   font-family: rubikRegular-400;
 }
-.cities-courses-card:hover {
-  background: rgba(38, 33, 33, 0.95);
+.cities-courses-card:hover .courses-city-details{
+  background: rgba(38, 33, 33, 0.705);
+}
+.courses-city-details {
+  opacity: 0;
+  position: relative;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+}
+.cities-courses-card:hover .courses-city-details {
+  opacity: 1;
 }
 .courses-city-details .courses-city {
   margin-bottom: 4px;
@@ -943,16 +962,18 @@ p {
   font-family: rubikRegular-400;
   font-size: 1rem;
   line-height: 1rem;
-  margin-bottom: 2.125rem;
+  padding: 1rem;
 }
 .courses-city-details .view-course-city {
   border-radius: 1px;
   border: 0.25px solid rgba(191, 182, 182, 0.5);
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(2px);
   font-size: 0.75rem;
-  position: relative;
   height: 1.75rem;
+  position: relative;
+  cursor: pointer;
+  width: 70%;
+  margin: auto;
 }
 .view-course-city p {
   padding: 3px 2.625rem;
@@ -962,11 +983,6 @@ p {
   top: 8px;
   right: 8px;
 }
-.a,
-.b,
-.c {
-  background: orange;
-}
 .b,
 .d {
   margin-top: 120px;
@@ -975,23 +991,7 @@ p {
 .g {
   margin-top: 0px;
 }
-.d,
-.e,
-.f {
-  background: violet;
-}
 
-.g,
-.h,
-.i {
-  background: lightgreen;
-}
-
-.j,
-.k,
-.l {
-  background: cornflowerblue;
-}
 .online-courses-bookmark-box {
   margin: 0 auto;
   position: relative;
@@ -1035,9 +1035,8 @@ p {
 }
 
 @media (768px < width <1025px) {
-  .cities-venues-section{
+  .cities-venues-section {
     padding: 7.5rem 3rem 5rem;
-
   }
   .cities-venues-section .container-cards {
     display: grid;
@@ -1123,6 +1122,7 @@ p {
   max-width: 85%;
   margin: 0 auto;
 }
+
 .partners-cards-container {
   display: grid;
   grid-template-columns: repeat(7, auto);
@@ -1135,7 +1135,15 @@ p {
 .partner-card {
   width: 100%;
   height: 10rem;
-  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--NuturalsN-5);
+}
+.partner-card-inner {
+  width: 80px;
+  height: 150px;
 }
 
 .up-card-partners {
@@ -1165,6 +1173,12 @@ p {
     height: 150px;
     bottom: 6rem;
   }
+  .partners-companion-section
+    .container-home
+    .partners-companies-heading
+    .cities-heading-paragraph {
+    max-width: 90%;
+  }
 }
 
 @media (width< 768px) {
@@ -1185,6 +1199,14 @@ p {
     height: 80px;
     bottom: 8rem;
   }
+  .partners-companion-section
+    .container-home
+    .partners-companies-heading
+    .cities-heading-paragraph {
+    padding: 2rem;
+    margin: 0;
+    max-width: 100%;
+  }
 }
 @media (width<400px) {
   .arrow-up-large {
@@ -1199,37 +1221,65 @@ p {
   padding: 7.5rem 0;
 }
 .training-memories-yellow-vector {
-  margin-left: -50%;
+  margin-right: 10px;
+  margin-left: -30px;
 }
-.training-memeory-section-container {
+.training-memory-section-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* align-items: center; */
+  align-items: center;
+  justify-content: center;
+  max-height: 32rem;
+  width: 100%;
 }
 .training-memories-main {
-  margin: 0 3.5rem 0 5.5rem;
-  max-width: 50%;
+  width: 50%;
+  height: 13rem;
 }
-@media screen and (max-width: 765px) {
-  .training-memeory-section-container {
-    flex-direction: column;
-  }
+.training-memories-section
+  .training-memory-section-container
+  .training-memories-main
+  .training-header-teritary {
+  width: 80%;
+  padding: 1rem 0rem;
+  position: relative;
+  border-bottom: 1px solid var(--Nuturals-N-1);
 }
 .training-memories-paragraph {
   color: var(--Nuturals-N-2);
   font-size: 1.125rem;
   font-family: rethinkRegular-400;
-  line-height: 1.875rem;
-  padding-top: 1.5rem;
+
+  padding-top: 1rem;
+  width: 80%;
+  margin: 0 auto;
 }
 .trainee-certificates {
-  height: 18.625rem;
-  border-radius: 1px;
-  border: 0.5px solid var(--Nuturals-N-2);
+  height: 19rem;
   position: relative;
-  max-width: 35%;
-  margin: 0 3.5rem 0 5.5rem;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.trainee-certificates .trainee-certificates-container {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid var(--Nuturals-N-1);
+}
+.trainee-certificates .trainee-search-certificate-container {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+}
+.trainee-certificates
+  .trainee-search-certificate-container
+  .trainingMemorySearchInput {
+  width: 100%;
+  height: 48px;
+  outline: none;
+  padding: 0px 10px;
 }
 .training-memories-gallery {
   max-width: 50%;
@@ -1239,13 +1289,13 @@ p {
 }
 .trainee-certificate-txt-container {
   border-bottom: 0.5px solid var(--Nuturals-N-2);
-  padding: 1.25rem 8.531rem;
+  padding: 2%;
   text-align: center;
 }
 .trainee-certificate-txt {
   color: var(--Nuturals-N-2);
   font-family: rubikMedium-500;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1.625rem;
   display: flex;
   justify-content: center;
@@ -1255,25 +1305,71 @@ p {
   background-color: var(--Nuturals-White);
   border: 0.5px solid var(--Nuturals-N-2);
   border-radius: 1px;
-  max-width: 88%;
+  width: 100%;
   margin: auto;
   position: relative;
   margin-top: 1.25rem;
 }
-.search-certificate-container .searchInput::placeholder {
+.search-certificate-container .trainingMemorySearchInput::placeholder {
   color: var(--Nuturals-N-4);
   font-family: rethinkRegular-400;
   font-size: 0.875rem;
 }
-.searchIcon-certificate {
+.trainee-certificates
+  .trainee-search-certificate-container
+  .searchIcon-certificate {
   position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 2.5rem;
-  height: 2.5rem;
+  right: 0.9rem;
 }
 .certificate-pana-container {
   text-align: center;
+}
+.training-memory-section-container aside {
+  width: 50%;
+  /* height: 31rem; */
+  /* height: auto; */
+  margin-top: 2rem;
+  align-self: center;
+}
+.training-memory-section-container aside img {
+  width: 100%;
+  height: 100%;
+}
+@media (width< 768px) {
+  .training-memories-section {
+    padding: 0rem 0rem;
+  }
+  .training-memories-yellow-vector {
+    /* margin-right: 10px; */
+    margin-left: -50px;
+  }
+  .training-memories-section
+    .training-memory-section-container
+    .training-memories-main
+    .training-header-teritary {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+}
+@media (width< 1025px) {
+  .training-memory-section-container {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  .training-memory-section-container aside {
+    order: 2;
+    width: 90%;
+    margin: 2rem auto;
+    /* height: 30rem; */
+  }
+  .trainee-certificates {
+    width: 100%;
+    order: 3;
+  }
+  .training-memories-main {
+    width: 100%;
+    height: auto;
+  }
 }
 /* ------------------------------------------------ testimonial section ---------------------------------- */
 .testimonial-section {
