@@ -315,7 +315,7 @@ p {
 .header-section .header-social-icons .left-side-icons,
 .header-section .header-social-icons .right-side-icons {
   display: flex;
-  padding: 15px;
+  padding: 15px 25px;
 }
 .header-section .header-social-icons .right-side-icons {
   gap: 0.8rem;
@@ -396,6 +396,16 @@ p {
   .header-section .header-social-icons {
     justify-content: space-evenly;
     bottom: 50px;
+  }
+}
+@media(width<400px){
+  .header-section .header-social-icons .left-side-icons{
+padding: 0;
+  }
+  .header-section .header-social-icons .right-side-icons{
+    padding: 15px 0px;
+    margin-right: 20px;
+    gap: 1.2rem;
   }
 }
 /* ------------------------------------------  UPCOMING TRAINING COURSES --------------------------------------------*/
@@ -623,17 +633,17 @@ p {
   }
 }
 /*------------------------------------------ course cartegory section ------------------------------------------ */
-.swiper-container {
+.courses-category-section .swiper-container {
   width: 86%;
   margin: auto;
   overflow-x: hidden;
 }
-.swiper-slide {
+.courses-category-section .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   /* height: 300px !important; */
-
+  flex-direction: column;
   margin-top: 0 !important;
   display: flex;
   justify-content: center;
@@ -641,42 +651,44 @@ p {
   padding: 5px;
   overflow: hidden;
 }
-.swiper-wrapper {
+.courses-category-section .swiper-wrapper {
   flex-direction: row !important;
   row-gap: 1rem;
   margin-bottom: 3rem;
   /* width: 100%; */
 }
-.swiper-container .swiper-wrapper .swiper-slide img {
+.courses-category-section .swiper-container .swiper-wrapper .swiper-slide img {
   width: 100%;
 }
-.swiper-pagination {
+.courses-category-section .swiper-pagination {
   position: static !important;
   margin-top: 2rem;
 }
-.swiper-pagination span,
-.swiper-pagination-clickable span,
-.swiper-pagination-bullets span,
-.swiper-pagination-horizontal span {
+.courses-category-section .swiper-pagination span,
+.courses-category-section .swiper-pagination-clickable span,
+.courses-category-section .swiper-pagination-bullets span,
+.courses-category-section .swiper-pagination-horizontal span {
   width: 2rem !important;
   height: 10px;
   border-radius: 2px !important;
   background-color: var(--Nuturals-N-1) !important;
 }
-.swiper-pagination-bullets .swiper-pagination-bullet:hover {
+.courses-category-section
+  .swiper-pagination-bullets
+  .swiper-pagination-bullet:hover {
   background: var(--Nuturals-N-1) !important;
 }
-.swiper-pagination-bullet-active {
+.courses-category-section .swiper-pagination-bullet-active {
   background: var(--Nuturals-N-1) !important;
 }
-.swiper-pagination-bullet-active:hover {
+.courses-category-section .swiper-pagination-bullet-active:hover {
   background: var(--Nuturals-N-1) !important;
 }
 
-.swiper-navigation {
+.courses-category-section .swiper-navigation {
   margin-top: -8px;
 }
-.swiper-button-prev {
+.courses-category-section .swiper-button-prev {
   color: var(--Nuturals-N-6) !important;
   position: static !important;
   display: block;
@@ -685,11 +697,11 @@ p {
   height: 2.2rem !important;
   background-color: var(--Nuturals-N-1);
 }
-.swiper-button-prev::after {
+.courses-category-section .swiper-button-prev::after {
   font-size: 17px !important;
   font-weight: bolder !important;
 }
-.swiper-button-next {
+.courses-category-section .swiper-button-next {
   color: var(--Nuturals-N-6) !important;
   display: block;
   position: static !important;
@@ -698,25 +710,27 @@ p {
   height: 2.2rem !important;
   background-color: var(--Nuturals-N-1);
 }
-.swiper-button-next::after {
+.courses-category-section .swiper-button-next::after {
   font-size: 15px !important;
   font-weight: bolder !important;
 }
 @media (width>1024px) {
-  .swiper-slide {
+  .courses-category-section .swiper-slide {
     width: 20% !important;
     margin-right: 8px !important;
   }
 }
 @media (width<768px) {
-  .swiper-pagination {
+  .courses-category-section .swiper-pagination {
     width: 90% !important;
     margin: auto;
   }
-  .swiper-navigation {
+  .courses-category-section .swiper-navigation {
     display: none !important;
   }
-  .swiper-pagination-bullets .swiper-pagination-bullet {
+  .courses-category-section
+    .swiper-pagination-bullets
+    .swiper-pagination-bullet {
     max-width: 1rem;
     height: 8px;
   }
@@ -794,7 +808,23 @@ p {
   align-items: center;
   justify-content: center;
 }
-
+.courses-category-section .top-category-item {
+  position: relative;
+}
+.courses-category-section .top-category-item::before {
+  content: "Top Category";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  color: var(--Nuturals-N-7);
+  font-family: rubikMedium-500;
+  font-size: 14px;
+  background: var(
+    --Linear-1,
+    linear-gradient(96deg, #ad1519 29.91%, #fabd00 121.68%)
+  );
+}
 @media (width< 1025px) {
   .course-category-topOne {
     display: none;
@@ -937,7 +967,7 @@ p {
   position: relative;
   font-family: rubikRegular-400;
 }
-.cities-courses-card:hover .courses-city-details{
+.cities-courses-card:hover .courses-city-details {
   background: rgba(38, 33, 33, 0.705);
 }
 .courses-city-details {
@@ -1337,7 +1367,7 @@ p {
 }
 @media (width< 768px) {
   .training-memories-section {
-    padding: 0rem 0rem;
+    padding: 3.5rem 0rem;
   }
   .training-memories-yellow-vector {
     /* margin-right: 10px; */
@@ -1354,7 +1384,8 @@ p {
 @media (width< 1025px) {
   .training-memory-section-container {
     flex-wrap: nowrap;
-    height: auto;
+    /* height: auto; */
+    max-height: none;
   }
   .training-memory-section-container aside {
     order: 2;
@@ -1365,6 +1396,7 @@ p {
   .trainee-certificates {
     width: 100%;
     order: 3;
+    height: auto;
   }
   .training-memories-main {
     width: 100%;
@@ -1376,7 +1408,7 @@ p {
   background-image: url(../Assets/overlay2.png);
   padding: 4rem 0;
 }
-.testimonial-paragraph {
+.testimonial-section .testimonial-paragraph {
   color: var(--Nuturals-N-7);
   text-align: center;
   font-family: rethinkRegular-400;
@@ -1384,18 +1416,102 @@ p {
   line-height: 1.875rem;
   padding: 4rem 0 4.25rem;
 }
-.testimonial-main {
+.testimonial-section .testimonial-main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.testimonial-header,
-.testimonial-body {
+.testimonial-section .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-section .swiper-slide .tesimonials-title-container {
+  display: flex;
+  flex-direction: row;
   background-color: var(--Nuturals-N-6);
 }
-.testimonial-header {
+.notActiveTestimonial {
+  width: 9.75rem !important;
+}
+.testimonial-section .swiper-slide .testimonial-person-image {
+  width: 9.75rem;
+  height: 9.75rem;
+}
+.testimonial-section .swiper .swiper-slide {
+  margin-right: 20px !important;
+}
+.active-testimonial {
+  font-size: 18px;
+  background: transparent;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 4px;
+  width: 440px !important;
+  transition: height 0.2s ease-in-out;
+}
+.testimonial-section
+  .swiper-slide
+  .tesimonials-title-container
+  .testimonial-person-name-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonial-section
+  .swiper-slide
+  .tesimonials-title-container
+  .testimonial-person-name-position
+  p {
+  font-size: 1rem;
+  color: var(--Nuturals-N-1);
+}
+.testimonial-section .swiper-slide-active {
+  height: 50%;
+  display: flex;
+}
+
+.testimonial-section .swiper-slide .testimonials-person-info {
+  padding: 1rem 1rem;
+  background-color: var(--Nuturals-N-6);
+  margin-top: 0.4rem;
+}
+.testimonial-section .swiper-slide .testimonials-person-info p {
+  font-size: 1rem;
+}
+.testimonial-section .swiper .swiper-slide .testimonial-name {
+  color: var(--Nuturals-N-1);
+}
+.testimonial-section .swiper .swiper-pagination {
+  position: static;
+}
+@media (768px < width<1025px) {
+  .testimonial-section .swiper .swiper-slide {
+    width: auto;
+  }
+  .testimonial-section .swiper-slide-active {
+    display: block !important;
+  }
+  .testimonial-section .swiper .swiper-slide {
+    margin-right: 40px !important;
+  }
+  .testimonial-section .swiper .swiper-slide .testimonial-position-paragraph {
+    font-size: 13px !important;
+  }
+  .testimonial-section .swiper .swiper-slide h5 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (width<768px) {
+  .testimonial-section .swiper-slide-active {
+    display: block !important;
+  }
+}
+@media (width<640px) {
+  /* .testimonial-section .swiper .swiper-slide {
+    width: auto !important;
+  } */
 }
