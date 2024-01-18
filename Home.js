@@ -1,25 +1,25 @@
-var navbarToggler = document.getElementById("navbar-toggler-id");
-var navbarDropdown = document.getElementById("navbar-toggler-items");
+var navbarToggler = document.getElementById('navbar-toggler-id');
+var navbarDropdown = document.getElementById('navbar-toggler-items');
 // Toggle visibility when the toggler is clicked
-navbarToggler.addEventListener("click", (event) => {
+navbarToggler.addEventListener('click', event => {
   event.stopPropagation(); // Prevents the click event from reaching the document
   navbarDropdown.style.visibility =
-    navbarDropdown.style.visibility === "hidden" ? "visible" : "hidden";
+    navbarDropdown.style.visibility === 'hidden' ? 'visible' : 'hidden';
   navbarDropdown.style.opacity =
-    navbarDropdown.style.opacity === "0" ? "1" : "0";
+    navbarDropdown.style.opacity === '0' ? '1' : '0';
 });
 // Hide dropdown when clicking outside of it
-document.addEventListener("click", (event) => {
+document.addEventListener('click', event => {
   if (
-    navbarDropdown.style.visibility === "visible" &&
+    navbarDropdown.style.visibility === 'visible' &&
     !navbarDropdown.contains(event.target)
   ) {
-    navbarDropdown.style.visibility = "hidden";
-    navbarDropdown.style.opacity = "0";
+    navbarDropdown.style.visibility = 'hidden';
+    navbarDropdown.style.opacity = '0';
   }
 });
 // Stop propagation when clicking inside the dropdown
-navbarDropdown.addEventListener("click", (event) => {
+navbarDropdown.addEventListener('click', event => {
   event.stopPropagation(); // Prevents the click event from reaching the document
 });
 // ----------------------------------------------------------------------------------------------------------------
@@ -47,37 +47,40 @@ function initializeCarousel(carousel) {
     },
   });
 
-  let customDotsContainer = carousel.find(".owl-dots");
-  let customDots = customDotsContainer.find(".owl-dot");
+  let customDotsContainer = carousel.find('.owl-dots');
+  let customDots = customDotsContainer.find('.owl-dot');
   let maxVisibleDots = 4; // Set the maximum number of visible dots
 
   if (customDots.length > maxVisibleDots) {
     // Set the width for the extra dots to 10px
     for (let i = maxVisibleDots; i < customDots.length; i++) {
       // Get the span inside the dot and set its style
-      customDots.eq(i).find("span").css("width", "10px");
+      customDots.eq(i).find('span').css('width', '10px');
     }
   }
 }
 
-initializeCarousel($(".carousel1"));
-initializeCarousel($(".carousel2"));
+initializeCarousel($('.carousel1'));
+initializeCarousel($('.carousel2'));
 
 //------------------------------------ cities slider---------------------------------
 let currentIndex = 0;
 
 function showSlide(index) {
-  const slides = document.querySelector(".cities-wrapper");
-  const slideWidth = document.querySelector(".swiper-slide-cities").offsetWidth;
+  const slides = document.querySelector('.cities-wrapper');
+  const slideWidth = document.querySelector('.swiper-slide-cities').offsetWidth;
   const newPosition = -index * slideWidth;
   slides.style.transform = `translateX(${newPosition}px)`;
   currentIndex = index;
+
+  updatePagination();
+  updateSlideData(); // Call the function to update data when the slide changes
 }
 
 function nextCitiesSlide() {
   currentIndex =
     (currentIndex + 1) %
-    document.querySelectorAll(".swiper-slide-cities").length;
+    document.querySelectorAll('.swiper-slide-cities').length;
   showSlide(currentIndex);
 }
 
@@ -85,57 +88,80 @@ function prevCitiesSlide() {
   currentIndex =
     (currentIndex -
       1 +
-      document.querySelectorAll(".swiper-slide-cities").length) %
-    document.querySelectorAll(".swiper-slide-cities").length;
+      document.querySelectorAll('.swiper-slide-cities').length) %
+    document.querySelectorAll('.swiper-slide-cities').length;
   showSlide(currentIndex);
 }
 
 function setSecondContainerWidth() {
-  const cityWidth = document.querySelector(".card-city-width");
+  const cityWidth = document.querySelector('.card-city-width');
   const cityCurrentWidth = cityWidth.offsetWidth;
 
-  const loadCourses = document.querySelector(".view-courses-width");
+  const loadCourses = document.querySelector('.view-courses-width');
   loadCourses.style.width = `${cityCurrentWidth}px`;
 }
 
-setSecondContainerWidth();
+function updatePagination() {
+  const paginationContainer = document.querySelector('.pagination-container');
+  paginationContainer.innerHTML = ''; // Clear existing pagination
 
-window.addEventListener("resize", setSecondContainerWidth);
-// course catogries -----------------------------------------------------------------
+  const totalSlides = document.querySelectorAll('.swiper-slide-cities').length;
 
-function setCategoriesWidth() {
-  const categoryWidth = document.querySelector(".course-category-item");
-  const categoryCurrentWidth = categoryWidth.offsetWidth;
-  const categoryCurrentHeight = categoryWidth.offsetHeight;
+  for (let i = 0; i < totalSlides; i++) {
+    const paginationItem = document.createElement('div');
+    paginationItem.classList.add('pagination-item');
 
-  const topCategoryWidth = document.querySelectorAll(".top-category-item");
+    // Add a class to the active pagination item
+    if (i === currentIndex) {
+      paginationItem.classList.add('active');
+    }
 
-  topCategoryWidth.forEach(function (element) {
-    element.style.width = `${categoryCurrentWidth}px`;
-    element.style.height = `${categoryCurrentHeight}px`;
-  });
+    // Add a click event listener to each pagination tab
+    paginationItem.addEventListener('click', function () {
+      showSlide(i);
+    });
+
+    paginationContainer.appendChild(paginationItem);
+  }
 }
 
-setCategoriesWidth();
+function updateSlideData() {
+  // Update data based on currentIndex
+  // Example: Fetch new data from an API and update the content
+  const cityNameElement = document.querySelector('.courses-city p');
+  const courseCountElement = document.querySelector('.courses-city-average');
+  // Update these elements based on your data
+  const newData = {
+    cityName: 'New City', // Example new city name
+    courseCount: 'New Course Count', // Example new course count
+  };
+  cityNameElement.textContent = newData.cityName;
+  courseCountElement.textContent = newData.courseCount;
+}
 
-window.addEventListener("resize", setCategoriesWidth);
+// Initial setup
+setSecondContainerWidth();
+updatePagination();
+updateSlideData(); // Call the function to update data for the initial slide
+
+window.addEventListener('resize', setSecondContainerWidth);
 
 // category-courses-section----------------------------------------------------------------------------------
 
 // swiper-------------------------
 
-const mySwiper = new Swiper(".swiper-container", {
+const mySwiper = new Swiper('.swiper-container', {
   spaceBetween: 30,
   grid: {
     rows: 1,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next", // CSS class or HTML element for next arrow
-    prevEl: ".swiper-button-prev", // CSS class or HTML element for prev arrow
+    nextEl: '.swiper-button-next', // CSS class or HTML element for next arrow
+    prevEl: '.swiper-button-prev', // CSS class or HTML element for prev arrow
   },
   breakpoints: {
     1300: {
@@ -166,10 +192,10 @@ const mySwiper = new Swiper(".swiper-container", {
 
 // gallery Memory Section ----------------------------------------------------------------------
 function handleGalleryWidth() {
-  const container = document.getElementById("memorySectionContainer");
+  const container = document.getElementById('memorySectionContainer');
   const containerWidth = container.offsetHeight;
   console.log(containerWidth);
-  const gallery = document.getElementById("AsideGallery");
+  const gallery = document.getElementById('AsideGallery');
 
   // Check if the screen width is larger than 1025px
   if (window.innerWidth > 1025) {
@@ -181,21 +207,21 @@ function handleGalleryWidth() {
 
 handleGalleryWidth();
 
-window.addEventListener("resize", handleGalleryWidth);
+window.addEventListener('resize', handleGalleryWidth);
 
 // testimonial section ---------------------------------------------------------------------------------
 
-var swiper = new Swiper(".testimonialSwiper", {
+var swiper = new Swiper('.testimonialSwiper', {
   slidesPerView: 5,
   spaceBetween: 10,
   centeredSlides: true,
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next", // CSS class or HTML element for next arrow
-    prevEl: ".swiper-button-prev", // CSS class or HTML element for prev arrow
+    nextEl: '.swiper-button-next', // CSS class or HTML element for next arrow
+    prevEl: '.swiper-button-prev', // CSS class or HTML element for prev arrow
   },
   breakpoints: {
     320: {
@@ -232,74 +258,74 @@ function updateImageShow() {
   // Check if the screen width is larger than 1024 pixels
   if (window.innerWidth > 1024) {
     var activeSlide = document.querySelector(
-      ".testimonial-section .swiper-slide.swiper-slide-active"
+      '.testimonial-section .swiper-slide.swiper-slide-active'
     );
     var allSlides = document.querySelectorAll(
-      ".testimonial-section .swiper-slide"
+      '.testimonial-section .swiper-slide'
     );
     var allSlidersTestimonialInfo = document.querySelectorAll(
-      ".testimonials-person-info"
+      '.testimonials-person-info'
     );
     var positionParagraphs = document.querySelectorAll(
-      ".testimonial-position-paragraph"
+      '.testimonial-position-paragraph'
     );
-    var testimonialName = document.querySelectorAll(".testimonial-name");
+    var testimonialName = document.querySelectorAll('.testimonial-name');
     var testimonialInfo;
     var testimonialTxt;
 
     allSlides.forEach(function (slide) {
       if (slide === activeSlide) {
-        slide.classList.add("active-testimonial");
+        slide.classList.add('active-testimonial');
       } else {
-        slide.classList.remove("active-testimonial");
-        slide.classList.add("notActiveTestimonial");
+        slide.classList.remove('active-testimonial');
+        slide.classList.add('notActiveTestimonial');
       }
     });
 
     if (activeSlide) {
-      testimonialInfo = activeSlide.querySelector(".testimonials-person-info");
+      testimonialInfo = activeSlide.querySelector('.testimonials-person-info');
       testimonialTxt = activeSlide.querySelector(
-        ".tesimonials-title-container"
+        '.tesimonials-title-container'
       );
 
       if (testimonialInfo) {
-        testimonialInfo.style.display = "block";
+        testimonialInfo.style.display = 'block';
       }
     }
 
     allSlidersTestimonialInfo.forEach(function (info) {
       if (info !== testimonialInfo) {
-        info.style.display = "none";
+        info.style.display = 'none';
       }
       document
-        .querySelectorAll(".tesimonials-title-container")
-        .forEach((title) => {
+        .querySelectorAll('.tesimonials-title-container')
+        .forEach(title => {
           if (title !== testimonialTxt) {
-            title.style.flexDirection = "column";
-            title.style.background = "transparent";
+            title.style.flexDirection = 'column';
+            title.style.background = 'transparent';
           } else {
-            title.style.flexDirection = "row";
-            title.style.background = "var(--Nuturals-N-6)";
+            title.style.flexDirection = 'row';
+            title.style.background = 'var(--Nuturals-N-6)';
           }
         });
     });
 
     positionParagraphs.forEach(function (paragraph) {
       if (!activeSlide.contains(paragraph)) {
-        paragraph.style.display = "none";
+        paragraph.style.display = 'none';
       } else {
-        paragraph.style.display = "block";
+        paragraph.style.display = 'block';
       }
     });
 
     testimonialName.forEach(function (name) {
       if (!activeSlide.contains(name)) {
-        name.style.color = "var(--NuturalsN-5)";
-        name.style.marginTop = "0.5rem";
-        name.style.fontSize = "1.1rem";
-        name.style.textAlign = "center";
+        name.style.color = 'var(--NuturalsN-5)';
+        name.style.marginTop = '0.5rem';
+        name.style.fontSize = '1.1rem';
+        name.style.textAlign = 'center';
       } else {
-        name.style.color = "var(--Nuturals-N-1)";
+        name.style.color = 'var(--Nuturals-N-1)';
       }
     });
   }
@@ -309,4 +335,4 @@ function updateImageShow() {
 updateImageShow();
 
 // Handle window resize to trigger the function
-window.addEventListener("resize", updateImageShow);
+window.addEventListener('resize', updateImageShow);
