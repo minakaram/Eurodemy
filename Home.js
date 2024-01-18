@@ -72,6 +72,9 @@ function showSlide(index) {
   const newPosition = -index * slideWidth;
   slides.style.transform = `translateX(${newPosition}px)`;
   currentIndex = index;
+
+  updatePagination();
+  updateSlideData(); // Call the function to update data when the slide changes
 }
 
 function nextCitiesSlide() {
@@ -98,27 +101,50 @@ function setSecondContainerWidth() {
   loadCourses.style.width = `${cityCurrentWidth}px`;
 }
 
-setSecondContainerWidth();
+function updatePagination() {
+  const paginationContainer = document.querySelector('.pagination-container');
+  paginationContainer.innerHTML = ''; // Clear existing pagination
 
-window.addEventListener('resize', setSecondContainerWidth);
-// course catogries -----------------------------------------------------------------
+  const totalSlides = document.querySelectorAll('.swiper-slide-cities').length;
 
-function setCategoriesWidth() {
-  const categoryWidth = document.querySelector('.course-category-item');
-  const categoryCurrentWidth = categoryWidth.offsetWidth;
-  const categoryCurrentHeight = categoryWidth.offsetHeight;
+  for (let i = 0; i < totalSlides; i++) {
+    const paginationItem = document.createElement('div');
+    paginationItem.classList.add('pagination-item');
 
-  const topCategoryWidth = document.querySelectorAll('.top-category-item');
+    // Add a class to the active pagination item
+    if (i === currentIndex) {
+      paginationItem.classList.add('active');
+    }
 
-  topCategoryWidth.forEach(function (element) {
-    element.style.width = `${categoryCurrentWidth}px`;
-    element.style.height = `${categoryCurrentHeight}px`;
-  });
+    // Add a click event listener to each pagination tab
+    paginationItem.addEventListener('click', function () {
+      showSlide(i);
+    });
+
+    paginationContainer.appendChild(paginationItem);
+  }
 }
 
-setCategoriesWidth();
+function updateSlideData() {
+  // Update data based on currentIndex
+  // Example: Fetch new data from an API and update the content
+  const cityNameElement = document.querySelector('.courses-city p');
+  const courseCountElement = document.querySelector('.courses-city-average');
+  // Update these elements based on your data
+  const newData = {
+    cityName: 'New City', // Example new city name
+    courseCount: 'New Course Count', // Example new course count
+  };
+  cityNameElement.textContent = newData.cityName;
+  courseCountElement.textContent = newData.courseCount;
+}
 
-window.addEventListener('resize', setCategoriesWidth);
+// Initial setup
+setSecondContainerWidth();
+updatePagination();
+updateSlideData(); // Call the function to update data for the initial slide
+
+window.addEventListener('resize', setSecondContainerWidth);
 
 // category-courses-section----------------------------------------------------------------------------------
 
@@ -166,11 +192,11 @@ const mySwiper = new Swiper('.swiper-container', {
 
 // gallery Memory Section ----------------------------------------------------------------------
 function handleGalleryWidth() {
-  const container = document.getElementById("memorySectionContainer");
+  const container = document.getElementById('memorySectionContainer');
   const containerWidth = container.offsetHeight;
   console.log(containerWidth);
-  const gallery = document.getElementById("AsideGallery");
-  
+  const gallery = document.getElementById('AsideGallery');
+
   // Check if the screen width is larger than 1025px
   if (window.innerWidth > 1025) {
     gallery.style.height = `${containerWidth}px`;
@@ -181,4 +207,4 @@ function handleGalleryWidth() {
 
 handleGalleryWidth();
 
-window.addEventListener("resize", handleGalleryWidth);
+window.addEventListener('resize', handleGalleryWidth);
