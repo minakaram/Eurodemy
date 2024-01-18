@@ -208,3 +208,131 @@ function handleGalleryWidth() {
 handleGalleryWidth();
 
 window.addEventListener('resize', handleGalleryWidth);
+
+// testimonial section ---------------------------------------------------------------------------------
+
+var swiper = new Swiper('.testimonialSwiper', {
+  slidesPerView: 5,
+  spaceBetween: 10,
+  centeredSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next', // CSS class or HTML element for next arrow
+    prevEl: '.swiper-button-prev', // CSS class or HTML element for prev arrow
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    970: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1025: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+      // slidesPerGroup:2
+    },
+  },
+  initialSlide: 2,
+  on: {
+    slideChangeTransitionEnd: function () {
+      updateImageShow();
+    },
+  },
+});
+
+function updateImageShow() {
+  // Check if the screen width is larger than 1024 pixels
+  if (window.innerWidth > 1024) {
+    var activeSlide = document.querySelector(
+      '.testimonial-section .swiper-slide.swiper-slide-active'
+    );
+    var allSlides = document.querySelectorAll(
+      '.testimonial-section .swiper-slide'
+    );
+    var allSlidersTestimonialInfo = document.querySelectorAll(
+      '.testimonials-person-info'
+    );
+    var positionParagraphs = document.querySelectorAll(
+      '.testimonial-position-paragraph'
+    );
+    var testimonialName = document.querySelectorAll('.testimonial-name');
+    var testimonialInfo;
+    var testimonialTxt;
+
+    allSlides.forEach(function (slide) {
+      if (slide === activeSlide) {
+        slide.classList.add('active-testimonial');
+      } else {
+        slide.classList.remove('active-testimonial');
+        slide.classList.add('notActiveTestimonial');
+      }
+    });
+
+    if (activeSlide) {
+      testimonialInfo = activeSlide.querySelector('.testimonials-person-info');
+      testimonialTxt = activeSlide.querySelector(
+        '.tesimonials-title-container'
+      );
+
+      if (testimonialInfo) {
+        testimonialInfo.style.display = 'block';
+      }
+    }
+
+    allSlidersTestimonialInfo.forEach(function (info) {
+      if (info !== testimonialInfo) {
+        info.style.display = 'none';
+      }
+      document
+        .querySelectorAll('.tesimonials-title-container')
+        .forEach(title => {
+          if (title !== testimonialTxt) {
+            title.style.flexDirection = 'column';
+            title.style.background = 'transparent';
+          } else {
+            title.style.flexDirection = 'row';
+            title.style.background = 'var(--Nuturals-N-6)';
+          }
+        });
+    });
+
+    positionParagraphs.forEach(function (paragraph) {
+      if (!activeSlide.contains(paragraph)) {
+        paragraph.style.display = 'none';
+      } else {
+        paragraph.style.display = 'block';
+      }
+    });
+
+    testimonialName.forEach(function (name) {
+      if (!activeSlide.contains(name)) {
+        name.style.color = 'var(--NuturalsN-5)';
+        name.style.marginTop = '0.5rem';
+        name.style.fontSize = '1.1rem';
+        name.style.textAlign = 'center';
+      } else {
+        name.style.color = 'var(--Nuturals-N-1)';
+      }
+    });
+  }
+}
+
+// Execute the function initially
+updateImageShow();
+
+// Handle window resize to trigger the function
+window.addEventListener('resize', updateImageShow);
