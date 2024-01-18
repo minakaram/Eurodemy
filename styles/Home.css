@@ -1510,8 +1510,3 @@ padding: 0;
     display: block !important;
   }
 }
-@media (width<640px) {
-  /* .testimonial-section .swiper .swiper-slide {
-    width: auto !important;
-  } */
-}
