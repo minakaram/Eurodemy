@@ -338,6 +338,49 @@ updateImageShow();
 
 // Handle window resize to trigger the function
 window.addEventListener("resize", updateImageShow);
+// staff slider ----------------------------------------------------------------------------------------------------
+
+
+var myStaffSwiper = new Swiper(".staff-swiper", {
+  spaceBetween: 0,
+  slidesPerView: 3,
+  grid: {
+    rows: 1,
+  },
+  pagination: {
+    el: ".staff-swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".staff-button-next", // CSS class or HTML element for next arrow
+    prevEl: ".staff-button-prev", // CSS class or HTML element for prev arrow
+  },
+  breakpoints: {
+    1300: {
+      slidesPerView: 5,
+      spaceBetween: 70,
+    },
+    1025: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+
+      grid: {
+        rows: 2,
+      },
+    },
+    320: {
+      slidesPerView: 1,
+      // spaceBetween: 70,
+      grid: {
+        rows: 2,
+      },
+    },
+  },
+});
+
 
 // international section swiper ------------------------------------------------------------------------------------
 
