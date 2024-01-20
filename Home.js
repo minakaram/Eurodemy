@@ -215,6 +215,7 @@ var swiper = new Swiper('.testimonialSwiper', {
   slidesPerView: 5,
   spaceBetween: 10,
   centeredSlides: true,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
