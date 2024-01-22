@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="image-video-carousel-qc/css/qc.slider.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,13 +16,13 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="image-video-carousel-qc/qcslider.jquery.js"></script>
+
   <script defer src="Home.js"></script>
   <title>Eorodemy</title>
 </head>
 
 <body>
-  <!----------------------------------------------------- nav bar -------------------------------------------------->
+  <!------------------------------------------------ nav bar -------------------------------------------------->
   <nav class="navigationBar">
     <img src="Assets/Logo.png" alt="logo" class="logo-image" />
     <div class="nav-items-container" id="navbar-toggler-items">
@@ -92,40 +91,71 @@
   </nav>
   <!---------------------------------------------- hero section ---------------------------------------------------->
   <section class="header-section">
-    <section class="slide h-100">
-      <div class="slider-container">
-        <ul class="slider-wrapper" id="slider">
-          <li class="slide-current">
-            <img src="Assets/slider1.png" />
-          </li>
-          <li class="">
-            <img src="Assets/slider2.jpg" />
-          </li>
-        </ul>
-        <div class="drt-control control-left d-flex justify-content-center align-items-center" id="lft-control">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M10.0125 1.13822C10.1102 1.04059 10.2685 1.04059 10.3661 1.13822L11.4268 2.19888C11.5244 2.29651 11.5244 2.4548 11.4268 2.55243L4.70924 9.26995C4.61161 9.36758 4.45332 9.36758 4.35569 9.26995L3.29503 8.20929C3.19739 8.11166 3.19739 7.95336 3.29503 7.85573L10.0125 1.13822Z"
-              fill="white" />
-            <path
-              d="M3.29503 8.20929C3.19739 8.11166 3.19739 7.95336 3.29503 7.85573L4.35571 6.79505C4.45334 6.69742 4.61163 6.69742 4.70926 6.79505L11.4268 13.5126C11.5244 13.6102 11.5244 13.7685 11.4268 13.8661L10.3661 14.9268C10.2685 15.0244 10.1102 15.0244 10.0126 14.9268L3.29503 8.20929Z"
-              fill="white" />
-          </svg>
+
+    <h1 class="Eourodemy-Provides-heading">Eourodemy Provides</h1>
+
+    <div class="owl-carousel owl-carousel-hero owl-theme">
+      <div class="item header-back1">
+        <img src="Assets/slider1.png" alt="">
+        <div class="header-course-details">
+          <h3>New Professional Courses In Madrid</h3>
+          <div class="header-view-course-button">
+            <img src="Assets/Flag_of_Spain.png" alt="">
+            <p>View Course in Madrid</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M5.98746 14.8618C5.88983 14.9594 5.73154 14.9594 5.63391 14.8618L4.57325 13.8011C4.47562 13.7035 4.47562 13.5452 4.57325 13.4476L11.2908 6.73005C11.3884 6.63242 11.5467 6.63242 11.6443 6.73005L12.705 7.79071C12.8026 7.88835 12.8026 8.04664 12.705 8.14427L5.98746 14.8618Z"
+                fill="white" />
+              <path
+                d="M12.705 7.79071C12.8026 7.88835 12.8026 8.04664 12.705 8.14427L11.6443 9.20495C11.5467 9.30258 11.3884 9.30258 11.2907 9.20495L4.57322 2.48744C4.47559 2.38981 4.47559 2.23151 4.57322 2.13388L5.63388 1.07322C5.73151 0.975592 5.88981 0.975592 5.98744 1.07322L12.705 7.79071Z"
+                fill="white" />
+            </svg>
+          </div>
         </div>
-        <div class="drt-control control-right d-flex justify-content-center align-items-center" id="rht-control">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path
-              d="M5.98746 1.13822C5.88983 1.04059 5.73154 1.04059 5.63391 1.13822L4.57325 2.19888C4.47562 2.29651 4.47562 2.4548 4.57325 2.55243L11.2908 9.26995C11.3884 9.36758 11.5467 9.36758 11.6443 9.26995L12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L5.98746 1.13822Z"
-              fill="white" />
-            <path
-              d="M12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L11.6443 6.79505C11.5467 6.69742 11.3884 6.69742 11.2907 6.79505L4.57322 13.5126C4.47559 13.6102 4.47559 13.7685 4.57322 13.8661L5.63388 14.9268C5.73151 15.0244 5.88981 15.0244 5.98744 14.9268L12.705 8.20929Z"
-              fill="white" />
-          </svg>
-        </div>
-        <ul class="slider-controls" id="slider-controls"></ul>
       </div>
-    </section>
-    <div class="header-social-icons">
+      <div class="item header-back1">
+        <img src="Assets/slider2.jpg" alt="">
+        <div class="header-course-details">
+          <h3>New Professional Courses In Madrid</h3>
+          <div class="header-view-course-button">
+            <img src="Assets/Flag_of_Spain.png" alt="">
+            <p>View Course in Madrid</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M5.98746 14.8618C5.88983 14.9594 5.73154 14.9594 5.63391 14.8618L4.57325 13.8011C4.47562 13.7035 4.47562 13.5452 4.57325 13.4476L11.2908 6.73005C11.3884 6.63242 11.5467 6.63242 11.6443 6.73005L12.705 7.79071C12.8026 7.88835 12.8026 8.04664 12.705 8.14427L5.98746 14.8618Z"
+                fill="white" />
+              <path
+                d="M12.705 7.79071C12.8026 7.88835 12.8026 8.04664 12.705 8.14427L11.6443 9.20495C11.5467 9.30258 11.3884 9.30258 11.2907 9.20495L4.57322 2.48744C4.47559 2.38981 4.47559 2.23151 4.57322 2.13388L5.63388 1.07322C5.73151 0.975592 5.88981 0.975592 5.98744 1.07322L12.705 7.79071Z"
+                fill="white" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="item header-back1">
+        <img src="Assets/slider1.png" alt="">
+        <div class="header-course-details">
+          <h3>New Professional Courses In Madrid</h3>
+          <div class="header-view-course-button">
+            <img src="Assets/Flag_of_Spain.png" alt="">
+            <p>View Course in Madrid</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M5.98746 14.8618C5.88983 14.9594 5.73154 14.9594 5.63391 14.8618L4.57325 13.8011C4.47562 13.7035 4.47562 13.5452 4.57325 13.4476L11.2908 6.73005C11.3884 6.63242 11.5467 6.63242 11.6443 6.73005L12.705 7.79071C12.8026 7.88835 12.8026 8.04664 12.705 8.14427L5.98746 14.8618Z"
+                fill="white" />
+              <path
+                d="M12.705 7.79071C12.8026 7.88835 12.8026 8.04664 12.705 8.14427L11.6443 9.20495C11.5467 9.30258 11.3884 9.30258 11.2907 9.20495L4.57322 2.48744C4.47559 2.38981 4.47559 2.23151 4.57322 2.13388L5.63388 1.07322C5.73151 0.975592 5.88981 0.975592 5.98744 1.07322L12.705 7.79071Z"
+                fill="white" />
+            </svg>
+          </div>
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="header-social-icons">
       <div class="left-side-icons">
         <div class="icon-header-container">
           <a href="">
@@ -225,7 +255,7 @@
       <input type="text" id="courseByName|code" name="courseByName|code" class="searchInput"
         placeholder="Search for a course by name or course #code" />
       <img src="./Assets/searchIcon.svg" alt="search" class="searchIcon-courseByName" />
-    </div>
+    </div> -->
   </section>
   <!------------------------------------------- comming soon section ----------------------------------------------->
   <section class="coming-training-section container-fluid">
@@ -1700,7 +1730,7 @@
   <div class="separator-box w-100">
     <img src="./Assets/Seaparator.svg" alt="separator" class="w-100" />
   </div>
-  <!--------------------------------------------- FOOTER ----------------------------------------------->
+  <!------------------------------------------------ FOOTER -------------------------------------------------------->
   <footer class="footer">
     <div class="footer-separator">
       <img src="./Assets/footer separator.svg" alt="separator" class="w-100" />
@@ -1823,7 +1853,7 @@
         <div class="footer-form-socialIcon">
           <img src="./Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
           <img src="./Assets/footerFacebook.svg" alt="Facebook" />
-          <img src="./Assets/youtube.svg" alt="Youtube" style="height: 33px;"/>
+          <img src="./Assets/youtube.svg" alt="Youtube" style="height: 33px;" />
           <img src="./Assets/FooterLinked.svg" alt="Linked" />
           <img src="./Assets/footerInstgram.svg" alt="Instgram" />
           <img src="./Assets/footerX.svg" alt="X" />
