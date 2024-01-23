@@ -400,7 +400,7 @@ p {
   align-items: center;
   bottom: 30px;
 }
-.header-section .owl-carousel .owl-nav{
+.header-section .owl-carousel .owl-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -409,17 +409,16 @@ p {
   width: 100%;
 }
 .header-section .owl-carousel .owl-nav button.owl-prev span,
-.header-section .owl-carousel .owl-nav button.owl-next span{
+.header-section .owl-carousel .owl-nav button.owl-next span {
   color: var(--Nuturals-White);
   font-size: 40px;
   line-height: 25px;
-
 }
 .header-section .owl-carousel .owl-nav button.owl-prev,
 .header-section .owl-carousel .owl-nav button.owl-next {
-  height: 60px; 
+  height: 60px;
   width: 60px;
-  background-color: #000; 
+  background-color: #000;
   margin: 0 !important;
 }
 
