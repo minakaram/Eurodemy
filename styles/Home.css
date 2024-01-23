@@ -978,7 +978,7 @@ p {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: "Top Category";
+  content: 'Top Category';
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1077,7 +1077,7 @@ p {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: "Top Category";
+  content: 'Top Category';
   position: absolute;
   top: 0;
   left: 0;
@@ -1696,7 +1696,7 @@ p {
 }
 /* --------------------------------------------- Training Memories-------------------------------------- */
 .training-memories-section {
-  padding: 7.5rem 0;
+  padding: 10rem 0 4rem;
 }
 .training-memories-yellow-vector {
   margin-right: 10px;
@@ -1989,7 +1989,7 @@ p {
 }
 /* ----------------------------------------training staff section ------------------------------------ */
 .training-staff-section {
-  padding: 7rem 0;
+  padding: 10rem 0 7.5rem;
 }
 .training-staff-paragraph {
   color: var(--Nuturals-N-2);
@@ -2091,17 +2091,10 @@ p {
 }
 .training-staff-section .staff-swiper .staff-swiper-pagination {
   position: static;
-  margin-top: 3rem;
   display: flex;
   justify-content: center;
+  margin: 3rem 0 4rem;
 }
-.training-staff-section .staff-swiper .staff-swiper-pagination {
-  position: static;
-  display: flex;
-  justify-content: center;
-  margin-top: 2.7rem;
-}
-
 .training-staff-section
   .staff-swiper
   .staff-swiper-pagination
@@ -2164,6 +2157,181 @@ p {
     /* 
     width: 31.2% !important;
     margin-right: 1px !important; */
+  }
+}
+/* --------------------------------------------- join our staff -------------------------------------- */
+.our-staff-container {
+  border-radius: 1px;
+  border: 0.5px solid var(--Nuturals-N-2);
+  /* min-height: 21.25rem; */
+  max-width: 94%;
+  margin: auto;
+}
+.our-staff-heading {
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid var(--Nuturals-N-2);
+  position: relative;
+}
+.join-staff-header {
+  color: var(--Nuturals-N-2);
+  text-align: center;
+  font-family: rubikMedium-500;
+  font-size: 1.25rem;
+  line-height: 1.625rem; /* 130% */
+}
+.view-careers-page-container {
+  position: absolute;
+  right: 1rem;
+  border-radius: 1px;
+  border: 0.25px solid var(--Nuturals-N-3);
+  padding: 3px 0.5rem 3px 0.5rem;
+}
+.our-staff-container-body {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+}
+.our-staff-left-side {
+  border-right: 1px solid var(--Nuturals-N-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.or-separator {
+  color: var(--Nuturals-N-2);
+  text-align: center;
+  font-family: rubikMedium-500;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--Nuturals-White);
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+.our-staff-left-txt {
+  color: var(--Nuturals-N-2);
+  text-align: center;
+  font-family: rethinkMedium-500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  padding-bottom: 2rem;
+  max-width: 60%;
+}
+.offer-skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+  border: 1px solid var(--Nuturals-N-2);
+  padding: 1rem 5rem;
+  min-width: 80%;
+  color: var(--Nuturals-N-2);
+  font-family: rubikRegular-400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  position: relative;
+}
+.offer-skills-container .right-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.our-staff-right-txt {
+  margin: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: var(--Nuturals-N-2);
+  text-align: center;
+  font-family: rethinkMedium-500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  border-bottom: 0.25px solid var(--Nuturals-N-3);
+}
+.hightlight-red-mini {
+  color: var(--Primary-Primary);
+  font-family: rethinkExtraBold-800;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+.courses-container {
+  padding: 0.75rem 1.25rem 0.75rem 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  height: 12.7rem;
+  overflow-y: scroll;
+  grid-template-columns: repeat(3, 1fr);
+}
+.course-container ::-webkit-scrollbar {
+  color: var(--Nuturals-N-3);
+}
+.single-course {
+  border-radius: 1px;
+  border: 0.25px solid var(--Nuturals-N-3);
+  padding: 0.75rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.apply-now-svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.applynow-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--Nuturals-N-7);
+  font-family: rubikBold-700;
+  font-size: 0.875rem;
+  opacity: 0;
+}
+.single-course:hover .apply-now-svg,
+.single-course:hover .applynow-txt {
+  opacity: 1;
+}
+.starting-date {
+  color: var(--Primary-Primary);
+  font-family: rubikRegular-400;
+  font-size: 0.75rem;
+}
+.course-name {
+  color: var(--Nuturals-N-3);
+  text-align: center;
+  font-family: rubikRegular-400;
+  font-size: 0.785rem;
+  line-height: 1.375rem;
+}
+@media screen and (max-width: 1024px) {
+  .our-staff-container-body {
+    grid-template-columns: 1fr;
+  }
+  .our-staff-left-side {
+    border-right: none;
+    border-bottom: 1px solid var(--Nuturals-N-2);
+    padding: 2rem 0 3.313rem;
+  }
+  .or-separator {
+    right: 50%;
+    top: 93%;
+    transform: translateX(50%);
+  }
+  .course-name {
+    max-width: 80%;
   }
 }
 /* -------------------------------------------international ------------------------------------------ */
@@ -2244,6 +2412,133 @@ p {
 
   .international-accerditations .swiper .swiper-slide-active {
     width: 250px !important;
+  }
+}
+/* --------------------------------------------- Eurodemy offices ----------------------------------------- */
+.eurodemy-offices-section {
+  padding: 7.5rem 0 12.5rem;
+  max-width: 91%;
+  margin: auto;
+}
+.eurodemy-office-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.offices-yellow-vector {
+  margin-left: -6rem;
+}
+.eurodemy-office-heading-paragraph {
+  color: var(--Nuturals-N-2);
+  font-size: 1.125rem;
+  font-family: rethinkRegular-400;
+  line-height: 1.875rem;
+  padding: 1.5rem 0 4rem;
+}
+.offices-container {
+  border-radius: 1px 1px 0px 0px;
+  border: 0.5px solid var(--Nuturals-N-2, #262121);
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+.arrow-active-tab-container {
+  position: absolute;
+  top: 101%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+.offices-container-heading {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 0.5px solid var(--Nuturals-N-2);
+  padding: 1.5rem 0 1.5rem 1.25rem;
+}
+.office-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.officeCity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.office-address {
+  color: var(--Nuturals-N-7, #fcfcfc);
+  font-family: rubikRegular-400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  max-height: 5rem;
+  width: 10rem;
+  align-self: end;
+  opacity: 0;
+}
+.offices-and-map {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+.office-location {
+  width: 55%;
+  min-height: 30.5rem;
+  border: 0.5px solid var(--Nuturals-N-2);
+}
+.map-tele p {
+  color: var(--Nuturals-N-2);
+  font-family: rubikRegular;
+  font-size: 1.125rem;
+  line-height: 1.313rem;
+}
+.selected-office-map {
+  height: 85%;
+}
+.selected-office-map iframe {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.map-contacts {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0.85rem 1.875rem;
+  /* gap: 0.5rem; */
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--Nuturals-N-2);
+}
+.map-tele {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+@media screen and (max-width: 1025px) {
+  .offices-and-map {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.875rem;
+  }
+  .offices-container,
+  .office-location {
+    width: 100%;
+  }
+  .selected-office-map {
+    height: 29rem;
+  }
+  .underline-offices {
+    width: 90%;
+  }
+  .map-contacts {
+    flex-wrap: wrap;
   }
 }
 /* -------------------------------------------- FOOTER ---------------------------------------------------- */
@@ -2370,19 +2665,17 @@ p {
 .footer-form-socialIcon {
   display: flex;
   width: 95%;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 1.3rem;
   border-radius: 1px;
   border: 2px dashed var(--Nuturals-N-1);
-  padding: 0.625rem;
+  padding: 0.3rem;
   margin-bottom: 2.125rem;
 }
 .footer-form-socialIcon > img {
   display: block;
-}
-.footer-form-separator {
-  /* opacity: none; */
 }
 .envelope-icon-container {
   padding: 2rem 0 0.625rem;
