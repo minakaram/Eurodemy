@@ -22,6 +22,30 @@ document.addEventListener('click', event => {
 navbarDropdown.addEventListener('click', event => {
   event.stopPropagation(); // Prevents the click event from reaching the document
 });
+
+// hero section ---------------------------------------------------------------------------------------------------
+
+$(document).ready(function () {
+  $('.owl-carousel-hero').owlCarousel({
+    // loop: true,
+    margin: 15,
+    nav: true,
+    dots: true,
+    // autoplay: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      610: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });
+});
+
 // ----------------------------------------------------------------------------------------------------------------
 
 function initializeCarousel(carousel) {
@@ -189,20 +213,18 @@ const mySwiper = new Swiper('.swiper-container1', {
   },
 });
 
-// gallery Memory Section ----------------------------------------------------------------------
+// gallery Memory Section ------------------------------------------------------------------------------
 function handleGalleryWidth() {
   const container = document.getElementById('memorySectionContainer');
   const containerWidth = container.offsetHeight;
   const gallery = document.getElementById('AsideGallery');
 
   // Check if the screen width is larger than 1025px
-  if (window.innerWidth > 1025) {
+  if (window.innerWidth > 1024) {
     gallery.style.height = `${containerWidth}px`;
   }
 }
-
 handleGalleryWidth();
-
 window.addEventListener('resize', handleGalleryWidth);
 
 // testimonial section ---------------------------------------------------------------------------------

@@ -331,12 +331,129 @@ p {
   height: 100vh;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
+  background-color: var(--Primary-Primary);
+}
+.header-section .Eourodemy-Provides-heading {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  text-transform: uppercase;
+  color: var(--Nuturals-White);
+  font-family: rubikBold-700;
 }
 .header-section .logo-image {
   width: 8.75rem;
   height: 3.125rem;
 }
+.header-section .owl-carousel {
+  height: 100%;
+  position: relative;
+}
+.header-section .owl-carousel .owl-stage-outer {
+  height: 100%;
+}
+.header-section .owl-carousel .owl-stage-outer .owl-stage {
+  background-color: var(--Primary-Primary);
+  height: 100%;
+}
+.header-section .owl-carousel .owl-stage-outer .owl-item {
+  height: 100%;
+}
+.header-section .owl-carousel .item {
+  height: 100%;
+}
+.header-section .owl-carousel .item .header-course-details {
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  color: var(--Nuturals-White);
+  width: 100%;
+}
+.header-section .owl-carousel .item .header-course-details h3 {
+  letter-spacing: 2px;
+  font-family: rubikBold-700;
+}
+.header-section
+  .owl-carousel
+  .item
+  .header-course-details
+  .header-view-course-button {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 0rem 0.4rem;
+  backdrop-filter: blur(1px);
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.171);
+  cursor: pointer;
+}
+.header-section .owl-carousel .owl-dots {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 30px;
+}
+.header-section .owl-carousel .owl-nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-section .owl-carousel .owl-nav button.owl-prev span,
+.header-section .owl-carousel .owl-nav button.owl-next span{
+  color: var(--Nuturals-White);
+  font-size: 40px;
+  line-height: 25px;
 
+}
+.header-section .owl-carousel .owl-nav button.owl-prev,
+.header-section .owl-carousel .owl-nav button.owl-next {
+  height: 60px; 
+  width: 60px;
+  background-color: #000; 
+  margin: 0 !important;
+}
+
+.header-section .owl-carousel .owl-dots .owl-dot span {
+  height: 8px;
+  width: 30px;
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255, 0.26);
+}
+.header-section .owl-carousel .owl-dots .owl-dot.active span {
+  background-color: #fabd00 !important;
+}
+.header-section
+  .owl-carousel
+  .item
+  .header-course-details
+  .header-view-course-button
+  img {
+  width: 40px;
+  height: 80%;
+  position: static;
+}
+.header-section .header-back1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.header-section .header-back1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .header-section .header-social-icons {
   position: absolute;
   z-index: 100;
@@ -568,7 +685,7 @@ p {
   right: 10px;
   top: 30%;
 }
-.coming-training-section .owl-dot.active span {
+.coming-training-section .owl-carousel .owl-dot.active span {
   color: black !important;
   background-color: black !important;
 }
@@ -612,16 +729,19 @@ p {
   width: 2.5rem;
   height: 0.5rem;
 }
-.owl-carousel .owl-nav {
+.coming-training-section .owl-carousel .owl-nav,
+.top-courses-section .owl-carousel .owl-nav {
   margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.owl-carousel .owl-dots {
+.coming-training-section .owl-carousel .owl-dots,
+.top-courses-section .owl-carousel .owl-dots {
   margin-top: -30px !important;
 }
-.owl-carousel .owl-nav button.owl-prev,
+.coming-training-section .owl-carousel .owl-nav button.owl-prev,
+.top-courses-section .owl-carousel .owl-nav button.owl-prev,
 .custom-navigation button.owl-prev {
   margin-right: 150px;
   height: 2rem;
@@ -629,7 +749,8 @@ p {
   color: #fff;
   padding-bottom: 15px !important;
 }
-.owl-carousel .owl-nav button.owl-next,
+.coming-training-section .owl-carousel .owl-nav button.owl-next,
+.top-courses-section .owl-carousel .owl-nav button.owl-next,
 .custom-navigation button.owl-next {
   height: 2rem;
   width: 3rem;
@@ -1427,7 +1548,7 @@ p {
 }
 @media (width<400px) {
   .view-cities-venues {
-    width: 100%;
+    width: 99%;
   }
   .view-course-city p {
     padding: 15px;
@@ -1475,7 +1596,7 @@ p {
   bottom: 8.125rem;
   left: 3%;
 }
-@media (767px< width< 1025px) {
+@media (767px < width < 1025px) {
   .partners-cards-container {
     grid-template-columns: repeat(4, auto);
   }
@@ -1535,6 +1656,9 @@ p {
     width: 80px;
     height: 80px;
     bottom: 8rem;
+  }
+  .container-home {
+    max-width: 90%;
   }
 }
 /* --------------------------------------------- Training Memories-------------------------------------- */
@@ -2605,8 +2729,11 @@ p {
 }
 @media (width<1025px) {
   .footer-form-container {
-    width: 60%;
+    width: 80%;
     max-width: none;
+  }
+  .footer-form-socialIcon {
+    gap: 0.8rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2615,6 +2742,9 @@ p {
   }
   .footer-absolute-logo-container {
     width: 100%;
+  }
+  .footer-content-heading {
+    width: 61%;
   }
 }
 @media (width<400px) {
