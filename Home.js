@@ -22,6 +22,20 @@ document.addEventListener("click", (event) => {
 navbarDropdown.addEventListener("click", (event) => {
   event.stopPropagation(); // Prevents the click event from reaching the document
 });
+// search overlay -------------------------------------------------------------------------------------------------
+
+$(document).ready(function () {
+  $('#search-close-btn').click(function () {
+    $('#search-overlay').fadeOut();
+    $('#search-open-btn').show();
+  });
+  $('#search-open-btn').click(function () {
+    // $(this).hide();
+    $('#search-overlay').fadeIn();
+  });
+});
+
+
 
 // hero section ---------------------------------------------------------------------------------------------------
 

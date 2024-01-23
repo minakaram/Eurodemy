@@ -325,6 +325,40 @@ p {
   }
 }
 
+/*--------------------------------------------- saerch overlay---------------------------------------------*/
+.search-overlay-section {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.836);
+  margin: 0;
+  z-index: 1000;
+  display: none;
+  backdrop-filter: blur(10px);
+}
+.search-overlay-section .search-overlay-close-btn {
+  position: fixed;
+  top: 1em;
+  right: 2em;
+}
+.search-overlay-section .search-overlay-logo-image {
+  position: fixed;
+  top: 1rem;
+  left: 2.5rem;
+}
+.search-overlay-section h2 {
+  position: fixed;
+  width: 100%;
+  top: 20%;
+  color: var(--Nuturals-White);
+  text-align: center;
+  margin: auto;
+}
+
 /*--------------------------------------------- hero section ----------------------------------------------*/
 .header-section {
   position: relative;
@@ -400,7 +434,7 @@ p {
   align-items: center;
   bottom: 30px;
 }
-.header-section .owl-carousel .owl-nav{
+.header-section .owl-carousel .owl-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -409,17 +443,16 @@ p {
   width: 100%;
 }
 .header-section .owl-carousel .owl-nav button.owl-prev span,
-.header-section .owl-carousel .owl-nav button.owl-next span{
+.header-section .owl-carousel .owl-nav button.owl-next span {
   color: var(--Nuturals-White);
   font-size: 40px;
   line-height: 25px;
-
 }
 .header-section .owl-carousel .owl-nav button.owl-prev,
 .header-section .owl-carousel .owl-nav button.owl-next {
-  height: 60px; 
+  height: 60px;
   width: 60px;
-  background-color: #000; 
+  background-color: #000;
   margin: 0 !important;
 }
 
