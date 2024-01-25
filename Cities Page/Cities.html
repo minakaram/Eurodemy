@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="Cities.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <title>Cities</title>
+</head>
+
+<body>
+    <!------------------------------------------------ nav bar ------------------------------------------------------->
+    <nav class="navigationBar">
+        <img src="../Assets/blackLogo.png" alt="logo" class="logo-image" />
+        <div class="nav-items-container" id="navbar-toggler-items">
+            <div class="nav-toggler-item">Home</div>
+            <div class="nav-toggler-item">Categories</div>
+            <div class="nav-toggler-item">Cities</div>
+            <div class="nav-toggler-item">Tailored Courses</div>
+            <div class="nav-toggler-item">About Us</div>
+            <div class="nav-toggler-item">Contact Us</div>
+            <div class="nav-toggler-item careers">Careers</div>
+        </div>
+        <div class="nav-list-container d-flex align-items-center justify-content-center">
+            <div class="nav-icon-toggler d-flex align-items-center justify-content-center">
+                <div style="overflow: hidden" class="navbar-home-item d-flex align-items-center justify-content-center">
+                    <p class="my-0">Cities</p>
+                </div>
+                <div class="navbar-toggle-container" id="navbar-toggler-id">
+                    <img src="./Assets/toggler-icon.svg" alt="toggler-icon" class="toggler-icon w-100" />
+                </div>
+            </div>
+            <ul>
+                <li class="d-flex justify-content-between align-items-center">
+                    <a href="" class="navbar-home-list-item">Home</a>
+                </li>
+                <li>
+                    <a href="">Categories <svg style="margin-left: 1rem" width="14" height="14" viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
+                                fill="black" />
+                            <path
+                                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
+                                fill="black" />
+                        </svg></a>
+
+                </li>
+                <li class="active-list">
+                    <a href="">Cities
+                        <svg style="margin-left: 1rem" width="14" height="14" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
+                                fill="#ad1519" />
+                            <path
+                                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
+                                fill="#ad1519" />
+                        </svg>
+                    </a>
+
+                </li>
+                <li><a href="">Tailored Courses</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+        </div>
+        <div class="navigation-bar-right-side">
+            <img src="../Assets/SearchBar.png" alt="" class="header-search-bar" id="search-open-btn" />
+            <div class="changeTo-arabic-courses-box">
+                <div class="arabic-icon">
+                    <img src="../Assets/Arabic-Icon2.png" alt="arabic" />
+                </div>
+                <p class="arabic-course-txt">Arabic <br />Courses</p>
+            </div>
+        </div>
+    </nav>
+    <div class="course-category-heading">
+        <img class="flag-cities-abslute" src="Assets/Falg-cities.svg" alt="">
+        <h1>
+            <img src="../Assets/Vector-left-cities.png" class="heading-left-vector-abslute">
+            Courses Categories
+            <img src="../Assets/Vector-right--cities.svg" class="heading-right-vector-abslute">
+        </h1>
+        <p class="cities-heading-paragraph">
+            EURODEMY provides professional courses and training in <span class="hightlight-red">37</span> city around
+            the world in addition to our online trainings and courses.
+        </p>
+        <img style="margin: auto;display: block; width: 80%;" src="Assets/Vector-spliter.svg" alt="" class="mt-4">
+    </div>
+
+
+    <!---------------------------------------- cities and venues section --------------------------------------------->
+    <section class="cities-venues-section">
+        <img src="./Assets/Vector5.png" alt="" class="vector-red-up-right" />
+        <div class="container-home">
+            <div class="cities-venues-heading">
+
+            </div>
+            <div class="wrapper-container">
+                <div class="cities-wrapper">
+                    <div class="container-cards swiper-slide-cities">
+                        <div class="cities-courses-card a card-city-width">
+                            <img src="../Assets/cities/City2.png" class="cities-image-abslute" alt="" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card b">
+                            <img src="../Assets/cities/City2.png" class="cities-image-abslute" alt="" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card c">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card d">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card e">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card f">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card g">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card h">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card i">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card j">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card k">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card l">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card m">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card n">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card o">
+                            <img src="../Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="../Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-cards swiper-slide-cities">
+                        <div class="cities-courses-card a card-city-width">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card b">
+                            <img src="Assets/cities/City2.png" class="cities-image-abslute" alt="" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card c">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card d">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card e">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card f">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card g">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card h">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card i">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card j">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card k">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card l">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card m">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card n">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cities-courses-card o">
+                            <img src="Assets/cities/City1.png" alt="" class="cities-image-abslute" />
+                            <img src="Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
+                            <div class="courses-city-details">
+                                <div class="courses-city">
+                                    <p>Amman</p>
+                                </div>
+                                <div class="courses-avrg-view">
+                                    <p class="courses-city-average">16 Course</p>
+                                    <div class="view-course-city">
+                                        <p>View Course</p>
+                                        <img src="./Assets/Right Arrow - mini.svg" alt="view course"
+                                            class="right-arrow-mini" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="online-courses-bookmark-box view-courses-width">
+                <div class="onlineCourse-bookmarkIcon">
+                    <img src="../Assets/Rectangle 70.svg" alt="bookmark" class="bookmark-icon" />
+                    <img src="../Assets/bookmarkWhite.svg" alt="bookmark" class="bookmark-icon img-on-hover" />
+                    <div class="cities-courses-card online-courses-bookmark-content">
+                        <div class="bookmark-img-container">
+                            <img src="../Assets/online-course-icon2.svg" alt="online-course-img"
+                                class="online-course-img" />
+                            <img src="../Assets/online-course-icon3.svg" alt="online-course-img"
+                                class="online-course-img img-on-hover-cap" />
+                        </div>
+                        <p class="online-courses-bookmark-header">ONLINE COURSES</p>
+                        <p class="online-courses-bookmark-txt">16 Course</p>
+                        <div class="view-course-city-bookmark">
+                            <p>View Course</p>
+                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-cities">
+                <div class="cities-button-prev" onclick="prevCitiesSlide()">
+                    <img src="../Assets/Left Arrow.svg" alt="" />
+                </div>
+                <div class="pagination-container"></div>
+                <div class="cities-button-next" onclick="nextCitiesSlide()">
+                    <img src="../Assets/Right Arrow.svg" alt="" />
+                </div>
+            </div>
+            <div class="view-cities-venues">
+                <p>View all cities & venues</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                        d="M5.98746 1.13822C5.88983 1.04059 5.73154 1.04059 5.63391 1.13822L4.57325 2.19888C4.47562 2.29651 4.47562 2.4548 4.57325 2.55243L11.2908 9.26995C11.3884 9.36758 11.5467 9.36758 11.6443 9.26995L12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L5.98746 1.13822Z"
+                        fill="#262121" />
+                    <path
+                        d="M12.705 8.20929C12.8026 8.11166 12.8026 7.95336 12.705 7.85573L11.6443 6.79505C11.5467 6.69742 11.3884 6.69742 11.2907 6.79505L4.57322 13.5126C4.47559 13.6102 4.47559 13.7685 4.57322 13.8661L5.63388 14.9268C5.73151 15.0244 5.88981 15.0244 5.98744 14.9268L12.705 8.20929Z"
+                        fill="#262121" />
+                </svg>
+            </div>
+        </div>
+        <img src="./Assets/Vector4.png" alt="" class="vector-red-down-left" />
+    </section>
+    <!--------------------------------------------- FOOTER ----------------------------------------------->
+    <footer class="footer">
+        <div class="footer-separator">
+            <img src="../Assets/footer separator.svg" alt="separator" class="w-100" style="width: 100%;" />
+        </div>
+        <div class="footerLogos-container">
+            <img src="../Assets/footerMiddleContainer.png" alt="logo" class="footer-absolute-logo-container" />
+            <img src="../Assets/footerLogo.svg" alt="Logo" class="footer-absolute-logo" />
+        </div>
+        <main class="footer-contents-container">
+            <div class="leftSide-footer">
+                <div class="main-pages-container">
+                    <div class="footer-content-heading">
+                        <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+                        <h4 class="footer-content-header">Main Pages</h4>
+                    </div>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Courses
+                            Categories
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Cities &
+                            Venues
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Tailored
+                            Courses
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Careers ( Join
+                            our staff )
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />About Us
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Contact Us
+                        </li>
+                    </ul>
+                </div>
+                <div class="more-details-container">
+                    <div class="footer-content-heading">
+                        <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+                        <h4 class="footer-content-header">More Details</h4>
+                    </div>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Privacy policy
+                            agreement
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Terms of use
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Copy rights
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Registration,
+                            payment & cancelation policies
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Why to choose
+                            us ?
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Add us to your
+                            safe mailing list
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Program
+                            venue's terms and conditions
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightSide-footer">
+                <div class="quick-access-container">
+                    <div class="footer-content-heading">
+                        <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+                        <h4 class="footer-content-header">Quick Access</h4>
+                    </div>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Upcoming
+                            Courses
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Top Courses
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerShape2.svg" alt="list" />Training Staff
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-info-container">
+                    <div class="footer-content-heading">
+                        <img src="../Assets/footerIcon.svg" alt="footer-shape1" />
+                        <h4 class="footer-content-header">Contact Info.</h4>
+                    </div>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerIcon2.svg" alt="list" />Edificios
+                            Corporativos del Retiro, Calle Menorca 12, 28009 - Madrid
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerIcon3.svg" alt="list" />info@EURODEMY.com
+                        </li>
+                        <li class="footer-content-list-item">
+                            <img src="../Assets/footerIcon4.svg" alt="list" />+201097551224 |
+                            +201097551224
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-form-container">
+                <h4 class="footer-form-header">EURODEMY</h4>
+                <p class="footer-form-secondary-header">
+                    PROFESSIONAL TRAINING ACADEMY
+                </p>
+                <div class="footer-form-socialIcon">
+                    <img src="../Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
+                    <img src="../Assets/footerFacebook.svg" alt="Facebook" />
+                    <img src="../Assets/youtube.svg" alt="Youtube" style="height: 33px" />
+                    <img src="../Assets/FooterLinked.svg" alt="Linked" />
+                    <img src="../Assets/footerInstgram.svg" alt="Instgram" />
+                    <img src="../Assets/footerX.svg" alt="X" />
+                </div>
+                <div class="envelope-icon-container">
+                    <img src="../Assets/envelope.svg" alt="message" />
+                </div>
+                <p class="assurance-message-form-txt">
+                    Recieve our news, offers & updates on your e-mail
+                </p>
+                <div class="footer-form-input-container">
+                    <input type="text" id="footerFormGmail" name="footerFormGmail" class="footer-formInput"
+                        placeholder="Add your email" />
+                    <button class="footer-form-gmail-btn">Send</button>
+                </div>
+                <p class="successfullySentTxt">Successfully Sent</p>
+            </div>
+        </main>
+    </footer>
+
+
+
+    <script src="Cities.js"></script>
+</body>
+
+</html>

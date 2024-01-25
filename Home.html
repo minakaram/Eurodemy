@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="image-video-carousel-qc/css/qc.slider.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,7 +16,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="image-video-carousel-qc/qcslider.jquery.js"></script>
   <script defer src="Home.js"></script>
   <title>Eorodemy</title>
 </head>
@@ -39,7 +37,7 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
   <script defer src="Home.js"></script>
-  <title>Eorodemy</title>
+  <title>Home</title>
 </head>
 
 <body>
@@ -113,47 +111,53 @@
   <!--------------------------------------------- search overylay -------------------------------------------------->
   <div class="search-overlay-section" id="search-overlay">
     <img src="Assets/Logo.png" alt="logo" class="search-overlay-logo-image" />
-    <svg class="search-overlay-close-btn" id="search-close-btn" xmlns="http://www.w3.org/2000/svg" width="56"
-      height="56" viewBox="0 0 56 56" fill="none">
-      <rect width="56" height="56" rx="1" fill="#F52A2A" />
-      <path
-        d="M19.4754 38.7245C19.3235 38.8763 19.0773 38.8763 18.9254 38.7245L17.2755 37.0745C17.1236 36.9227 17.1236 36.6764 17.2755 36.5246L27.725 26.0751C27.8768 25.9232 28.1231 25.9232 28.275 26.0751L29.9249 27.725C30.0767 27.8768 30.0767 28.1231 29.9249 28.2749L19.4754 38.7245Z"
-        fill="white" />
-      <path
-        d="M29.9249 27.725C30.0767 27.8768 30.0767 28.1231 29.9249 28.2749L28.2749 29.9249C28.123 30.0768 27.8768 30.0768 27.7249 29.9249L17.2755 19.4754C17.1236 19.3236 17.1236 19.0773 17.2755 18.9255L18.9254 17.2755C19.0773 17.1237 19.3235 17.1237 19.4754 17.2755L29.9249 27.725Z"
-        fill="white" />
-      <path
-        d="M19.4754 38.7245C19.3235 38.8763 19.0773 38.8763 18.9254 38.7245L17.2755 37.0745C17.1236 36.9227 17.1236 36.6764 17.2755 36.5246L27.725 26.0751C27.8768 25.9232 28.1231 25.9232 28.275 26.0751L29.9249 27.725C30.0767 27.8768 30.0767 28.1231 29.9249 28.2749L19.4754 38.7245Z"
-        fill="white" />
-      <path
-        d="M29.9249 27.725C30.0767 27.8768 30.0767 28.1231 29.9249 28.2749L28.2749 29.9249C28.123 30.0768 27.8768 30.0768 27.7249 29.9249L17.2755 19.4754C17.1236 19.3236 17.1236 19.0773 17.2755 18.9255L18.9254 17.2755C19.0773 17.1237 19.3235 17.1237 19.4754 17.2755L29.9249 27.725Z"
-        fill="white" />
-      <path
-        d="M38.7244 36.5245C38.8763 36.6764 38.8763 36.9226 38.7244 37.0745L37.0745 38.7244C36.9226 38.8763 36.6764 38.8763 36.5245 38.7244L26.075 28.2749C25.9232 28.1231 25.9232 27.8768 26.0751 27.725L27.725 26.0751C27.8768 25.9232 28.1231 25.9232 28.275 26.0751L38.7244 36.5245Z"
-        fill="white" />
-      <path
-        d="M27.725 26.0751C27.8768 25.9232 28.1231 25.9232 28.275 26.0751L29.9249 27.725C30.0767 27.8768 30.0767 28.1231 29.9249 28.2749L19.4754 38.7245C19.3235 38.8763 19.0773 38.8763 18.9254 38.7245L17.2755 37.0745C17.1236 36.9227 17.1236 36.6764 17.2755 36.5246L27.725 26.0751Z"
-        fill="white" />
-      <path
-        d="M38.7244 36.5245C38.8763 36.6764 38.8763 36.9226 38.7244 37.0745L37.0745 38.7244C36.9226 38.8763 36.6764 38.8763 36.5245 38.7244L26.075 28.2749C25.9232 28.1231 25.9232 27.8768 26.0751 27.725L27.725 26.0751C27.8768 25.9232 28.1231 25.9232 28.275 26.0751L38.7244 36.5245Z"
-        fill="white" />
-      <path
-        d="M27.725 26.0751C27.8768 25.9232 28.1231 25.9232 28.275 26.0751L29.9249 27.725C30.0767 27.8768 30.0767 28.1231 29.9249 28.2749L19.4754 38.7245C19.3235 38.8763 19.0773 38.8763 18.9254 38.7245L17.2755 37.0745C17.1236 36.9227 17.1236 36.6764 17.2755 36.5246L27.725 26.0751Z"
-        fill="white" />
-      <path
-        d="M36.5245 38.7244C36.6764 38.8763 36.9226 38.8763 37.0745 38.7244L38.7244 37.0745C38.8763 36.9226 38.8763 36.6764 38.7244 36.5245L28.275 26.0751C28.1231 25.9232 27.8768 25.9232 27.725 26.0751L26.0751 27.725C25.9232 27.8768 25.9232 28.1231 26.075 28.2749L36.5245 38.7244Z"
-        fill="white" />
-      <path
-        d="M26.0751 27.725C25.9232 27.8768 25.9232 28.1231 26.075 28.2749L27.7249 29.9249C27.8768 30.0768 28.123 30.0768 28.2749 29.9249L38.7244 19.4755C38.8763 19.3236 38.8763 19.0774 38.7244 18.9255L37.0745 17.2756C36.9226 17.1237 36.6764 17.1237 36.5245 17.2756L26.0751 27.725Z"
-        fill="white" />
-      <path
-        d="M36.5245 38.7244C36.6764 38.8763 36.9226 38.8763 37.0745 38.7244L38.7244 37.0745C38.8763 36.9226 38.8763 36.6764 38.7244 36.5245L28.275 26.0751C28.1231 25.9232 27.8768 25.9232 27.725 26.0751L26.0751 27.725C25.9232 27.8768 25.9232 28.1231 26.075 28.2749L36.5245 38.7244Z"
-        fill="white" />
-      <path
-        d="M26.0751 27.725C25.9232 27.8768 25.9232 28.1231 26.075 28.2749L27.7249 29.9249C27.8768 30.0768 28.123 30.0768 28.2749 29.9249L38.7244 19.4755C38.8763 19.3236 38.8763 19.0774 38.7244 18.9255L37.0745 17.2756C36.9226 17.1237 36.6764 17.1237 36.5245 17.2756L26.0751 27.725Z"
-        fill="white" />
-    </svg>
-    <h2>Advanced Courses Search</h2>
+    <img class="search-overlay-close-btn" id="search-close-btn" src="Assets/Exit-button.svg" alt="">
+    <div class="search-overlay-inner-container">
+      <h2>Advanced Courses Search</h2>
+      <div class="w-100"><input placeholder="Enter course name or a word included..." class="" id="search-overlay-input"
+          name="search-overlay-input" type="text"></div>
+      <div class="row my-3">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-7 search-overlay-category-input">
+              <input id="category-input-search-overlay" placeholder="Category" name="category-input-search-overlay"
+                type="text">
+              <img src="Assets/down-arrow.svg" alt="" class="search-overlay-abslute-arrow"
+                id="search-by-category-arrow">
+            </div>
+            <div class="col-lg-5 pr-0 search-overlay-cities-input">
+              <input placeholder="All Cities" class="w-100" type="text" id="cities-input-search-overlay"
+                name="cities-input-search-overlay">
+              <img src="Assets/down-arrow.svg" alt="" class="search-overlay-abslute-arrow">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-4 search-overlay-duration-input">
+              <input type="text" placeholder="All Durations" id="duration-input-search-overlay"
+                name="duration-input-search-overlay">
+              <img src="Assets/down-arrow.svg" alt="" class="search-overlay-abslute-arrow">
+            </div>
+            <div class="col-lg-4 search-overlay-years-input"><input type="text" placeholder="All Years"
+                id="duration-input-search-overlay" name="duration-input-search-overlay">
+              <img src="Assets/down-arrow.svg" alt="" class="search-overlay-abslute-arrow">
+            </div>
+            <div class="col-lg-4 search-overlay-months-input"><input type="text" placeholder="All Months"
+                id="duration-input-search-overlay" name="duration-input-search-overlay">
+              <img src="Assets/down-arrow.svg" alt="" class="search-overlay-abslute-arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-overlay-dropdown" id="search-overlay-dropdown-container">
+
+      </div>
+      <div class="search-button-overlay d-flex justify-content-center align-items-center">
+        <img src="Assets/searchicon2.svg" alt="" style="margin-right: 10px;">
+        <span>Search</span>
+      </div>
+    </div>
   </div>
   <!---------------------------------------------- hero section ---------------------------------------------------->
   <section class="header-section">
@@ -312,12 +316,12 @@
         </a>
       </div>
     </div>
-    <<<<<<< HEAD </div>
-      <div class="searchCourseByName-hero-section-container">
-        <input type="text" id="courseByName|code" name="courseByName|code" class="searchInput"
-          placeholder="Search for a course by name or course #code" />
-        <img src="./Assets/searchIcon.svg" alt="search" class="searchIcon-courseByName" />
-      </div>
+    </div>
+    <div class="searchCourseByName-hero-section-container">
+      <input type="text" id="courseByName|code" name="courseByName|code" class="searchInput"
+        placeholder="Search for a course by name or course #code" />
+      <img src="./Assets/searchIcon.svg" alt="search" class="searchIcon-courseByName" />
+    </div>
   </section>
   <section class="coming-training-section container-fluid">
     <!-- <div class="q-scroll-chat">
@@ -2122,13 +2126,6 @@
     Academy
   </div>
 
-  <script>
-    $(document).ready(function ($) {
-      $('#slider').QCslider({
-        start: 0,
-      });
-    });
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
   <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>

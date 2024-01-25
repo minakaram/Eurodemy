@@ -48,6 +48,7 @@
   --NuturalsN-5: #bfb6b6;
   --secondary: #fee1e1;
   --Success-Success---Primary: #16ad38;
+  --Secondary-Secondary: #fabd00;
 }
 html {
   font-size: 100%;
@@ -63,28 +64,25 @@ p {
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #fff;
-  border-left: 2px solid var(--main-color);
-  box-shadow: 0px 0px 21px 0px #0003 inset;
   color: black;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--Primary-Primary);
-  box-shadow: 0px 0px 10px 0px var(--NuturalsN-5);
   border-radius: 0;
   height: 80px;
 }
 
 /* --------------------------------------------- navbar -------------------------------------------------- */
 .navigationBar {
-  /* position: fixed !important;
+  position: fixed !important;
   top: 0;
-  left: 0; */
+  left: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   padding: 0px 2.5rem;
-  position: absolute;
+  /* position: absolute; */
   z-index: 100;
   background: rgba(128, 128, 128, 0.486);
   max-height: 80px;
@@ -326,6 +324,7 @@ p {
 }
 
 /*--------------------------------------------- saerch overlay---------------------------------------------*/
+
 .search-overlay-section {
   width: 100%;
   position: fixed;
@@ -334,11 +333,15 @@ p {
   right: 0;
   bottom: 0;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.836);
   margin: 0;
   z-index: 1000;
   display: none;
-  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    115deg,
+    rgba(20, 0, 0, 0.93) -4.15%,
+    rgba(0, 0, 0, 0.93) 120%
+  );
+  backdrop-filter: blur(11px);
 }
 .search-overlay-section .search-overlay-close-btn {
   position: fixed;
@@ -351,21 +354,136 @@ p {
   left: 2.5rem;
 }
 .search-overlay-section h2 {
-  position: fixed;
-  width: 100%;
-  top: 20%;
   color: var(--Nuturals-White);
   text-align: center;
-  margin: auto;
+  margin: 50px auto;
+}
+.search-overlay-section .search-overlay-inner-container {
+  width: 70%;
+  position: fixed;
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%);
+  color: var(--Nuturals-White);
+}
+.search-overlay-section .search-overlay-inner-container input[type="text"] {
+  background-color: transparent;
+  border-radius: 1px;
+  border: 0.5px solid var(--Nuturals-N-5, #bfb6b6);
+  height: 3rem;
+  color: var(--Nuturals-White);
+  outline: none;
+  padding: 0rem 1rem;
+  width: 100%;
+}
+.search-overlay-abslute-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5rem;
+}
+.search-overlay-category-input,
+.search-overlay-cities-input,
+.search-overlay-duration-input,
+.search-overlay-years-input,
+.search-overlay-months-input {
+  position: relative;
+}
+.search-overlay-section .search-overlay-dropdown {
+  height: 300px;
+  overflow: auto;
+  overflow-x: hidden;
+  display: none;
 }
 
+.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar-thumb {
+  background-color: var(--Secondary-Secondary);
+  border-radius: 1px;
+  border: var(--Nuturals-N-6);
+  width: 10px;
+
+}
+.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 1px;
+  background-color: rgba(245, 227, 227, 0.2);
+  border: 1px solid var(--Nuturals-N-6);
+}
+.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar-track {
+  width: 10px;
+}
+
+.search-overlay-dropdown-item {
+  position: relative;
+  background: rgba(245, 227, 227, 0.2);
+  padding: 1rem;
+  margin-bottom: 2px;
+}
+.search-overlay-dropdown-item .custom-checkbox {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Style the custom checkbox appearance */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #807070; /* Set default background color */
+  border-radius: 3px;
+}
+
+/* Show a checkmark when the checkbox is checked */
+.custom-checkbox input:checked + .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.search-overlay-section .search-button-overlay{
+  width: 22%;
+  padding: 8px 20px;
+  margin: auto;
+  background-color: var(--Nuturals-White);
+  color: var(--Nuturals-N-1);
+  text-align: center;
+  font-family: rubikMedium-500;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 1rem;
+  visibility: hidden; 
+}
+.search-overlay-section .search-button-overlay img{
+  width: 20px;
+  height: 20px;
+}
 /*--------------------------------------------- hero section ----------------------------------------------*/
 .header-section {
   position: relative;
   height: 100vh;
   width: 100%;
   z-index: 1;
-  overflow: hidden;
   background-color: var(--Primary-Primary);
 }
 .header-section .Eourodemy-Provides-heading {
@@ -432,7 +550,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 30px;
+  bottom: 70px;
 }
 .header-section .owl-carousel .owl-nav {
   position: absolute;
@@ -978,7 +1096,7 @@ p {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: 'Top Category';
+  content: "Top Category";
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1077,7 +1195,7 @@ p {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: 'Top Category';
+  content: "Top Category";
   position: absolute;
   top: 0;
   left: 0;
@@ -1234,7 +1352,6 @@ p {
 }
 .cities-courses-card {
   width: 100%;
-  border: 1px solid black;
   height: 15rem;
   display: flex;
   justify-content: center;
@@ -1301,9 +1418,15 @@ p {
   width: 70%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0px 10px;
+}
+.courses-city-details .view-course-city .right-arrow-mini{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
 }
 .online-courses-bookmark-content .view-course-city-bookmark {
   border-radius: 1px;
@@ -1888,15 +2011,17 @@ p {
   background-color: var(--Nuturals-N-6);
 }
 .notActiveTestimonial {
-  width: 9.75rem !important;
+  width: calc(60% - 40% - 103px) !important;
+  text-align: center;
 }
 .testimonial-section .swiper-slide .testimonial-person-image {
-  width: 9.75rem;
+  width: 10rem;
   height: 9.75rem;
+  align-items: center;
 }
-.testimonial-section .swiper .swiper-slide {
+/* .testimonial-section .swiper .swiper-slide {
   margin-right: 20px !important;
-}
+} */
 .active-testimonial {
   font-size: 18px;
   background: transparent;
@@ -1904,7 +2029,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 440px !important;
+  width: 36% !important;
   transition: height 0.2s ease-in-out;
 }
 .testimonial-section
