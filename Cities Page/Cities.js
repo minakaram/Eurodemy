@@ -1,3 +1,54 @@
+// navbar dropdown -----------------------------------------------------------------
+const cities_Button_small_Screen = document.getElementById("collapse-dropdown");
+const small_screen_dropdown = document.getElementById(
+  "cities-dropdown-collapse-id"
+);
+
+cities_Button_small_Screen.addEventListener("click", () => {
+  const computedStyles = window.getComputedStyle(small_screen_dropdown);
+
+  if (
+    computedStyles.visibility === "hidden" ||
+    computedStyles.visibility === ""
+  ) {
+    console.log("in");
+    small_screen_dropdown.style.visibility = "visible";
+    small_screen_dropdown.style.opacity = "1";
+  } else {
+    small_screen_dropdown.style.visibility = "hidden";
+    small_screen_dropdown.style.opacity = "0";
+    console.log("no");
+  }
+});
+
+const cities_Nav_Button = document.getElementById("active-ul-list");
+const cities_Dropdown = document.getElementById("cities-dropdown-id");
+
+cities_Nav_Button.addEventListener("click", (e) => {
+  e.preventDefault();
+  
+  const computedStyles = window.getComputedStyle(cities_Dropdown);
+  
+  if (computedStyles.visibility === "hidden") {
+    console.log("in");
+    cities_Dropdown.style.visibility = "visible";
+    cities_Dropdown.style.opacity = "1";
+  } else {
+    cities_Dropdown.style.visibility = "hidden";
+    cities_Dropdown.style.opacity = "0";
+    console.log("o");
+  }
+});
+
+// Event listener to close dropdown when clicking outside
+// document.addEventListener("click", (e) => {
+//   const isClickInsideDropdown =
+//     cities_Nav_Button.contains(e.target) || cities_Dropdown.contains(e.target);
+
+//   if (!isClickInsideDropdown) {
+//     closeDropdown();
+//   }
+// });
 //------------------------------------ cities slider---------------------------------
 let currentIndex = 0;
 
@@ -279,16 +330,12 @@ cities_input_search.addEventListener("input", function (event) {
 });
 
 function setSecondContainerWidth() {
-  console.log("Function is running!");
-
   const cityWidth = document.querySelector(".cities-courses-card");
-  console.log(cityWidth);
   if (cityWidth) {
     const cityCurrentWidth = cityWidth.offsetWidth;
     const loadCourses = document.querySelector(".view-courses-width");
     if (loadCourses) {
       loadCourses.style.width = `${cityCurrentWidth}px`;
-      console.log("Width applied successfully!");
     } else {
       console.error("Element with class view-courses-width not found.");
     }
