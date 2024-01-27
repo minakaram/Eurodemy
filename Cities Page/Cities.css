@@ -376,713 +376,877 @@ p {
   line-height: 1.875rem;
   font-family: rethinkExtraBold-800;
 }
-
-
-/*------------------------------------------ cities and venues section ------------------------------------------ */
-.cities-venues-section {
-    padding: 7.5rem 0 5rem;
-    position: relative;
-  }
-  .vector-red-up-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .vector-red-down-left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  .cities-heading-paragraph {
-    font-family: rethinkRegular-400;
-    font-size: 1.125rem;
-    line-height: 1.875rem;
-    color: var(--Nuturals-N-2);
-    text-align: center;
-    padding: 2rem 3rem;
-  }
-  .hightlight-red {
-    color: var(--Primary-Primary);
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    font-family: rethinkExtraBold-800;
-  }
-  .wrapper-container {
-    overflow: hidden;
+@media(width<768px){
+  .course-category-heading h1 {
     position: relative;
     width: 100%;
-    margin: 0 auto;
+    text-align: center;
+    padding: 5.9rem 1rem;
+    
   }
-  
-  .cities-venues-section .wrapper-container .cities-wrapper {
-    display: flex !important;
-    transition: transform 0.5s ease-in-out;
+  .heading-right-vector-abslute{
+    width: 19% !important;
+    top: 52% !important;
+  }
+  .heading-left-vector-abslute{
+    width: 19% !important;
+  }
+}
+@media(width<400px){
+
+  .heading-right-vector-abslute{
+    width: 13% !important;
+  }
+  .heading-left-vector-abslute{
+    width: 13% !important;
+  }
+}
+/*------------------------------------------ cities and venues section ------------------------------------------ */
+.cities-venues-section {
+  padding: 7.5rem 0 5rem;
+  position: relative;
+}
+.vector-red-up-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.vector-red-down-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.cities-heading-paragraph {
+  font-family: rethinkRegular-400;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: var(--Nuturals-N-2);
+  text-align: center;
+  padding: 2rem 3rem;
+}
+.hightlight-red {
+  color: var(--Primary-Primary);
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-family: rethinkExtraBold-800;
+}
+.wrapper-container {
+  overflow: hidden;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.cities-venues-section .wrapper-container .cities-wrapper {
+  display: flex !important;
+  transition: transform 0.5s ease-in-out;
+}
+.cities-venues-section .container-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 85%;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  padding: 4rem 0;
+  min-width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 60px;
+}
+
+.cities-image-abslute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+.j,
+.h,
+.i,
+.g,
+.f,
+.k,
+.o,
+.m {
+  margin-top: -120px;
+}
+.cities-courses-card {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--Nuturals-N-6);
+  position: relative;
+  font-family: rubikRegular-400;
+}
+.cities-courses-card:hover .courses-city-details,
+.cities-courses-card:hover {
+  background: rgba(38, 33, 33, 0.705);
+}
+.search-div-style:hover .courses-city-details,
+.search-div-style:hover {
+  background: rgba(38, 33, 33, 0.705);
+}
+.courses-city-details {
+  position: relative;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.order-by-toggler{
+  background-color: var(--Primary-Primary);
+  position: absolute;
+  left: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+.cities-courses-card .courses-city-average,
+.cities-courses-card .view-course-city,
+.online-courses-bookmark-content .view-course-city-bookmark {
+  opacity: 0;
+}
+.search-div-style .courses-city-average,
+.search-div-style .view-course-city,
+.online-courses-bookmark-content .view-course-city-bookmark {
+  opacity: 0;
+}
+.cities-courses-card:hover .courses-city-average,
+.cities-courses-card:hover .view-course-city,
+.online-courses-bookmark-content:hover .view-course-city-bookmark {
+  opacity: 1;
+}
+.search-div-style:hover .courses-city-average,
+.search-div-style:hover .view-course-city,
+.online-courses-bookmark-content:hover .view-course-city-bookmark {
+  opacity: 1;
+}
+.courses-city-details .courses-city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: rubikMedium-500;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: var(--Nuturals-White);
+}
+.courses-avrg-view {
+  position: absolute;
+  width: 100%;
+  bottom: 0.5rem;
+}
+.courses-city-average {
+  font-family: rubikRegular-400;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 1rem 0 2.125rem;
+  text-align: center;
+  color: var(--Nuturals-White);
+}
+.courses-city-details .view-course-city {
+  border-radius: 1px;
+  border: 0.25px solid rgba(191, 182, 182, 0.5);
+  background: rgba(255, 255, 255, 0);
+  font-size: 0.75rem;
+  height: 1.75rem;
+  position: relative;
+  bottom: 0;
+  cursor: pointer;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 10px;
+}
+.courses-city-details .view-course-city .right-arrow-mini {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+}
+.online-courses-bookmark-content .view-course-city-bookmark {
+  border-radius: 1px;
+  border: 0.25px solid rgba(191, 182, 182, 0.5);
+  background: rgba(255, 255, 255, 0);
+  font-size: 0.75rem;
+  position: relative;
+  cursor: pointer;
+  width: 70%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-course-city p,
+.online-courses-bookmark-content .view-course-city-bookmark p {
+  padding: 0.5rem 1rem;
+  color: var(--Nuturals-N-6);
+}
+.container-container-cities {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.b,
+.d {
+  margin-top: 120px;
+}
+.i,
+.g {
+  margin-top: 0px;
+}
+
+.online-courses-bookmark-box {
+  margin: auto;
+  position: relative;
+  z-index: 100;
+  background-color: var(--Nuturals-N-7);
+}
+.bookmark-icon {
+  position: absolute;
+  top: 0;
+  left: 0.438rem;
+}
+.onlineCourse-bookmarkIcon {
+  margin-top: -170px;
+  border: 1px solid black;
+}
+.cities-courses-card:hover > * {
+  color: var(--Nuturals-N-6);
+}
+.online-courses-bookmark-box .img-on-hover,
+.online-courses-bookmark-box .img-on-hover-cap,
+.on-hover-white-arrow {
+  opacity: 0;
+}
+.online-courses-bookmark-box:hover .img-on-hover,
+.online-courses-bookmark-box:hover .img-on-hover-cap {
+  opacity: 1;
+  z-index: 1;
+}
+
+.see-all-cities-div:hover {
+  color: var(--Nuturals-N-6);
+}
+
+.img-on-hover-cap {
+  position: absolute;
+  transform: translateX(-100%);
+}
+.online-courses-bookmark-box:hover {
+  background: var(--Nuturals-N-2);
+}
+.online-courses-bookmark-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: var(--Nuturals-N-2);
+}
+.online-course-img {
+  margin-top: 0.75rem;
+}
+.online-courses-bookmark-header {
+  font-family: rubikMedium-500;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-bottom: 0.25rem;
+  padding: 0.938rem 0;
+}
+.online-courses-bookmark-content .online-courses-bookmark-txt {
+  line-height: 1rem;
+  font-family: rubikRegular-400;
+  font-size: 1rem;
+  margin-bottom: 2.125rem;
+}
+.navigation-cities {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 14.5rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+.cities-button-prev,
+.cities-button-next {
+  background-color: var(--Nuturals-N-2);
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-item {
+  width: 2.5rem;
+  height: 0.5rem;
+  border-radius: 3px;
+  background-color: var(--Nuturals-N-6);
+  margin: 0 0.4rem;
+  cursor: pointer;
+}
+
+.pagination-item.active {
+  background-color: var(--Nuturals-N-2);
+  border-radius: 3px;
+}
+.view-cities-venues {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+  text-align: center;
+  border: 0.5px solid var(--Nuturals-N-2);
+  background: var(--Nuturals-N-7);
+  backdrop-filter: blur(2.5px);
+  margin: auto;
+  width: 30%;
+  padding: 0.938rem 2.25rem;
+  position: relative;
+  cursor: pointer;
+  color: var(--Nuturals-N-2);
+}
+.view-cities-venues p {
+  text-align: end;
+  font-family: rubikMedium-500;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  margin-right: 12%;
+}
+.view-cities-venues svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.view-cities-venues:hover {
+  color: var(--Nuturals-N-7);
+  background-color: var(--Nuturals-N-2);
+}
+.view-cities-venues:hover path {
+  fill: #fff !important;
+}
+.cities-venues-section .cities-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 4rem;
+  z-index: 1000;
+  position: relative;
+}
+.cities-venues-section .cities-search .left-side-search {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cities-venues-section .cities-search .left-side-search .order-by {
+  color: var(--Nuturals-White);
+  background-color: var(--Primary-Primary);
+  padding: 11px 20px;
+}
+.cities-venues-section .cities-search .left-side-search select {
+  width: 180px;
+  border-radius: 1px;
+  padding: 10px 15px;
+  outline: none !important;
+  border: 1px solid var(--Primary-Primary);
+  color: var(--Primary-Primary);
+  appearance: none; /* Remove default arrow in some browsers */
+  -webkit-appearance: none; /* Remove default arrow in Safari */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  background-image: url(../Assets/red-arrow.svg);
+  position: relative;
+}
+.cities-venues-section .cities-search .left-side-search select option:hover {
+  background-color: var(--Primary-Primary);
+  color: var(--Nuturals-White);
+}
+
+.cities-venues-section .cities-search .left-side-search select:focus {
+  border: 1px solid var(--Primary-Primary);
+  box-shadow: none;
+  outline: none !important;
+}
+.cities-search-input {
+  position: relative;
+}
+.cities-search-input input {
+  width: 30rem;
+  height: 3rem;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid var(--NuturalsN-5);
+}
+.cities-search-input img {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-div-style {
+  width: 20%;
+  height: 15rem;
+  position: relative;
+}
+
+.cities-search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+@media (767px < width <1025px) {
+  .cities-venues-section {
+    padding: 7.5rem 3rem 5rem;
   }
   .cities-venues-section .container-cards {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8px;
+    padding: 5rem 2rem;
     max-width: 80%;
-    justify-content: center;
-    justify-items: center;
-    margin: auto;
-    padding: 4rem 0;
-    min-width: 100%;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    padding: 60px;
   }
-  .cities-venues-section
-    .wrapper-container
-    .cities-wrapper
-    .container-cards
-    .cities-image-abslute {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    vertical-align: middle;
-  }
-  .j,
-  .h,
-  .i,
-  .g,
-  .f,
-  .k,
-  .o,
-  .m {
+  .b {
     margin-top: -120px;
   }
-  .cities-courses-card {
-    width: 100%;
-    height: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: var(--Nuturals-N-6);
-    position: relative;
-    font-family: rubikRegular-400;
+  .d {
+    margin-top: -240px;
+    grid-column-start: 2;
+    grid-column-end: 2;
   }
-  .cities-courses-card:hover .courses-city-details,
-  .cities-courses-card:hover {
-    background: rgba(38, 33, 33, 0.705);
+  .f,
+  .i {
+    margin-top: -370px;
   }
-  .courses-city-details {
-    position: relative;
-    transition: 0.3s;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  .h {
+    margin-bottom: 120px;
+  }
+  .e {
+    margin-bottom: 120px;
+    margin-top: -120px;
+  }
+  .g {
+    margin-top: -240px;
+  }
+  .c {
+    margin-bottom: 120px;
+  }
+  .j {
+    margin-top: -240px;
+  }
+  .l {
+    margin-top: -250px;
+  }
+  .o {
+    margin-top: -250px;
+  }
+  .onlineCourse-bookmarkIcon {
+    margin-top: -200px;
+    border: 1px solid black;
+  }
+  .cities-venues-section .wrapper-container .cities-wrapper {
+    padding-top: 7rem;
+  }
+  .cities-heading-paragraph {
+    padding: 4rem;
+  }
+  .view-cities-venues {
+    width: 60%;
   }
   .cities-courses-card .courses-city-average,
   .cities-courses-card .view-course-city,
   .online-courses-bookmark-content .view-course-city-bookmark {
-    opacity: 0;
-  }
-  .cities-courses-card:hover .courses-city-average,
-  .cities-courses-card:hover .view-course-city,
-  .online-courses-bookmark-content:hover .view-course-city-bookmark {
     opacity: 1;
   }
-  .courses-city-details .courses-city {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: rubikMedium-500;
-    font-size: 1.5rem;
-    line-height: 1.875rem;
+  .search-div-style .courses-city-average,
+  .search-div-style .view-course-city,
+  .online-courses-bookmark-content .view-course-city-bookmark {
+    opacity: 1;
     color: var(--Nuturals-White);
   }
-  .courses-avrg-view {
-    position: absolute;
-    width: 100%;
-    bottom: 0.5rem;
-  }
-  .courses-city-average {
-    font-family: rubikRegular-400;
-    font-size: 1rem;
-    line-height: 1rem;
-    padding: 1rem 0 2.125rem;
-  }
-  .courses-city-details .view-course-city {
-    border-radius: 1px;
-    border: 0.25px solid rgba(191, 182, 182, 0.5);
-    background: rgba(255, 255, 255, 0);
-    font-size: 0.75rem;
-    height: 1.75rem;
+  .search-div-style {
+    width: 40%;
+    height: 15rem;
     position: relative;
-    bottom: 0;
-    cursor: pointer;
-    width: 70%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 10px;
   }
-  .courses-city-details .view-course-city .right-arrow-mini{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 5px;
+  .cities-search{
+    padding: 0rem 0rem !important;
   }
-  .online-courses-bookmark-content .view-course-city-bookmark {
-    border-radius: 1px;
-    border: 0.25px solid rgba(191, 182, 182, 0.5);
-    background: rgba(255, 255, 255, 0);
-    font-size: 0.75rem;
-    position: relative;
-    cursor: pointer;
-    width: 70%;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@media (width<768px) {
+  .vector-red-down-left {
+    width: 150px;
+    height: 150px;
   }
-  .view-course-city p,
-  .online-courses-bookmark-content .view-course-city-bookmark p {
-    padding: 0.5rem 1rem;
-    color: var(--Nuturals-N-6);
-  }
-  .container-home {
-    max-width: 85%;
-    margin: 0 auto;
-  }
-  
-  .b,
-  .d {
-    margin-top: 120px;
-  }
-  .i,
-  .g {
-    margin-top: 0px;
-  }
-  
-  .online-courses-bookmark-box {
-    margin: auto;
-    position: relative;
-    z-index: 100;
-    background-color: var(--Nuturals-N-7);
-  }
-  .bookmark-icon {
-    position: absolute;
-    top: 0;
-    left: 0.438rem;
-  }
-  .onlineCourse-bookmarkIcon {
-    margin-top: -170px;
-    border: 1px solid black;
-  }
-  .cities-courses-card:hover > * {
-    color: var(--Nuturals-N-6);
-  }
-  .online-courses-bookmark-box .img-on-hover,
-  .online-courses-bookmark-box .img-on-hover-cap,
-  .on-hover-white-arrow {
-    opacity: 0;
-  }
-  .online-courses-bookmark-box:hover .img-on-hover,
-  .online-courses-bookmark-box:hover .img-on-hover-cap {
-    opacity: 1;
-    z-index: 1;
-  }
-  .img-on-hover-cap {
-    position: absolute;
-    transform: translateX(-100%);
-  }
-  .online-courses-bookmark-box:hover {
-    background: var(--Nuturals-N-2);
-  }
-  .online-courses-bookmark-content {
+  .cities-venues-section .container-cards {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 1.5rem 0;
-    color: var(--Nuturals-N-2);
+    justify-content: flex-start;
   }
-  .online-course-img {
-    margin-top: 0.75rem;
+  .b,
+  .d,
+  .f,
+  .i,
+  .l,
+  .o,
+  .j,
+  .h,
+  .k,
+  .m {
+    margin: 0;
   }
-  .online-courses-bookmark-header {
-    font-family: rubikMedium-500;
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    margin-bottom: 0.25rem;
-    padding: 0.938rem 0;
+
+  .onlineCourse-bookmarkIcon {
+    margin-top: -50px;
+    border: 1px solid black;
   }
-  .online-courses-bookmark-content .online-courses-bookmark-txt {
-    line-height: 1rem;
-    font-family: rubikRegular-400;
-    font-size: 1rem;
-    margin-bottom: 2.125rem;
-  }
-  .navigation-cities {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    max-width: 14.5rem;
-    align-items: center;
-    padding: 3rem 0;
+  .view-cities-venues {
+    width: 90%;
   }
   .cities-button-prev,
   .cities-button-next {
-    background-color: var(--Nuturals-N-2);
-    padding: 0.5rem 0.75rem;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 2px;
+    display: none;
   }
-  .pagination-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .pagination-item {
-    width: 2.5rem;
-    height: 0.5rem;
-    border-radius: 3px;
-    background-color: var(--Nuturals-N-6);
-    margin: 0 0.4rem;
-    cursor: pointer;
-  }
-  
-  .pagination-item.active {
-    background-color: var(--Nuturals-N-2);
-    border-radius: 3px;
-  }
-  .view-cities-venues {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1px;
-    text-align: center;
-    border: 0.5px solid var(--Nuturals-N-2);
-    background: var(--Nuturals-N-7);
-    backdrop-filter: blur(2.5px);
+  .cities-venues-section .pagination-container {
     margin: auto;
-    width: 30%;
-    padding: 0.938rem 2.25rem;
+  }
+  .cities-courses-card .courses-city-average,
+  .cities-courses-card .view-course-city,
+  .online-courses-bookmark-content .view-course-city-bookmark {
+    opacity: 1;
+  }
+  .search-div-style .courses-city-average,
+  .search-div-style .view-course-city,
+  .online-courses-bookmark-content .view-course-city-bookmark {
+    opacity: 1;
+    color: var(--Nuturals-White);
+  }
+  .vector-red-up-right {
+    width: 200px;
+    height: 200px;
+  }
+  .cities-heading-paragraph {
+    padding: 0.5rem 0;
+  }
+  .search-div-style {
+    width: 65%;
+    height: 15.5rem;
     position: relative;
-    cursor: pointer;
-    color: var(--Nuturals-N-2);
   }
-  .view-cities-venues p {
-    text-align: end;
-    font-family: rubikMedium-500;
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-    margin-right: 12%;
+  .order-by-toggler{
+    display: block !important;
+    left: 1rem;
   }
-  .view-cities-venues svg {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+  .left-side-search{
+    display: none !important; 
   }
-  .view-cities-venues:hover {
-    color: var(--Nuturals-N-7);
-    background-color: var(--Nuturals-N-2);
+  .cities-search{
+    padding: 0rem 0rem !important;
+    padding-right: 1rem !important;
+    justify-content: flex-end !important;
   }
-  .view-cities-venues:hover path {
-    fill: #fff !important;
+  .cities-search-input{
+    align-self: flex-end;
+    width: 70%;
   }
-  @media (767px < width <1025px) {
-    .cities-venues-section {
-      padding: 7.5rem 3rem 5rem;
-    }
-    .cities-venues-section .container-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 8px;
-      padding: 5rem 2rem;
-      max-width: 80%;
-    }
-    .b {
-      margin-top: -120px;
-    }
-    .d {
-      margin-top: -240px;
-      grid-column-start: 2;
-      grid-column-end: 2;
-    }
-    .f,
-    .i {
-      margin-top: -370px;
-    }
-    .h {
-      margin-bottom: 120px;
-    }
-    .e {
-      margin-bottom: 120px;
-      margin-top: -120px;
-    }
-    .g {
-      margin-top: -240px;
-    }
-    .c {
-      margin-bottom: 120px;
-    }
-    .j {
-      margin-top: -240px;
-    }
-    .l {
-      margin-top: -250px;
-    }
-    .o {
-      margin-top: -250px;
-    }
-    .onlineCourse-bookmarkIcon {
-      margin-top: -200px;
-      border: 1px solid black;
-    }
-    .cities-venues-section .wrapper-container .cities-wrapper {
-      padding-top: 4rem;
-    }
-    .cities-heading-paragraph {
-      padding: 4rem;
-    }
-    .view-cities-venues {
-      width: 60%;
-    }
-    .cities-courses-card .courses-city-average,
-    .cities-courses-card .view-course-city,
-    .online-courses-bookmark-content .view-course-city-bookmark {
-      opacity: 1;
-    }
+  .cities-search-input input{
+    /* align-self: flex-end; */
+    width: 100%
   }
-  
-  @media (width<768px) {
-    .vector-red-down-left {
-      width: 150px;
-      height: 150px;
-    }
-    .cities-venues-section .container-cards {
-      grid-template-columns: 1fr;
-    }
-    .b,
-    .d,
-    .f,
-    .i,
-    .l,
-    .o,
-    .j,
-    .h,
-    .k,
-    .m {
-      margin: 0;
-    }
-  
-    .onlineCourse-bookmarkIcon {
-      margin-top: -50px;
-      border: 1px solid black;
-    }
-    .view-cities-venues {
-      width: 90%;
-    }
-    .cities-button-prev,
-    .cities-button-next {
-      display: none;
-    }
-    .cities-venues-section .pagination-container {
-      margin: auto;
-    }
-    .cities-courses-card .courses-city-average,
-    .cities-courses-card .view-course-city,
-    .online-courses-bookmark-content .view-course-city-bookmark {
-      opacity: 1;
-    }
-    .vector-red-up-right {
-      width: 200px;
-      height: 200px;
-    }
-    .cities-heading-paragraph {
-      padding: 0.5rem 0;
-    }
+}
+@media (width<400px) {
+  .view-cities-venues {
+    width: 99%;
   }
-  @media (width<400px) {
-    .view-cities-venues {
-      width: 99%;
-    }
-    .view-course-city p {
-      padding: 15px;
-    }
+  .view-course-city p {
+    padding: 15px;
   }
+}
 
-
-  /* -------------------------------------------- FOOTER ---------------------------------------------------- */
+/* -------------------------------------------- FOOTER ---------------------------------------------------- */
 .footer {
-    background-image: url(../Assets/Footer\ Bg.png);
-    margin-top: 4rem;
-    min-height: 48rem;
-    width: 100%;
-    position: relative;
-  }
-  .footerLogos-container {
-    width: 100%;
-    overflow: hidden;
-  }
-  .footer-absolute-logo-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 51%;
-  }
-  .footer-absolute-logo {
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: -1rem;
-  }
-  .footer-contents-container {
-    display: flex;
+  background-image: url(../Assets/Footer\ Bg.png);
+  margin-top: 4rem;
+  min-height: 48rem;
+  width: 100%;
+  position: relative;
+}
+.footerLogos-container {
+  width: 100%;
+  overflow: hidden;
+}
+.footer-absolute-logo-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 51%;
+}
+.footer-absolute-logo {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -1rem;
+}
+.footer-contents-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0 0;
+}
+.footer-separator {
+  position: absolute;
+  top: 64%;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftSide-footer,
+.rightSide-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.leftSide-footer {
+  padding: 0 4rem;
+}
+.rightSide-footer {
+  margin: 2rem 0 1rem;
+  padding-left: 4rem;
+}
+.more-details-container {
+  width: 30%;
+  padding-right: 1rem;
+}
+.contact-info-container {
+  width: 33%;
+  padding-right: 1rem;
+}
+.main-pages-container {
+  margin-bottom: 4.813rem;
+  width: 30%;
+}
+.quick-access-container {
+  width: 30%;
+}
+.footer-content-heading {
+  width: 60%;
+  display: flex;
+  gap: 0.5rem;
+  color: var(--Nuturals-N-7);
+  font-family: rubikSemiBold-600;
+  margin-bottom: 2rem;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  border-bottom: 1px solid var(--Nuturals-N-7);
+}
+.footer-content-list {
+  color: var(--Nuturals-N-6);
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-content-list-item {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer-content-list-item:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+.footer-form-container {
+  background-color: var(--Nuturals-N-6);
+  border-radius: 5rem 5rem 0px 0px;
+  min-height: 31.75rem;
+  max-width: 30.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-form-header {
+  color: var(--Nuturals-N-1);
+  text-align: center;
+  font-family: rubikMedium-500;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  padding: 2rem 0 0.75rem;
+}
+.footer-form-secondary-header {
+  padding-bottom: 2rem;
+  color: var(--Nuturals-N-1);
+  text-align: center;
+  font-family: rubikRegular-400;
+  font-size: 1.125rem;
+}
+.footer-form-socialIcon {
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+  border-radius: 1px;
+  border: 2px dashed var(--Nuturals-N-1);
+  padding: 0.3rem;
+  margin-bottom: 2.125rem;
+}
+.footer-form-socialIcon > img {
+  display: block;
+}
+.envelope-icon-container {
+  padding: 2rem 0 0.625rem;
+}
+.assurance-message-form-txt {
+  color: var(--Nuturals-N-1);
+  text-align: center;
+  font-family: rubikRegular;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  padding-bottom: 1.5rem;
+  max-width: 55%;
+}
+.footer-form-input-container {
+  border-radius: 1px;
+  border: 0.5px solid var(--Nuturals-N-1, #140000);
+  background-color: var(--Nuturals-N-7);
+  position: relative;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+.footer-formInput {
+  padding: 0.813rem 5.5rem 0.813rem 0.875rem;
+  border: none;
+  width: 100%;
+}
+.footer-formInput::placeholder {
+  color: var(--Nuturals-N-4);
+  font-family: rethinkRegular-400;
+  font-size: 1rem;
+}
+.footer-form-gmail-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.25rem;
+  border: none;
+  border-radius: 1px;
+  background: var(--Ternary-Ternary);
+  color: var(--Nuturals-White);
+  padding: 0.625rem 1.094rem;
+}
+.successfullySentTxt {
+  padding-bottom: 0.813rem;
+  color: var(--Success-Success---Primary);
+  font-family: rethinkBold-700;
+  font-size: 1.125rem;
+  opacity: 0;
+}
+.footer-copyright {
+  background: linear-gradient(90deg, #670709 0%, #62520f 224.57%);
+  color: var(--Nuturals-White);
+  text-align: center;
+  font-family: rubikMedium-500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 1rem;
+}
+@media screen and (max-width: 1125px) {
+  .footer-contents-container .leftSide-footer,
+  .footer-contents-container .rightSide-footer {
     flex-direction: column;
-    padding: 4rem 0 0;
+  }
+  .footer {
+    padding-top: 4rem;
+    padding-bottom: 550px;
   }
   .footer-separator {
-    position: absolute;
-    top: 64%;
-    left: 0;
-    z-index: 99;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .leftSide-footer,
-  .rightSide-footer {
-    display: flex;
-    justify-content: space-between;
+    display: none;
   }
   .leftSide-footer {
-    padding: 0 4rem;
+    padding-top: 8rem;
   }
-  .rightSide-footer {
-    margin: 2rem 0 1rem;
-    padding-left: 4rem;
-  }
-  .more-details-container {
-    width: 30%;
-    padding-right: 1rem;
-  }
+  .main-pages-container,
+  .quick-access-container,
+  .more-details-container,
   .contact-info-container {
-    width: 33%;
-    padding-right: 1rem;
-  }
-  .main-pages-container {
-    margin-bottom: 4.813rem;
-    width: 30%;
-  }
-  .quick-access-container {
-    width: 30%;
-  }
-  .footer-content-heading {
-    width: 60%;
-    display: flex;
-    gap: 0.5rem;
-    color: var(--Nuturals-N-7);
-    font-family: rubikSemiBold-600;
+    width: 100%;
     margin-bottom: 2rem;
-    font-size: 1.375rem;
-    line-height: 1.875rem;
-    border-bottom: 1px solid var(--Nuturals-N-7);
   }
   .footer-content-list {
-    color: var(--Nuturals-N-6);
-    display: grid;
-    grid-template-columns: 1fr;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .footer-content-list-item {
-    display: flex;
-    gap: 0.5rem;
-  }
-  .footer-content-list-item:not(:last-of-type) {
-    margin-bottom: 2rem;
-  }
+}
+@media (width<1025px) {
   .footer-form-container {
-    background-color: var(--Nuturals-N-6);
-    border-radius: 5rem 5rem 0px 0px;
-    min-height: 31.75rem;
-    max-width: 30.5rem;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-form-header {
-    color: var(--Nuturals-N-1);
-    text-align: center;
-    font-family: rubikMedium-500;
-    font-size: 2rem;
-    line-height: 2.25rem;
-    padding: 2rem 0 0.75rem;
-  }
-  .footer-form-secondary-header {
-    padding-bottom: 2rem;
-    color: var(--Nuturals-N-1);
-    text-align: center;
-    font-family: rubikRegular-400;
-    font-size: 1.125rem;
+    width: 80%;
+    max-width: none;
   }
   .footer-form-socialIcon {
-    display: flex;
-    width: 95%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.3rem;
-    border-radius: 1px;
-    border: 2px dashed var(--Nuturals-N-1);
-    padding: 0.3rem;
-    margin-bottom: 2.125rem;
+    gap: 0.8rem;
   }
-  .footer-form-socialIcon > img {
-    display: block;
+}
+@media screen and (max-width: 768px) {
+  .footer-content-list {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .envelope-icon-container {
-    padding: 2rem 0 0.625rem;
-  }
-  .assurance-message-form-txt {
-    color: var(--Nuturals-N-1);
-    text-align: center;
-    font-family: rubikRegular;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    padding-bottom: 1.5rem;
-    max-width: 55%;
-  }
-  .footer-form-input-container {
-    border-radius: 1px;
-    border: 0.5px solid var(--Nuturals-N-1, #140000);
-    background-color: var(--Nuturals-N-7);
-    position: relative;
-    width: 90%;
-    margin-bottom: 1rem;
-  }
-  .footer-formInput {
-    padding: 0.813rem 5.5rem 0.813rem 0.875rem;
-    border: none;
+  .footer-absolute-logo-container {
     width: 100%;
   }
-  .footer-formInput::placeholder {
-    color: var(--Nuturals-N-4);
-    font-family: rethinkRegular-400;
-    font-size: 1rem;
+  .footer-content-heading {
+    width: 61%;
   }
-  .footer-form-gmail-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0.25rem;
-    border: none;
-    border-radius: 1px;
-    background: var(--Ternary-Ternary);
-    color: var(--Nuturals-White);
-    padding: 0.625rem 1.094rem;
+}
+@media (width<400px) {
+  .footer-form-container {
+    width: 90%;
   }
-  .successfullySentTxt {
-    padding-bottom: 0.813rem;
-    color: var(--Success-Success---Primary);
-    font-family: rethinkBold-700;
-    font-size: 1.125rem;
-    opacity: 0;
+  .footer-form-socialIcon {
+    width: 95%;
+    gap: 0.6rem;
   }
-  .footer-copyright {
-    background: linear-gradient(90deg, #670709 0%, #62520f 224.57%);
-    color: var(--Nuturals-White);
-    text-align: center;
-    font-family: rubikMedium-500;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding: 1rem;
+  .footer-absolute-logo {
+    height: 95px;
   }
-  @media screen and (max-width: 1125px) {
-    .footer-contents-container .leftSide-footer,
-    .footer-contents-container .rightSide-footer {
-      flex-direction: column;
-    }
-    .footer {
-      padding-top: 4rem;
-      padding-bottom: 608px;
-    }
-    .footer-separator {
-      display: none;
-    }
-    .leftSide-footer {
-      padding-top: 8rem;
-    }
-    .main-pages-container,
-    .quick-access-container,
-    .more-details-container,
-    .contact-info-container {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-    .footer-content-list {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .assurance-message-form-txt {
+    max-width: 90%;
   }
-  @media (width<1025px) {
-    .footer-form-container {
-      width: 80%;
-      max-width: none;
-    }
-    .footer-form-socialIcon {
-      gap: 0.8rem;
-    }
+  .footer-content-heading {
+    width: 70%;
   }
-  @media screen and (max-width: 768px) {
-    .footer-content-list {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .footer-absolute-logo-container {
-      width: 100%;
-    }
-    .footer-content-heading {
-      width: 61%;
-    }
+  .more-details-container {
+    padding-right: 0px;
   }
-  @media (width<400px) {
-    .footer-form-container {
-      width: 90%;
-    }
-    .footer-form-socialIcon {
-      width: 95%;
-      gap: 0.6rem;
-    }
-    .footer-absolute-logo {
-      height: 95px;
-    }
-    .assurance-message-form-txt {
-      max-width: 90%;
-    }
-    .footer-content-heading {
-      width: 70%;
-    }
-    .more-details-container {
-      padding-right: 0px;
-    }
-    .leftSide-footer {
-      padding: 7rem 3rem 0rem;
-    }
-    .rightSide-footer {
-      padding-left: 3rem;
-    }
-    .footer {
-      padding-bottom: 530px;
-    }
+  .leftSide-footer {
+    padding: 7rem 3rem 0rem;
   }
-  
+  .rightSide-footer {
+    padding-left: 3rem;
+  }
+  .footer {
+    padding-bottom: 530px;
+  }
+}
