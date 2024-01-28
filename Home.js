@@ -235,7 +235,7 @@ function showSlide(index) {
   currentIndex = index;
 
   updatePagination();
-  updateSlideData(); // Call the function to update data when the slide changes
+ // Call the function to update data when the slide changes
 }
 
 function nextCitiesSlide() {
@@ -260,6 +260,7 @@ function setSecondContainerWidth() {
 
   const loadCourses = document.querySelector(".view-courses-width");
   loadCourses.style.width = `${cityCurrentWidth}px`;
+  showSlide(0)
 }
 
 function updatePagination() {
