@@ -1277,6 +1277,7 @@ p {
 .cities-venues-section {
   padding: 7.5rem 0 5rem;
   position: relative;
+  z-index: 10;
 }
 .vector-red-up-right {
   position: absolute;
