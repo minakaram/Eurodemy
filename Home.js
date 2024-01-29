@@ -414,17 +414,17 @@ const downloadIcon = document.getElementById('downloadIcon');
 
 const certificateObj = [
   {
-    name: 'Javascript intermediate',
+    name: 'Javascript-intermediate',
     date: '17/3/2023',
     website: 'www.eurodemy.com',
   },
   {
-    name: 'css3',
+    name: 'css-3',
     date: '17/3/2023',
     website: 'www.eurodemy.com',
   },
   {
-    name: 'Javascript basics',
+    name: 'Javascript-basics',
     date: '17/3/2023',
     website: 'www.eurodemy.com',
   },
@@ -446,36 +446,60 @@ function handleSearchCertificate(e) {
       item.name.toLowerCase().includes(inputVal)
     );
     console.log(selectedCertificate);
+
     const averageResult = document.createElement('div');
-    averageResult.innerHTML = `<div class="average-result-certificate">${selectedCertificate.length} Result <img src="./Assets/Exit_button_certificate.svg"alt="exit"/></div>`;
+    averageResult.innerHTML = `<div class="average-result-certificate">${selectedCertificate.length} Result <img src="./Assets/Exit_button_certificate.svg" alt="exit" style="cursor:pointer" onclick="handleExitFilteredResult()"/></div>`;
     resultedData.appendChild(averageResult);
     const filteredResultWrapper = document.createElement('div');
     filteredResultWrapper.className = 'filteredResultWrapper';
     resultedData.appendChild(filteredResultWrapper);
     selectedCertificate.forEach(item => {
       filteredResultWrapper.innerHTML += `<div class="filteredResult">
-    <div class="crt-name">${item.name} | ${item.name} <span id="downloadIcon" onclick="downloadFile()">📥</span>
-    </div>
-    <div class="crt-date">Certificate was issued on: ${item.date} <span id="showImageIcon" onclick="toggleImageVisibility()">🖼️</span>
-    </div>
-    <img id="displayedImage" src="./Assets/searchIcon.svg" alt="Displayed Image" style="display: none;">
-
-    <div class="crt-website">Gained from [${item.website}]</div>
-    </div>`;
+        <div>
+          <div class="crt-name"><span class="spanRed">${item.name}</span><span> ${item.name}</span></div>
+          <div class="crt-date"><span>Certificate was issued on : </span>${item.date}</div>
+          <div id="imageModal" class="certificate-modal">
+            <span class="certificate-modal-close" onclick="closeImageModal()">&times;</span>
+            <img id="displayedImage" src="./Assets/searchIcon.svg" alt="Displayed Image">
+          </div>
+          <div class="crt-website">Gained from [<span>${item.website}</span>]</div>
+        </div>
+        <div class="filteredResultIcons">
+          <img src="./Assets/downloadFile.svg" alt="download" id="downloadIcon" onclick="downloadFile()"/>
+          <img src="./Assets/seeFile.svg" alt="see certificate" id="showImageIcon" onclick="openImageModal()"/>
+        </div>
+      </div>`;
     });
+    // Now you can manipulate textContainer
+
     certificateContainer.appendChild(resultedData);
   }
 }
-function toggleImageVisibility() {
-  const imageElement = document.getElementById('displayedImage');
-
-  // Toggle the visibility of the image
-  if (imageElement.style.display === 'none') {
-    imageElement.style.display = 'block';
-  } else {
-    imageElement.style.display = 'none';
-  }
+function handleExitFilteredResult() {
+  certificateInput.value = '';
+  certificateInputIcon.src = './Assets/searchIcon.svg';
+  certificateSvg.style.display = 'block';
+  resultedData.innerHTML = '';
 }
+function openImageModal() {
+  const modal = document.getElementById('imageModal');
+  const image = document.getElementById('displayedImage');
+
+  modal.style.display = 'block';
+}
+
+function closeImageModal() {
+  const modal = document.getElementById('imageModal');
+  modal.style.display = 'none';
+}
+
+// Close modal if clicked outside the image
+window.addEventListener('click', function (event) {
+  const modal = document.getElementById('imageModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
 
 function downloadFile() {
   // Create a Blob with your file content or a data URI
