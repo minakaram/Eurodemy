@@ -51,6 +51,8 @@
   --secondary: #fee1e1;
   --Success-Success---Primary: #16ad38;
   --Secondary-Secondary: #fabd00;
+  --nuturals-35: #575859;
+  --Primary-Blue: #006dc4;
 }
 html {
   font-size: 100%;
@@ -120,7 +122,7 @@ p {
   align-items: center;
 }
 
-.navigationBar ul li a.active {
+.navigationBar ul li a:hover {
   color: var(--Primary-Primary);
   font-family: rubikSemiBold-600;
   background-color: var(--secondary);
@@ -1986,6 +1988,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 300ms;
 }
 .filteredResultWrapper {
   overflow-y: scroll;
@@ -1995,13 +1998,96 @@ p {
 }
 .filteredResult {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
   border: 0.5px dashed #262121;
   border-radius: 1px;
   width: 90%;
   margin: auto;
   height: 9rem;
 }
+.filteredResultIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-left: 1rem;
+  border-left: 1.5px solid #f2eded;
+}
+.filteredResultIcons img {
+  cursor: pointer;
+}
+/* Add your styles here */
+.certificate-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+.crt-name {
+  color: var(--Nuturals-N-1);
+  font-family: rubikMedium-500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #f2eded;
+  text-align: left;
+}
+.crt-name .spanRed {
+  color: var(--Primary-Primary);
+  font-family: rethinkMedium-500;
+  border-right: 1px solid #f2eded;
+  font-size: 0.75rem;
+  line-height: 0.938rem;
+  margin-right: 1rem;
+  padding-right: 0.75rem;
+}
+.crt-date {
+  font-family: rethinkMedium-500;
+  font-size: 0.875rem;
+  color: var(--nuturals-35);
+  padding: 0.5rem 1rem 1.5rem;
+  text-align: left;
+}
+.crt-date span {
+  font-family: rethinkRegular-400;
+}
+.crt-website {
+  text-align: left;
+  color: var(--nuturals-35);
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: rethinkRegular-400;
+}
+.crt-website span {
+  color: var(--Primary-Blue);
+  font-family: rethinkSemiBold-600;
+  font-size: 0.875rem;
+}
+.certificate-modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.certificate-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .filteredResult:not(:last-of-type) {
   margin-bottom: 1rem;
 }
@@ -2926,7 +3012,7 @@ p {
 }
 .footer-content-list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 .footer-content-list-item:not(:last-of-type) {
