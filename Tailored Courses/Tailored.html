@@ -197,53 +197,80 @@
     <div class="tailored-form-section">
         <img src="../Assets/Vector4.png" alt="" class="vector-red-down-left" />
         <p class="fill-form-paragraph">Please fill in the next form to request a tailored courses</p>
-
-        <div class="form-container">
-            <div class="contact-datails">
-                <p>Contact & Details</p>
-                <div class="name-phone-container">
-                    <div class="name-container">
-                        <img src="./assets/name-icon.svg" alt="">
-                        <input type="text" placeholder="Please type your triple name">
+        <form action="">
+            <div class="form-main">
+                <div class="form-container">
+                    <div class="contact-datails">
+                        <p>Contact & Details</p>
+                        <div class="name-phone-container">
+                            <div class="name-container">
+                                <img src="./assets/name-icon.svg" alt="">
+                                <input type="text" placeholder="Please type your triple name">
+                            </div>
+                            <div class="phone-container">
+                                <img src="./assets/phone.svg" alt="">
+                                <input type="text" placeholder="Enter mobile number with the country key">
+                            </div>
+                        </div>
+                        <div class="email-country-container">
+                            <div class="email-container">
+                                <img src="./assets/email.svg" alt="">
+                                <input type="mail" placeholder="Please enter your email">
+                            </div>
+                            <div class="country-container">
+                                <img src="./assets/country.svg" alt="">
+                                <input type="text" placeholder="Country & City name">
+                            </div>
+                        </div>
                     </div>
-                    <div class="phone-container">
-                        <img src="./assets/phone.svg" alt="">
-                        <input type="text" placeholder="Enter mobile number with the country key">
+                    <div class="message-request">
+                        <p>Your Message & Requests</p>
+                        <div class="message-container">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="1500"
+                                placeholder="Please write a simple explanation about the course you need or exact request"></textarea>
+                        </div>
+                    </div>
+                    <div class="referece-courses">
+                        <p>Reference course or training </p>
+                        <div class="file-insert-container">
+                            <label for="file-input">
+                                <img id="file-image" src="assets/attachment.svg" alt="">
+                            </label>
+                            <input id="file-input" type="file" accept=".doc,.docx,.xls,.xlsx,.pdf,image/*">
+                            <input id="file-name" type="text"
+                                placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
+                                readonly>
+                        </div>
                     </div>
                 </div>
-                <div class="email-country-container">
-                    <div class="email-container">
-                        <img src="./assets/email.svg" alt="">
-                        <input type="mail" placeholder="Please enter your email">
+                <div class="submit-container">
+                    <div class="submit-container-inner">
+                        <div class="left-side-submit">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <span>I agree to the
+                                <a class="highlighted-from-text" href="">property rights</a> &
+                                <a class="highlighted-from-text" href="">terms ofuse</a>.
+                            </span>
+                        </div>
+                        <div class="right-side-submit">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                            </label>
+                            <span>I agree to use data sent by me.</span>
+                        </div>
                     </div>
-                    <div class="country-container">
-                        <img src="./assets/country.svg" alt="">
-                        <input type="text" placeholder="Country & City name">
-                    </div>
+                    <button>
+                        <img src="assets/submit.svg" alt="" class="mr-3" >
+                        Send Form
+                    </button>
                 </div>
             </div>
-            <div class="message-request">
-                <p>Your Message & Requests</p>
-                <div class="message-container">
-                    <textarea name="" id="" cols="30" rows="10" maxlength="1500"
-                        placeholder="Please write a simple explanation about the course you need or exact request"></textarea>
-                </div>
-            </div>
-            <div class="referece-courses">
-                <p>Reference course or training </p>
-                <div class="file-insert-container">
-                    <label for="file-input">
-                        <img id="file-image" src="assets/attachment.svg" alt="">
-                    </label>
-                    <input id="file-input" type="file" accept=".doc,.docx,.xls,.xlsx,.pdf,image/*">
-                    <input id="file-name" type="text"
-                        placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
-                        readonly>
-                </div>
-            </div>
+        </form>
 
-
-        </div>
     </div>
 
 
@@ -391,7 +418,7 @@
         </main>
     </footer>
 
-    
+
     <script src="Tailored.js"></script>
 </body>
 

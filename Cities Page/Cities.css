@@ -1161,6 +1161,7 @@ p {
 }
 .footer-content-list-item {
   display: flex;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 .footer-content-list-item:not(:last-of-type) {
@@ -1299,6 +1300,10 @@ p {
   }
   .footer-form-socialIcon {
     gap: 0.8rem;
+  }
+  .footer-absolute-logo{
+    width: 170px;
+    height: 175px;
   }
 }
 @media screen and (max-width: 768px) {
