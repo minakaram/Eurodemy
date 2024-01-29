@@ -113,16 +113,20 @@ p {
   color: var(--Nuturals-White);
   text-align: center;
   padding: 0px 1.2rem;
-  font-family: rubikRegular-400;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.active-nav-item {
+  font-family: rubikSemiBold-600 !important ;
+  background-color: var(--secondary);
+  color: var(--Primary-Primary) !important;
+}
 
-.navigationBar ul li a.active {
+.navigationBar ul li a:hover {
   color: var(--Primary-Primary);
-  font-family: rubikSemiBold-600;
+  /* font-family: rubikSemiBold-600; */
   background-color: var(--secondary);
 }
 .navigationBar ul li a:hover path {
@@ -166,7 +170,7 @@ p {
   padding: 0.938rem 2rem 0.938rem 0;
 }
 
-.navigationBar .nav-list-container{
+.navigationBar .nav-list-container {
   margin: auto;
 }
 .navigationBar .nav-list-container .nav-icon-toggler {
@@ -373,7 +377,7 @@ p {
   transform: translateX(-50%);
   color: var(--Nuturals-White);
 }
-.search-overlay-section .search-overlay-inner-container input[type='text'] {
+.search-overlay-section .search-overlay-inner-container input[type="text"] {
   background-color: transparent;
   border-radius: 1px;
   border: 0.5px solid var(--Nuturals-N-5, #bfb6b6);
@@ -482,7 +486,7 @@ p {
 
 /* Show a checkmark when the checkbox is checked */
 .custom-checkbox input:checked + .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   left: 7px;
@@ -1160,7 +1164,7 @@ p {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: 'Top Category';
+  content: "Top Category";
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1259,7 +1263,7 @@ p {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: 'Top Category';
+  content: "Top Category";
   position: absolute;
   top: 0;
   left: 0;
@@ -3070,7 +3074,7 @@ p {
   .footer-form-socialIcon {
     gap: 0.8rem;
   }
-  .footer-absolute-logo{
+  .footer-absolute-logo {
     width: 170px;
     height: 175px;
   }
