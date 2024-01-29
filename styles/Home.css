@@ -40,6 +40,8 @@
   --Nuturals-N-1: #140000;
   --Nuturals-N-2: #262121;
   --Nuturals-N-3: #594e4e;
+  --Nuturals-N-4: #807070;
+  --Nuturals-N-5: #bfb6b6;
   --Nuturals-N-7: #fcfcfc;
   --Nuturals-N-6: #f2eded;
   --Nuturals-White: #fff;
@@ -52,6 +54,8 @@
 }
 html {
   font-size: 100%;
+  scrollbar-color: var(--Primary-Primary) #fff;
+  scrollbar-width: 12px;
 }
 p {
   margin-bottom: 0 !important;
@@ -83,7 +87,7 @@ p {
   width: 100%;
   padding: 0px 2.5rem;
   /* position: absolute; */
-  z-index: 100;
+  z-index: 1000;
   background: rgba(128, 128, 128, 0.486);
   max-height: 80px;
 }
@@ -99,7 +103,6 @@ p {
 }
 .navigationBar ul li {
   height: 100%;
-  /* margin: 0px 2px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,17 +112,17 @@ p {
   text-decoration: none;
   color: var(--Nuturals-White);
   text-align: center;
-  /* line-height: 80px; */
   padding: 0px 1.2rem;
-  font-weight: 600;
+  font-family: rubikRegular-400;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigationBar ul li a:hover {
+.navigationBar ul li a.active {
   color: var(--Primary-Primary);
+  font-family: rubikSemiBold-600;
   background-color: var(--secondary);
 }
 .navigationBar ul li a:hover path {
@@ -191,7 +194,7 @@ p {
   top: 81px;
   background-color: white;
   width: 30rem;
-  transition: 0.3s;
+  transition: all 300ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -366,7 +369,7 @@ p {
   transform: translateX(-50%);
   color: var(--Nuturals-White);
 }
-.search-overlay-section .search-overlay-inner-container input[type="text"] {
+.search-overlay-section .search-overlay-inner-container input[type='text'] {
   background-color: transparent;
   border-radius: 1px;
   border: 0.5px solid var(--Nuturals-N-5, #bfb6b6);
@@ -395,22 +398,43 @@ p {
   overflow-x: hidden;
   display: none;
 }
+#search-course-dropdown-container {
+  max-height: 23.5rem;
+  width: 59%;
+  margin: auto;
+  overflow-y: scroll;
+  z-index: 1000;
+  position: relative;
+  top: 2rem;
+  border: 0.5px solid var(--Nuturals-N-4);
+}
 
-.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar-thumb {
+.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar-thumb,
+#search-course-dropdown-container::-webkit-scrollbar-thumb,
+.filteredResultWrapper::-webkit-scrollbar-thumb {
   background-color: var(--Secondary-Secondary);
   border-radius: 1px;
   border: var(--Nuturals-N-6);
   width: 10px;
-
 }
-.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar {
+.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar,
+#search-course-dropdown-container::-webkit-scrollbar,
+.filteredResultWrapper::-webkit-scrollbar {
   width: 6px;
   border-radius: 1px;
   background-color: rgba(245, 227, 227, 0.2);
   border: 1px solid var(--Nuturals-N-6);
 }
-.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar-track {
+.search-overlay-section .search-overlay-dropdown::-webkit-scrollbar-track,
+#search-course-dropdown-container::-webkit-scrollbar-track,
+.filteredResultWrapper::-webkit-scrollbar-track {
   width: 10px;
+}
+.search-overlay-section .search-overlay-dropdown,
+#search-course-dropdown-container,
+.filteredResultWrapper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--Secondary-Secondary) rgba(245, 227, 227, 0.2);
 }
 
 .search-overlay-dropdown-item {
@@ -418,6 +442,11 @@ p {
   background: rgba(245, 227, 227, 0.2);
   padding: 1rem;
   margin-bottom: 2px;
+}
+#search-course-dropdown-container .search-overlay-dropdown-item {
+  background: var(--Nuturals-N-1);
+  margin-bottom: 0;
+  border-bottom: 0.25px solid var(--Nuturals-N-4);
 }
 .search-overlay-dropdown-item .custom-checkbox {
   width: 20px;
@@ -449,7 +478,7 @@ p {
 
 /* Show a checkmark when the checkbox is checked */
 .custom-checkbox input:checked + .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   left: 7px;
@@ -461,7 +490,7 @@ p {
   transform: rotate(45deg);
 }
 
-.search-overlay-section .search-button-overlay{
+.search-overlay-section .search-button-overlay {
   width: 22%;
   padding: 8px 20px;
   margin: auto;
@@ -472,9 +501,9 @@ p {
   font-size: 18px;
   cursor: pointer;
   margin-top: 1rem;
-  visibility: hidden; 
+  visibility: hidden;
 }
-.search-overlay-section .search-button-overlay img{
+.search-overlay-section .search-button-overlay img {
   width: 20px;
   height: 20px;
 }
@@ -483,7 +512,7 @@ p {
   position: relative;
   height: 100vh;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   background-color: var(--Primary-Primary);
 }
 .header-section .Eourodemy-Provides-heading {
@@ -618,16 +647,27 @@ p {
 .header-section .header-social-icons .left-side-icons,
 .header-section .header-social-icons .right-side-icons {
   display: flex;
+  align-items: center;
   padding: 15px 25px;
 }
 .header-section .header-social-icons .right-side-icons {
   gap: 0.8rem;
 }
+.hero-social-link {
+  position: relative;
+  transition: all 300ms;
+}
+.hero-social-hover-img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+}
+.hero-social-link:hover .hero-social-hover-img {
+  opacity: 1;
+}
 .icon-header-container {
   margin-right: 10px;
-  background-color: #716a6744;
-  border-radius: 50%;
-  padding: 0.5rem;
 }
 .searchCourseByName-hero-section-container {
   background-color: var(--Nuturals-N-1);
@@ -715,6 +755,7 @@ p {
 .coming-training-section {
   padding: 7.5rem 0 5rem;
   width: 100%;
+  z-index: 10;
 }
 .q-scroll-chat {
   display: flex;
@@ -1087,6 +1128,25 @@ p {
   font-size: 1.125rem;
   font-family: rubikRegular-400;
   line-height: 1.375rem;
+  transition: 300ms;
+  position: relative;
+  width: 18rem;
+}
+.right-arrow-categories {
+  position: absolute;
+  right: 1rem;
+}
+.right-arrow-categoriesHover {
+  position: absolute;
+  right: 1rem;
+  opacity: 0;
+}
+.view-courses-category:hover {
+  background-color: var(--Nuturals-N-2);
+  color: var(--Nuturals-N-7);
+}
+.view-courses-category:hover .right-arrow-categoriesHover {
+  opacity: 1;
 }
 .course-category-topOne {
   display: flex;
@@ -1096,7 +1156,7 @@ p {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: "Top Category";
+  content: 'Top Category';
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1195,7 +1255,7 @@ p {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: "Top Category";
+  content: 'Top Category';
   position: absolute;
   top: 0;
   left: 0;
@@ -1369,7 +1429,7 @@ p {
 }
 .courses-city-details {
   position: relative;
-  transition: 0.3s;
+  transition: all 0.3s;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1423,7 +1483,7 @@ p {
   align-items: center;
   padding: 0px 10px;
 }
-.courses-city-details .view-course-city .right-arrow-mini{
+.courses-city-details .view-course-city .right-arrow-mini {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1739,6 +1799,13 @@ p {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--NuturalsN-5);
+  transition: all 300ms;
+}
+.partner-card:hover {
+  border-top: 0.5px solid var(--Nuturals-N-2, #262121);
+  border-right: 0.5px solid var(--Nuturals-N-2, #262121);
+  border-bottom: 2px solid var(--Nuturals-N-2, #262121);
+  border-left: 0.5px solid var(--Nuturals-N-2, #262121);
 }
 .partner-card-inner {
   width: 80px;
@@ -1845,6 +1912,9 @@ p {
   .training-header-teritary {
   width: 80%;
   padding: 1rem 0rem;
+  font-family: rubikSemiBold-600;
+  font-size: 1.75rem;
+  line-height: 1.625rem;
   position: relative;
   border-bottom: 1px solid var(--Nuturals-N-1);
 }
@@ -1852,7 +1922,6 @@ p {
   color: var(--Nuturals-N-2);
   font-size: 1.125rem;
   font-family: rethinkRegular-400;
-
   padding-top: 1rem;
   width: 80%;
   margin: 0 auto;
@@ -1911,6 +1980,38 @@ p {
   margin: auto;
   position: relative;
   margin-top: 1.25rem;
+}
+.filteredResultsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filteredResultWrapper {
+  overflow-y: scroll;
+  max-height: 9.2rem;
+  width: 100%;
+  text-align: center;
+}
+.filteredResult {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px dashed #262121;
+  border-radius: 1px;
+  width: 90%;
+  margin: auto;
+  height: 9rem;
+}
+.filteredResult:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+.average-result-certificate {
+  gap: 1rem;
+  color: var(--Nuturals-N-5);
+  font-family: rubikMedium-500;
+  font-size: 1.012rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.3rem;
 }
 .search-certificate-container .trainingMemorySearchInput::placeholder {
   color: var(--Nuturals-N-4);
@@ -2116,6 +2217,17 @@ p {
 /* ----------------------------------------training staff section ------------------------------------ */
 .training-staff-section {
   padding: 10rem 0 7.5rem;
+  position: relative;
+}
+.TopLeftRedVector {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.BottomRightRedVector {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .training-staff-paragraph {
   color: var(--Nuturals-N-2);
@@ -2159,7 +2271,7 @@ p {
   transform: translateY(-50%);
   opacity: 0;
   text-align: center;
-  transition: 0.2s;
+  transition: all 300ms;
   color: var(--Nuturals-White);
   z-index: 100;
 }
@@ -2364,6 +2476,20 @@ p {
   line-height: 1.375rem;
   position: relative;
 }
+.right-arrowStaffHover {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.offer-skills-container:hover {
+  color: var(--Nuturals-N-7);
+  background-color: var(--Nuturals-N-2);
+}
+.offer-skills-container:hover .right-arrowStaffHover {
+  opacity: 1;
+}
 .offer-skills-container .right-arrow {
   position: absolute;
   right: 1rem;
@@ -2394,9 +2520,35 @@ p {
   overflow-y: scroll;
   grid-template-columns: repeat(3, 1fr);
 }
-.course-container ::-webkit-scrollbar {
-  color: var(--Nuturals-N-3);
+.courses-container {
+  padding: 0.75rem 1.25rem 0.75rem 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  height: 12.7rem;
+  overflow-y: scroll;
+  grid-template-columns: repeat(3, 1fr);
 }
+
+/* Customize the scrollbar */
+.courses-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.courses-container::-webkit-scrollbar-thumb {
+  background-color: #594e4e;
+  border-radius: 10px; /* adjust the border-radius for the rounded effect */
+}
+
+.courses-container::-webkit-scrollbar-track {
+  background-color: #f2eded;
+}
+
+/* For Firefox */
+.courses-container {
+  scrollbar-width: thin;
+  scrollbar-color: #594e4e #f2eded;
+}
+
 .single-course {
   border-radius: 1px;
   border: 0.25px solid var(--Nuturals-N-3);
@@ -2460,7 +2612,27 @@ p {
     max-width: 80%;
   }
 }
-/* -------------------------------------------international ------------------------------------------ */
+@media screen and (max-width: 740px) {
+  .view-careers-page-container {
+    text-align: center;
+    right: 1rem;
+    border-radius: 1px;
+    padding: 0;
+    max-width: 15%;
+  }
+  .view-careers-page-container img {
+    width: 100%;
+  }
+  .courses-container {
+    min-height: 14.5rem;
+    grid-template-columns: 1fr;
+  }
+  .offer-skills-container {
+    max-width: 90%;
+    padding: 1rem 3rem;
+  }
+}
+/* --------------------------------------------- international ------------------------------------------ */
 .international-accerditations {
   padding: 7rem 0rem;
 }
@@ -2589,7 +2761,7 @@ p {
   flex-wrap: wrap;
   align-items: center;
   padding: 1.5rem 1rem;
-  transition: all 0.3s ease;
+  transition: all 300ms ease;
 }
 
 .officeCity {
@@ -2638,7 +2810,6 @@ p {
   display: flex;
   flex-wrap: nowrap;
   padding: 0.85rem 1.875rem;
-  /* gap: 0.5rem; */
   justify-content: space-between;
   border-bottom: 0.5px solid var(--Nuturals-N-2);
 }
@@ -2667,7 +2838,7 @@ p {
     flex-wrap: wrap;
   }
 }
-/* -------------------------------------------- FOOTER ---------------------------------------------------- */
+/* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {
   background-image: url(../Assets/Footer\ Bg.png);
   margin-top: 4rem;
@@ -2755,6 +2926,7 @@ p {
 }
 .footer-content-list-item {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 .footer-content-list-item:not(:last-of-type) {
