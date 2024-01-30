@@ -80,9 +80,10 @@ p {
 
 /* --------------------------------------------- navbar -------------------------------------------------- */
 .navigationBar {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -217,7 +218,10 @@ p {
   grid-column: span 2;
   text-align: center;
 }
-
+.active-home-anchor{
+  color: var(--Primary-Primary);
+  text-decoration: none;
+}
 @media (1024px < width <1240px) {
   .logo-image {
     padding-right: 0.5rem;
@@ -316,7 +320,7 @@ p {
     top: 71px !important;
   }
   .logo-image {
-    width: 120px;
+    width: 110px;
   }
   .navigationBar .nav-icon-toggler p {
     height: 80px;
@@ -2259,7 +2263,6 @@ p {
 .testimonial-section .swiper-slide .testimonials-person-info p {
   font-size: 0.8rem;
   text-align: left;
-
 }
 .testimonial-section .swiper .swiper-slide .testimonial-name {
   color: var(--Nuturals-N-1);

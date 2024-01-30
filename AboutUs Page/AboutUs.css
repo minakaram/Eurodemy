@@ -57,7 +57,7 @@ p {
   margin-bottom: 0 !important;
 }
 .navbar-toggle-container {
-  width: 35px;
+  width: 38px;
   background-color: rgba(128, 128, 128, 0.589);
   height: 100%;
 }
@@ -80,8 +80,10 @@ p {
   align-items: center;
   width: 100%;
   padding: 0px 2.5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10000;
   max-height: 80px;
   color: var(--Nuturals-N-1);
@@ -435,8 +437,8 @@ p {
 /*------------------------------------------------ hero section ----------------------------------------------*/
 .hero-section {
   position: relative;
-  height: 88vh;
-  padding: 4rem 4rem;
+  height: 100vh;
+  padding: 7rem 4rem;
 }
 .hero-section .hero-background {
   width: 100%;
@@ -545,6 +547,7 @@ p {
       .hero-section{
         height: auto;
         padding: 4rem 1rem !important;
+        padding-top: 7rem !important;
       }
       .hero-social-icons{
         left: 50%;
