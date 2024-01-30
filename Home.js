@@ -164,7 +164,7 @@ updateSearchButtonVisibility();
 
 $(document).ready(function () {
   $('.owl-carousel-hero').owlCarousel({
-    // loop: true,
+    loop: true,
     margin: 15,
     nav: true,
     dots: true,
@@ -225,6 +225,34 @@ window.addEventListener('click', () => {
   searchCourseHero.value = '';
 });
 searchCourseHero.addEventListener('input', handleSearchCourseHero);
+
+window.addEventListener('scroll', function () {
+  let navigationBar = document.querySelector('.navigationBar');
+  let logoImg = document.querySelector('.logo-image');
+  let arabicTxt = document.querySelector('.arabic-course-txt');
+  let arabicIcon = document.querySelector('.arabic-icon-img');
+  let downArrowsNav = document.querySelectorAll('.down-arrow-nav');
+  let scrollHeight = window.scrollY;
+
+  if (scrollHeight > 0) {
+    navigationBar.classList.add('sticky');
+    logoImg.src = './Assets/Logoheroblack.svg';
+    arabicTxt.style.color = '#fff';
+    arabicIcon.src = './Assets/Arabic_Iconwhite.svg';
+    downArrowsNav.forEach(function (arrow) {
+      arrow.src = './Assets/DownArrowBlack.svg';
+    });
+  } else {
+    navigationBar.classList.remove('sticky');
+    logoImg.src = './Assets/Logoherowhite.svg';
+    arabicTxt.style.color = '#bfb6b6';
+    arabicIcon.src = './Assets/Arabic_Icon.svg';
+    downArrowsNav.forEach(function (arrow) {
+      arrow.src = './Assets/DownArrowWhite.svg';
+    });
+  }
+});
+
 // ----------------------------------------------------------------------------------------------------------------
 
 function initializeCarousel(carousel) {
@@ -816,4 +844,28 @@ window.addEventListener('resize', () => {
 handleOffice({ currentTarget: offices[0] });
 offices.forEach(office => {
   office.addEventListener('click', handleOffice.bind(this));
+});
+// ------------------------------------------ footer --------------------------------------
+// TO MAKE YEAR IN FOOTER UP TO DATE
+const yearEl = document.querySelector('.year');
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
+// ------------------------------------------ general logic -------------------------------------
+const allLink = document.querySelectorAll('a');
+
+allLink.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const href = link.getAttribute('href');
+
+    if (href === '#') {
+      window.scrollTo({
+        top: 0,
+        left: 100,
+        behavior: 'smooth',
+      });
+    }
+  });
 });

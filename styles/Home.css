@@ -80,18 +80,26 @@ p {
 
 /* --------------------------------------------- navbar -------------------------------------------------- */
 .navigationBar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   padding: 0px 2.5rem;
-  /* position: absolute; */
   z-index: 1000;
   background: rgba(128, 128, 128, 0.486);
-  max-height: 80px;
+  max-height: 5rem;
+  transition: all 200ms;
+}
+.sticky {
+  background-color: var(--Nuturals-White);
+  box-shadow: 0px 0px 5px 0px rgba(20, 0, 0, 0.16);
+}
+.sticky.navigationBar ul li a {
+  color: var(--Ternary-Ternary);
 }
 .navigationBar ul {
   list-style: none;
@@ -116,9 +124,29 @@ p {
   text-align: center;
   padding: 0px 1.2rem;
   height: 80px;
+  line-height: 1.625rem;
+  font-size: 1.125rem;
+  font-family: rubikRegular-400;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: all 300ms;
+}
+.navigationBar ul li a:hover {
+  color: var(--Primary-Primary);
+}
+.navigationBar ul li a:hover .down-arrow-nav-absolute {
+  opacity: 1;
+}
+.down-arrow-nav {
+  margin-left: 1rem;
+}
+.down-arrow-nav-absolute {
+  position: absolute;
+  right: 1.2rem;
+  opacity: 0;
+  transition: all 300ms;
 }
 .active-nav-item {
   font-family: rubikSemiBold-600 !important ;
@@ -126,14 +154,6 @@ p {
   color: var(--Primary-Primary) !important;
 }
 
-.navigationBar ul li a:hover {
-  color: var(--Primary-Primary);
-  /* font-family: rubikSemiBold-600; */
-  background-color: var(--secondary);
-}
-.navigationBar ul li a:hover path {
-  fill: var(--Primary-Primary) !important;
-}
 .navigationBar .header-search-bar {
   height: 3rem;
   width: 3rem;
@@ -379,7 +399,7 @@ p {
   transform: translateX(-50%);
   color: var(--Nuturals-White);
 }
-.search-overlay-section .search-overlay-inner-container input[type="text"] {
+.search-overlay-section .search-overlay-inner-container input[type='text'] {
   background-color: transparent;
   border-radius: 1px;
   border: 0.5px solid var(--Nuturals-N-5, #bfb6b6);
@@ -488,7 +508,7 @@ p {
 
 /* Show a checkmark when the checkbox is checked */
 .custom-checkbox input:checked + .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   left: 7px;
@@ -527,13 +547,16 @@ p {
 }
 .header-section .Eourodemy-Provides-heading {
   position: absolute;
-  top: 25%;
+  top: 9.5rem;
   text-align: center;
   width: 100%;
   z-index: 10;
+  margin-bottom: 1rem;
+  font-size: 3rem;
   text-transform: uppercase;
   color: var(--Nuturals-White);
   font-family: rubikBold-700;
+  letter-spacing: 2.4px;
 }
 .header-section .logo-image {
   width: 8.75rem;
@@ -558,29 +581,33 @@ p {
 }
 .header-section .owl-carousel .item .header-course-details {
   position: absolute;
-  top: 35%;
+  top: 14.063rem;
   text-align: center;
   color: var(--Nuturals-White);
   width: 100%;
 }
 .header-section .owl-carousel .item .header-course-details h3 {
-  letter-spacing: 2px;
   font-family: rubikBold-700;
+  color: var(--Nuturals-White, #fff);
+  font-size: 3rem;
+  letter-spacing: 2.4px;
 }
 .header-section
   .owl-carousel
   .item
   .header-course-details
   .header-view-course-button {
-  width: 20%;
+  height: 3.25rem;
+  width: 21.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px auto;
+  margin: 1.5rem auto;
   padding: 0rem 0.4rem;
-  backdrop-filter: blur(1px);
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.171);
+  border-radius: 1px;
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(2.5px);
   cursor: pointer;
 }
 .header-section .owl-carousel .owl-dots {
@@ -607,9 +634,9 @@ p {
 }
 .header-section .owl-carousel .owl-nav button.owl-prev,
 .header-section .owl-carousel .owl-nav button.owl-next {
-  height: 60px;
-  width: 60px;
-  background-color: #000;
+  height: 2.5rem;
+  width: 3.5rem;
+  background-color: rgba(20, 0, 0, 0.65);
   margin: 0 !important;
 }
 
@@ -725,10 +752,6 @@ p {
     flex-direction: column-reverse;
     gap: 1rem;
   }
-  .header-section .header-social-icons .right-side-icons {
-    flex-direction: column-reverse;
-    gap: 1rem;
-  }
 }
 @media (width < 681px) {
   .header-section {
@@ -747,8 +770,7 @@ p {
     right: 1rem;
   }
   .header-section .header-social-icons {
-    justify-content: space-evenly;
-    bottom: 50px;
+    bottom: 2.75rem;
   }
   #search-course-dropdown-container {
     width: 87%;
@@ -1169,7 +1191,7 @@ p {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: "Top Category";
+  content: 'Top Category';
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1268,7 +1290,7 @@ p {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: "Top Category";
+  content: 'Top Category';
   position: absolute;
   top: 0;
   left: 0;
@@ -2259,7 +2281,6 @@ p {
 .testimonial-section .swiper-slide .testimonials-person-info p {
   font-size: 0.8rem;
   text-align: left;
-
 }
 .testimonial-section .swiper .swiper-slide .testimonial-name {
   color: var(--Nuturals-N-1);
