@@ -280,7 +280,7 @@ function initializeCarousel(carousel) {
 
   let customDotsContainer = carousel.find('.owl-dots');
   let customDots = customDotsContainer.find('.owl-dot');
-  let maxVisibleDots = 4; // Set the maximum number of visible dots
+  let maxVisibleDots = 3; // Set the maximum number of visible dots
 
   if (customDots.length > maxVisibleDots) {
     // Set the width for the extra dots to 10px
@@ -379,7 +379,6 @@ window.addEventListener('resize', setSecondContainerWidth);
 // category-courses-section----------------------------------------------------------------------------------
 
 // swiper-------------------------
-
 const mySwiper = new Swiper('.swiper-container1', {
   spaceBetween: 30,
   grid: {
@@ -390,8 +389,8 @@ const mySwiper = new Swiper('.swiper-container1', {
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next', // CSS class or HTML element for next arrow
-    prevEl: '.swiper-button-prev', // CSS class or HTML element for prev arrow
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   breakpoints: {
     1300: {
@@ -404,7 +403,6 @@ const mySwiper = new Swiper('.swiper-container1', {
     768: {
       slidesPerView: 3,
       spaceBetween: 20,
-
       grid: {
         rows: 2,
       },
@@ -856,8 +854,6 @@ const allLink = document.querySelectorAll('a');
 
 allLink.forEach(function (link) {
   link.addEventListener('click', function (e) {
-    e.preventDefault();
-
     const href = link.getAttribute('href');
 
     if (href === '#') {
