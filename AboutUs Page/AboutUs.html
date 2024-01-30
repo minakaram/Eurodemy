@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="AboutUs.css">
+    <title>About Us</title>
+</head>
+
+<body>
+    <!------------------------------------------------ nav bar ------------------------------------------------------->
+    <nav class="navigationBar">
+        <img src="../Assets/blackLogo.png" alt="logo" class="logo-image" />
+        <div class="nav-items-container" id="navbar-toggler-items">
+            <div class="nav-toggler-item">Home</div>
+            <div class="nav-toggler-item">Categories</div>
+            <div class="nav-toggler-item">Cities</div>
+            <div class="nav-toggler-item">Tailored Courses</div>
+            <div class="nav-toggler-item">About Us</div>
+            <div class="nav-toggler-item">Contact Us</div>
+            <div class="nav-toggler-item careers">Careers</div>
+        </div>
+        <div class="nav-list-container d-flex align-items-center justify-content-center">
+            <div class="nav-icon-toggler d-flex align-items-center justify-content-center">
+                <div id="categories-id-collapse" style="overflow: hidden"
+                    class="navbar-home-item d-flex align-items-center justify-content-center">
+                    <p class="my-0">Categories</p>
+                </div>
+                <div class="navbar-toggle-container" id="navbar-toggler-id">
+                    <img src="../Assets/toggler-icon.svg" alt="toggler-icon" class="toggler-icon w-100" />
+                </div>
+            </div>
+            <ul>
+                <li class="d-flex justify-content-between align-items-center">
+                    <a href="../Home.html" class="navbar-home-list-item">Home</a>
+                </li>
+                <li>
+                    <a href="../Categories Page/Categories.html">Categories <svg id="active-list-id"
+                            style="margin-left: 1rem" width="14" height="14" viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
+                                fill="black" />
+                            <path
+                                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
+                                fill="black" />
+                        </svg></a>
+
+                </li>
+                <li>
+                    <a href="../Cities Page/Cities.html">Cities
+                        <svg id="cities-dropdown-button" style="margin-left: 1rem" width="14" height="14"
+                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
+                                fill="black" />
+                            <path
+                                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+
+                </li>
+                <li><a href="../Tailored Courses/Tailored.html">Tailored Courses</a></li>
+                <li class="active-list"><a href="./AboutUs.html">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+        </div>
+        <div class="navigation-bar-right-side">
+            <img src="../Assets/SearchBar.png" alt="" class="header-search-bar" id="search-open-btn" />
+            <div class="changeTo-arabic-courses-box">
+                <div class="arabic-icon">
+                    <img src="../Assets/Arabic-Icon2.png" alt="arabic" />
+                </div>
+                <p class="arabic-course-txt">Arabic <br />Courses</p>
+            </div>
+        </div>
+        <div class="cities-dropdown-nav" id="cities-dropdown-id">
+            <div class="cities-dropdown-item">Cairo</div>
+            <div class="cities-dropdown-item">Paris</div>
+            <div class="cities-dropdown-item">Spain</div>
+            <div class="cities-dropdown-item">Brazil</div>
+            <div class="cities-dropdown-item">Germany</div>
+            <div class="cities-dropdown-item">America</div>
+            <div class="cities-dropdown-item">Sudan</div>
+            <div class="cities-dropdown-item">Dubai</div>
+            <div class="cities-dropdown-item">Greece</div>
+            <div class="cities-dropdown-item">Italy</div>
+            <div class="cities-dropdown-item">Marooc</div>
+            <div class="cities-dropdown-item">palastine</div>
+            <div class="cities-dropdown-item">lybia</div>
+            <div class="cities-dropdown-item">tunisia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+            <div class="cities-dropdown-item">saudi arabia</div>
+        </div>
+        <div class="categories-dropdown-nav" id="categories-dropdown-id">
+            <div class="categories-dropdown-item">Maintenance Planning, Process Engineering & Instrumentation management
+            </div>
+            <div class="categories-dropdown-item">Management</div>
+            <div class="categories-dropdown-item">Project Management</div>
+            <div class="categories-dropdown-item">Administration and Secretarial Training Courses</div>
+            <div class="categories-dropdown-item">Human Resource Training </div>
+            <div class="categories-dropdown-item">Healthcare Management</div>
+            <div class="categories-dropdown-item">Data management and analytics</div>
+            <div class="categories-dropdown-item">Public Relations , communication skills</div>
+            <div class="categories-dropdown-item">Petroleum, Oil , Gas Training Courses</div>
+            <div class="categories-dropdown-item">Chemical, Mechanical Engineering Training Courses</div>
+            <div class="categories-dropdown-item">Customer Support Representative</div>
+            <div class="categories-dropdown-item">Data Scientist</div>
+            <div class="categories-dropdown-item">Network Administrator</div>
+            <div class="categories-dropdown-item">Systems Administrator</div>
+            <div class="categories-dropdown-item">HR Coordinator</div>
+            <div class="categories-dropdown-item">Executive Assistant</div>
+            <div class="categories-dropdown-item">Administrative Assistant</div>
+            <div class="categories-dropdown-item">Content Writer</div>
+            <div class="categories-dropdown-item">Social Media Specialist</div>
+            <div class="categories-dropdown-item">Legal Counsel</div>
+            <div class="categories-dropdown-item">Compliance Officer</div>
+            <div class="categories-dropdown-item">Quality Assurance Manager</div>
+            <div class="categories-dropdown-item">Business Development Manager</div>
+            <div class="categories-dropdown-item">Director of Information Technology</div>
+            <div class="categories-dropdown-item">Chief Human Resources Officer (CHRO)</div>
+            <div class="categories-dropdown-item">Chief Technology Officer (CTO)</div>
+            <div class="categories-dropdown-item">Chief Executive Officer (CEO)</div>
+            <div class="categories-dropdown-item">Sales Manager</div>
+        </div>
+        <div class="categories-dropdown-nav" id="categories-dropdown-collapse">
+            <div class="categories-dropdown-item">Maintenance Planning, Process Engineering & Instrumentation management
+            </div>
+            <div class="categories-dropdown-item">Management</div>
+            <div class="categories-dropdown-item">Project Management</div>
+            <div class="categories-dropdown-item">Administration and Secretarial Training Courses</div>
+            <div class="categories-dropdown-item">Human Resource Training </div>
+            <div class="categories-dropdown-item">Healthcare Management</div>
+            <div class="categories-dropdown-item">Data management and analytics</div>
+            <div class="categories-dropdown-item">Public Relations , communication skills</div>
+            <div class="categories-dropdown-item">Petroleum, Oil , Gas Training Courses</div>
+            <div class="categories-dropdown-item">Chemical, Mechanical Engineering Training Courses</div>
+            <div class="categories-dropdown-item">Customer Support Representative</div>
+            <div class="categories-dropdown-item">Data Scientist</div>
+            <div class="categories-dropdown-item">Network Administrator</div>
+            <div class="categories-dropdown-item">Systems Administrator</div>
+            <div class="categories-dropdown-item">HR Coordinator</div>
+            <div class="categories-dropdown-item">Executive Assistant</div>
+            <div class="categories-dropdown-item">Administrative Assistant</div>
+            <div class="categories-dropdown-item">Content Writer</div>
+            <div class="categories-dropdown-item">Social Media Specialist</div>
+            <div class="categories-dropdown-item">Legal Counsel</div>
+            <div class="categories-dropdown-item">Compliance Officer</div>
+            <div class="categories-dropdown-item">Quality Assurance Manager</div>
+            <div class="categories-dropdown-item">Business Development Manager</div>
+            <div class="categories-dropdown-item">Director of Information Technology</div>
+            <div class="categories-dropdown-item">Chief Human Resources Officer (CHRO)</div>
+            <div class="categories-dropdown-item">Chief Technology Officer (CTO)</div>
+            <div class="categories-dropdown-item">Chief Executive Officer (CEO)</div>
+            <div class="categories-dropdown-item">Sales Manager</div>
+        </div>
+    </nav>
+    <!------------------------------------------ who we are section -------------------------------------------------->
+    <div class="hero-section">
+        <img class="hero-background" src="Assets/BG Img.png" alt="">
+        <img class="image-overlay" src="Assets/Overlays.png" alt="">
+        <img class="ellipse1" src="Assets/Ellipse 273.png" alt="">
+        <img class="ellipse2" src="Assets/Ellipse 274.svg" alt="">
+
+        <h1><span>Who <img src="Assets/Line 30.svg" alt=""></span> we are:</h1>
+        <p><span style="color: var(--Secondary-Secondary);">EURODEMY</span> has started its journey from Kuwait, with
+            being specialized in providing all various training
+            services in different fields, including law, management, media, leadership, self-development, finance, and
+            accounting, as well as other fields related to a person's, both male and female, professional and social
+            life in Kuwait and the other Arab countries. We, at EURODEMY, highly believe in that everyone has their own
+            talents and capabilities, and it is our responsibility to search for and develop these talents and
+            capabilities, in the interest of the individual and society. Based on this, our importance has come from the
+            valuable solutions we provide to the problems and challenges facing the individuals within different
+            organizations, work environment, and family. <br> <br>
+
+            Since its start, EURODEMY has succeeded to provide many great solutions to many clients of different ages
+            and places with achieving its clients' satisfaction with all the services and solutions provided. Therefore,
+            we have high rates of registration for our training programs.
+        </p>
+
+        <div class="hero-social-icons">
+            <div class="x">
+                <img src="Assets/x-gray.svg" alt="">
+                <img class="x-abslute" src="Assets/x-white.svg" alt="">
+            </div>
+            <div class="linkedin">
+                <img src="Assets/linked-gray.svg" alt="">
+                <img class="linked-abslute" src="Assets/linked-white.svg" alt="">
+            </div>
+            <div class="facebook">
+                <img src="Assets/facebook-gray.svg" alt="">
+                <img class="facebook-abslute" src="Assets/facebook-white.svg" alt="">
+            </div>
+            <div class="instagram">
+                <img src="Assets/instagram-gray.svg" alt="">
+                <img class="instagram-abslute" src="Assets/instagram-white.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="AboutUs.js"></script>
+</body>
+
+</html>
