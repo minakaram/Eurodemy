@@ -57,7 +57,7 @@ p {
   margin-bottom: 0 !important;
 }
 .navbar-toggle-container {
-  width: 40px;
+  width: 38px;
   background-color: rgba(128, 128, 128, 0.589);
   height: 100%;
 }
@@ -80,8 +80,10 @@ p {
   align-items: center;
   width: 100%;
   padding: 0px 2.5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10000;
   max-height: 80px;
   color: var(--Nuturals-N-1);
@@ -413,20 +415,20 @@ p {
     top: 71px !important;
   }
   .logo-image {
-    width: 120px;
+    width: 110px;
   }
   .navigationBar .nav-icon-toggler p {
     height: 80px;
-    padding: 0rem 1.25rem;
+    padding: 0rem 1rem;
   }
   .navigationBar .header-search-bar {
-    height: 2.3rem;
-    width: 2.3rem;
+    height: 2.2rem;
+    width: 2.2rem;
     margin-right: 1px;
   }
   .changeTo-arabic-courses-box {
-    width: 2.3rem;
-    height: 2.3rem;
+    width: 2.2rem;
+    height: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -436,7 +438,7 @@ p {
 .hero-section {
   position: relative;
   height: 100vh;
-  padding: 4rem 4rem;
+  padding: 7rem 4rem;
 }
 .hero-section .hero-background {
   width: 100%;
@@ -493,12 +495,15 @@ p {
   bottom: 1rem;
   right: 1rem;
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 .x-abslute,
 .linked-abslute,
-.facebook-abslute ,
-.instagram-abslute {
+.facebook-abslute,
+.instagram-abslute,
+.youtube-abslute,
+.whatsapp-abslute {
   position: absolute;
   top: 0;
   left: 0;
@@ -507,17 +512,203 @@ p {
 }
 .hero-section .hero-social-icons .x,
 .hero-section .hero-social-icons .linkedin,
-.hero-section .hero-social-icons .facebook ,
-.hero-section .hero-social-icons .instagram{
+.hero-section .hero-social-icons .facebook,
+.hero-section .hero-social-icons .instagram,
+.hero-section .hero-social-icons .youtube,
+.hero-section .hero-social-icons .whatsapp {
   position: relative;
 }
 .hero-section .hero-social-icons .x:hover .x-abslute,
 .hero-section .hero-social-icons .linkedin:hover .linked-abslute,
 .hero-section .hero-social-icons .facebook-abslute:hover,
-.hero-section .hero-social-icons .instagram-abslute:hover {
+.hero-section .hero-social-icons .instagram-abslute:hover,
+.hero-section .hero-social-icons .youtube-abslute:hover,
+.hero-section .hero-social-icons .whatsapp-abslute:hover {
   opacity: 1;
 }
-/* {
-  opacity: 1;
+@media (width<1300px) {
+  .hero-section {
+    height: 70vh;
+  }
 }
-. */
+@media (768px < width<1025px) {
+  .hero-section {
+    height: 60vh;
+  }
+  .hero-section p {
+    width: 80%;
+  }
+}
+@media(width<769px){
+    .hero-section p {
+        width: 100%;
+       margin-bottom: 2rem !important;
+      }
+      .hero-section{
+        height: auto;
+        padding: 4rem 1rem !important;
+        padding-top: 7rem !important;
+      }
+      .hero-social-icons{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        justify-content: center;
+      }
+}
+/*------------------------------------- mession-vision-section ------------------------------------------------*/
+.mission-vision-section {
+  padding: 10rem 0rem;
+}
+.mission-vision-section .mission-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+.mission-vision-section .mission-container .mission-left-side {
+  width: 45%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid var(--NuturalsN-5);
+}
+.mission-vision-section .mission-container .mission-left-side .vector1 {
+  position: absolute;
+  right: -7px;
+  top: -7px;
+}
+.mission-vision-section .mission-container .mission-left-side .vector2 {
+  position: absolute;
+  left: -7px;
+  bottom: -7px;
+}
+.mission-vision-section .mission-container .mission-left-side .road-man {
+  width: 90%;
+  height: 80%;
+}
+
+.mission-vision-section .mission-container .mission-right-side {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mission-vision-section .mission-container .mission-right-side h2 {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+}
+.mission-vision-section .mission-container .mission-right-side h2 img {
+  position: absolute;
+  left: -40px;
+  top: -15px;
+}
+.mission-vision-section .mission-container .mission-right-side p {
+  width: 80%;
+  color: var(--Nuturals-N-2);
+  font-family: rubikMedium-500;
+}
+
+.vision-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.mission-vision-section .vision-container .vision-left-side {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.vision-container .vision-left-side h2 {
+  position: relative;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.vision-container .vision-left-side h2 img {
+  position: absolute;
+  left: -40px;
+  top: -15px;
+}
+.vision-container .vision-left-side p {
+  width: 80%;
+  color: var(--Nuturals-N-2);
+  font-family: rubikMedium-500;
+}
+.vision-container .vision-right-side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid var(--NuturalsN-5);
+  width: 45%;
+}
+.vision-container .vision-right-side .scope-man {
+  height: 80%;
+  width: 90%;
+}
+.vision-container .vision-right-side .vector3 {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+}
+.vision-container .vision-right-side .vector4 {
+  position: absolute;
+  right: -7px;
+  bottom: -7px;
+}
+.spliter{
+    width: 100%;
+    margin-bottom: 5rem;
+    display: none;
+}
+@media (width<1025px) {
+  .mission-vision-section .mission-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+  .mission-container .mission-left-side {
+    order: 1;
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  .mission-container .mission-right-side {
+    order: 0;
+    width: 100% !important;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  .mission-container .mission-right-side p {
+    width: 100% !important;
+  }
+  .vision-container {
+    flex-direction: column;
+  }
+  .vision-left-side {
+    width: 100% !important;
+    margin-bottom: 3rem;
+  }
+  .vision-left-side p {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  .vision-right-side {
+    width: 100% !important;
+  }
+  .spliter{
+    display: block;
+  }
+}

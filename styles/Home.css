@@ -237,7 +237,10 @@ p {
   grid-column: span 2;
   text-align: center;
 }
-
+.active-home-anchor {
+  color: var(--Primary-Primary);
+  text-decoration: none;
+}
 @media (1024px < width <1240px) {
   .logo-image {
     padding-right: 0.5rem;
@@ -336,7 +339,7 @@ p {
     top: 71px !important;
   }
   .logo-image {
-    width: 120px;
+    width: 110px;
   }
   .navigationBar .nav-icon-toggler p {
     height: 80px;
