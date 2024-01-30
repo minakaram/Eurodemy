@@ -712,3 +712,30 @@ p {
     display: block;
   }
 }
+/* -------------------------------------- goals section ---------------------------------------------- */
+
+.goals-section{
+  background-image: url(./Assets/goals-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 0rem;
+  position: relative;
+  height: 500px;
+}
+.goals-section .goals-heading{
+  color: var(--Nuturals-White);
+  width: 15%;
+  padding: 1rem 0rem;
+  margin: auto;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  border-bottom: 2px solid var(--Secondary-Secondary);
+}
+.goals-section .target-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  height: 90%;    
+  transform: translateY(-50%);
+}
