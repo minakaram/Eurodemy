@@ -83,6 +83,10 @@ document.addEventListener("click", (e) => {
   }
 });
 
+
+
+
+
 const fileInput = document.querySelector("#file-input");
 const fileImage = document.querySelector("#file-image");
 const fileName = document.querySelector("#file-name");
