@@ -562,10 +562,10 @@ var swiper = new Swiper(".testimonialSwiper", {
   centeredSlides: true,
   initialSlide: 3,
   loop: true,
-  // autoplay: {
-  //   delay: 5000,
-  //   reverseDirection: true, // Set the delay to 10 seconds (in milliseconds)
-  // },
+  autoplay: {
+    delay: 5000,
+    reverseDirection: true, // Set the delay to 10 seconds (in milliseconds)
+  },
   pagination: {
     el: ".swiper-pagination2",
     clickable: true,
