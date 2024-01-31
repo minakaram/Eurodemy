@@ -1107,27 +1107,23 @@ h6 {
 .custom-width {
   width: 10px !important;
 }
-.courses-category-section .swiper-button-prev {
-  color: var(--Nuturals-N-6) !important;
-  position: static !important;
-  display: block;
-  width: 5% !important;
-  margin-right: 18rem;
-  height: 2.2rem !important;
-  background-color: var(--Nuturals-N-1);
-}
+
 .courses-category-section .swiper-button-prev::after {
   font-size: 17px !important;
   font-weight: bolder !important;
 }
-.courses-category-section .swiper-button-next {
+.courses-category-section .swiper-button-next,
+.courses-category-section .swiper-button-prev {
   color: var(--Nuturals-N-6) !important;
   display: block;
   position: static !important;
-  color: blue;
-  width: 5% !important;
-  height: 2.2rem !important;
+  width: 3rem !important;
+  height: 2rem !important;
   background-color: var(--Nuturals-N-1);
+  border-radius: 5px;
+}
+.courses-category-section .swiper-button-prev {
+  margin-right: 18rem;
 }
 .courses-category-section .swiper-button-next::after {
   font-size: 15px !important;
