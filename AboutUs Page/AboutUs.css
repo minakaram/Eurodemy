@@ -733,28 +733,129 @@ a {
 }
 /* -------------------------------------- goals section ---------------------------------------------- */
 
-.goals-section{
+.goals-section {
   background-image: url(./Assets/goals-background.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1rem 0rem;
+  padding: 3rem 0rem 6.125rem;
+  min-height: 45rem;
   position: relative;
-  height: 500px;
 }
-.goals-section .goals-heading{
-  color: var(--Nuturals-White);
-  width: 15%;
-  padding: 1rem 0rem;
-  margin: auto;
-  text-align: center;
-  text-transform: capitalize;
-  font-weight: 700;
-  border-bottom: 2px solid var(--Secondary-Secondary);
-}
-.goals-section .target-icon{
+.topLeftVector {
   position: absolute;
-  right: 10px;
-  top: 50%;
-  height: 90%;    
-  transform: translateY(-50%);
+  top: 0;
+}
+.bottomRightVector {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.goals-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.header-underline {
+  width: 15.5%;
+}
+.secondary-header {
+  color: var(--Nuturals-White);
+  padding: 1rem 0rem;
+  text-align: center;
+  font-family: rubikBold-700;
+  font-size: 2.25rem;
+}
+.goals-container-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1.563rem 0 4.688rem;
+  gap: 2rem;
+  height: 30rem;
+}
+.goal-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.goal-container:hover .goal-number {
+  background-color: var(--Nuturals-N-6);
+  color: var(--Nuturals-N-2);
+}
+.goal-container:hover .goal-txt {
+  font-family: rethinkBold-700;
+}
+.goal-number {
+  color: var(--Nuturals-N-6);
+  font-family: rubikMedium-500;
+  transition: all 300ms;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 4rem;
+  border-right: 3px solid var(--Nuturals-N-6);
+  border-radius: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-txt {
+  color: var(--Nuturals-N-7);
+  font-family: rethinkRegular-400;
+  transition: all 1s;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  width: 47%;
+}
+.targetIcon {
+  position: absolute;
+  right: 0;
+  bottom: 3.844rem;
+  width: 41.6%;
+}
+@media screen and (max-width: 1025px) {
+  .targetIcon {
+    width: 50.8%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .goals-container-box {
+    padding-left: 1.563rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .targetIcon {
+    width: 58.6%;
+    top: 30%;
+  }
+  .goal-txt {
+    width: 100%;
+  }
+}
+/* ------------------------------------------------ values ------------------------------------------- */
+.values-section {
+  padding: 12.5rem 0;
+}
+.values-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.values-heading .header-underline {
+  margin-bottom: 2rem;
+}
+.values-heading .secondary-header {
+  color: var(--Ternary-Ternary);
+}
+.values-heading-paragraph {
+  color: var(--Nuturals-N-2);
+  font-family: rethinkMedium-500;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  width: 30.5%;
+  margin-bottom: 2rem;
 }
