@@ -1079,20 +1079,11 @@ h6 {
   transform: none !important;
   width: 100% !important;
 }
-.swiper-custom-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #000; /* Customize the color */
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
 .courses-category-section .swiper-pagination1 span {
   width: 2.5rem !important;
   height: 0.5rem;
   border-radius: 30px !important;
   margin: 0 0.2rem;
-  /* background-color: var(--Nuturals-N-1) !important; */
 }
 .courses-category-section .swiper-pagination-bullets {
   display: flex;
