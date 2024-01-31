@@ -1092,7 +1092,15 @@ h6 {
   height: 0.5rem;
   border-radius: 30px !important;
   margin: 0 0.2rem;
-  background-color: var(--Nuturals-N-1) !important;
+  /* background-color: var(--Nuturals-N-1) !important; */
+}
+.courses-category-section .swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.courses-category-section .swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: var(--Nuturals-N-5);
 }
 .courses-category-section
   .swiper-pagination-bullets
@@ -2503,13 +2511,14 @@ h6 {
   width: 40px;
   height: 8px;
   border-radius: 1px;
+  background-color: #d0cccc !important;
 }
 
 .training-staff-section
   .staff-swiper
   .staff-swiper-pagination
   .swiper-pagination-bullet-active {
-  background-color: var(--Ternary-Ternary);
+  background-color: var(--Ternary-Ternary) !important;
 }
 
 @media (width>1024px) {
@@ -2858,13 +2867,14 @@ h6 {
   width: 40px;
   height: 8px;
   border-radius: 1px;
+  background-color: #cecbcb !important;
 }
 
 .international-accerditations
   .swiper
   .international-swiper-pagination
   .swiper-pagination-bullet-active {
-  background-color: var(--Ternary-Ternary);
+  background-color: var(--Ternary-Ternary) !important;
 }
 @media (width>768px) {
   .international-accerditations .swiper .swiper-slide {

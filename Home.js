@@ -65,7 +65,6 @@ const DROP_DOWN_CONTAINER = document.getElementById(
 const overlayInputs = Array.from(
   document.querySelectorAll('#search-overlay input')
 );
-console.log(overlayInputs);
 const SEARCH_BUTTON = document.querySelector('.search-button-overlay');
 const CATEGORY_INPUT = document.getElementById('category-input-search-overlay');
 CATEGORY_ARROW.addEventListener('click', () => {
@@ -356,22 +355,6 @@ function updatePagination() {
     paginationContainer.appendChild(paginationItem);
   }
 }
-
-// function updateSlideData() {
-//   // Update data based on currentIndex
-//   // Example: Fetch new data from an API and update the content
-//   const cityNameElement = document.querySelector(".courses-city p");
-//   const courseCountElement = document.querySelector(".courses-city-average");
-//   // Update these elements based on your data
-//   const newData = {
-//     cityName: "New City", // Example new city name
-//     courseCount: "New Course Count", // Example new course count
-//   };
-//   cityNameElement.textContent = newData.cityName;
-//   courseCountElement.textContent = newData.courseCount;
-// }
-
-// Initial setup
 setSecondContainerWidth();
 
 window.addEventListener('resize', setSecondContainerWidth);
@@ -379,6 +362,7 @@ window.addEventListener('resize', setSecondContainerWidth);
 // category-courses-section----------------------------------------------------------------------------------
 
 // swiper-------------------------
+
 const mySwiper = new Swiper('.swiper-container1', {
   spaceBetween: 30,
   grid: {
@@ -389,9 +373,35 @@ const mySwiper = new Swiper('.swiper-container1', {
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next', // CSS class or HTML element for next arrow
+    prevEl: '.swiper-button-prev', // CSS class or HTML element for prev arrow
   },
+  on: {
+    init: function () {
+      const paginationContainer = document.querySelector('.swiper-pagination1');
+      const maxVisibleDots = 4; // Set the maximum number of visible dots
+
+      const paginationDots = Array.from(paginationContainer.children);
+
+      // Hide dots more than 4 and replace them with an image
+      paginationDots.forEach((dot, index) => {
+        if (index >= maxVisibleDots) {
+          dot.style.display = 'none'; // Hide the dot
+          // Replace hidden dots with an image
+        }
+      });
+      const svgDots = document.createElement('div');
+      svgDots.style.display = 'flex';
+      svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
+      <rect width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="20" width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="30" width="8" height="8" rx="1" fill="#F2EDED"/>
+    </svg>`;
+      paginationContainer.appendChild(svgDots);
+    },
+  },
+
   breakpoints: {
     1300: {
       slidesPerView: 5,
@@ -588,6 +598,31 @@ var swiper = new Swiper('.testimonialSwiper', {
   },
   initialSlide: 2,
   on: {
+    init: function () {
+      const paginationContainer = document.querySelector('.swiper-pagination2');
+      const maxVisibleDots = 4; // Set the maximum number of visible dots
+
+      const paginationDots = Array.from(paginationContainer.children);
+
+      // Hide dots more than 4 and replace them with an image
+      paginationDots.forEach((dot, index) => {
+        if (index >= maxVisibleDots) {
+          dot.style.display = 'none'; // Hide the dot
+          // Replace hidden dots with an image
+        }
+      });
+      const svgDots = document.createElement('div');
+      svgDots.style.display = 'flex';
+      svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
+      <g opacity="0.2">
+        <rect width="8" height="8" rx="1" fill="white"/>
+        <rect x="10" width="8" height="8" rx="1" fill="white"/>
+        <rect x="20" width="8" height="8" rx="1" fill="white"/>
+        <rect x="30" width="8" height="8" rx="1" fill="white"/>
+      </g>
+    </svg>`;
+      paginationContainer.appendChild(svgDots);
+    },
     slideChangeTransitionEnd: function () {
       updateImageShow();
     },
@@ -717,8 +752,37 @@ var myStaffSwiper = new Swiper('.staff-swiper', {
       },
     },
   },
-});
+  on: {
+    init: function () {
+      const paginationContainer = document.querySelector(
+        '.staff-swiper-pagination'
+      );
+      const maxVisibleDots = 4; // Set the maximum number of visible dots
 
+      const paginationDots = Array.from(paginationContainer.children);
+
+      // Hide dots more than 4 and replace them with an image
+      paginationDots.forEach((dot, index) => {
+        if (index >= maxVisibleDots) {
+          dot.style.display = 'none'; // Hide the dot
+          // Replace hidden dots with an image
+        }
+      });
+      const svgDots = document.createElement('div');
+      svgDots.style.display = 'flex';
+      svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
+      <rect width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="20" width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="30" width="8" height="8" rx="1" fill="#F2EDED"/>
+    </svg>`;
+      paginationContainer.appendChild(svgDots);
+    },
+    slideChangeTransitionEnd: function () {
+      updateImageShow();
+    },
+  },
+});
 // international section swiper ------------------------------------------------------------------------------------
 
 var swiper = new Swiper('.international-swiper', {
@@ -755,6 +819,33 @@ var swiper = new Swiper('.international-swiper', {
     1025: {
       slidesPerView: 5,
       spaceBetween: 50,
+    },
+  },
+  on: {
+    init: function () {
+      const paginationContainer = document.querySelector(
+        '.international-swiper-pagination'
+      );
+      const maxVisibleDots = 4; // Set the maximum number of visible dots
+
+      const paginationDots = Array.from(paginationContainer.children);
+
+      // Hide dots more than 4 and replace them with an image
+      paginationDots.forEach((dot, index) => {
+        if (index >= maxVisibleDots) {
+          dot.style.display = 'none'; // Hide the dot
+          // Replace hidden dots with an image
+        }
+      });
+      const svgDots = document.createElement('div');
+      svgDots.style.display = 'flex';
+      svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
+      <rect width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="20" width="8" height="8" rx="1" fill="#F2EDED"/>
+      <rect x="30" width="8" height="8" rx="1" fill="#F2EDED"/>
+    </svg>`;
+      paginationContainer.appendChild(svgDots);
     },
   },
 });
@@ -850,7 +941,7 @@ const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
 // ------------------------------------------ general logic -------------------------------------
-const allLink = document.querySelectorAll('a');
+const allLink = document.querySelectorAll('.navigationBar a');
 
 allLink.forEach(function (link) {
   link.addEventListener('click', function (e) {
