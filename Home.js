@@ -717,6 +717,10 @@ window.addEventListener('resize', updateImageShow);
 var myStaffSwiper = new Swiper('.staff-swiper', {
   spaceBetween: 0,
   slidesPerView: 3,
+  loop: true,
+  autoplay: {
+    delay: 5000, // Set the delay to 10 seconds (in milliseconds)
+  },
   grid: {
     rows: 1,
   },
