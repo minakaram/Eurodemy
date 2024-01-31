@@ -1,757 +1,1104 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.css" />
-    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Categories.css">
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Categories.css" />
     <title>Categories</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!------------------------------------------------ nav bar ------------------------------------------------------->
     <nav class="navigationBar">
-        <img src="../Assets/blackLogo.png" alt="logo" class="logo-image" />
-        <div class="nav-items-container" id="navbar-toggler-items">
-            <div class="nav-toggler-item">Home</div>
-            <div class="nav-toggler-item">Categories</div>
-            <div class="nav-toggler-item">Cities</div>
-            <div class="nav-toggler-item">Tailored Courses</div>
-            <div class="nav-toggler-item">About Us</div>
-            <div class="nav-toggler-item">Contact Us</div>
-            <div class="nav-toggler-item careers">Careers</div>
+      <a href="#">
+        <img src="../Assets/Logoheroblack.svg" alt="logo" class="logo-image"
+      /></a>
+      <div class="nav-items-container" id="navbar-toggler-items">
+        <div class="nav-toggler-item">Home</div>
+        <div class="nav-toggler-item">Categories</div>
+        <div class="nav-toggler-item">Cities</div>
+        <div class="nav-toggler-item">Tailored Courses</div>
+        <div class="nav-toggler-item">About Us</div>
+        <div class="nav-toggler-item">Contact Us</div>
+        <div class="nav-toggler-item careers">Careers</div>
+      </div>
+      <div
+        class="nav-list-container d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="nav-icon-toggler d-flex align-items-center justify-content-center"
+        >
+          <div
+            id="categories-id-collapse"
+            style="overflow: hidden"
+            class="navbar-home-item d-flex align-items-center justify-content-center"
+          >
+            <p class="my-0"><a href="./Categories.html">Categories</a></p>
+          </div>
+          <div class="navbar-toggle-container" id="navbar-toggler-id">
+            <img
+              src="../Assets/toggler-icon.svg"
+              alt="toggler-icon"
+              class="toggler-icon w-100"
+            />
+          </div>
         </div>
-        <div class="nav-list-container d-flex align-items-center justify-content-center">
-            <div class="nav-icon-toggler d-flex align-items-center justify-content-center">
-                <div id="categories-id-collapse" style="overflow: hidden"
-                    class="navbar-home-item d-flex align-items-center justify-content-center">
-                    <p class="my-0"><a href="./Categories.html">Categories</a></p>
-                </div>
-                <div class="navbar-toggle-container" id="navbar-toggler-id">
-                    <img src="../Assets/toggler-icon.svg" alt="toggler-icon" class="toggler-icon w-100" />
-                </div>
-            </div>
-            <ul>
-                <li class="d-flex justify-content-between align-items-center">
-                    <a href="../Home.html" class="navbar-home-list-item">Home</a>
-                </li>
-                <li class="active-list" >
-                    <a href="./Categories.html">Categories <svg id="active-list-id" style="margin-left: 1rem" width="14" height="14" viewBox="0 0 16 16"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
-                                fill="#ad1519" />
-                            <path
-                                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
-                                fill="#ad1519" />
-                        </svg></a>
-
-                </li>
-                <li >
-                    <a href="../Cities Page/Cities.html">Cities
-                        <svg id="cities-dropdown-button" style="margin-left: 1rem" width="14" height="14" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
-                                fill="black" />
-                            <path
-                                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
-                                fill="black" />
-                        </svg>
-                    </a>
-
-                </li>
-                <li><a href="../Tailored Courses/Tailored.html">Tailored Courses</a></li>
-                <li><a href="../AboutUs Page/AboutUs.html">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">Careers</a></li>
-            </ul>
+        <ul>
+          <li class="d-flex justify-content-between align-items-center">
+            <a href="../Home.html" class="navbar-home-list-item">Home</a>
+          </li>
+          <li class="active-list">
+            <a href="./Categories.html"
+              >Categories
+              <img
+                src="../Assets/DownArrowRed.svg"
+                alt="view cities"
+                class="down-arrow-nav"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="../Cities Page/Cities.html"
+              >Cities
+              <img
+                src="../Assets/DownArrowBlack.svg"
+                alt="view cities"
+                class="down-arrow-nav"
+              />
+              <img
+                src="../Assets/DownArrowRed.svg"
+                alt="view cities"
+                class="down-arrow-nav-absolute"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="../Tailored Courses/Tailored.html">Tailored Courses</a>
+          </li>
+          <li><a href="../AboutUs Page/AboutUs.html">About Us</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Careers</a></li>
+        </ul>
+      </div>
+      <div class="navigation-bar-right-side">
+        <img
+          src="../Assets/SearchBar.png"
+          alt="search"
+          class="header-search-bar"
+          id="search-open-btn"
+        />
+        <div class="changeTo-arabic-courses-box">
+          <div class="arabic-icon">
+            <img src="../Assets/Arabic_Iconwhite.svg" alt="arabic courses" />
+          </div>
+          <p class="arabic-course-txt">Arabic <br />Courses</p>
         </div>
-        <div class="navigation-bar-right-side">
-            <img src="../Assets/SearchBar.png" alt="" class="header-search-bar" id="search-open-btn" />
-            <div class="changeTo-arabic-courses-box">
-                <div class="arabic-icon">
-                    <img src="../Assets/Arabic-Icon2.png" alt="arabic" />
-                </div>
-                <p class="arabic-course-txt">Arabic <br />Courses</p>
-            </div>
+      </div>
+      <div class="cities-dropdown-nav" id="cities-dropdown-id">
+        <div class="cities-dropdown-item">Cairo</div>
+        <div class="cities-dropdown-item">Paris</div>
+        <div class="cities-dropdown-item">Spain</div>
+        <div class="cities-dropdown-item">Brazil</div>
+        <div class="cities-dropdown-item">Germany</div>
+        <div class="cities-dropdown-item">America</div>
+        <div class="cities-dropdown-item">Sudan</div>
+        <div class="cities-dropdown-item">Dubai</div>
+        <div class="cities-dropdown-item">Greece</div>
+        <div class="cities-dropdown-item">Italy</div>
+        <div class="cities-dropdown-item">Marooc</div>
+        <div class="cities-dropdown-item">palastine</div>
+        <div class="cities-dropdown-item">lybia</div>
+        <div class="cities-dropdown-item">tunisia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+      </div>
+      <div class="categories-dropdown-nav" id="categories-dropdown-id">
+        <div class="categories-dropdown-item">
+          Maintenance Planning, Process Engineering & Instrumentation management
         </div>
-        <div class="cities-dropdown-nav" id="cities-dropdown-id">
-            <div class="cities-dropdown-item">Cairo</div>
-            <div class="cities-dropdown-item">Paris</div>
-            <div class="cities-dropdown-item">Spain</div>
-            <div class="cities-dropdown-item">Brazil</div>
-            <div class="cities-dropdown-item">Germany</div>
-            <div class="cities-dropdown-item">America</div>
-            <div class="cities-dropdown-item">Sudan</div>
-            <div class="cities-dropdown-item">Dubai</div>
-            <div class="cities-dropdown-item">Greece</div>
-            <div class="cities-dropdown-item">Italy</div>
-            <div class="cities-dropdown-item">Marooc</div>
-            <div class="cities-dropdown-item">palastine</div>
-            <div class="cities-dropdown-item">lybia</div>
-            <div class="cities-dropdown-item">tunisia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
-            <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="categories-dropdown-item">Management</div>
+        <div class="categories-dropdown-item">Project Management</div>
+        <div class="categories-dropdown-item">
+          Administration and Secretarial Training Courses
         </div>
-        <div class="categories-dropdown-nav" id="categories-dropdown-id">
-            <div class="categories-dropdown-item">Maintenance Planning, Process Engineering & Instrumentation management
-            </div>
-            <div class="categories-dropdown-item">Management</div>
-            <div class="categories-dropdown-item">Project Management</div>
-            <div class="categories-dropdown-item">Administration and Secretarial Training Courses</div>
-            <div class="categories-dropdown-item">Human Resource Training </div>
-            <div class="categories-dropdown-item">Healthcare Management</div>
-            <div class="categories-dropdown-item">Data management and analytics</div>
-            <div class="categories-dropdown-item">Public Relations , communication skills</div>
-            <div class="categories-dropdown-item">Petroleum, Oil , Gas Training Courses</div>
-            <div class="categories-dropdown-item">Chemical, Mechanical Engineering Training Courses</div>
-            <div class="categories-dropdown-item">Customer Support Representative</div>
-            <div class="categories-dropdown-item">Data Scientist</div>
-            <div class="categories-dropdown-item">Network Administrator</div>
-            <div class="categories-dropdown-item">Systems Administrator</div>
-            <div class="categories-dropdown-item">HR Coordinator</div>
-            <div class="categories-dropdown-item">Executive Assistant</div>
-            <div class="categories-dropdown-item">Administrative Assistant</div>
-            <div class="categories-dropdown-item">Content Writer</div>
-            <div class="categories-dropdown-item">Social Media Specialist</div>
-            <div class="categories-dropdown-item">Legal Counsel</div>
-            <div class="categories-dropdown-item">Compliance Officer</div>
-            <div class="categories-dropdown-item">Quality Assurance Manager</div>
-            <div class="categories-dropdown-item">Business Development Manager</div>
-            <div class="categories-dropdown-item">Director of Information Technology</div>
-            <div class="categories-dropdown-item">Chief Human Resources Officer (CHRO)</div>
-            <div class="categories-dropdown-item">Chief Technology Officer (CTO)</div>
-            <div class="categories-dropdown-item">Chief Executive Officer (CEO)</div>
-            <div class="categories-dropdown-item">Sales Manager</div>
+        <div class="categories-dropdown-item">Human Resource Training</div>
+        <div class="categories-dropdown-item">Healthcare Management</div>
+        <div class="categories-dropdown-item">
+          Data management and analytics
         </div>
-        <div class="categories-dropdown-nav" id="categories-dropdown-collapse">
-            <div class="categories-dropdown-item">Maintenance Planning, Process Engineering & Instrumentation management
-            </div>
-            <div class="categories-dropdown-item">Management</div>
-            <div class="categories-dropdown-item">Project Management</div>
-            <div class="categories-dropdown-item">Administration and Secretarial Training Courses</div>
-            <div class="categories-dropdown-item">Human Resource Training </div>
-            <div class="categories-dropdown-item">Healthcare Management</div>
-            <div class="categories-dropdown-item">Data management and analytics</div>
-            <div class="categories-dropdown-item">Public Relations , communication skills</div>
-            <div class="categories-dropdown-item">Petroleum, Oil , Gas Training Courses</div>
-            <div class="categories-dropdown-item">Chemical, Mechanical Engineering Training Courses</div>
-            <div class="categories-dropdown-item">Customer Support Representative</div>
-            <div class="categories-dropdown-item">Data Scientist</div>
-            <div class="categories-dropdown-item">Network Administrator</div>
-            <div class="categories-dropdown-item">Systems Administrator</div>
-            <div class="categories-dropdown-item">HR Coordinator</div>
-            <div class="categories-dropdown-item">Executive Assistant</div>
-            <div class="categories-dropdown-item">Administrative Assistant</div>
-            <div class="categories-dropdown-item">Content Writer</div>
-            <div class="categories-dropdown-item">Social Media Specialist</div>
-            <div class="categories-dropdown-item">Legal Counsel</div>
-            <div class="categories-dropdown-item">Compliance Officer</div>
-            <div class="categories-dropdown-item">Quality Assurance Manager</div>
-            <div class="categories-dropdown-item">Business Development Manager</div>
-            <div class="categories-dropdown-item">Director of Information Technology</div>
-            <div class="categories-dropdown-item">Chief Human Resources Officer (CHRO)</div>
-            <div class="categories-dropdown-item">Chief Technology Officer (CTO)</div>
-            <div class="categories-dropdown-item">Chief Executive Officer (CEO)</div>
-            <div class="categories-dropdown-item">Sales Manager</div>
+        <div class="categories-dropdown-item">
+          Public Relations , communication skills
         </div>
+        <div class="categories-dropdown-item">
+          Petroleum, Oil , Gas Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Chemical, Mechanical Engineering Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Customer Support Representative
+        </div>
+        <div class="categories-dropdown-item">Data Scientist</div>
+        <div class="categories-dropdown-item">Network Administrator</div>
+        <div class="categories-dropdown-item">Systems Administrator</div>
+        <div class="categories-dropdown-item">HR Coordinator</div>
+        <div class="categories-dropdown-item">Executive Assistant</div>
+        <div class="categories-dropdown-item">Administrative Assistant</div>
+        <div class="categories-dropdown-item">Content Writer</div>
+        <div class="categories-dropdown-item">Social Media Specialist</div>
+        <div class="categories-dropdown-item">Legal Counsel</div>
+        <div class="categories-dropdown-item">Compliance Officer</div>
+        <div class="categories-dropdown-item">Quality Assurance Manager</div>
+        <div class="categories-dropdown-item">Business Development Manager</div>
+        <div class="categories-dropdown-item">
+          Director of Information Technology
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Human Resources Officer (CHRO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Technology Officer (CTO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Executive Officer (CEO)
+        </div>
+        <div class="categories-dropdown-item">Sales Manager</div>
+      </div>
+      <div class="categories-dropdown-nav" id="categories-dropdown-collapse">
+        <div class="categories-dropdown-item">
+          Maintenance Planning, Process Engineering & Instrumentation management
+        </div>
+        <div class="categories-dropdown-item">Management</div>
+        <div class="categories-dropdown-item">Project Management</div>
+        <div class="categories-dropdown-item">
+          Administration and Secretarial Training Courses
+        </div>
+        <div class="categories-dropdown-item">Human Resource Training</div>
+        <div class="categories-dropdown-item">Healthcare Management</div>
+        <div class="categories-dropdown-item">
+          Data management and analytics
+        </div>
+        <div class="categories-dropdown-item">
+          Public Relations , communication skills
+        </div>
+        <div class="categories-dropdown-item">
+          Petroleum, Oil , Gas Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Chemical, Mechanical Engineering Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Customer Support Representative
+        </div>
+        <div class="categories-dropdown-item">Data Scientist</div>
+        <div class="categories-dropdown-item">Network Administrator</div>
+        <div class="categories-dropdown-item">Systems Administrator</div>
+        <div class="categories-dropdown-item">HR Coordinator</div>
+        <div class="categories-dropdown-item">Executive Assistant</div>
+        <div class="categories-dropdown-item">Administrative Assistant</div>
+        <div class="categories-dropdown-item">Content Writer</div>
+        <div class="categories-dropdown-item">Social Media Specialist</div>
+        <div class="categories-dropdown-item">Legal Counsel</div>
+        <div class="categories-dropdown-item">Compliance Officer</div>
+        <div class="categories-dropdown-item">Quality Assurance Manager</div>
+        <div class="categories-dropdown-item">Business Development Manager</div>
+        <div class="categories-dropdown-item">
+          Director of Information Technology
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Human Resources Officer (CHRO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Technology Officer (CTO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Executive Officer (CEO)
+        </div>
+        <div class="categories-dropdown-item">Sales Manager</div>
+      </div>
     </nav>
 
-
-
     <div class="course-category-heading">
-        <img class="flag-cities-abslute" src="../Assets/Falg-cities.svg" alt="">
-        <h1>
-            <img src="../Assets/Vector-left-cities.png" class="heading-left-vector-abslute">
-            Courses Categories
-            <img src="../Assets/Vector-right--cities.svg" class="heading-right-vector-abslute">
-        </h1>
-        <p class="cities-heading-paragraph">
-            Our academy offers a wide range of courses in a variety of subjects, including leadership, management, IT,
-            finance, and many more with over <span class="hightlight-red">+27</span> of the available courses categories to enhance your career.
-        </p>
-        <img style="margin: auto;display: block; width: 80%;" src="../Assets/Vector-spliter.svg" alt="" class="mt-4">
+      <img class="flag-cities-abslute" src="../Assets/Falg-cities.svg" alt="" />
+      <h1>
+        <img
+          src="../Assets/Vector-left-cities.png"
+          class="heading-left-vector-abslute"
+        />
+        Courses Categories
+        <img
+          src="../Assets/Vector-right--cities.svg"
+          class="heading-right-vector-abslute"
+        />
+      </h1>
+      <p class="cities-heading-paragraph">
+        Our academy offers a wide range of courses in a variety of subjects,
+        including leadership, management, IT, finance, and many more with over
+        <span class="hightlight-red">+27</span> of the available courses
+        categories to enhance your career.
+      </p>
+      <img
+        style="margin: auto; display: block; width: 80%"
+        src="../Assets/Vector-spliter.svg"
+        alt=""
+        class="mt-4"
+      />
     </div>
 
     <!-------------------------------------- courses category section ------------------------------------------------>
     <section class="courses-category-section">
-        <div class="swiper-container categories-swiper-container1">
-            <div class="swiper-wrapper grid-container course-category-card-container">
-                <div class="course-category-card course-category-item swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
-                <div class="course-category-card swiper-slide">
-                    <img src="../Assets/Img.png" alt="category" />
-                    <img src="../Assets/overlay-cards.png" alt="category" class="course-category-img" />
-                    <div class="course-category-details">
-                        <p class="course-category-avrg">16 Courses</p>
-                        <div class="view-category">
-                            <p>View Category</p>
-                            <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
-                        </div>
-                    </div>
-                    <div class="course-category-card-title">
-                        <p>International law</p>
-                    </div>
-                </div>
+      <div class="swiper-container categories-swiper-container1">
+        <div
+          class="swiper-wrapper grid-container course-category-card-container"
+        >
+          <div class="course-category-card course-category-item swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination1"></div>
-            <div class="swiper-navigation d-flex justify-content-center align-items-center">
-                <button class="swiper-button-prev"></button>
-                <button class="swiper-button-next"></button>
+            <div class="course-category-card-title">
+              <p>International law</p>
             </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
+          <div class="course-category-card swiper-slide">
+            <img src="../Assets/Img.png" alt="category" />
+            <img
+              src="../Assets/overlay-cards.png"
+              alt="category"
+              class="course-category-img"
+            />
+            <div class="course-category-details">
+              <p class="course-category-avrg">16 Courses</p>
+              <div class="view-category">
+                <p>View Category</p>
+                <img
+                  src="../Assets/Right Arrow - mini.svg"
+                  alt="view course"
+                  class="right-arrow-mini"
+                />
+              </div>
+            </div>
+            <div class="course-category-card-title">
+              <p>International law</p>
+            </div>
+          </div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination1"></div>
+        <div
+          class="swiper-navigation d-flex justify-content-center align-items-center"
+        >
+          <button class="swiper-button-prev"></button>
+          <button class="swiper-button-next"></button>
+        </div>
+      </div>
     </section>
-
 
     <!--------------------------------------------- FOOTER ----------------------------------------------->
     <footer class="footer">
-        <div class="footer-separator">
-            <img src="../Assets/footer separator.svg" alt="separator" class="w-100" style="width: 100%;" />
+      <div class="footer-separator">
+        <img
+          src="../Assets/footer separator.svg"
+          alt="separator"
+          class="w-100"
+          style="width: 100%"
+        />
+      </div>
+      <div class="footerLogos-container">
+        <img
+          src="../Assets/footerMiddleContainer.png"
+          alt="logo"
+          class="footer-absolute-logo-container"
+        />
+        <img
+          src="../Assets/footerLogo.svg"
+          alt="Logo"
+          class="footer-absolute-logo"
+        />
+      </div>
+      <main class="footer-contents-container">
+        <div class="leftSide-footer">
+          <div class="main-pages-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">Main Pages</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Courses
+                Categories
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Cities &
+                Venues
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Tailored
+                Courses
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Careers (
+                Join our staff )
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />About Us
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Contact Us
+              </li>
+            </ul>
+          </div>
+          <div class="more-details-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">More Details</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Privacy
+                policy agreement
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Terms of use
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Copy rights
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Registration,
+                payment & cancelation policies
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Why to choose
+                us ?
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Add us to
+                your safe mailing list
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Program
+                venue's terms and conditions
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="footerLogos-container">
-            <img src="../Assets/footerMiddleContainer.png" alt="logo" class="footer-absolute-logo-container" />
-            <img src="../Assets/footerLogo.svg" alt="Logo" class="footer-absolute-logo" />
+        <div class="rightSide-footer">
+          <div class="quick-access-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">Quick Access</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Upcoming
+                Courses
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Top Courses
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Training
+                Staff
+              </li>
+            </ul>
+          </div>
+          <div class="contact-info-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerIcon.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">Contact Info.</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerIcon2.svg" alt="list" />Edificios
+                Corporativos del Retiro, Calle Menorca 12, 28009 - Madrid
+              </li>
+              <li class="footer-content-list-item">
+                <img
+                  src="../Assets/footerIcon3.svg"
+                  alt="list"
+                />info@EURODEMY.com
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerIcon4.svg" alt="list" />+201097551224
+                | +201097551224
+              </li>
+            </ul>
+          </div>
         </div>
-        <main class="footer-contents-container">
-            <div class="leftSide-footer">
-                <div class="main-pages-container">
-                    <div class="footer-content-heading">
-                        <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-                        <h4 class="footer-content-header">Main Pages</h4>
-                    </div>
-                    <ul class="footer-content-list">
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Courses
-                            Categories
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Cities &
-                            Venues
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Tailored
-                            Courses
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Careers ( Join
-                            our staff )
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />About Us
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Contact Us
-                        </li>
-                    </ul>
-                </div>
-                <div class="more-details-container">
-                    <div class="footer-content-heading">
-                        <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-                        <h4 class="footer-content-header">More Details</h4>
-                    </div>
-                    <ul class="footer-content-list">
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Privacy policy
-                            agreement
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Terms of use
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Copy rights
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Registration,
-                            payment & cancelation policies
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Why to choose
-                            us ?
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Add us to your
-                            safe mailing list
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Program
-                            venue's terms and conditions
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="rightSide-footer">
-                <div class="quick-access-container">
-                    <div class="footer-content-heading">
-                        <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-                        <h4 class="footer-content-header">Quick Access</h4>
-                    </div>
-                    <ul class="footer-content-list">
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Upcoming
-                            Courses
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Top Courses
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerShape2.svg" alt="list" />Training Staff
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-info-container">
-                    <div class="footer-content-heading">
-                        <img src="../Assets/footerIcon.svg" alt="footer-shape1" />
-                        <h4 class="footer-content-header">Contact Info.</h4>
-                    </div>
-                    <ul class="footer-content-list">
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerIcon2.svg" alt="list" />Edificios
-                            Corporativos del Retiro, Calle Menorca 12, 28009 - Madrid
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerIcon3.svg" alt="list" />info@EURODEMY.com
-                        </li>
-                        <li class="footer-content-list-item">
-                            <img src="../Assets/footerIcon4.svg" alt="list" />+201097551224 |
-                            +201097551224
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-form-container">
-                <h4 class="footer-form-header">EURODEMY</h4>
-                <p class="footer-form-secondary-header">
-                    PROFESSIONAL TRAINING ACADEMY
-                </p>
-                <div class="footer-form-socialIcon">
-                    <img src="../Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
-                    <img src="../Assets/footerFacebook.svg" alt="Facebook" />
-                    <img src="../Assets/youtube.svg" alt="Youtube" style="height: 33px" />
-                    <img src="../Assets/FooterLinked.svg" alt="Linked" />
-                    <img src="../Assets/footerInstgram.svg" alt="Instgram" />
-                    <img src="../Assets/footerX.svg" alt="X" />
-                </div>
-                <div class="envelope-icon-container">
-                    <img src="../Assets/envelope.svg" alt="message" />
-                </div>
-                <p class="assurance-message-form-txt">
-                    Recieve our news, offers & updates on your e-mail
-                </p>
-                <div class="footer-form-input-container">
-                    <input type="text" id="footerFormGmail" name="footerFormGmail" class="footer-formInput"
-                        placeholder="Add your email" />
-                    <button class="footer-form-gmail-btn">Send</button>
-                </div>
-                <p class="successfullySentTxt">Successfully Sent</p>
-            </div>
-        </main>
+        <div class="footer-form-container">
+          <h4 class="footer-form-header">EURODEMY</h4>
+          <p class="footer-form-secondary-header">
+            PROFESSIONAL TRAINING ACADEMY
+          </p>
+          <div class="footer-form-socialIcon">
+            <img src="../Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
+            <img src="../Assets/footerFacebook.svg" alt="Facebook" />
+            <img
+              src="../Assets/youtube.svg"
+              alt="Youtube"
+              style="height: 33px"
+            />
+            <img src="../Assets/FooterLinked.svg" alt="Linked" />
+            <img src="../Assets/footerInstgram.svg" alt="Instgram" />
+            <img src="../Assets/footerX.svg" alt="X" />
+          </div>
+          <div class="envelope-icon-container">
+            <img src="../Assets/envelope.svg" alt="message" />
+          </div>
+          <p class="assurance-message-form-txt">
+            Recieve our news, offers & updates on your e-mail
+          </p>
+          <div class="footer-form-input-container">
+            <input
+              type="text"
+              id="footerFormGmail"
+              name="footerFormGmail"
+              class="footer-formInput"
+              placeholder="Add your email"
+            />
+            <button class="footer-form-gmail-btn">Send</button>
+          </div>
+          <p class="successfullySentTxt">Successfully Sent</p>
+        </div>
+      </main>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="Categories.js"></script>
-</body>
-
+  </body>
 </html>

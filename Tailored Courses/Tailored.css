@@ -113,6 +113,7 @@ p {
 }
 .active-list a {
   color: var(--Primary-Primary) !important;
+  font-family: rubikSemiBold-600 !important;
 }
 .navigationBar ul li a {
   text-decoration: none;
@@ -120,16 +121,28 @@ p {
   text-align: center;
   /* line-height: 80px; */
   padding: 0px 1.4rem;
-  font-weight: 600;
   height: 80px;
+  font-family: rubikRegular-400;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: all 300ms;
 }
-
+.navigationBar ul li a:hover .down-arrow-nav-absolute {
+  opacity: 1;
+}
+.down-arrow-nav {
+  margin-left: 1rem;
+}
+.down-arrow-nav-absolute {
+  position: absolute;
+  right: 1.4rem;
+  opacity: 0;
+  transition: all 300ms;
+}
 .navigationBar ul li a:hover {
   color: var(--Primary-Primary);
-  background-color: var(--secondary);
 }
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
@@ -138,6 +151,7 @@ p {
   height: 3rem;
   width: 3rem;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .navigationBar .changeTo-arabic-courses-box .arabic-icon {
@@ -154,6 +168,7 @@ p {
   justify-content: center;
   gap: 0.375rem;
   height: 3rem;
+  cursor: pointer;
 }
 .arabic-course-txt {
   color: var(--Nuturals-White);
@@ -573,7 +588,7 @@ p {
   width: 100%;
   padding: 0.9rem 2rem 0.9rem 3.5rem;
   outline: none;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border: none;
   border-right: 2px solid var(--Nuturals-N-3);
   font-size: 0.9rem;
@@ -606,7 +621,7 @@ p {
   width: 100%;
   padding: 0.9rem 2rem 0.9rem 3.5rem;
   outline: none;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border: none;
   border-right: 2px solid var(--Nuturals-N-3);
   font-size: 0.9rem;
@@ -650,7 +665,7 @@ p {
   width: 100%;
   padding: 0.9rem 2rem 0.9rem 3.5rem;
   outline: none;
-  background-color:#F9F9F9;
+  background-color: #f9f9f9;
   border: none;
   border-right: 2px solid var(--Nuturals-N-3);
   font-size: 0.9rem;
@@ -682,7 +697,7 @@ p {
   width: 100%;
   padding: 0.9rem 2rem 0.9rem 3.5rem;
   outline: none;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border: none;
   border-right: 2px solid var(--Nuturals-N-3);
   font-size: 0.9rem;
@@ -723,7 +738,7 @@ p {
   border-left: 2px solid var(--Nuturals-N-2);
   border-right: 2px solid var(--Nuturals-N-2);
   padding: 10px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   outline: none;
   min-height: 200px;
   max-height: 200px;
@@ -748,7 +763,7 @@ p {
   margin: 3rem 0rem;
 }
 
-.file-insert-container input[type="file"] {
+.file-insert-container input[type='file'] {
   position: absolute;
   top: 0;
   left: 0;
@@ -757,7 +772,7 @@ p {
   opacity: 0;
   cursor: pointer;
 }
-.file-insert-container input[type="text"] {
+.file-insert-container input[type='text'] {
   width: 100%;
   border: none;
   border-left: 2px solid var(--Nuturals-N-2);
@@ -865,7 +880,7 @@ p {
   .custom-checkbox
   input:checked
   + .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   left: 35%;
@@ -928,7 +943,7 @@ p {
   .custom-checkbox
   input:checked
   + .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   left: 35%;
