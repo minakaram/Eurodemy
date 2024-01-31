@@ -676,7 +676,7 @@ h6 {
 
 .header-section .owl-carousel .owl-dots .owl-dot span {
   height: 8px;
-  width: 30px;
+  width: 40px;
   border-radius: 1px;
   background-color: rgba(255, 255, 255, 0.26);
 }
@@ -1067,8 +1067,9 @@ h6 {
   margin-top: 40px;
 }
 .coming-training-section .owl-carousel .owl-dots span {
-  width: 2.5rem;
-  height: 0.5rem;
+  width: 40px;
+  height: 8px;
+  border-radius: 1px;
 }
 .coming-training-section .owl-carousel .owl-nav,
 .top-courses-section .owl-carousel .owl-nav {
@@ -1182,9 +1183,9 @@ h6 {
   width: 100% !important;
 }
 .courses-category-section .swiper-pagination1 span {
-  width: 2.5rem !important;
-  height: 0.5rem;
-  border-radius: 30px !important;
+  width: 40px !important;
+  height: 8px;
+  border-radius: 1px !important;
   margin: 0 0.2rem;
 }
 .courses-category-section .swiper-pagination-bullets {
@@ -1194,6 +1195,10 @@ h6 {
 }
 .courses-category-section .swiper-pagination-bullets .swiper-pagination-bullet {
   background-color: var(--Nuturals-N-5);
+}
+.courses-category-section .swiper-pagination-bullets .swiper-pagination-bullet span{
+  height: 8px !important;
+  width: 40px !important;
 }
 .courses-category-section
   .swiper-pagination-bullets
@@ -1495,8 +1500,9 @@ h6 {
 }
 
 .top-courses-section .owl-carousel .owl-dots .owl-dot span {
-  width: 2.5rem;
-  height: 0.5rem;
+  width: 40px;
+  height: 8px;
+  border-radius: 1px;
   background-color: var(--Nuturals-White);
   opacity: 0.2;
 }
