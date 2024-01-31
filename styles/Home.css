@@ -1088,17 +1088,19 @@ h6 {
 .top-courses-section .owl-carousel .owl-nav button.owl-prev,
 .custom-navigation button.owl-prev {
   margin-right: 150px;
-  height: 2rem;
-  width: 3rem;
+  height: 32px;
+  width: 40px;
+  border-radius: 1px;
   color: #fff;
   padding-bottom: 15px !important;
 }
 .coming-training-section .owl-carousel .owl-nav button.owl-next,
 .top-courses-section .owl-carousel .owl-nav button.owl-next,
 .custom-navigation button.owl-next {
-  height: 2rem;
-  width: 3rem;
+  height: 32px;
+  width: 40px;
   color: #fff;
+  border-radius: 1px;
   padding-bottom: 15px !important;
 }
 .owl-dot.active span {
@@ -1224,10 +1226,12 @@ h6 {
   color: var(--Nuturals-N-6) !important;
   display: block;
   position: static !important;
-  width: 3rem !important;
-  height: 2rem !important;
+  width: 40px !important;
+  height: 32px !important;
   background-color: var(--Nuturals-N-1);
-  border-radius: 5px;
+  border-radius: 1px;
+  outline: none;
+  border: none;
 }
 .courses-category-section .swiper-button-prev {
   margin-right: 18rem;
@@ -1785,10 +1789,13 @@ h6 {
 .cities-button-prev,
 .cities-button-next {
   background-color: var(--Nuturals-N-2);
-  padding: 0.5rem 0.75rem;
-  text-align: center;
+  height: 32px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 .pagination-container {
   display: flex;
@@ -1796,9 +1803,9 @@ h6 {
 }
 
 .pagination-item {
-  width: 2.5rem;
-  height: 0.5rem;
-  border-radius: 3px;
+  width: 40px;
+  height: 8px;
+  border-radius: 1px;
   background-color: var(--Nuturals-N-6);
   margin: 0 0.4rem;
   cursor: pointer;
@@ -1806,7 +1813,7 @@ h6 {
 
 .pagination-item.active {
   background-color: var(--Nuturals-N-2);
-  border-radius: 3px;
+  border-radius: 1px;
 }
 .view-cities-venues {
   display: flex;
