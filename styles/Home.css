@@ -2837,7 +2837,7 @@ p {
 
 .international-accerditations
   .swiper
-  .international-swiper-pagination
+  .international-swiper-pagination  
   .swiper-pagination-bullet-active {
   background-color: var(--Ternary-Ternary) !important;
 }
