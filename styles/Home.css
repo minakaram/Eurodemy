@@ -414,7 +414,7 @@ h6 {
   transform: translateX(-50%);
   color: var(--Nuturals-White);
 }
-.search-overlay-section .search-overlay-inner-container input[type='text'] {
+.search-overlay-section .search-overlay-inner-container input[type="text"] {
   background-color: transparent;
   border-radius: 1px;
   border: 0.5px solid var(--Nuturals-N-5, #bfb6b6);
@@ -523,7 +523,7 @@ h6 {
 
 /* Show a checkmark when the checkbox is checked */
 .custom-checkbox input:checked + .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   left: 7px;
@@ -1231,7 +1231,7 @@ h6 {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: 'Top Category';
+  content: "Top Category";
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1330,7 +1330,7 @@ h6 {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: 'Top Category';
+  content: "Top Category";
   position: absolute;
   top: 0;
   left: 0;
@@ -2317,10 +2317,12 @@ h6 {
   padding: 1rem 1rem;
   background-color: var(--Nuturals-N-6);
   margin-top: 0.4rem;
+  transition: 0.3s;
 }
 .testimonial-section .swiper-slide .testimonials-person-info p {
   font-size: 0.8rem;
   text-align: left;
+  transition: 0.3s;
 }
 .testimonial-section .swiper .swiper-slide .testimonial-name {
   color: var(--Nuturals-N-1);
@@ -2350,7 +2352,39 @@ h6 {
   .swiper-pagination-bullet-active {
   background-color: var(--Nuturals-White) !important;
 }
-
+.testimonial-section .swiper-navigation {
+  margin-top: -20px;
+}
+.testimonial-section .swiper-button-prev2 {
+  color: var(--Nuturals-N-6) !important;
+  position: static !important;
+  display: block;
+  margin-right: 16rem;
+  width: 40px !important;
+  height: 32px !important;
+  background-color: var(--Nuturals-White);
+  outline: none;
+  border: none;
+}
+.testimonial-section .swiper-button-prev2::after {
+  font-size: 17px !important;
+  font-weight: bolder !important;
+}
+.testimonial-section .swiper-button-next2 {
+  color: var(--Nuturals-N-6) !important;
+  display: block;
+  position: static !important;
+  color: blue;
+  width: 40px !important;
+  height: 32px !important;
+  background-color: var(--Nuturals-White);
+  outline: none;
+  border: none;
+}
+.testimonial-section .swiper-button-next2::after {
+  font-size: 15px !important;
+  font-weight: bolder !important;
+}
 @media (767px < width<1025px) {
   .testimonial-section .swiper-slide-active {
     display: block !important;
@@ -2374,6 +2408,9 @@ h6 {
   .testimonial-section .testimonial-paragraph {
     padding: 3rem 0rem;
   }
+  .testimonial-section .swiper-navigation {
+    display: none !important;
+  }
 }
 /* ----------------------------------------training staff section ------------------------------------ */
 .training-staff-section {
@@ -2390,6 +2427,7 @@ h6 {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: -1;
 }
 .training-staff-paragraph {
   color: var(--Nuturals-N-2);
@@ -2403,6 +2441,7 @@ h6 {
   max-width: 86%;
   margin: auto;
   overflow: hidden;
+  margin-bottom: 5rem;
 }
 .training-staff-section .staff-swiper .swiper-wrapper {
   flex-direction: row !important;
@@ -2493,7 +2532,7 @@ h6 {
   position: static;
   display: flex;
   justify-content: center;
-  margin: 3rem 0 4rem;
+  margin: 3rem 0 0rem 0rem;
 }
 .training-staff-section
   .staff-swiper
@@ -2502,7 +2541,7 @@ h6 {
   width: 40px;
   height: 8px;
   border-radius: 1px;
-  background-color: #d0cccc !important;
+  background-color: var(--Nuturals-N-4) !important;
 }
 
 .training-staff-section
@@ -2512,10 +2551,43 @@ h6 {
   background-color: var(--Ternary-Ternary) !important;
 }
 
+.training-staff-section .swiper-navigation {
+  margin-top: -20px;
+}
+.training-staff-section .staff-button-prev {
+  color: var(--Nuturals-N-6) !important;
+  position: static !important;
+  display: block;
+  margin-right: 17rem !important;
+  width: 40px !important;
+  height: 32px !important;
+  background-color: var(--Nuturals-N-1);
+  outline: none;
+  border: none;
+}
+.training-staff-section .staff-button-prev::after {
+  font-size: 17px !important;
+  font-weight: bolder !important;
+}
+.training-staff-section .staff-button-next {
+  color: var(--Nuturals-N-6) !important;
+  display: block;
+  position: static !important;
+  width: 40px !important;
+  height: 32px !important;
+  background-color: var(--Nuturals-N-1);
+  outline: none;
+  border: none;
+}
+.training-staff-section .staff-button-next::after {
+  font-size: 15px !important;
+  font-weight: bolder !important;
+}
+
 @media (width>1024px) {
   .training-staff-section .staff-swiper .swiper-slide {
     width: 19% !important;
-    margin-right: 12px !important;
+    margin-right: 15px !important;
   }
   .training-staff-section .staff-swiper .swiper-wrapper {
   }
@@ -2548,9 +2620,12 @@ h6 {
   .staff-swiper .swiper-slide:nth-child(even) {
     margin-top: 0px !important;
   }
-  .training-staff-section .staff-swiper .swiper-wrapper .swiper-slide {
-    /* width: 32% !important;
-    margin-right: 16px; */
+  .training-staff-section .swiper-navigation {
+    display: none !important;
+  }
+  .BottomRightRedVector {
+    width: 150px;
+    height: 150px;
   }
 }
 @media (width<400px) {
@@ -2863,7 +2938,7 @@ h6 {
 
 .international-accerditations
   .swiper
-  .international-swiper-pagination  
+  .international-swiper-pagination
   .swiper-pagination-bullet-active {
   background-color: var(--Ternary-Ternary) !important;
 }
@@ -2977,6 +3052,9 @@ h6 {
   justify-content: space-between;
   border-bottom: 0.5px solid var(--Nuturals-N-2);
 }
+.map-contacts p {
+  font-family: rubikMedium-500;
+}
 .map-tele {
   display: flex;
   gap: 0.5rem;
@@ -3000,6 +3078,12 @@ h6 {
   }
   .map-contacts {
     flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+@media (width<768px) {
+  .offices-yellow-vector {
+    margin-left: -4rem;
   }
 }
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
@@ -3146,7 +3230,7 @@ h6 {
 .assurance-message-form-txt {
   color: var(--Nuturals-N-1);
   text-align: center;
-  font-family: rubikRegular;
+  font-family: rubikRegular-400;
   font-size: 1.125rem;
   line-height: 1.5rem;
   padding-bottom: 1.5rem;
@@ -3233,7 +3317,7 @@ h6 {
   }
   .footer-absolute-logo {
     width: 170px;
-    height: 175px;
+    height: 170px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3245,6 +3329,14 @@ h6 {
   }
   .footer-content-heading {
     width: 61%;
+  }
+  .footer-form-socialIcon {
+    gap: 0.8rem;
+    width: 95%;
+  }
+  .footer-absolute-logo {
+    width: 170px;
+    height: 115px;
   }
 }
 @media (width<400px) {
