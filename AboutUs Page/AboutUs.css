@@ -773,7 +773,7 @@ a {
   flex-direction: column;
   padding: 0 1.563rem 0 4.688rem;
   gap: 2rem;
-  height: 30rem;
+  min-height: 30rem;
 }
 .goal-container {
   display: flex;
@@ -846,6 +846,7 @@ a {
   align-items: center;
 }
 .values-heading .header-underline {
+  width: 15.5%;
   margin-bottom: 2rem;
 }
 .values-heading .secondary-header {
