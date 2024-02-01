@@ -332,6 +332,16 @@ p {
   background-color: rgba(245, 227, 227, 0.2);
   border: 1px solid var(--Nuturals-N-6);
 }
+.navigationBar ul li a svg {
+  margin-left: 10px !important  ;
+}
+.navigationBar ul li a svg path {
+  transition: all 0.5s;
+}
+.navigationBar ul li a:hover path {
+  fill: var(--Primary-Primary) !important;
+}
+
 
 @media (1024px < width <1240px) {
   .logo-image {

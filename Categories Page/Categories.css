@@ -153,7 +153,10 @@ p {
   margin-right: 10px;
   cursor: pointer;
 }
-
+.navigationBar .nav-list-container p a {
+  text-decoration: none;
+  color: var(--Primary-Primary);
+}
 .navigationBar .changeTo-arabic-courses-box .arabic-icon {
   display: flex;
   align-items: center;
@@ -262,7 +265,7 @@ p {
   z-index: 10000;
   visibility: hidden;
   opacity: 0;
-  width: 50%;
+  width: 70%;
   transition: 0.3s;
 }
 .navigationBar .categories-dropdown-nav .categories-dropdown-item {
@@ -331,6 +334,17 @@ p {
   border-radius: 1px;
   background-color: rgba(245, 227, 227, 0.2);
   border: 1px solid var(--Nuturals-N-6);
+}
+
+
+.navigationBar ul li a svg {
+  margin-left: 10px;
+}
+.navigationBar ul li a svg path {
+  transition: all 0.5s;
+}
+.navigationBar ul li a:hover path {
+  fill: var(--Primary-Primary) !important;
 }
 
 @media (1239px < width <1260px) {
@@ -432,6 +446,9 @@ p {
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
     overflow-x: hidden;
+  }
+  #categories-dropdown-collapse {
+    width: 100%;
   }
 }
 @media (width<400px) {
@@ -709,7 +726,7 @@ p {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: 'Top Category';
+  content: "Top Category";
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -808,7 +825,7 @@ p {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: 'Top Category';
+  content: "Top Category";
   position: absolute;
   top: 0;
   left: 0;
