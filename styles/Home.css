@@ -189,6 +189,7 @@ h6 {
   height: 3rem;
   width: 3rem;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .navigationBar .changeTo-arabic-courses-box .arabic-icon {
@@ -205,6 +206,7 @@ h6 {
   justify-content: center;
   gap: 0.375rem;
   height: 3rem;
+  cursor: pointer;
 }
 .arabic-course-txt {
   color: var(--NuturalsN-5);
@@ -557,7 +559,7 @@ h6 {
   transform: translateX(-50%);
   color: var(--Nuturals-White);
 }
-.search-overlay-section .search-overlay-inner-container input[type="text"] {
+.search-overlay-section .search-overlay-inner-container input[type='text'] {
   background-color: transparent;
   border-radius: 1px;
   border: 0.5px solid var(--Nuturals-N-5, #bfb6b6);
@@ -666,7 +668,7 @@ h6 {
 
 /* Show a checkmark when the checkbox is checked */
 .custom-checkbox input:checked + .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   left: 7px;
@@ -899,9 +901,10 @@ h6 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 1.75rem;
+  right: 1.2rem;
   width: 2.5rem;
   height: 2.5rem;
+  cursor: pointer;
 }
 
 @media (768px < width <1025px) {
@@ -1031,6 +1034,12 @@ h6 {
   padding: 7.5rem 0 5rem;
   width: 100%;
   z-index: 10;
+  position: relative;
+}
+.topRightRedVector {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .q-scroll-chat {
   display: flex;
@@ -1468,7 +1477,7 @@ h6 {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: "Top Category";
+  content: 'Top Category';
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1567,7 +1576,7 @@ h6 {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: "Top Category";
+  content: 'Top Category';
   position: absolute;
   top: 0;
   left: 0;
@@ -3352,7 +3361,7 @@ h6 {
     flex-direction: column;
     gap: 1rem;
   }
-  .map-contacts img[alt="line"] {
+  .map-contacts img[alt='line'] {
     display: none;
   }
   .office-container {
