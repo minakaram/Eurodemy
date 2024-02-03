@@ -1,5 +1,20 @@
-//   navbar dropdown ----------------------------------------------------------------------------------
+const allLink = document.querySelectorAll("a");
 
+allLink.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
+
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        left: 100,
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
+//   navbar dropdown -----------------------------------------------------------------------------------
 // laptop screen
 const categories_Nav_Button = document.getElementById("active-list-id");
 const categories_Dropdown = document.getElementById("categories-dropdown-id");
@@ -76,25 +91,5 @@ document.addEventListener("click", (e) => {
     citiesSvgPath.forEach((path) => {
       path.style.fill = "black";
     });
-  }
-});
-
-
-
-
-const fileInput = document.querySelector("#file-input");
-const fileImage = document.querySelector("#file-image");
-const fileName = document.querySelector("#file-name");
-
-fileImage.addEventListener("click", function () {
-  fileInput.click();
-});
-
-fileInput.addEventListener("change", function () {
-  const file = fileInput.files[0];
-  if (file) {
-    fileName.value = file.name;
-  } else {
-    fileName.value = "";
   }
 });

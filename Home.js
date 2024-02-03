@@ -1,3 +1,83 @@
+// laptop screen
+const categories_Nav_Button = document.getElementById("active-list-id");
+const categories_Dropdown = document.getElementById("categories-dropdown-id");
+const categoriesSvgPaths = categories_Nav_Button.querySelectorAll("path");
+
+categories_Nav_Button.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const computedStyles = window.getComputedStyle(categories_Dropdown);
+  const visibility = computedStyles.getPropertyValue("visibility");
+
+  if (visibility === "hidden") {
+    categories_Dropdown.style.visibility = "visible";
+    categories_Dropdown.style.opacity = "1";
+    categoriesSvgPaths.forEach((path) => {
+      path.style.fill = "#ad1519 !important";
+    });
+  } else {
+    categories_Dropdown.style.visibility = "hidden";
+    categories_Dropdown.style.opacity = "0";
+    categoriesSvgPaths.forEach((path) => {
+      path.style.fill = "#fff";
+    });
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const isClickInsideDropdown =
+    categories_Nav_Button.contains(e.target) ||
+    categories_Dropdown.contains(e.target);
+
+  if (!isClickInsideDropdown) {
+    categories_Dropdown.style.visibility = "hidden";
+    categories_Dropdown.style.opacity = "0";
+    categoriesSvgPaths.forEach((path) => {
+      path.style.fill = "#fff";
+    });
+  }
+});
+
+//   cities dropdown -----------------------------------------
+const cities_Nav_Button = document.getElementById("cities-dropdown-button");
+const cities_Dropdown = document.getElementById("cities-dropdown-id");
+const citiesSvgPath = cities_Nav_Button.querySelectorAll("path");
+
+cities_Nav_Button.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const computedStyles = window.getComputedStyle(cities_Dropdown);
+  const visibility = computedStyles.getPropertyValue("visibility");
+
+  if (visibility === "hidden") {
+    cities_Dropdown.style.visibility = "visible";
+    cities_Dropdown.style.opacity = "1";
+    citiesSvgPath.forEach((path) => {
+      path.style.fill = "#ad1519 !important";
+    });
+  } else {
+    cities_Dropdown.style.visibility = "hidden";
+    cities_Dropdown.style.opacity = "0";
+    citiesSvgPath.forEach((path) => {
+      path.style.fill = "#fff";
+    });
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const isClickInsideDropdown =
+    cities_Nav_Button.contains(e.target) || cities_Dropdown.contains(e.target);
+
+  if (!isClickInsideDropdown) {
+    cities_Dropdown.style.visibility = "hidden";
+    cities_Dropdown.style.opacity = "0";
+    citiesSvgPath.forEach((path) => {
+      path.style.fill = "#fff";
+    });
+  }
+});
+
+
 var navbarToggler = document.getElementById("navbar-toggler-id");
 var navbarDropdown = document.getElementById("navbar-toggler-items");
 // Toggle visibility when the toggler is clicked
@@ -241,6 +321,12 @@ window.addEventListener("scroll", function () {
     downArrowsNav.forEach(function (arrow) {
       arrow.src = "./Assets/DownArrowBlack.svg";
     });
+    citiesSvgPath.forEach((path) => {
+      path.style.fill = "#fff";
+    });
+    categoriesSvgPaths.forEach((path) => {
+      path.style.fill = "#fff";
+    });
   } else {
     navigationBar.classList.remove("sticky");
     logoImg.src = "./Assets/Logoherowhite.svg";
@@ -251,7 +337,12 @@ window.addEventListener("scroll", function () {
     });
   }
 });
-
+document.addEventListener("click", function (event) {
+  let navigationBar = document.querySelector(".navigationBar");
+  if (!navigationBar.contains(event.target)) {
+    event.stopPropagation();
+  }
+});
 // ----------------------------------------------------------------------------------------------------------------
 
 function initializeCarousel(carousel) {

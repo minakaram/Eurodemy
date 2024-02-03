@@ -337,6 +337,15 @@ a {
   background-color: rgba(245, 227, 227, 0.2);
   border: 1px solid var(--Nuturals-N-6);
 }
+.navigationBar ul li a svg {
+  margin-left: 10px;
+}
+.navigationBar ul li a svg path {
+  transition: all 0.5s;
+}
+.navigationBar ul li a:hover path {
+  fill: var(--Primary-Primary) !important;
+}
 
 @media (1024px < width <1240px) {
   .logo-image {
@@ -547,12 +556,12 @@ a {
 }
 @media (width<1300px) {
   .hero-section {
-    height: 70vh;
+    height: auto;
   }
 }
 @media (768px < width<1025px) {
   .hero-section {
-    height: 60vh;
+ height: auto;
   }
   .hero-section p {
     width: 80%;

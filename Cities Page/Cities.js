@@ -1,4 +1,45 @@
 // navbar dropdown -----------------------------------------------------------------
+const categories_Nav_Button = document.getElementById("active-list-id");
+const categories_Dropdown = document.getElementById("categories-dropdown-id");
+const categoriesSvgPaths = categories_Nav_Button.querySelectorAll("path");
+
+categories_Nav_Button.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const computedStyles = window.getComputedStyle(categories_Dropdown);
+  const visibility = computedStyles.getPropertyValue("visibility");
+
+  if (visibility === "hidden") {
+    categories_Dropdown.style.visibility = "visible";
+    categories_Dropdown.style.opacity = "1";
+    categoriesSvgPaths.forEach((path) => {
+      path.style.fill = "#ad1519";
+    });
+  } else {
+    categories_Dropdown.style.visibility = "hidden";
+    categories_Dropdown.style.opacity = "0";
+    categoriesSvgPaths.forEach((path) => {
+      path.style.fill = "black";
+    });
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const isClickInsideDropdown =
+    categories_Nav_Button.contains(e.target) ||
+    categories_Dropdown.contains(e.target);
+
+  if (!isClickInsideDropdown) {
+    categories_Dropdown.style.visibility = "hidden";
+    categories_Dropdown.style.opacity = "0";
+    categoriesSvgPaths.forEach((path) => {
+      path.style.fill = "black";
+    });
+  }
+});
+
+
+
 const cities_Button_small_Screen = document.getElementById("collapse-dropdown");
 const small_screen_dropdown = document.getElementById(
   "cities-dropdown-collapse-id"
@@ -41,14 +82,16 @@ cities_Nav_Button.addEventListener("click", (e) => {
 });
 
 // Event listener to close dropdown when clicking outside
-// document.addEventListener("click", (e) => {
-//   const isClickInsideDropdown =
-//     cities_Nav_Button.contains(e.target) || cities_Dropdown.contains(e.target);
+document.addEventListener("click", (e) => {
+  const isClickInsideDropdown =
+    cities_Nav_Button.contains(e.target) || cities_Dropdown.contains(e.target);
 
-//   if (!isClickInsideDropdown) {
-//     closeDropdown();
-//   }
-// });
+  if (!isClickInsideDropdown) {
+    cities_Dropdown.style.visibility = "hidden";
+    cities_Dropdown.style.opacity = "0";
+    console.log("o");
+  }
+});
 //------------------------------------ cities slider---------------------------------
 let currentIndex = 0;
 

@@ -118,18 +118,18 @@ p {
   text-decoration: none;
   color: var(--Nuturals-N-1);
   text-align: center;
-  /* line-height: 80px; */
-  padding: 0px 1.2rem;
-  font-weight: 600;
-  height: 80px;
+  padding: 0px 1.4rem;
+  height: 5rem;
+  font-family: rubikRegular-400;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: all 300ms;
 }
 
 .navigationBar ul li a:hover {
   color: var(--Primary-Primary);
-  background-color: var(--secondary);
 }
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
@@ -275,7 +275,66 @@ p {
   background-color: rgba(245, 227, 227, 0.2);
   border: 1px solid var(--Nuturals-N-6);
 }
-
+.navigationBar .categories-dropdown-nav {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
+#categories-dropdown-collapse {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
+.navigationBar .categories-dropdown-nav .categories-dropdown-item {
+  padding: 1rem 1rem 10px 0.7rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border-right: 1px solid var(--NuturalsN-5); /* Add right border */
+  border-bottom: 1px solid var(--NuturalsN-5); /* Add bottom border */
+}
+.navigationBar .categories-dropdown-nav .categories-dropdown-item:hover {
+  color: var(--Nuturals-White);
+  background-color: var(--Primary-Primary);
+  cursor: pointer;
+}
+.navigationBar .categories-dropdown-nav::-webkit-scrollbar-thumb {
+  background-color: var(--Primary-Primary);
+  border-radius: 1px;
+  border: var(--Nuturals-N-6);
+  width: 10px;
+}
+.navigationBar .categories-dropdown-nav::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 1px;
+  background-color: rgba(245, 227, 227, 0.2);
+  border: 1px solid var(--Nuturals-N-6);
+}
 @media (1239px < width <1260px) {
   .navigationBar .nav-list-container ul li a {
     padding: 0px 1rem;
