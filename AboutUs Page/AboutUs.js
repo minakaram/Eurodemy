@@ -98,3 +98,9 @@ document.addEventListener('click', e => {
     cities_Dropdown.style.opacity = '0';
   }
 });
+// ------------------------------------------ footer --------------------------------------
+// TO MAKE YEAR IN FOOTER UP TO DATE
+const yearEl = document.querySelector('.year');
+console.log(yearEl);
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
