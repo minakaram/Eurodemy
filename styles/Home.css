@@ -128,10 +128,10 @@ h6 {
 .sticky.navigationBar ul li a {
   color: var(--Ternary-Ternary);
 }
-/* .sticky.navigationBar ul li a > svg path {
+.sticky.navigationBar ul li a > svg path {
   fill: #000 !important;
-} */
-.sticky .navigationBar ul li a:hover > svg path {
+}
+.sticky .navigationBar ul li a svg:hover path {
   fill: var(--Primary-Primary) !important;
 }
 .navigationBar ul {
