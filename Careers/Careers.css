@@ -23,6 +23,10 @@
   src: url(../Assets/Rethink_sans/RethinkSans-Medium.ttf);
 }
 @font-face {
+  font-family: rethinkSemiBold-600;
+  src: url(../Assets/Rethink_sans/RethinkSans-SemiBold.ttf);
+}
+@font-face {
   font-family: rethinkBold-700;
   src: url(../Assets/Rethink_sans/RethinkSans-Bold.ttf);
 }
@@ -480,7 +484,6 @@ a {
   font-family: rubikSemiBold-600;
   font-size: 2.5rem;
   font-style: normal;
-  font-weight: 600;
   line-height: 3.75rem;
   width: 54%;
   margin-bottom: 5rem;
@@ -489,7 +492,7 @@ a {
   color: var(--Secondary-Secondary, #fabd00);
 }
 .heading-txt {
-  font-family: rethinkSemiBold-600;
+  /* font-family: rethinkSemiBold-600; */
   font-size: 1.25rem;
   margin-bottom: 0.75rem !important;
 }

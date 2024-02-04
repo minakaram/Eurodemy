@@ -23,6 +23,10 @@
   src: url(../Assets/Rethink_sans/RethinkSans-Medium.ttf);
 }
 @font-face {
+  font-family: rethinkSemiBold-600;
+  src: url(../Assets/Rethink_sans/RethinkSans-SemiBold.ttf);
+}
+@font-face {
   font-family: rethinkBold-700;
   src: url(../Assets/Rethink_sans/RethinkSans-Bold.ttf);
 }
@@ -1053,7 +1057,6 @@ h6 {
   font-family: rubikSemiBold-600;
   font-size: 28px;
   font-style: normal;
-  font-weight: 600;
   line-height: 26px;
   padding-bottom: 1.25rem;
 }
