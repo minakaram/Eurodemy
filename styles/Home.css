@@ -3071,6 +3071,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .apply-now-svg {
   position: absolute;
@@ -3369,6 +3370,10 @@ h6 {
   }
   .office-container {
     padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .office-address {
+    width: 100%;
   }
 }
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
