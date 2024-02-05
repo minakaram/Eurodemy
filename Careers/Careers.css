@@ -602,13 +602,12 @@ a {
   line-height: 1.625rem;
   color: var(--Ternary-Ternary);
 }
-.our-staff-right-txt {
-  padding: 3rem 0 1.5rem;
+.careers-paragraph-heading {
+  padding: 4rem 0 1.5rem;
   color: var(--Nuturals-N-2);
   font-family: rethinkMedium-500;
   font-size: 1.25rem;
   line-height: 1.625rem;
-  border-bottom: 0.25px solid var(--Nuturals-N-3);
   max-width: 75%;
   margin: auto;
 }
@@ -630,6 +629,8 @@ a {
   padding: 2rem 0.2rem 2rem;
   flex-direction: row !important;
   border-bottom: 0.25px solid var(--Nuturals-N-3);
+  border-top: 0.25px solid var(--Nuturals-N-3);
+
   width: 100%;
 }
 .swiper-container1 .courses-container .swiper-slide .swiper-slide-inner {
@@ -689,7 +690,12 @@ a {
   max-width: 72.2%;
   margin: auto;
 }
-
+.experience-section .careers-paragraph-heading {
+  max-width: 100%;
+}
+.experience-section .vector {
+  width: 70%;
+}
 .tailored-form-section {
   width: 100%;
   position: relative;
@@ -1135,11 +1141,42 @@ a {
   color: var(--Primary-Primary);
 }
 @media (width <1025px) {
-  .tailored-form-section .form-container {
+  .experience-section {
     width: 90%;
+    margin: auto;
   }
-  .submit-container {
-    width: 90%;
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .name-phone-container
+    .name-container
+    input,
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .name-phone-container
+    .phone-container
+    input,
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .email-country-container
+    .email-container
+    input,
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .email-country-container
+    .country-container
+    input {
+    padding-left: 5rem;
+  }
+  .cv-letter-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .file-insert-container:last-of-type {
+    margin-top: 0;
   }
   .tailored-form-section
     .form-container
@@ -1221,6 +1258,9 @@ a {
   .tailored-form-section {
     padding-top: 5rem;
   }
+  .optional {
+    display: none;
+  }
   .vector-red-down-left {
     right: -20px;
     top: -30px;
@@ -1251,6 +1291,15 @@ a {
   .submit-container .right-side-submit {
     padding-left: 2rem;
   }
+}
+.optional {
+  margin-right: 1rem;
+  font-family: rethinkRegular-400;
+  font-size: 0.75rem;
+  color: var(--NuturalsN-5);
+}
+.vector {
+  width: 50%;
 }
 /* ------------------------------------------------ FOOTER ---------------------------------------------- */
 .footer {

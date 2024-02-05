@@ -340,8 +340,8 @@
         />
         <header class="available-opportunities-heading">
           <h3 class="careers-header">Available Opportunities</h3>
-          <img src="../Assets/Vector.svg" alt="vector" class="vector w-100" />
-          <p class="our-staff-right-txt">
+          <img src="../Assets/Vector.svg" alt="vector" class="vector" />
+          <p class="careers-paragraph-heading">
             You can find a prober position among our announced available
             <span class="hightlight-red-mini">22</span> job positions lately.
           </p>
@@ -694,7 +694,7 @@
                     <div class="file-insert-container">
                       <label for="file-cv-careers">
                         <img
-                          id="file-image"
+                          id="file-cv-image"
                           src="./Assets/CV.svg"
                           alt="image"
                         />
@@ -706,9 +706,9 @@
                         accept=".doc,.docx,.xls,.xlsx,.pdf,image/*"
                       />
                       <input
-                        id="file-cv"
+                        id="cv-careers"
                         type="text"
-                        name="file-cv"
+                        name="cv-careers"
                         placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
                         readonly
                       />
@@ -719,10 +719,11 @@
                         id="clearCv"
                       />
                     </div>
+
                     <div class="file-insert-container">
                       <label for="cover-input-careers">
                         <img
-                          id="file-image"
+                          id="file-cover-image"
                           src="./Assets/Icon.svg"
                           alt="image"
                         />
@@ -741,8 +742,12 @@
                         readonly
                       />
                       <div class="cv-img">
-                        <span>Optional</span>
-                        <img src="./Assets/UploadIcon.svg" alt="Upload" />
+                        <span class="optional">Optional</span>
+                        <img
+                          src="./Assets/UploadIcon.svg"
+                          alt="Upload"
+                          class="upload-btn"
+                        />
                       </div>
                     </div>
                   </div>

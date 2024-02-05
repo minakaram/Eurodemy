@@ -1,13 +1,13 @@
-var myStaffSwiper = new Swiper(".swiper-container1", {
+var myStaffSwiper = new Swiper('.swiper-container1', {
   // initialSlide: 2,
   // loop: true,
   pagination: {
-    el: ".staff-swiper-pagination",
+    el: '.staff-swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: ".staff-button-next", // CSS class or HTML element for next arrow
-    prevEl: ".staff-button-prev", // CSS class or HTML element for prev arrow
+    nextEl: '.staff-button-next', // CSS class or HTML element for next arrow
+    prevEl: '.staff-button-prev', // CSS class or HTML element for prev arrow
   },
   breakpoints: {
     1025: {
@@ -35,7 +35,7 @@ var myStaffSwiper = new Swiper(".swiper-container1", {
   on: {
     init: function () {
       const paginationContainer = document.querySelector(
-        ".staff-swiper-pagination"
+        '.staff-swiper-pagination'
       );
       console.log(paginationContainer);
       const maxVisibleDots = 4; // Set the maximum number of visible dots
@@ -45,12 +45,12 @@ var myStaffSwiper = new Swiper(".swiper-container1", {
       // Hide dots more than 4 and replace them with an image
       paginationDots.forEach((dot, index) => {
         if (index >= maxVisibleDots) {
-          dot.style.display = "none"; // Hide the dot
+          dot.style.display = 'none'; // Hide the dot
           // Replace hidden dots with an image
         }
       });
-      const svgDots = document.createElement("div");
-      svgDots.style.display = "flex";
+      const svgDots = document.createElement('div');
+      svgDots.style.display = 'flex';
       svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
       <rect width="8" height="8" rx="1" fill="#F2EDED"/>
       <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
@@ -62,27 +62,37 @@ var myStaffSwiper = new Swiper(".swiper-container1", {
   },
 });
 // ------------------------------------------- form -------------------------------------------
-const fileInput = document.querySelector('#cover-input-careers');
-const fileImage = document.querySelector('#file-image');
-const fileName = document.querySelector('#cover-letter-input-careers');
+const fileCoverInput = document.querySelector('#file-cv-careers');
+const fileCoverImage = document.querySelector('#file-cover-image');
+const fileCoverName = document.querySelector('#cv-careers');
+const fileCvInput = document.querySelector('#cover-input-careers');
+const fileCvImage = document.querySelector('#file-cv-image');
+const fileCvName = document.querySelector('#cover-letter-input-careers');
 
-fileImage.addEventListener('click', function () {
-  fileInput.click();
+fileCoverImage.addEventListener('click', function () {
+  fileCoverInput.click();
 });
-
-fileInput.addEventListener('change', function () {
-  const file = fileInput.files[0];
+fileCvImage.addEventListener('click', function () {
+  fileCvInput.click();
+});
+fileCoverInput.addEventListener('change', function () {
+  const file = fileCoverInput.files[0];
   if (file) {
-    fileName.value = file.name;
+    fileCoverName.value = file.name;
   } else {
-    fileName.value = '';
+    fileCoverName.value = '';
   }
 });
-// const clearCv = document.getElementById('clearCv');
-// const clearCvInput = document.getElementById('file-cv');
-// const clearCvInput2 = document.getElementById('file-cv-careers');
+fileCvInput.addEventListener('change', function () {
+  const file = fileCvInput.files[0];
+  if (file) {
+    fileCvName.value = file.name;
+  } else {
+    fileCvName.value = '';
+  }
+});
+const clearCv = document.getElementById('clearCv');
 
-// clearCv.addEventListener('click', () => {
-//   clearCvInput.value = '';
-//   clearCvInput2.value = '';
-// });
+clearCv.addEventListener('click', () => {
+  fileCoverName.value = '';
+});
