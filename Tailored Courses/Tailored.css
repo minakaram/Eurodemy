@@ -342,7 +342,6 @@ p {
   fill: var(--Primary-Primary) !important;
 }
 
-
 @media (1024px < width <1240px) {
   .logo-image {
     padding-right: 0.5rem;

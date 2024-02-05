@@ -1,466 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="Tailored.css" />
+    <title>Tailored</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="Tailored.css" />
-  <title>Tailored</title>
-</head>
-
-<body>
-  <!------------------------------------------------ nav bar ------------------------------------------------------->
-  <nav class="navigationBar">
-    <a href="#">
-      <img src="../Assets/Logoheroblack.svg" alt="logo" class="logo-image" /></a>
-    <div class="nav-items-container" id="navbar-toggler-items">
-      <div class="nav-toggler-item">Home</div>
-      <div class="nav-toggler-item">Categories</div>
-      <div class="nav-toggler-item">Cities</div>
-      <div class="nav-toggler-item">Tailored Courses</div>
-      <div class="nav-toggler-item">About Us</div>
-      <div class="nav-toggler-item">Contact Us</div>
-      <div class="nav-toggler-item careers">Careers</div>
-    </div>
-    <div class="nav-list-container d-flex align-items-center justify-content-center">
-      <div class="nav-icon-toggler d-flex align-items-center justify-content-center">
-        <div id="categories-id-collapse" style="overflow: hidden"
-          class="navbar-home-item d-flex align-items-center justify-content-center">
-          <p class="my-0">Categories</p>
+  <body>
+    <!------------------------------------------------ nav bar ------------------------------------------------------->
+    <nav class="navigationBar">
+      <a href="#">
+        <img src="../Assets/Logoheroblack.svg" alt="logo" class="logo-image"
+      /></a>
+      <div class="nav-items-container" id="navbar-toggler-items">
+        <div class="nav-toggler-item">Home</div>
+        <div class="nav-toggler-item">Categories</div>
+        <div class="nav-toggler-item">Cities</div>
+        <div class="nav-toggler-item">Tailored Courses</div>
+        <div class="nav-toggler-item">About Us</div>
+        <div class="nav-toggler-item">Contact Us</div>
+        <div class="nav-toggler-item careers">Careers</div>
+      </div>
+      <div
+        class="nav-list-container d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="nav-icon-toggler d-flex align-items-center justify-content-center"
+        >
+          <div
+            id="categories-id-collapse"
+            style="overflow: hidden"
+            class="navbar-home-item d-flex align-items-center justify-content-center"
+          >
+            <p class="my-0">Categories</p>
+          </div>
+          <div class="navbar-toggle-container" id="navbar-toggler-id">
+            <img
+              src="../Assets/toggler-icon.svg"
+              alt="toggler-icon"
+              class="toggler-icon w-100"
+            />
+          </div>
         </div>
-        <div class="navbar-toggle-container" id="navbar-toggler-id">
-          <img src="../Assets/toggler-icon.svg" alt="toggler-icon" class="toggler-icon w-100" />
+        <ul>
+          <li class="d-flex justify-content-between align-items-center">
+            <a href="../Home.html" class="navbar-home-list-item">Home</a>
+          </li>
+          <li>
+            <a href="../Categories Page/Categories.html"
+              >Categories
+              <svg
+                id="active-list-id"
+                style="margin-left: 1rem"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
+                  fill="black"
+                />
+                <path
+                  d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="../Cities Page/Cities.html"
+              >Cities
+              <svg
+                id="cities-dropdown-button"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
+                  fill="#140000"
+                />
+                <path
+                  d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
+                  fill="#140000"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="active-list">
+            <a href="./Tailored.html">Tailored Courses</a>
+          </li>
+          <li><a href="../AboutUs Page/AboutUs.html">About Us</a></li>
+          <li><a href="../ContactUs Page/ContactUs.html">Contact Us</a></li>
+          <li><a href="">Careers</a></li>
+        </ul>
+      </div>
+      <div class="navigation-bar-right-side">
+        <img
+          src="../Assets/SearchBar.png"
+          alt="arabic courses"
+          class="header-search-bar"
+          id="search-open-btn"
+        />
+        <div class="changeTo-arabic-courses-box">
+          <div class="arabic-icon">
+            <img src="../Assets/Arabic_Iconwhite.svg" alt="arabic" />
+          </div>
+          <p class="arabic-course-txt">Arabic <br />Courses</p>
         </div>
       </div>
-      <ul>
-        <li class="d-flex justify-content-between align-items-center">
-          <a href="../Home.html" class="navbar-home-list-item">Home</a>
-        </li>
-        <li>
-          <a href="../Categories Page/Categories.html">Categories
-            <svg id="active-list-id" style="margin-left: 1rem" width="16" height="16" viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
-                fill="black" />
-              <path
-                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
-                fill="black" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="../Cities Page/Cities.html">Cities
-            <svg id="cities-dropdown-button" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              viewBox="0 0 16 16" fill="none">
-              <path
-                d="M1.13822 5.98746C1.04059 5.88983 1.04059 5.73154 1.13822 5.63391L2.19888 4.57325C2.29651 4.47561 2.4548 4.47561 2.55243 4.57325L9.26995 11.2908C9.36758 11.3884 9.36758 11.5467 9.26994 11.6443L8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L1.13822 5.98746Z"
-                fill="#140000" />
-              <path
-                d="M8.20928 12.705C8.11165 12.8026 7.95336 12.8026 7.85573 12.705L6.79505 11.6443C6.69742 11.5467 6.69742 11.3884 6.79505 11.2907L13.5126 4.57322C13.6102 4.47559 13.7685 4.47559 13.8661 4.57322L14.9268 5.63388C15.0244 5.73151 15.0244 5.88981 14.9268 5.98744L8.20928 12.705Z"
-                fill="#140000" />
-            </svg>
-          </a>
-        </li>
-        <li class="active-list">
-          <a href="./Tailored.html">Tailored Courses</a>
-        </li>
-        <li><a href="../AboutUs Page/AboutUs.html">About Us</a></li>
-        <li><a href="../ContactUs Page/ContactUs.html">Contact Us</a></li>
-        <li><a href="">Careers</a></li>
-      </ul>
-    </div>
-    <div class="navigation-bar-right-side">
-      <img src="../Assets/SearchBar.png" alt="arabic courses" class="header-search-bar" id="search-open-btn" />
-      <div class="changeTo-arabic-courses-box">
-        <div class="arabic-icon">
-          <img src="../Assets/Arabic_Iconwhite.svg" alt="arabic" />
+      <div class="cities-dropdown-nav" id="cities-dropdown-id">
+        <div class="cities-dropdown-item">Cairo</div>
+        <div class="cities-dropdown-item">Paris</div>
+        <div class="cities-dropdown-item">Spain</div>
+        <div class="cities-dropdown-item">Brazil</div>
+        <div class="cities-dropdown-item">Germany</div>
+        <div class="cities-dropdown-item">America</div>
+        <div class="cities-dropdown-item">Sudan</div>
+        <div class="cities-dropdown-item">Dubai</div>
+        <div class="cities-dropdown-item">Greece</div>
+        <div class="cities-dropdown-item">Italy</div>
+        <div class="cities-dropdown-item">Marooc</div>
+        <div class="cities-dropdown-item">palastine</div>
+        <div class="cities-dropdown-item">lybia</div>
+        <div class="cities-dropdown-item">tunisia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+        <div class="cities-dropdown-item">saudi arabia</div>
+      </div>
+      <div class="categories-dropdown-nav" id="categories-dropdown-id">
+        <div class="categories-dropdown-item">
+          Maintenance Planning, Process Engineering & Instrumentation management
         </div>
-        <p class="arabic-course-txt">Arabic <br />Courses</p>
+        <div class="categories-dropdown-item">Management</div>
+        <div class="categories-dropdown-item">Project Management</div>
+        <div class="categories-dropdown-item">
+          Administration and Secretarial Training Courses
+        </div>
+        <div class="categories-dropdown-item">Human Resource Training</div>
+        <div class="categories-dropdown-item">Healthcare Management</div>
+        <div class="categories-dropdown-item">
+          Data management and analytics
+        </div>
+        <div class="categories-dropdown-item">
+          Public Relations , communication skills
+        </div>
+        <div class="categories-dropdown-item">
+          Petroleum, Oil , Gas Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Chemical, Mechanical Engineering Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Customer Support Representative
+        </div>
+        <div class="categories-dropdown-item">Data Scientist</div>
+        <div class="categories-dropdown-item">Network Administrator</div>
+        <div class="categories-dropdown-item">Systems Administrator</div>
+        <div class="categories-dropdown-item">HR Coordinator</div>
+        <div class="categories-dropdown-item">Executive Assistant</div>
+        <div class="categories-dropdown-item">Administrative Assistant</div>
+        <div class="categories-dropdown-item">Content Writer</div>
+        <div class="categories-dropdown-item">Social Media Specialist</div>
+        <div class="categories-dropdown-item">Legal Counsel</div>
+        <div class="categories-dropdown-item">Compliance Officer</div>
+        <div class="categories-dropdown-item">Quality Assurance Manager</div>
+        <div class="categories-dropdown-item">Business Development Manager</div>
+        <div class="categories-dropdown-item">
+          Director of Information Technology
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Human Resources Officer (CHRO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Technology Officer (CTO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Executive Officer (CEO)
+        </div>
+        <div class="categories-dropdown-item">Sales Manager</div>
       </div>
-    </div>
-    <div class="cities-dropdown-nav" id="cities-dropdown-id">
-      <div class="cities-dropdown-item">Cairo</div>
-      <div class="cities-dropdown-item">Paris</div>
-      <div class="cities-dropdown-item">Spain</div>
-      <div class="cities-dropdown-item">Brazil</div>
-      <div class="cities-dropdown-item">Germany</div>
-      <div class="cities-dropdown-item">America</div>
-      <div class="cities-dropdown-item">Sudan</div>
-      <div class="cities-dropdown-item">Dubai</div>
-      <div class="cities-dropdown-item">Greece</div>
-      <div class="cities-dropdown-item">Italy</div>
-      <div class="cities-dropdown-item">Marooc</div>
-      <div class="cities-dropdown-item">palastine</div>
-      <div class="cities-dropdown-item">lybia</div>
-      <div class="cities-dropdown-item">tunisia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-      <div class="cities-dropdown-item">saudi arabia</div>
-    </div>
-    <div class="categories-dropdown-nav" id="categories-dropdown-id">
-      <div class="categories-dropdown-item">
-        Maintenance Planning, Process Engineering & Instrumentation management
+      <div class="categories-dropdown-nav" id="categories-dropdown-collapse">
+        <div class="categories-dropdown-item">
+          Maintenance Planning, Process Engineering & Instrumentation management
+        </div>
+        <div class="categories-dropdown-item">Management</div>
+        <div class="categories-dropdown-item">Project Management</div>
+        <div class="categories-dropdown-item">
+          Administration and Secretarial Training Courses
+        </div>
+        <div class="categories-dropdown-item">Human Resource Training</div>
+        <div class="categories-dropdown-item">Healthcare Management</div>
+        <div class="categories-dropdown-item">
+          Data management and analytics
+        </div>
+        <div class="categories-dropdown-item">
+          Public Relations , communication skills
+        </div>
+        <div class="categories-dropdown-item">
+          Petroleum, Oil , Gas Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Chemical, Mechanical Engineering Training Courses
+        </div>
+        <div class="categories-dropdown-item">
+          Customer Support Representative
+        </div>
+        <div class="categories-dropdown-item">Data Scientist</div>
+        <div class="categories-dropdown-item">Network Administrator</div>
+        <div class="categories-dropdown-item">Systems Administrator</div>
+        <div class="categories-dropdown-item">HR Coordinator</div>
+        <div class="categories-dropdown-item">Executive Assistant</div>
+        <div class="categories-dropdown-item">Administrative Assistant</div>
+        <div class="categories-dropdown-item">Content Writer</div>
+        <div class="categories-dropdown-item">Social Media Specialist</div>
+        <div class="categories-dropdown-item">Legal Counsel</div>
+        <div class="categories-dropdown-item">Compliance Officer</div>
+        <div class="categories-dropdown-item">Quality Assurance Manager</div>
+        <div class="categories-dropdown-item">Business Development Manager</div>
+        <div class="categories-dropdown-item">
+          Director of Information Technology
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Human Resources Officer (CHRO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Technology Officer (CTO)
+        </div>
+        <div class="categories-dropdown-item">
+          Chief Executive Officer (CEO)
+        </div>
+        <div class="categories-dropdown-item">Sales Manager</div>
       </div>
-      <div class="categories-dropdown-item">Management</div>
-      <div class="categories-dropdown-item">Project Management</div>
-      <div class="categories-dropdown-item">
-        Administration and Secretarial Training Courses
-      </div>
-      <div class="categories-dropdown-item">Human Resource Training</div>
-      <div class="categories-dropdown-item">Healthcare Management</div>
-      <div class="categories-dropdown-item">
-        Data management and analytics
-      </div>
-      <div class="categories-dropdown-item">
-        Public Relations , communication skills
-      </div>
-      <div class="categories-dropdown-item">
-        Petroleum, Oil , Gas Training Courses
-      </div>
-      <div class="categories-dropdown-item">
-        Chemical, Mechanical Engineering Training Courses
-      </div>
-      <div class="categories-dropdown-item">
-        Customer Support Representative
-      </div>
-      <div class="categories-dropdown-item">Data Scientist</div>
-      <div class="categories-dropdown-item">Network Administrator</div>
-      <div class="categories-dropdown-item">Systems Administrator</div>
-      <div class="categories-dropdown-item">HR Coordinator</div>
-      <div class="categories-dropdown-item">Executive Assistant</div>
-      <div class="categories-dropdown-item">Administrative Assistant</div>
-      <div class="categories-dropdown-item">Content Writer</div>
-      <div class="categories-dropdown-item">Social Media Specialist</div>
-      <div class="categories-dropdown-item">Legal Counsel</div>
-      <div class="categories-dropdown-item">Compliance Officer</div>
-      <div class="categories-dropdown-item">Quality Assurance Manager</div>
-      <div class="categories-dropdown-item">Business Development Manager</div>
-      <div class="categories-dropdown-item">
-        Director of Information Technology
-      </div>
-      <div class="categories-dropdown-item">
-        Chief Human Resources Officer (CHRO)
-      </div>
-      <div class="categories-dropdown-item">
-        Chief Technology Officer (CTO)
-      </div>
-      <div class="categories-dropdown-item">
-        Chief Executive Officer (CEO)
-      </div>
-      <div class="categories-dropdown-item">Sales Manager</div>
-    </div>
-    <div class="categories-dropdown-nav" id="categories-dropdown-collapse">
-      <div class="categories-dropdown-item">
-        Maintenance Planning, Process Engineering & Instrumentation management
-      </div>
-      <div class="categories-dropdown-item">Management</div>
-      <div class="categories-dropdown-item">Project Management</div>
-      <div class="categories-dropdown-item">
-        Administration and Secretarial Training Courses
-      </div>
-      <div class="categories-dropdown-item">Human Resource Training</div>
-      <div class="categories-dropdown-item">Healthcare Management</div>
-      <div class="categories-dropdown-item">
-        Data management and analytics
-      </div>
-      <div class="categories-dropdown-item">
-        Public Relations , communication skills
-      </div>
-      <div class="categories-dropdown-item">
-        Petroleum, Oil , Gas Training Courses
-      </div>
-      <div class="categories-dropdown-item">
-        Chemical, Mechanical Engineering Training Courses
-      </div>
-      <div class="categories-dropdown-item">
-        Customer Support Representative
-      </div>
-      <div class="categories-dropdown-item">Data Scientist</div>
-      <div class="categories-dropdown-item">Network Administrator</div>
-      <div class="categories-dropdown-item">Systems Administrator</div>
-      <div class="categories-dropdown-item">HR Coordinator</div>
-      <div class="categories-dropdown-item">Executive Assistant</div>
-      <div class="categories-dropdown-item">Administrative Assistant</div>
-      <div class="categories-dropdown-item">Content Writer</div>
-      <div class="categories-dropdown-item">Social Media Specialist</div>
-      <div class="categories-dropdown-item">Legal Counsel</div>
-      <div class="categories-dropdown-item">Compliance Officer</div>
-      <div class="categories-dropdown-item">Quality Assurance Manager</div>
-      <div class="categories-dropdown-item">Business Development Manager</div>
-      <div class="categories-dropdown-item">
-        Director of Information Technology
-      </div>
-      <div class="categories-dropdown-item">
-        Chief Human Resources Officer (CHRO)
-      </div>
-      <div class="categories-dropdown-item">
-        Chief Technology Officer (CTO)
-      </div>
-      <div class="categories-dropdown-item">
-        Chief Executive Officer (CEO)
-      </div>
-      <div class="categories-dropdown-item">Sales Manager</div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="course-category-heading">
-    <img class="flag-cities-abslute" src="../Assets/Falg-cities.svg" alt="" />
-    <h1>
-      <img src="../Assets/Vector-left-cities.png" class="heading-left-vector-abslute" />
-      Tailored Categories
-      <img src="../Assets/Vector-right--cities.svg" class="heading-right-vector-abslute" />
-    </h1>
-    <p class="cities-heading-paragraph">
-      <span class="hightlight-red">EURODEMY</span> the Professional Training
-      Academy, is providing the service of customizing training courses that
-      are more suitable for your development needs whether it’s personal
-      development goals or for a full business development and enhancement.
-    </p>
-    <img style="margin: auto; display: block; width: 80%" src="../Assets/Vector-spliter.svg" alt="" class="mt-4" />
-  </div>
-  <!-------------------------------------- form filling ------------------------------------------------------>
+    <div class="course-category-heading">
+      <img class="flag-cities-abslute" src="../Assets/Falg-cities.svg" alt="" />
+      <h1>
+        <img
+          src="../Assets/Vector-left-cities.png"
+          class="heading-left-vector-abslute"
+        />
+        Tailored Categories
+        <img
+          src="../Assets/Vector-right--cities.svg"
+          class="heading-right-vector-abslute"
+        />
+      </h1>
+      <p class="cities-heading-paragraph">
+        <span class="hightlight-red">EURODEMY</span> the Professional Training
+        Academy, is providing the service of customizing training courses that
+        are more suitable for your development needs whether it’s personal
+        development goals or for a full business development and enhancement.
+      </p>
+      <img
+        style="margin: auto; display: block; width: 80%"
+        src="../Assets/Vector-spliter.svg"
+        alt=""
+        class="mt-4"
+      />
+    </div>
+    <!-------------------------------------- form filling ------------------------------------------------------>
 
-  <div class="tailored-form-section">
-    <img src="../Assets/Vector4.png" alt="" class="vector-red-down-left" />
-    <p class="fill-form-paragraph">
-      Please fill in the next form to request a tailored courses
-    </p>
-    <form action="">
-      <div class="form-main">
-        <div class="form-container">
-          <div class="contact-datails">
-            <p>Contact & Details</p>
-            <div class="name-phone-container">
-              <div class="name-container">
-                <img src="./assets/name-icon.svg" alt="" />
-                <input type="text" placeholder="Please type your triple name" />
+    <div class="tailored-form-section">
+      <img src="../Assets/Vector4.png" alt="" class="vector-red-down-left" />
+      <p class="fill-form-paragraph">
+        Please fill in the next form to request a tailored courses
+      </p>
+      <form action="" method="post">
+        <div class="form-main">
+          <div class="form-container">
+            <div class="contact-datails">
+              <p>Contact & Details</p>
+              <div class="name-phone-container">
+                <div class="name-container">
+                  <img src="./assets/name-icon.svg" alt="" />
+                  <input
+                    type="text"
+                    placeholder="Please type your triple name"
+                  />
+                </div>
+                <div class="phone-container">
+                  <img src="./assets/phone.svg" alt="" />
+                  <input
+                    type="text"
+                    placeholder="Enter mobile number with the country key"
+                  />
+                </div>
               </div>
-              <div class="phone-container">
-                <img src="./assets/phone.svg" alt="" />
-                <input type="text" placeholder="Enter mobile number with the country key" />
+              <div class="email-country-container">
+                <div class="email-container">
+                  <img src="./assets/email.svg" alt="" />
+                  <input type="mail" placeholder="Please enter your email" />
+                </div>
+                <div class="country-container">
+                  <img src="./assets/country.svg" alt="" />
+                  <input type="text" placeholder="Country & City name" />
+                </div>
               </div>
             </div>
-            <div class="email-country-container">
-              <div class="email-container">
-                <img src="./assets/email.svg" alt="" />
-                <input type="mail" placeholder="Please enter your email" />
+            <div class="message-request">
+              <p>Your Message & Requests</p>
+              <div class="message-container">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  maxlength="1500"
+                  placeholder="Please write a simple explanation about the course you need or exact request"
+                ></textarea>
               </div>
-              <div class="country-container">
-                <img src="./assets/country.svg" alt="" />
-                <input type="text" placeholder="Country & City name" />
+            </div>
+            <div class="referece-courses">
+              <p>Reference course or training</p>
+              <div class="file-insert-container">
+                <label for="file-input">
+                  <img id="file-image" src="assets/attachment.svg" alt="" />
+                </label>
+                <input
+                  id="file-input"
+                  type="file"
+                  accept=".doc,.docx,.xls,.xlsx,.pdf,image/*"
+                />
+                <input
+                  id="file-name"
+                  type="text"
+                  placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
+                  readonly
+                />
               </div>
             </div>
           </div>
-          <div class="message-request">
-            <p>Your Message & Requests</p>
-            <div class="message-container">
-              <textarea name="" id="" cols="30" rows="10" maxlength="1500"
-                placeholder="Please write a simple explanation about the course you need or exact request"></textarea>
+          <div class="submit-container">
+            <div class="submit-container-inner">
+              <div class="left-side-submit">
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span
+                  >I agree to the
+                  <a class="highlighted-from-text" href="">property rights</a> &
+                  <a class="highlighted-from-text" href="">terms ofuse</a>.
+                </span>
+              </div>
+              <div class="right-side-submit">
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>I agree to use data sent by me.</span>
+              </div>
             </div>
-          </div>
-          <div class="referece-courses">
-            <p>Reference course or training</p>
-            <div class="file-insert-container">
-              <label for="file-input">
-                <img id="file-image" src="assets/attachment.svg" alt="" />
-              </label>
-              <input id="file-input" type="file" accept=".doc,.docx,.xls,.xlsx,.pdf,image/*" />
-              <input id="file-name" type="text"
-                placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
-                readonly />
-            </div>
+            <button>
+              <img src="assets/submit.svg" alt="" class="mr-3" />
+              Send Form
+            </button>
           </div>
         </div>
-        <div class="submit-container">
-          <div class="submit-container-inner">
-            <div class="left-side-submit">
-              <label class="custom-checkbox">
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <span>I agree to the
-                <a class="highlighted-from-text" href="">property rights</a> &
-                <a class="highlighted-from-text" href="">terms ofuse</a>.
-              </span>
-            </div>
-            <div class="right-side-submit">
-              <label class="custom-checkbox">
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
-              <span>I agree to use data sent by me.</span>
-            </div>
-          </div>
-          <button>
-            <img src="assets/submit.svg" alt="" class="mr-3" />
-            Send Form
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <!--------------------------------------------- FOOTER ----------------------------------------------->
-  <footer class="footer">
-    <div class="footer-separator">
-      <img src="../Assets/footer separator.svg" alt="separator" class="w-100" style="width: 100%" />
+      </form>
     </div>
-    <div class="footerLogos-container">
-      <img src="../Assets/footerMiddleContainer.png" alt="logo" class="footer-absolute-logo-container" />
-      <img src="../Assets/footerLogo.svg" alt="Logo" class="footer-absolute-logo" />
-    </div>
-    <main class="footer-contents-container">
-      <div class="leftSide-footer">
-        <div class="main-pages-container">
-          <div class="footer-content-heading">
-            <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-            <h4 class="footer-content-header">Main Pages</h4>
-          </div>
-          <ul class="footer-content-list">
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Courses
-              Categories
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Cities &
-              Venues
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Tailored
-              Courses
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Careers (
-              Join our staff )
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />About Us
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Contact Us
-            </li>
-          </ul>
-        </div>
-        <div class="more-details-container">
-          <div class="footer-content-heading">
-            <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-            <h4 class="footer-content-header">More Details</h4>
-          </div>
-          <ul class="footer-content-list">
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Privacy
-              policy agreement
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Terms of use
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Copy rights
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Registration,
-              payment & cancelation policies
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Why to choose
-              us ?
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Add us to
-              your safe mailing list
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Program
-              venue's terms and conditions
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="rightSide-footer">
-        <div class="quick-access-container">
-          <div class="footer-content-heading">
-            <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-            <h4 class="footer-content-header">Quick Access</h4>
-          </div>
-          <ul class="footer-content-list">
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Upcoming
-              Courses
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Top Courses
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerShape2.svg" alt="list" />Training
-              Staff
-            </li>
-          </ul>
-        </div>
-        <div class="contact-info-container">
-          <div class="footer-content-heading">
-            <img src="../Assets/footerIcon.svg" alt="footer-shape1" />
-            <h4 class="footer-content-header">Contact Info.</h4>
-          </div>
-          <ul class="footer-content-list">
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerIcon2.svg" alt="list" />Edificios
-              Corporativos del Retiro, Calle Menorca 12, 28009 - Madrid
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerIcon3.svg" alt="list" />info@EURODEMY.com
-            </li>
-            <li class="footer-content-list-item">
-              <img src="../Assets/footerIcon4.svg" alt="list" />+201097551224
-              | +201097551224
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-form-container">
-        <h4 class="footer-form-header">EURODEMY</h4>
-        <p class="footer-form-secondary-header">
-          PROFESSIONAL TRAINING ACADEMY
-        </p>
-        <div class="footer-form-socialIcon">
-          <img src="../Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
-          <img src="../Assets/footerFacebook.svg" alt="Facebook" />
-          <img src="../Assets/youtube.svg" alt="Youtube" style="height: 33px" />
-          <img src="../Assets/FooterLinked.svg" alt="Linked" />
-          <img src="../Assets/footerInstgram.svg" alt="Instgram" />
-          <img src="../Assets/footerX.svg" alt="X" />
-        </div>
-        <div class="envelope-icon-container">
-          <img src="../Assets/envelope.svg" alt="message" />
-        </div>
-        <p class="assurance-message-form-txt">
-          Recieve our news, offers & updates on your e-mail
-        </p>
-        <div class="footer-form-input-container">
-          <input type="text" id="footerFormGmail" name="footerFormGmail" class="footer-formInput"
-            placeholder="Add your email" />
-          <button class="footer-form-gmail-btn">Send</button>
-        </div>
-        <p class="successfullySentTxt">Successfully Sent</p>
-      </div>
-    </main>
-  </footer>
 
-  <script src="Tailored.js"></script>
-</body>
+    <!--------------------------------------------- FOOTER ----------------------------------------------->
+    <footer class="footer">
+      <div class="footer-separator">
+        <img
+          src="../Assets/footer separator.svg"
+          alt="separator"
+          class="w-100"
+          style="width: 100%"
+        />
+      </div>
+      <div class="footerLogos-container">
+        <img
+          src="../Assets/footerMiddleContainer.png"
+          alt="logo"
+          class="footer-absolute-logo-container"
+        />
+        <img
+          src="../Assets/footerLogo.svg"
+          alt="Logo"
+          class="footer-absolute-logo"
+        />
+      </div>
+      <main class="footer-contents-container">
+        <div class="leftSide-footer">
+          <div class="main-pages-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">Main Pages</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Courses
+                Categories
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Cities &
+                Venues
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Tailored
+                Courses
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Careers (
+                Join our staff )
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />About Us
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Contact Us
+              </li>
+            </ul>
+          </div>
+          <div class="more-details-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">More Details</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Privacy
+                policy agreement
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Terms of use
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Copy rights
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Registration,
+                payment & cancelation policies
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Why to choose
+                us ?
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Add us to
+                your safe mailing list
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Program
+                venue's terms and conditions
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="rightSide-footer">
+          <div class="quick-access-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">Quick Access</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Upcoming
+                Courses
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Top Courses
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerShape2.svg" alt="list" />Training
+                Staff
+              </li>
+            </ul>
+          </div>
+          <div class="contact-info-container">
+            <div class="footer-content-heading">
+              <img src="../Assets/footerIcon.svg" alt="footer-shape1" />
+              <h4 class="footer-content-header">Contact Info.</h4>
+            </div>
+            <ul class="footer-content-list">
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerIcon2.svg" alt="list" />Edificios
+                Corporativos del Retiro, Calle Menorca 12, 28009 - Madrid
+              </li>
+              <li class="footer-content-list-item">
+                <img
+                  src="../Assets/footerIcon3.svg"
+                  alt="list"
+                />info@EURODEMY.com
+              </li>
+              <li class="footer-content-list-item">
+                <img src="../Assets/footerIcon4.svg" alt="list" />+201097551224
+                | +201097551224
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-form-container">
+          <h4 class="footer-form-header">EURODEMY</h4>
+          <p class="footer-form-secondary-header">
+            PROFESSIONAL TRAINING ACADEMY
+          </p>
+          <div class="footer-form-socialIcon">
+            <img src="../Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
+            <img src="../Assets/footerFacebook.svg" alt="Facebook" />
+            <img
+              src="../Assets/youtube.svg"
+              alt="Youtube"
+              style="height: 33px"
+            />
+            <img src="../Assets/FooterLinked.svg" alt="Linked" />
+            <img src="../Assets/footerInstgram.svg" alt="Instgram" />
+            <img src="../Assets/footerX.svg" alt="X" />
+          </div>
+          <div class="envelope-icon-container">
+            <img src="../Assets/envelope.svg" alt="message" />
+          </div>
+          <p class="assurance-message-form-txt">
+            Recieve our news, offers & updates on your e-mail
+          </p>
+          <div class="footer-form-input-container">
+            <input
+              type="text"
+              id="footerFormGmail"
+              name="footerFormGmail"
+              class="footer-formInput"
+              placeholder="Add your email"
+            />
+            <button class="footer-form-gmail-btn">Send</button>
+          </div>
+          <p class="successfullySentTxt">Successfully Sent</p>
+        </div>
+      </main>
+    </footer>
 
+    <script src="Tailored.js"></script>
+  </body>
 </html>
