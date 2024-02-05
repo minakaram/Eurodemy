@@ -346,6 +346,11 @@ a {
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
 }
+@media (1239px < width < 1350px) {
+  .navigationBar .nav-list-container ul li a {
+    padding: 0px 0.7rem;
+  }
+}
 @media (1024px < width <1240px) {
   .logo-image {
     padding-right: 0.5rem;
@@ -461,6 +466,131 @@ a {
     align-items: center;
   }
 }
+/* -------------------------------------------------- hero section ---------------------------------------------- */
+.contact-hero-section {
+  position: relative;
+}
+.hero-abslute-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.contact-hero-section .hero-container {
+  padding: 10rem 0;
+  position: relative;
+  z-index: 100;
+  color: var(--Nuturals-White);
+}
+.contact-hero-section .hero-container h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  padding-left: 4rem;
+}
+.contact-hero-section .hero-container p {
+  padding-left: 4rem;
+}
+.contact-hero-section .hero-inner {
+  background-image: url(./Assets/gray-background.svg);
+  margin-top: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0rem;
+  border-left: 4px solid var(--Secondary-Secondary);
+}
+.contact-hero-section .hero-inner p {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 4rem;
+}
+.contact-hero-section .hero-inner p img {
+  margin-right: 1rem;
+}
+.hero-social-icons {
+  padding-left: 4rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 1rem;
+}
+.x-abslute,
+.linked-abslute,
+.facebook-abslute,
+.instagram-abslute,
+.youtube-abslute,
+.whatsapp-abslute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.hero-social-icons .x,
+.hero-social-icons .linkedin,
+.hero-social-icons .facebook,
+.hero-social-icons .instagram,
+.hero-social-icons .youtube,
+.hero-social-icons .whatsapp {
+  position: relative;
+}
+.hero-social-icons .x:hover .x-abslute,
+.hero-social-icons .linkedin:hover .linked-abslute,
+.hero-social-icons .facebook-abslute:hover,
+.hero-social-icons .instagram-abslute:hover,
+.hero-social-icons .youtube-abslute:hover,
+.hero-social-icons .whatsapp-abslute:hover {
+  opacity: 1;
+}
+@media (768px < width < 1025px) {
+  .contact-hero-section .hero-container h1 {
+    padding-left: 2rem;
+  }
+  .contact-hero-section .hero-container p {
+    padding-left: 2rem;
+  }
+  .hero-social-icons {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (width<769px) {
+  .contact-hero-section .hero-container h1 {
+    padding-left: 1rem;
+  }
+  .contact-hero-section .hero-container p {
+    padding-left: 1rem;
+  }
+  .hero-social-icons {
+    padding-left: 0rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .hero-abslute-image {
+    height: 80%;
+  }
+  .contact-hero-section .hero-inner p {
+    width: 90%;
+  }
+}
+@media (width<400px) {
+  .contact-hero-section .hero-container p {
+    width: 90%;
+  }
+  .contact-hero-section .hero-inner p {
+    width: 90%;
+  }
+  .contact-hero-section .hero-inner p span {
+    font-size: 80%;
+  }
+}
 /* --------------------------------------------- Eurodemy offices ----------------------------------------- */
 .eurodemy-offices-section {
   padding: 7.5rem 0 12.5rem;
@@ -504,7 +634,7 @@ a {
   display: flex;
   gap: 0.5rem;
   border-bottom: 0.5px solid var(--Nuturals-N-2);
-  padding: 1.5rem 0 1.5rem 1.25rem;
+  padding: 1.4rem 0rem 1.4rem 1.25rem;
 }
 .office-container {
   display: flex;
@@ -527,7 +657,7 @@ a {
   font-size: 0.875rem;
   line-height: 1.25rem;
   max-height: 5rem;
-  width: 10rem;
+  width: 50%;
   align-self: end;
   opacity: 0;
 }
@@ -589,7 +719,7 @@ a {
     gap: 1rem;
   }
 }
-@media (width<768px) {
+@media (width<769px) {
   .offices-yellow-vector {
     margin-left: -4rem;
   }
@@ -606,6 +736,7 @@ a {
   }
   .office-address {
     width: 100%;
+    padding-left: 3rem;
   }
 }
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
