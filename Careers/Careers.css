@@ -671,7 +671,6 @@ a {
   width: 100%;
   position: relative;
   overflow-x: hidden;
-  padding: 4rem 0rem;
   z-index: 1000;
 }
 .vector-red-down-left {
@@ -922,7 +921,6 @@ a {
   padding: 1rem 3.7rem;
 }
 .file-insert-container img {
-  width: 100%;
   height: 20px;
   cursor: pointer;
 }
@@ -939,6 +937,25 @@ a {
 .submit-container {
   margin-top: 15px;
   border: 1px solid var(--Nuturals-N-3);
+}
+.cv-letter-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.file-insert-container {
+  position: relative;
+}
+
+.cv-img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  top: 0;
+  z-index: 1;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .submit-container .submit-container-inner {
   display: flex;

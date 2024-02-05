@@ -68,3 +68,28 @@ var myStaffSwiper = new Swiper('.courses-container', {
     },
   },
 });
+// ------------------------------------------- form -------------------------------------------
+const fileInput = document.querySelector('#cover-input-careers');
+const fileImage = document.querySelector('#file-image');
+const fileName = document.querySelector('#cover-letter-input-careers');
+
+fileImage.addEventListener('click', function () {
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', function () {
+  const file = fileInput.files[0];
+  if (file) {
+    fileName.value = file.name;
+  } else {
+    fileName.value = '';
+  }
+});
+// const clearCv = document.getElementById('clearCv');
+// const clearCvInput = document.getElementById('file-cv');
+// const clearCvInput2 = document.getElementById('file-cv-careers');
+
+// clearCv.addEventListener('click', () => {
+//   clearCvInput.value = '';
+//   clearCvInput2.value = '';
+// });

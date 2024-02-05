@@ -610,36 +610,77 @@
                   </div>
                 </div>
                 <div class="referece-courses">
-                  <p>Reference course or training</p>
-                  <div class="file-insert-container">
-                    <label for="file-input">
-                      <img
-                        id="file-image"
-                        src="../Tailored Courses/assets/attachment.svg"
-                        alt="image"
+                  <p>CV & Cover letter</p>
+                  <div class="cv-letter-container">
+                    <div class="file-insert-container">
+                      <label for="file-cv-careers">
+                        <img
+                          id="file-image"
+                          src="./Assets/CV.svg"
+                          alt="image"
+                        />
+                      </label>
+                      <input
+                        id="file-cv-careers"
+                        name="file-cv-careers"
+                        type="file"
+                        accept=".doc,.docx,.xls,.xlsx,.pdf,image/*"
                       />
-                    </label>
-                    <input
-                      id="file-input"
-                      name="file-input"
-                      type="file"
-                      accept=".doc,.docx,.xls,.xlsx,.pdf,image/*"
-                    />
-                    <input
-                      id="file-name"
-                      type="text"
-                      name="file-name"
-                      placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
-                      readonly
-                    />
+                      <input
+                        id="file-cv"
+                        type="text"
+                        name="file-cv"
+                        placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
+                        readonly
+                      />
+                      <img
+                        src="./Assets/exitButton.svg"
+                        alt="clear"
+                        class="cv-img"
+                        id="clearCv"
+                      />
+                    </div>
+                    <div class="file-insert-container">
+                      <label for="cover-input-careers">
+                        <img
+                          id="file-image"
+                          src="./Assets/Icon.svg"
+                          alt="image"
+                        />
+                      </label>
+                      <input
+                        id="cover-input-careers"
+                        name="cover-input-careers"
+                        type="file"
+                        accept=".doc,.docx,.xls,.xlsx,.pdf,image/*"
+                      />
+                      <input
+                        id="cover-letter-input-careers"
+                        type="text"
+                        name="cover-letter-input-careers"
+                        placeholder="Upload your cover letter."
+                        readonly
+                      />
+                      <div class="cv-img">
+                        <span>Optional</span>
+                        <img src="./Assets/UploadIcon.svg" alt="Upload" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="submit-container">
                 <div class="submit-container-inner">
                   <div class="left-side-submit">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" />
+                    <label
+                      for="agreeToOpportunityCareers"
+                      class="custom-checkbox"
+                    >
+                      <input
+                        type="checkbox"
+                        id="agreeToOpportunityCareers"
+                        name="agreeToOpportunityCareers"
+                      />
                       <span class="checkmark"></span>
                     </label>
                     <span
@@ -652,8 +693,12 @@
                     </span>
                   </div>
                   <div class="right-side-submit">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" />
+                    <label for="agreeToUseDataCareers" class="custom-checkbox">
+                      <input
+                        type="checkbox"
+                        id="agreeToUseDataCareers"
+                        name="agreeToUseDataCareers"
+                      />
                       <span class="checkmark"></span>
                     </label>
                     <span>I agree to use data sent by me.</span>
