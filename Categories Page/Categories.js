@@ -98,9 +98,6 @@ categories_Nav_Button.addEventListener("click", (e) => {
   } else {
     categories_Dropdown.style.visibility = "hidden";
     categories_Dropdown.style.opacity = "0";
-    categoriesSvgPaths.forEach((path) => {
-      path.style.fill = "black";
-    });
   }
 });
 
@@ -112,9 +109,6 @@ document.addEventListener("click", (e) => {
   if (!isClickInsideDropdown) {
     categories_Dropdown.style.visibility = "hidden";
     categories_Dropdown.style.opacity = "0";
-    categoriesSvgPaths.forEach((path) => {
-      path.style.fill = "black";
-    });
   }
 });
 
