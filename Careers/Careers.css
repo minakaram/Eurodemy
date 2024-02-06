@@ -946,7 +946,7 @@ a {
   margin: 3rem 0rem;
 }
 
-.file-insert-container input[type='file'] {
+.file-insert-container input[type="file"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -955,7 +955,7 @@ a {
   opacity: 0;
   cursor: pointer;
 }
-.file-insert-container input[type='text'] {
+.file-insert-container input[type="text"] {
   width: 100%;
   border: none;
   border-left: 2px solid var(--Nuturals-N-2);
@@ -1078,7 +1078,7 @@ a {
   .custom-checkbox
   input:checked
   + .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   left: 35%;
@@ -1141,7 +1141,7 @@ a {
   .custom-checkbox
   input:checked
   + .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   left: 35%;
@@ -1158,34 +1158,42 @@ a {
 }
 .swiper-navigation-pagination {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-top: 3rem;
+}
+.swiper-navigation {
+  z-index: 1000;
 }
 .experience-button-next,
 .experience-button-prev {
   background-color: var(--Nuturals-N-2);
-  height: 2rem;
-  width: 2.5rem;
+  height: 32px;
+  width: 50px;
   border-radius: 2px;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .experience-swiper-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
 }
 .swiper-navigation {
   display: flex;
   justify-content: center;
-  gap: 15rem;
+  gap: 1rem;
   align-items: center;
 }
 .swiper-pagination-bullet {
-  height: 0.5rem;
-  width: 2.5rem;
+  height: 8px;
+  width: 40px;
   border-radius: 1px;
 }
 .swiper-pagination-bullet-active {
