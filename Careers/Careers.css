@@ -1356,7 +1356,7 @@ a {
 .vector {
   width: 50%;
 }
-/* ------------------------------------------------ FOOTER ---------------------------------------------- */
+/* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {
   background-image: url(../Assets/Footer\ Bg.png);
   margin-top: 4rem;
@@ -1505,7 +1505,7 @@ a {
   font-size: 1.125rem;
   line-height: 1.5rem;
   padding-bottom: 1.5rem;
-  max-width: 55%;
+  max-width: 60%;
 }
 .footer-form-input-container {
   border-radius: 1px;
@@ -1569,7 +1569,7 @@ a {
   }
   .footer {
     padding-top: 4rem;
-    padding-bottom: 608px;
+    padding-bottom: 500px;
   }
   .footer-separator {
     display: none;
@@ -1582,6 +1582,7 @@ a {
   .more-details-container,
   .contact-info-container {
     width: 99%;
+    margin-top: 2rem;
     margin-bottom: 2rem;
   }
   .more-details-container {
@@ -1596,9 +1597,6 @@ a {
   }
   .footer-form-container {
     width: 70%;
-  }
-  .footer-content-heading {
-    width: 40%;
   }
 }
 @media (769px < width <1025px) {
@@ -1641,6 +1639,9 @@ a {
   }
   .footer-form-container {
     width: 80%;
+  }
+  .rightSide-footer {
+    padding-right: 1rem !important;
   }
 }
 @media (399px < width <501px) {
@@ -1690,6 +1691,7 @@ a {
   }
   .rightSide-footer {
     padding-left: 1rem !important;
+    padding-right: 1rem !important;
     padding-bottom: 3rem;
   }
   .footer {
