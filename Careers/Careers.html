@@ -1,981 +1,721 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
 
-    <link rel="stylesheet" href="Careers.css" />
-    <script defer src="Careers.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <title>Careers</title>
-  </head>
-  <body>
-    <nav class="navigationBar">
-      <a href="#">
-        <img src="../Assets/Logoheroblack.svg" alt="logo" class="logo-image" />
-      </a>
-      <div class="nav-items-container" id="navbar-toggler-items">
-        <div class="nav-toggler-item">Home</div>
-        <div class="nav-toggler-item">Categories</div>
-        <div class="nav-toggler-item">Cities</div>
-        <div class="nav-toggler-item">Tailored Courses</div>
-        <div class="nav-toggler-item">About Us</div>
-        <div class="nav-toggler-item">Contact Us</div>
-        <div class="nav-toggler-item careers">Careers</div>
-      </div>
-      <div
-        class="nav-list-container d-flex align-items-center justify-content-center"
-      >
-        <div
-          class="nav-icon-toggler d-flex align-items-center justify-content-center"
-        >
-          <div
-            id="categories-id-collapse"
-            style="overflow: hidden"
-            class="navbar-home-item d-flex align-items-center justify-content-center"
-          >
-            <p class="my-0">Careers</p>
-          </div>
-          <div class="navbar-toggle-container" id="navbar-toggler-id">
-            <img
-              src="../AboutUs Page/Assets/toggler.svg"
-              alt="toggler-icon"
-              class="toggler-icon w-100"
-            />
-          </div>
-        </div>
-        <ul>
-          <li class="d-flex justify-content-between align-items-center">
-            <a href="../Home.html" class="navbar-home-list-item">Home</a>
-          </li>
-          <li>
-            <a href="../Categories Page/Categories.html"
-              >Categories
-              <img
-                src="../Assets/DownArrowBlack.svg"
-                alt="view cities"
-                class="down-arrow-nav"
-              />
-              <img
-                src="../Assets/DownArrowRed.svg"
-                alt="view cities"
-                class="down-arrow-nav-absolute"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="../Cities Page/Cities.html"
-              >Cities
-              <img
-                src="../Assets/DownArrowBlack.svg"
-                alt="view cities"
-                class="down-arrow-nav"
-              />
-              <img
-                src="../Assets/DownArrowRed.svg"
-                alt="view cities"
-                class="down-arrow-nav-absolute"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="../Tailored Courses/Tailored.html">Tailored Courses</a>
-          </li>
-          <li><a href="../AboutUs Page/AboutUs.html">About Us</a></li>
-          <li><a href="">Contact Us</a></li>
-          <li class="active-list"><a href="#">Careers</a></li>
-        </ul>
-      </div>
-      <div class="navigation-bar-right-side">
-        <img
-          src="../Assets/SearchBar.png"
-          alt="search"
-          class="header-search-bar"
-          id="search-open-btn"
-        />
-        <div class="changeTo-arabic-courses-box">
-          <div class="arabic-icon">
-            <img
-              src="../Assets/Arabic_Iconwhite.svg"
-              alt="arabic"
-              class="arabic-icon-img"
-            />
-          </div>
-          <p class="arabic-course-txt">Arabic <br />Courses</p>
-        </div>
-      </div>
-      <div class="cities-dropdown-nav" id="cities-dropdown-id">
-        <div class="cities-dropdown-item">Cairo</div>
-        <div class="cities-dropdown-item">Paris</div>
-        <div class="cities-dropdown-item">Spain</div>
-        <div class="cities-dropdown-item">Brazil</div>
-        <div class="cities-dropdown-item">Germany</div>
-        <div class="cities-dropdown-item">America</div>
-        <div class="cities-dropdown-item">Sudan</div>
-        <div class="cities-dropdown-item">Dubai</div>
-        <div class="cities-dropdown-item">Greece</div>
-        <div class="cities-dropdown-item">Italy</div>
-        <div class="cities-dropdown-item">Marooc</div>
-        <div class="cities-dropdown-item">palastine</div>
-        <div class="cities-dropdown-item">lybia</div>
-        <div class="cities-dropdown-item">tunisia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-        <div class="cities-dropdown-item">saudi arabia</div>
-      </div>
-      <div class="categories-dropdown-nav" id="categories-dropdown-id">
-        <div class="categories-dropdown-item">
-          Maintenance Planning, Process Engineering & Instrumentation management
-        </div>
-        <div class="categories-dropdown-item">Management</div>
-        <div class="categories-dropdown-item">Project Management</div>
-        <div class="categories-dropdown-item">
-          Administration and Secretarial Training Courses
-        </div>
-        <div class="categories-dropdown-item">Human Resource Training</div>
-        <div class="categories-dropdown-item">Healthcare Management</div>
-        <div class="categories-dropdown-item">
-          Data management and analytics
-        </div>
-        <div class="categories-dropdown-item">
-          Public Relations , communication skills
-        </div>
-        <div class="categories-dropdown-item">
-          Petroleum, Oil , Gas Training Courses
-        </div>
-        <div class="categories-dropdown-item">
-          Chemical, Mechanical Engineering Training Courses
-        </div>
-        <div class="categories-dropdown-item">
-          Customer Support Representative
-        </div>
-        <div class="categories-dropdown-item">Data Scientist</div>
-        <div class="categories-dropdown-item">Network Administrator</div>
-        <div class="categories-dropdown-item">Systems Administrator</div>
-        <div class="categories-dropdown-item">HR Coordinator</div>
-        <div class="categories-dropdown-item">Executive Assistant</div>
-        <div class="categories-dropdown-item">Administrative Assistant</div>
-        <div class="categories-dropdown-item">Content Writer</div>
-        <div class="categories-dropdown-item">Social Media Specialist</div>
-        <div class="categories-dropdown-item">Legal Counsel</div>
-        <div class="categories-dropdown-item">Compliance Officer</div>
-        <div class="categories-dropdown-item">Quality Assurance Manager</div>
-        <div class="categories-dropdown-item">Business Development Manager</div>
-        <div class="categories-dropdown-item">
-          Director of Information Technology
-        </div>
-        <div class="categories-dropdown-item">
-          Chief Human Resources Officer (CHRO)
-        </div>
-        <div class="categories-dropdown-item">
-          Chief Technology Officer (CTO)
-        </div>
-        <div class="categories-dropdown-item">
-          Chief Executive Officer (CEO)
-        </div>
-        <div class="categories-dropdown-item">Sales Manager</div>
-      </div>
-      <div class="categories-dropdown-nav" id="categories-dropdown-collapse">
-        <div class="categories-dropdown-item">
-          Maintenance Planning, Process Engineering & Instrumentation management
-        </div>
-        <div class="categories-dropdown-item">Management</div>
-        <div class="categories-dropdown-item">Project Management</div>
-        <div class="categories-dropdown-item">
-          Administration and Secretarial Training Courses
-        </div>
-        <div class="categories-dropdown-item">Human Resource Training</div>
-        <div class="categories-dropdown-item">Healthcare Management</div>
-        <div class="categories-dropdown-item">
-          Data management and analytics
-        </div>
-        <div class="categories-dropdown-item">
-          Public Relations , communication skills
-        </div>
-        <div class="categories-dropdown-item">
-          Petroleum, Oil , Gas Training Courses
-        </div>
-        <div class="categories-dropdown-item">
-          Chemical, Mechanical Engineering Training Courses
-        </div>
-        <div class="categories-dropdown-item">
-          Customer Support Representative
-        </div>
-        <div class="categories-dropdown-item">Data Scientist</div>
-        <div class="categories-dropdown-item">Network Administrator</div>
-        <div class="categories-dropdown-item">Systems Administrator</div>
-        <div class="categories-dropdown-item">HR Coordinator</div>
-        <div class="categories-dropdown-item">Executive Assistant</div>
-        <div class="categories-dropdown-item">Administrative Assistant</div>
-        <div class="categories-dropdown-item">Content Writer</div>
-        <div class="categories-dropdown-item">Social Media Specialist</div>
-        <div class="categories-dropdown-item">Legal Counsel</div>
-        <div class="categories-dropdown-item">Compliance Officer</div>
-        <div class="categories-dropdown-item">Quality Assurance Manager</div>
-        <div class="categories-dropdown-item">Business Development Manager</div>
-        <div class="categories-dropdown-item">
-          Director of Information Technology
-        </div>
-        <div class="categories-dropdown-item">
-          Chief Human Resources Officer (CHRO)
-        </div>
-        <div class="categories-dropdown-item">
-          Chief Technology Officer (CTO)
-        </div>
-        <div class="categories-dropdown-item">
-          Chief Executive Officer (CEO)
-        </div>
-        <div class="categories-dropdown-item">Sales Manager</div>
-      </div>
-    </nav>
+  <link rel="stylesheet" href="Careers.css" />
+  <script defer src="Careers.js"></script>
 
-    <main>
-      <section class="hero-section">
-        <img src="./Assets/heroBG.png" alt="bg" class="hero-background" />
-        <img src="./Assets/Overlay 1.png" alt="bg2" class="hero-overlay" />
-        <div class="hero-container">
-          <h1 class="header-first">
-            Join <span class="highlight-yellow">EURODEMY</span> 's professional
-            staff & be our new member
-          </h1>
-          <p class="heading-txt">
-            Apply for one of our available opportunities :
-          </p>
-          <div class="available-jobs-container">
-            <p>Available Jobs</p>
-            <img src="./Assets/RightArrow.svg" alt="Available Jobs" />
-          </div>
-          <img src="./Assets/orLineHero.svg" alt="or" class="or-yellow" />
-          <p class="heading-txt">
-            Find a suitable job that matches your skills
-          </p>
-          <div class="available-jobs-container">
-            <p>Offer your skills</p>
-            <img src="./Assets/RightArrow.svg" alt="Available Jobs" />
-          </div>
-          <div class="hero-social-icons">
-            <div class="x">
-              <img src="../AboutUs Page/Assets/x-gray.svg" alt="" />
-              <img
-                class="x-abslute"
-                src="../AboutUs Page/Assets/x-white.svg"
-                alt=""
-              />
-            </div>
-            <div class="linkedin">
-              <img src="../AboutUs Page/Assets/linked-gray.svg" alt="" />
-              <img
-                class="linked-abslute"
-                src="../AboutUs Page/Assets/linked-white.svg"
-                alt=""
-              />
-            </div>
-            <div class="facebook">
-              <img src="../AboutUs Page/Assets/facebook-gray.svg" alt="" />
-              <img
-                class="facebook-abslute"
-                src="../AboutUs Page/Assets/facebook-white.svg"
-                alt=""
-              />
-            </div>
-            <div class="instagram">
-              <img src="../AboutUs Page/Assets/instagram-gray.svg" alt="" />
-              <img
-                class="instagram-abslute"
-                src="../AboutUs Page/Assets/instagram-white.svg"
-                alt=""
-              />
-            </div>
-            <div class="youtube">
-              <img src="../AboutUs Page/Assets/youtube-gray.svg" alt="" />
-              <img
-                class="youtube-abslute"
-                src="../AboutUs Page/Assets/youtube-white.svg"
-                alt=""
-              />
-            </div>
-            <div class="whatsapp">
-              <img src="../AboutUs Page/Assets/whatapp-gray.svg" alt="" />
-              <img
-                class="whatsapp-abslute"
-                src="../AboutUs Page/Assets/whatsapp-white.svg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ---------------------------------------available opportunities -------------------------------- -->
-      <section class="available-opportunities-section">
-        <img
-          src="../Assets/topRightVector.png"
-          alt="vector"
-          class="topRightRedVector"
-        />
-        <header class="available-opportunities-heading">
-          <h3 class="careers-header">Available Opportunities</h3>
-          <img src="../Assets/Vector.svg" alt="vector" class="vector" />
-          <p class="careers-paragraph-heading">
-            You can find a prober position among our announced available
-            <span class="hightlight-red-mini">22</span> job positions lately.
-          </p>
-        </header>
-        <div class="swiper-container1">
-          <div class="swiper-wrapper grid-container courses-container">
-            <a
-              class="swiper-slide"
-              href="../Career Details page/CareerDetails.html"
-            >
-              <div class="single-course">
-                <div class="swiper-slide-inner">
-                  <p class="starting-date">12 Jan, 2024</p>
-                  <p class="course-name">Learning and Development Specialist</p>
-                  <img
-                    src="../Assets/courseBG.png"
-                    alt="Apply now"
-                    class="apply-now-svg"
-                  />
-                  <p class="applynow-txt">Apply Now</p>
-                </div>
-              </div>
-            </a>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-            <div class="single-course swiper-slide">
-              <div class="swiper-slide-inner">
-                <p class="starting-date">12 Jan, 2024</p>
-                <p class="course-name">Learning and Development Specialist</p>
-                <img
-                  src="../Assets/courseBG.png"
-                  alt="Apply now"
-                  class="apply-now-svg"
-                />
-                <p class="applynow-txt">Apply Now</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-navigation-pagination">
-            <div class="experience-swiper-pagination"></div>
-            <div class="swiper-navigation">
-              <button class="experience-button-prev">
-                <img src="../Assets/staff-left-arrow.svg" alt="arrow" />
-              </button>
-              <button class="experience-button-next">
-                <img src="../Assets/staff-right-arrow.svg" alt="arrow" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="separator-box w-100">
-        <img src="../Assets/Seaparator.svg" alt="separator" class="w-100" />
-      </div>
-      <!-- ------------------------------------- experience-section -------------------------------------- -->
-      <section class="experience-section">
-        <header class="available-opportunities-heading">
-          <h3 class="careers-header">Offer my experiences</h3>
-          <img src="../Assets/Vector.svg" alt="vector" class="vector" />
-          <p class="careers-paragraph-heading">
-            We would love every day to have new experienced member in our team,
-            so if you find in yourself a high-qualified and professionally
-            skilled member that adds a real value to our training services,
-            don't hesitate just write us, and we will get back to you as soon as
-            possible.
-          </p>
-        </header>
-        <div class="tailored-form-section">
-          <form action="" method="post">
-            <div class="form-main">
-              <div class="form-container">
-                <div class="contact-datails">
-                  <p>Contact & Details</p>
-                  <div class="name-phone-container">
-                    <div class="name-container">
-                      <img
-                        src="../Tailored Courses/assets/name-icon.svg"
-                        alt=""
-                      />
-                      <input
-                        id="tripleNameCarrers"
-                        name="tripleNameCarrers"
-                        type="text"
-                        placeholder="Please type your triple name"
-                      />
-                    </div>
-                    <div class="phone-container">
-                      <img src="../Tailored Courses/assets/phone.svg" alt="" />
-                      <input
-                        type="text"
-                        id="mobileNumCareers"
-                        name="mobileNumCareers"
-                        placeholder="Enter mobile number with the country key"
-                      />
-                    </div>
-                  </div>
-                  <div class="email-country-container">
-                    <div class="email-container">
-                      <img src="../Tailored Courses/assets/email.svg" alt="" />
-                      <input
-                        type="mail"
-                        id="mailCareers"
-                        name="mailCareers"
-                        placeholder="Please enter your email"
-                      />
-                    </div>
-                    <div class="country-container">
-                      <img
-                        src="../Tailored Courses/assets/country.svg"
-                        alt=""
-                      />
-                      <input
-                        type="text"
-                        id="countryCareers"
-                        name="countryCareers"
-                        placeholder="Country & City name"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="message-request">
-                  <p>Your Message & Requests</p>
-                  <div class="message-container">
-                    <textarea
-                      name="messageCareers"
-                      id="messageCareers"
-                      cols="30"
-                      rows="10"
-                      maxlength="1500"
-                      placeholder="Please write a simple explanation about the course you need or exact request"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="referece-courses">
-                  <p>CV & Cover letter</p>
-                  <div class="cv-letter-container">
-                    <div class="file-insert-container">
-                      <label for="file-cv-careers">
-                        <img
-                          id="file-cv-image"
-                          src="./Assets/CV.svg"
-                          alt="image"
-                        />
-                      </label>
-                      <input
-                        id="file-cv-careers"
-                        name="file-cv-careers"
-                        type="file"
-                        accept=".doc,.docx,.xls,.xlsx,.pdf,image/*"
-                      />
-                      <input
-                        id="cv-careers"
-                        type="text"
-                        name="cv-careers"
-                        placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
-                        readonly
-                      />
-                      <img
-                        src="./Assets/exitButton.svg"
-                        alt="clear"
-                        class="cv-img"
-                        id="clearCv"
-                      />
-                    </div>
+  <title>Careers</title>
+</head>
 
-                    <div class="file-insert-container">
-                      <label for="cover-input-careers">
-                        <img
-                          id="file-cover-image"
-                          src="./Assets/Icon.svg"
-                          alt="image"
-                        />
-                      </label>
-                      <input
-                        id="cover-input-careers"
-                        name="cover-input-careers"
-                        type="file"
-                        accept=".doc,.docx,.xls,.xlsx,.pdf,image/*"
-                      />
-                      <input
-                        id="cover-letter-input-careers"
-                        type="text"
-                        name="cover-letter-input-careers"
-                        placeholder="Upload your cover letter."
-                        readonly
-                      />
-                      <div class="cv-img">
-                        <span class="optional">Optional</span>
-                        <img
-                          src="./Assets/UploadIcon.svg"
-                          alt="Upload"
-                          class="upload-btn"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="submit-container">
-                <div class="submit-container-inner">
-                  <div class="left-side-submit">
-                    <label
-                      for="agreeToOpportunityCareers"
-                      class="custom-checkbox"
-                    >
-                      <input
-                        type="checkbox"
-                        id="agreeToOpportunityCareers"
-                        name="agreeToOpportunityCareers"
-                      />
-                      <span class="checkmark"></span>
-                    </label>
-                    <span
-                      >I agree to the
-                      <a class="highlighted-from-text" href=""
-                        >property rights</a
-                      >
-                      &
-                      <a class="highlighted-from-text" href="">terms ofuse</a>.
-                    </span>
-                  </div>
-                  <div class="right-side-submit">
-                    <label for="agreeToUseDataCareers" class="custom-checkbox">
-                      <input
-                        type="checkbox"
-                        id="agreeToUseDataCareers"
-                        name="agreeToUseDataCareers"
-                      />
-                      <span class="checkmark"></span>
-                    </label>
-                    <span>I agree to use data sent by me.</span>
-                  </div>
-                </div>
-                <button>
-                  <img
-                    src="../Tailored Courses/assets/submit.svg"
-                    alt=""
-                    class="mr-3"
-                  />
-                  Send Form
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-    <!--------------------------------------------- FOOTER ----------------------------------------------->
-    <footer class="footer">
-      <div class="footer-separator">
-        <img
-          src="../Assets/footer separator.svg"
-          alt="separator"
-          class="w-100"
-        />
-      </div>
-      <div class="footerLogos-container">
-        <img
-          src="../Assets/footerMiddleContainer.png"
-          alt="logo"
-          class="footer-absolute-logo-container"
-        />
-        <img
-          src="../Assets/footerLogo.svg"
-          alt="Logo"
-          class="footer-absolute-logo"
-        />
-      </div>
-      <main class="footer-contents-container">
-        <div class="leftSide-footer">
-          <div class="main-pages-container">
-            <div class="footer-content-heading">
-              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-              <h4 class="footer-content-header">Main Pages</h4>
-            </div>
-            <ul class="footer-content-list">
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Courses
-                Categories
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Cities &
-                Venues
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Tailored
-                Courses
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Careers (
-                Join our staff )
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />About Us
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Contact Us
-              </li>
-            </ul>
-          </div>
-          <div class="more-details-container">
-            <div class="footer-content-heading">
-              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-              <h4 class="footer-content-header">More Details</h4>
-            </div>
-            <ul class="footer-content-list">
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Privacy
-                policy agreement
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Terms of use
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Copy rights
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Registration,
-                payment & cancelation policies
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Why to choose
-                us ?
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Add us to
-                your safe mailing list
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Program
-                venue's terms and conditions
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="rightSide-footer">
-          <div class="quick-access-container">
-            <div class="footer-content-heading">
-              <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
-              <h4 class="footer-content-header">Quick Access</h4>
-            </div>
-            <ul class="footer-content-list">
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Upcoming
-                Courses
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Top Courses
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerShape2.svg" alt="list" />Training
-                Staff
-              </li>
-            </ul>
-          </div>
-          <div class="contact-info-container">
-            <div class="footer-content-heading">
-              <img src="../Assets/footerIcon.svg" alt="footer-shape1" />
-              <h4 class="footer-content-header">Contact Info.</h4>
-            </div>
-            <ul class="footer-content-list">
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerIcon2.svg" alt="list" />Edificios
-                Corporativos del Retiro, Calle Menorca 12, 28009 - Madrid
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/Email.svg" alt="list" />info@EURODEMY.com
-              </li>
-              <li class="footer-content-list-item">
-                <img src="../Assets/footerIcon4.svg" alt="list" />+201097551224
-                | +201097551224
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-form-container">
-          <h4 class="footer-form-header">EURODEMY</h4>
-          <p class="footer-form-secondary-header">
-            PROFESSIONAL TRAINING ACADEMY
-          </p>
-          <div class="footer-form-socialIcon">
-            <img src="../Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
-            <img src="../Assets/footerFacebook.svg" alt="Facebook" />
-            <img
-              src="../Assets/youtube.svg"
-              alt="Youtube"
-              style="height: 33px"
-            />
-            <img src="../Assets/FooterLinked.svg" alt="Linked" />
-            <img src="../Assets/footerInstgram.svg" alt="Instgram" />
-            <img src="../Assets/footerX.svg" alt="X" />
-          </div>
-          <div class="envelope-icon-container">
-            <img src="../Assets/envelope.svg" alt="message" />
-          </div>
-          <p class="assurance-message-form-txt">
-            Recieve our news, offers & updates on your e-mail
-          </p>
-          <div class="footer-form-input-container">
-            <input
-              type="text"
-              id="footerFormGmail"
-              name="footerFormGmail"
-              class="footer-formInput"
-              placeholder="Add your email"
-            />
-            <button class="footer-form-gmail-btn">Send</button>
-          </div>
-          <p class="successfullySentTxt">Successfully Sent</p>
-        </div>
-      </main>
-    </footer>
-    <div class="footer-copyright">
-      Copyright © <span class="year">2023</span> - All Rights Reserved to
-      EURODEMY - Professional Training Academy
+<body>
+  <nav class="navigationBar">
+    <a href="#">
+      <img src="../Assets/Logoheroblack.svg" alt="logo" class="logo-image" />
+    </a>
+    <div class="nav-items-container" id="navbar-toggler-items">
+      <div class="nav-toggler-item">Home</div>
+      <div class="nav-toggler-item">Categories</div>
+      <div class="nav-toggler-item">Cities</div>
+      <div class="nav-toggler-item">Tailored Courses</div>
+      <div class="nav-toggler-item">About Us</div>
+      <div class="nav-toggler-item">Contact Us</div>
+      <div class="nav-toggler-item careers">Careers</div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
-    <script src="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <div class="nav-list-container d-flex align-items-center justify-content-center">
+      <div class="nav-icon-toggler d-flex align-items-center justify-content-center">
+        <div id="categories-id-collapse" style="overflow: hidden"
+          class="navbar-home-item d-flex align-items-center justify-content-center">
+          <p class="my-0">Careers</p>
+        </div>
+        <div class="navbar-toggle-container" id="navbar-toggler-id">
+          <img src="../AboutUs Page/Assets/toggler.svg" alt="toggler-icon" class="toggler-icon w-100" />
+        </div>
+      </div>
+      <ul>
+        <li class="d-flex justify-content-between align-items-center">
+          <a href="../Home.html" class="navbar-home-list-item">Home</a>
+        </li>
+        <li>
+          <a href="../Categories Page/Categories.html">Categories
+            <img src="../Assets/DownArrowBlack.svg" alt="view cities" class="down-arrow-nav" />
+            <img src="../Assets/DownArrowRed.svg" alt="view cities" class="down-arrow-nav-absolute" />
+          </a>
+        </li>
+        <li>
+          <a href="../Cities Page/Cities.html">Cities
+            <img src="../Assets/DownArrowBlack.svg" alt="view cities" class="down-arrow-nav" />
+            <img src="../Assets/DownArrowRed.svg" alt="view cities" class="down-arrow-nav-absolute" />
+          </a>
+        </li>
+        <li>
+          <a href="../Tailored Courses/Tailored.html">Tailored Courses</a>
+        </li>
+        <li><a href="../AboutUs Page/AboutUs.html">About Us</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li class="active-list"><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="navigation-bar-right-side">
+      <img src="../Assets/SearchBar.png" alt="search" class="header-search-bar" id="search-open-btn" />
+      <div class="changeTo-arabic-courses-box">
+        <div class="arabic-icon">
+          <img src="../Assets/Arabic_Iconwhite.svg" alt="arabic" class="arabic-icon-img" />
+        </div>
+        <p class="arabic-course-txt">Arabic <br />Courses</p>
+      </div>
+    </div>
+    <div class="cities-dropdown-nav" id="cities-dropdown-id">
+      <div class="cities-dropdown-item">Cairo</div>
+      <div class="cities-dropdown-item">Paris</div>
+      <div class="cities-dropdown-item">Spain</div>
+      <div class="cities-dropdown-item">Brazil</div>
+      <div class="cities-dropdown-item">Germany</div>
+      <div class="cities-dropdown-item">America</div>
+      <div class="cities-dropdown-item">Sudan</div>
+      <div class="cities-dropdown-item">Dubai</div>
+      <div class="cities-dropdown-item">Greece</div>
+      <div class="cities-dropdown-item">Italy</div>
+      <div class="cities-dropdown-item">Marooc</div>
+      <div class="cities-dropdown-item">palastine</div>
+      <div class="cities-dropdown-item">lybia</div>
+      <div class="cities-dropdown-item">tunisia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+      <div class="cities-dropdown-item">saudi arabia</div>
+    </div>
+    <div class="categories-dropdown-nav" id="categories-dropdown-id">
+      <div class="categories-dropdown-item">
+        Maintenance Planning, Process Engineering & Instrumentation management
+      </div>
+      <div class="categories-dropdown-item">Management</div>
+      <div class="categories-dropdown-item">Project Management</div>
+      <div class="categories-dropdown-item">
+        Administration and Secretarial Training Courses
+      </div>
+      <div class="categories-dropdown-item">Human Resource Training</div>
+      <div class="categories-dropdown-item">Healthcare Management</div>
+      <div class="categories-dropdown-item">
+        Data management and analytics
+      </div>
+      <div class="categories-dropdown-item">
+        Public Relations , communication skills
+      </div>
+      <div class="categories-dropdown-item">
+        Petroleum, Oil , Gas Training Courses
+      </div>
+      <div class="categories-dropdown-item">
+        Chemical, Mechanical Engineering Training Courses
+      </div>
+      <div class="categories-dropdown-item">
+        Customer Support Representative
+      </div>
+      <div class="categories-dropdown-item">Data Scientist</div>
+      <div class="categories-dropdown-item">Network Administrator</div>
+      <div class="categories-dropdown-item">Systems Administrator</div>
+      <div class="categories-dropdown-item">HR Coordinator</div>
+      <div class="categories-dropdown-item">Executive Assistant</div>
+      <div class="categories-dropdown-item">Administrative Assistant</div>
+      <div class="categories-dropdown-item">Content Writer</div>
+      <div class="categories-dropdown-item">Social Media Specialist</div>
+      <div class="categories-dropdown-item">Legal Counsel</div>
+      <div class="categories-dropdown-item">Compliance Officer</div>
+      <div class="categories-dropdown-item">Quality Assurance Manager</div>
+      <div class="categories-dropdown-item">Business Development Manager</div>
+      <div class="categories-dropdown-item">
+        Director of Information Technology
+      </div>
+      <div class="categories-dropdown-item">
+        Chief Human Resources Officer (CHRO)
+      </div>
+      <div class="categories-dropdown-item">
+        Chief Technology Officer (CTO)
+      </div>
+      <div class="categories-dropdown-item">
+        Chief Executive Officer (CEO)
+      </div>
+      <div class="categories-dropdown-item">Sales Manager</div>
+    </div>
+    <div class="categories-dropdown-nav" id="categories-dropdown-collapse">
+      <div class="categories-dropdown-item">
+        Maintenance Planning, Process Engineering & Instrumentation management
+      </div>
+      <div class="categories-dropdown-item">Management</div>
+      <div class="categories-dropdown-item">Project Management</div>
+      <div class="categories-dropdown-item">
+        Administration and Secretarial Training Courses
+      </div>
+      <div class="categories-dropdown-item">Human Resource Training</div>
+      <div class="categories-dropdown-item">Healthcare Management</div>
+      <div class="categories-dropdown-item">
+        Data management and analytics
+      </div>
+      <div class="categories-dropdown-item">
+        Public Relations , communication skills
+      </div>
+      <div class="categories-dropdown-item">
+        Petroleum, Oil , Gas Training Courses
+      </div>
+      <div class="categories-dropdown-item">
+        Chemical, Mechanical Engineering Training Courses
+      </div>
+      <div class="categories-dropdown-item">
+        Customer Support Representative
+      </div>
+      <div class="categories-dropdown-item">Data Scientist</div>
+      <div class="categories-dropdown-item">Network Administrator</div>
+      <div class="categories-dropdown-item">Systems Administrator</div>
+      <div class="categories-dropdown-item">HR Coordinator</div>
+      <div class="categories-dropdown-item">Executive Assistant</div>
+      <div class="categories-dropdown-item">Administrative Assistant</div>
+      <div class="categories-dropdown-item">Content Writer</div>
+      <div class="categories-dropdown-item">Social Media Specialist</div>
+      <div class="categories-dropdown-item">Legal Counsel</div>
+      <div class="categories-dropdown-item">Compliance Officer</div>
+      <div class="categories-dropdown-item">Quality Assurance Manager</div>
+      <div class="categories-dropdown-item">Business Development Manager</div>
+      <div class="categories-dropdown-item">
+        Director of Information Technology
+      </div>
+      <div class="categories-dropdown-item">
+        Chief Human Resources Officer (CHRO)
+      </div>
+      <div class="categories-dropdown-item">
+        Chief Technology Officer (CTO)
+      </div>
+      <div class="categories-dropdown-item">
+        Chief Executive Officer (CEO)
+      </div>
+      <div class="categories-dropdown-item">Sales Manager</div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <img src="./Assets/heroBG.png" alt="bg" class="hero-background" />
+      <img src="./Assets/Overlay 1.png" alt="bg2" class="hero-overlay" />
+      <div class="hero-container">
+        <h1 class="header-first">
+          Join <span class="highlight-yellow">EURODEMY</span> 's professional
+          staff & be our new member
+        </h1>
+        <p class="heading-txt">
+          Apply for one of our available opportunities :
+        </p>
+        <div class="available-jobs-container">
+          <p>Available Jobs</p>
+          <img src="./Assets/RightArrow.svg" alt="Available Jobs" />
+        </div>
+        <img src="./Assets/orLineHero.svg" alt="or" class="or-yellow" />
+        <p class="heading-txt">
+          Find a suitable job that matches your skills
+        </p>
+        <div class="available-jobs-container">
+          <p>Offer your skills</p>
+          <img src="./Assets/RightArrow.svg" alt="Available Jobs" />
+        </div>
+        <div class="hero-social-icons">
+          <div class="x">
+            <img src="../AboutUs Page/Assets/x-gray.svg" alt="" />
+            <img class="x-abslute" src="../AboutUs Page/Assets/x-white.svg" alt="" />
+          </div>
+          <div class="linkedin">
+            <img src="../AboutUs Page/Assets/linked-gray.svg" alt="" />
+            <img class="linked-abslute" src="../AboutUs Page/Assets/linked-white.svg" alt="" />
+          </div>
+          <div class="facebook">
+            <img src="../AboutUs Page/Assets/facebook-gray.svg" alt="" />
+            <img class="facebook-abslute" src="../AboutUs Page/Assets/facebook-white.svg" alt="" />
+          </div>
+          <div class="instagram">
+            <img src="../AboutUs Page/Assets/instagram-gray.svg" alt="" />
+            <img class="instagram-abslute" src="../AboutUs Page/Assets/instagram-white.svg" alt="" />
+          </div>
+          <div class="youtube">
+            <img src="../AboutUs Page/Assets/youtube-gray.svg" alt="" />
+            <img class="youtube-abslute" src="../AboutUs Page/Assets/youtube-white.svg" alt="" />
+          </div>
+          <div class="whatsapp">
+            <img src="../AboutUs Page/Assets/whatapp-gray.svg" alt="" />
+            <img class="whatsapp-abslute" src="../AboutUs Page/Assets/whatsapp-white.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------------------------------available opportunities -------------------------------- -->
+    <section class="available-opportunities-section">
+      <img src="../Assets/topRightVector.png" alt="vector" class="topRightRedVector" />
+      <header class="available-opportunities-heading">
+        <h3 class="careers-header">Available Opportunities</h3>
+        <img src="../Assets/Vector.svg" alt="vector" class="vector" />
+        <p class="careers-paragraph-heading">
+          You can find a prober position among our announced available
+          <span class="hightlight-red-mini">22</span> job positions lately.
+        </p>
+      </header>
+      <div class="swiper-container1">
+        <div class="swiper-wrapper grid-container courses-container">
+          <a class="swiper-slide" href="../Career Details page/CareerDetails.html">
+            <div class="single-course">
+              <div class="swiper-slide-inner">
+                <p class="starting-date">12 Jan, 2024</p>
+                <p class="course-name">Learning and Development Specialist</p>
+                <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+                <p class="applynow-txt">Apply Now</p>
+              </div>
+            </div>
+          </a>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+          <div class="single-course swiper-slide">
+            <div class="swiper-slide-inner">
+              <p class="starting-date">12 Jan, 2024</p>
+              <p class="course-name">Learning and Development Specialist</p>
+              <img src="../Assets/courseBG.png" alt="Apply now" class="apply-now-svg" />
+              <p class="applynow-txt">Apply Now</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-navigation-pagination">
+
+          <div class="swiper-navigation">
+            <button class="experience-button-prev">
+              <img src="../Assets/staff-left-arrow.svg" alt="arrow" />
+            </button>
+            <div class="experience-swiper-pagination"></div>
+            <button class="experience-button-next">
+              <img src="../Assets/staff-right-arrow.svg" alt="arrow" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="separator-box w-100">
+      <img src="../Assets/Seaparator.svg" alt="separator" class="w-100" />
+    </div>
+    <!-- ------------------------------------- experience-section -------------------------------------- -->
+    <section class="experience-section">
+      <header class="available-opportunities-heading">
+        <h3 class="careers-header">Offer my experiences</h3>
+        <img src="../Assets/Vector.svg" alt="vector" class="vector" />
+        <p class="careers-paragraph-heading">
+          We would love every day to have new experienced member in our team,
+          so if you find in yourself a high-qualified and professionally
+          skilled member that adds a real value to our training services,
+          don't hesitate just write us, and we will get back to you as soon as
+          possible.
+        </p>
+      </header>
+      <div class="tailored-form-section">
+        <form action="" method="post">
+          <div class="form-main">
+            <div class="form-container">
+              <div class="contact-datails">
+                <p>Contact & Details</p>
+                <div class="name-phone-container">
+                  <div class="name-container">
+                    <img src="../Tailored Courses/assets/name-icon.svg" alt="" />
+                    <input id="tripleNameCarrers" name="tripleNameCarrers" type="text"
+                      placeholder="Please type your triple name" />
+                  </div>
+                  <div class="phone-container">
+                    <img src="../Tailored Courses/assets/phone.svg" alt="" />
+                    <input type="text" id="mobileNumCareers" name="mobileNumCareers"
+                      placeholder="Enter mobile number with the country key" />
+                  </div>
+                </div>
+                <div class="email-country-container">
+                  <div class="email-container">
+                    <img src="../Tailored Courses/assets/email.svg" alt="" />
+                    <input type="mail" id="mailCareers" name="mailCareers" placeholder="Please enter your email" />
+                  </div>
+                  <div class="country-container">
+                    <img src="../Tailored Courses/assets/country.svg" alt="" />
+                    <input type="text" id="countryCareers" name="countryCareers" placeholder="Country & City name" />
+                  </div>
+                </div>
+              </div>
+              <div class="message-request">
+                <p>Your Message & Requests</p>
+                <div class="message-container">
+                  <textarea name="messageCareers" id="messageCareers" cols="30" rows="10" maxlength="1500"
+                    placeholder="Please write a simple explanation about the course you need or exact request"></textarea>
+                </div>
+              </div>
+              <div class="referece-courses">
+                <p>CV & Cover letter</p>
+                <div class="cv-letter-container">
+                  <div class="file-insert-container">
+                    <label for="file-cv-careers">
+                      <img id="file-cv-image" src="./Assets/CV.svg" alt="image" />
+                    </label>
+                    <input id="file-cv-careers" name="file-cv-careers" type="file"
+                      accept=".doc,.docx,.xls,.xlsx,.pdf,image/*" />
+                    <input id="cv-careers" type="text" name="cv-careers"
+                      placeholder="Leave here a reference link or code for the needed training or course from our website or others websites."
+                      readonly />
+                    <img src="./Assets/exitButton.svg" alt="clear" class="cv-img" id="clearCv" />
+                  </div>
+
+                  <div class="file-insert-container">
+                    <label for="cover-input-careers">
+                      <img id="file-cover-image" src="./Assets/Icon.svg" alt="image" />
+                    </label>
+                    <input id="cover-input-careers" name="cover-input-careers" type="file"
+                      accept=".doc,.docx,.xls,.xlsx,.pdf,image/*" />
+                    <input id="cover-letter-input-careers" type="text" name="cover-letter-input-careers"
+                      placeholder="Upload your cover letter." readonly />
+                    <div class="cv-img">
+                      <span class="optional">Optional</span>
+                      <img src="./Assets/UploadIcon.svg" alt="Upload" class="upload-btn" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="submit-container">
+              <div class="submit-container-inner">
+                <div class="left-side-submit">
+                  <label for="agreeToOpportunityCareers" class="custom-checkbox">
+                    <input type="checkbox" id="agreeToOpportunityCareers" name="agreeToOpportunityCareers" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>I agree to the
+                    <a class="highlighted-from-text" href="">property rights</a>
+                    &
+                    <a class="highlighted-from-text" href="">terms ofuse</a>.
+                  </span>
+                </div>
+                <div class="right-side-submit">
+                  <label for="agreeToUseDataCareers" class="custom-checkbox">
+                    <input type="checkbox" id="agreeToUseDataCareers" name="agreeToUseDataCareers" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>I agree to use data sent by me.</span>
+                </div>
+              </div>
+              <button>
+                <img src="../Tailored Courses/assets/submit.svg" alt="" class="mr-3" />
+                Send Form
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!--------------------------------------------- FOOTER ----------------------------------------------->
+  <footer class="footer">
+    <div class="footer-separator">
+      <img src="../Assets/footer separator.svg" alt="separator" class="w-100" />
+    </div>
+    <div class="footerLogos-container">
+      <img src="../Assets/footerMiddleContainer.png" alt="logo" class="footer-absolute-logo-container" />
+      <img src="../Assets/footerLogo.svg" alt="Logo" class="footer-absolute-logo" />
+    </div>
+    <main class="footer-contents-container">
+      <div class="leftSide-footer">
+        <div class="main-pages-container">
+          <div class="footer-content-heading">
+            <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+            <h4 class="footer-content-header">Main Pages</h4>
+          </div>
+          <ul class="footer-content-list">
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Courses
+              Categories
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Cities &
+              Venues
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Tailored
+              Courses
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Careers (
+              Join our staff )
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />About Us
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Contact Us
+            </li>
+          </ul>
+        </div>
+        <div class="more-details-container">
+          <div class="footer-content-heading">
+            <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+            <h4 class="footer-content-header">More Details</h4>
+          </div>
+          <ul class="footer-content-list">
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Privacy
+              policy agreement
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Terms of use
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Copy rights
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Registration,
+              payment & cancelation policies
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Why to choose
+              us ?
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Add us to
+              your safe mailing list
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Program
+              venue's terms and conditions
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rightSide-footer">
+        <div class="quick-access-container">
+          <div class="footer-content-heading">
+            <img src="../Assets/footerShape1.svg" alt="footer-shape1" />
+            <h4 class="footer-content-header">Quick Access</h4>
+          </div>
+          <ul class="footer-content-list">
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Upcoming
+              Courses
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Top Courses
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerShape2.svg" alt="list" />Training
+              Staff
+            </li>
+          </ul>
+        </div>
+        <div class="contact-info-container">
+          <div class="footer-content-heading">
+            <img src="../Assets/footerIcon.svg" alt="footer-shape1" />
+            <h4 class="footer-content-header">Contact Info.</h4>
+          </div>
+          <ul class="footer-content-list">
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerIcon2.svg" alt="list" />Edificios
+              Corporativos del Retiro, Calle Menorca 12, 28009 - Madrid
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/Email.svg" alt="list" />info@EURODEMY.com
+            </li>
+            <li class="footer-content-list-item">
+              <img src="../Assets/footerIcon4.svg" alt="list" />+201097551224
+              | +201097551224
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-form-container">
+        <h4 class="footer-form-header">EURODEMY</h4>
+        <p class="footer-form-secondary-header">
+          PROFESSIONAL TRAINING ACADEMY
+        </p>
+        <div class="footer-form-socialIcon">
+          <img src="../Assets/logos_whatsapp-icon.svg" alt="whatsapp" />
+          <img src="../Assets/footerFacebook.svg" alt="Facebook" />
+          <img src="../Assets/youtube.svg" alt="Youtube" style="height: 33px" />
+          <img src="../Assets/FooterLinked.svg" alt="Linked" />
+          <img src="../Assets/footerInstgram.svg" alt="Instgram" />
+          <img src="../Assets/footerX.svg" alt="X" />
+        </div>
+        <div class="envelope-icon-container">
+          <img src="../Assets/envelope.svg" alt="message" />
+        </div>
+        <p class="assurance-message-form-txt">
+          Recieve our news, offers & updates on your e-mail
+        </p>
+        <div class="footer-form-input-container">
+          <input type="text" id="footerFormGmail" name="footerFormGmail" class="footer-formInput"
+            placeholder="Add your email" />
+          <button class="footer-form-gmail-btn">Send</button>
+        </div>
+        <p class="successfullySentTxt">Successfully Sent</p>
+      </div>
+    </main>
+  </footer>
+  <div class="footer-copyright">
+    Copyright © <span class="year">2023</span> - All Rights Reserved to
+    EURODEMY - Professional Training Academy
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <script src="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
