@@ -468,12 +468,15 @@ a {
 .searchResult-section {
   position: relative;
 }
+.searchResult-container {
+  width: 80%;
+  margin: auto;
+}
 .navigation-box-container {
   display: flex;
 }
 .navigation-box {
   margin-top: 105px;
-  margin-left: 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -522,11 +525,11 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
-  margin: 5rem 0 3rem 3rem;
+  margin: 5rem 0 3rem 0rem;
 }
 .searchResultDetails {
   border: 0.5px solid var(--Nuturals-N-4);
-  height: 2rem;
+  min-height: 2rem;
   padding: 0.5rem 0.2rem 0.5rem 0.5rem;
   display: flex;
   justify-content: center;
@@ -542,6 +545,7 @@ a {
 .searchResultDetails p span {
   color: var(--Nuturals-N-2);
 }
+
 .course-search-lenght-container {
   display: flex;
   gap: 0.2rem;
@@ -563,8 +567,9 @@ a {
 .courses-search {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
-  padding: 0px 3rem;
   position: relative;
 }
 .courses-search .left-side-search {
@@ -608,8 +613,7 @@ a {
 }
 /* ----- */
 .coming-training-card-container {
-  width: 80%;
-  margin: 3rem auto 10rem;
+  margin: 5rem auto 10rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
