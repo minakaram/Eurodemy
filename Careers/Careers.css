@@ -470,8 +470,8 @@ a {
 .hero-section {
   position: relative;
   width: 100%;
-  height: auto;
-  /* padding-top: 6rem; */
+  min-height: 100vh;
+  padding-top: 6rem;
 }
 .hero-background,
 .hero-overlay {
@@ -526,6 +526,9 @@ a {
   margin-bottom: 2rem;
   cursor: pointer;
 }
+.offer-skills {
+  margin-bottom: 5rem;
+}
 .or-yellow {
   margin-bottom: 2rem;
   width: 29%;
@@ -575,11 +578,24 @@ a {
     margin: auto;
     padding: 7.5rem 0rem 3rem;
   }
+  .header-first {
+    width: 86%;
+  }
 }
 @media (width<769px) {
   .hero-social-icons {
     width: 100%;
     justify-content: space-evenly;
+    right: 0;
+  }
+  .submit-container button {
+    padding: 0.7rem 3rem;
+  }
+  .header-first {
+    width: 100%;
+  }
+  .or-yellow {
+    width: 50%;
   }
 }
 /* ---------------------------------------------- available opportunities ------------------------------*/
@@ -592,6 +608,7 @@ a {
   position: absolute;
   right: 0;
   top: 0;
+  width: 20%;
 }
 .available-opportunities-heading {
   text-align: center;
