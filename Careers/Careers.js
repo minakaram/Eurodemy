@@ -2,12 +2,12 @@ var myStaffSwiper = new Swiper('.swiper-container1', {
   // initialSlide: 2,
   // loop: true,
   pagination: {
-    el: '.staff-swiper-pagination',
+    el: '.experience-swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: '.staff-button-next', // CSS class or HTML element for next arrow
-    prevEl: '.staff-button-prev', // CSS class or HTML element for prev arrow
+    nextEl: '.experience-button-next', // CSS class or HTML element for next arrow
+    prevEl: '.experience-button-prev', // CSS class or HTML element for prev arrow
   },
   breakpoints: {
     1025: {
@@ -35,7 +35,7 @@ var myStaffSwiper = new Swiper('.swiper-container1', {
   on: {
     init: function () {
       const paginationContainer = document.querySelector(
-        '.staff-swiper-pagination'
+        '.experience-swiper-pagination'
       );
       console.log(paginationContainer);
       const maxVisibleDots = 4; // Set the maximum number of visible dots
@@ -61,6 +61,14 @@ var myStaffSwiper = new Swiper('.swiper-container1', {
     },
   },
 });
+// window.addEventListener('resize', () => {
+//   const swiperNextBtn = document.querySelector('.experience-button-next');
+//   const swiperPrevBtn = document.querySelector('.experience-button-prev');
+//   console.log(swiperPrevBtn);
+//   if (window.offsetWidth < 769) {
+//     swiperNextBtn.style.display = 'none';
+//   }
+// });
 // ------------------------------------------- form -------------------------------------------
 const fileCoverInput = document.querySelector('#file-cv-careers');
 const fileCoverImage = document.querySelector('#file-cover-image');
