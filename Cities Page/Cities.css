@@ -660,6 +660,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   display: none;
+  z-index: 200;
 }
 .cities-courses-card .courses-city-average,
 .cities-courses-card .view-course-city,
