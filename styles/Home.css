@@ -1146,6 +1146,7 @@ h6 {
   transition: 500ms;
   margin-bottom: 0.313rem;
   position: relative;
+  cursor: pointer;
 }
 .view-course-box {
   display: flex;
@@ -1688,7 +1689,7 @@ h6 {
 }
 .vector-red-down-left {
   position: absolute;
-  bottom: 0;
+  /* bottom: 50%; */
   left: 0;
 }
 .cities-heading-paragraph {

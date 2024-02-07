@@ -519,7 +519,7 @@ a {
   position: absolute;
   left: 0;
   width: 20%;
-  bottom: -15%;
+  bottom: -7%;
 }
 .searchResult-details-container {
   display: flex;
@@ -696,6 +696,7 @@ a {
   align-items: center;
   font-family: rubikRegular-400;
   color: var(--Nuturals-White);
+  cursor: pointer;
 }
 .view-course-box p {
   margin: 0;
