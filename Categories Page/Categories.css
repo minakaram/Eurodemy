@@ -71,7 +71,6 @@ p {
   border-radius: 0;
   height: 80px;
 }
-
 /* --------------------------------------------- navbar -------------------------------------------------- */
 .navigationBar {
   background-color: var(--Nuturals-White);
@@ -80,9 +79,9 @@ p {
   align-items: center;
   width: 100%;
   padding: 0px 2.5rem;
-  position: relative;
+  position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   max-height: 80px;
   color: var(--Nuturals-N-1);
   box-shadow: 0px 0px 5px 0px rgba(20, 0, 0, 0.16);
@@ -113,7 +112,6 @@ p {
 }
 .active-list a {
   color: var(--Primary-Primary) !important;
-  font-family: rubikSemiBold-600 !important;
 }
 .navigationBar ul li a {
   text-decoration: none;
@@ -128,19 +126,7 @@ p {
   position: relative;
   transition: all 300ms;
 }
-.down-arrow-nav {
-  margin-left: 1rem;
-}
-.navigationBar ul li a:hover .down-arrow-nav-absolute {
-  opacity: 1;
-}
 
-.down-arrow-nav-absolute {
-  position: absolute;
-  right: 1.4rem;
-  opacity: 0;
-  transition: all 300ms;
-}
 .navigationBar ul li a:hover {
   color: var(--Primary-Primary);
 }
@@ -151,12 +137,8 @@ p {
   height: 3rem;
   width: 3rem;
   margin-right: 10px;
-  cursor: pointer;
 }
-.navigationBar .nav-list-container p a {
-  text-decoration: none;
-  color: var(--Primary-Primary);
-}
+
 .navigationBar .changeTo-arabic-courses-box .arabic-icon {
   display: flex;
   align-items: center;
@@ -171,7 +153,6 @@ p {
   justify-content: center;
   gap: 0.375rem;
   height: 3rem;
-  cursor: pointer;
 }
 .arabic-course-txt {
   color: var(--Nuturals-White);
@@ -231,7 +212,68 @@ p {
   grid-column: span 2;
   text-align: center;
 }
+.navigationBar .cities-dropdown-nav {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
 
+#cities-dropdown-collapse-id {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
+
+.navigationBar .cities-dropdown-nav .cities-dropdown-item {
+  padding: 1rem 3rem 10px 0.7rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border-right: 1px solid var(--NuturalsN-5); /* Add right border */
+  border-bottom: 1px solid var(--NuturalsN-5); /* Add bottom border */
+}
+.navigationBar .cities-dropdown-nav .cities-dropdown-item:hover {
+  color: var(--Nuturals-White);
+  background-color: var(--Primary-Primary);
+  cursor: pointer;
+}
+.navigationBar .cities-dropdown-nav::-webkit-scrollbar-thumb {
+  background-color: var(--Primary-Primary);
+  border-radius: 1px;
+  border: var(--Nuturals-N-6);
+  width: 10px;
+}
+.navigationBar .cities-dropdown-nav::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 1px;
+  background-color: rgba(245, 227, 227, 0.2);
+  border: 1px solid var(--Nuturals-N-6);
+}
 .navigationBar .categories-dropdown-nav {
   position: absolute;
   top: 100%;
@@ -265,7 +307,7 @@ p {
   z-index: 10000;
   visibility: hidden;
   opacity: 0;
-  width: 70%;
+  width: 50%;
   transition: 0.3s;
 }
 .navigationBar .categories-dropdown-nav .categories-dropdown-item {
@@ -293,49 +335,10 @@ p {
   border: 1px solid var(--Nuturals-N-6);
 }
 
-.navigationBar .cities-dropdown-nav {
-  position: absolute;
-  top: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--Nuturals-White);
-  border: 1px solid var(--NuturalsN-5);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 250px;
-  overflow: auto;
-  z-index: 10000;
-  visibility: hidden;
-  opacity: 0;
-  width: 50%;
-  transition: 0.3s;
+.navigationBar .nav-items-container .nav-toggler-item a {
+  text-decoration: none;
+  color: var(--Nuturals-N-1);
 }
-.navigationBar .cities-dropdown-nav .cities-dropdown-item {
-  padding: 1rem 3rem 10px 0.7rem;
-  font-size: 0.8rem;
-  text-transform: capitalize;
-  border-right: 1px solid var(--NuturalsN-5); /* Add right border */
-  border-bottom: 1px solid var(--NuturalsN-5); /* Add bottom border */
-}
-.navigationBar .cities-dropdown-nav .cities-dropdown-item:hover {
-  color: var(--Nuturals-White);
-  background-color: var(--Primary-Primary);
-  cursor: pointer;
-}
-.navigationBar .cities-dropdown-nav::-webkit-scrollbar-thumb {
-  background-color: var(--Primary-Primary);
-  border-radius: 1px;
-  border: var(--Nuturals-N-6);
-  width: 10px;
-}
-.navigationBar .cities-dropdown-nav::-webkit-scrollbar {
-  width: 6px;
-  border-radius: 1px;
-  background-color: rgba(245, 227, 227, 0.2);
-  border: 1px solid var(--Nuturals-N-6);
-}
-
 
 .navigationBar ul li a svg {
   margin-left: 10px;
@@ -346,9 +349,9 @@ p {
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
 }
-.navigationBar .nav-items-container .nav-toggler-item a{
+.navbar-home-item a{
   text-decoration: none;
-  color: var(--Nuturals-N-1);
+  color: var(--Primary-Primary);
 }
 @media (1239px < width <1260px) {
   .navigationBar .nav-list-container ul li a {
@@ -415,6 +418,12 @@ p {
     width: 80%;
   }
 }
+@media(width<768px){
+  #categories-dropdown-collapse{
+    width: 100%;
+
+  }
+}
 @media (width<600px) {
   .navigationBar {
     padding: 0 0.5rem;
@@ -450,9 +459,6 @@ p {
     grid-template-columns: repeat(3, 1fr);
     overflow-x: hidden;
   }
-  #categories-dropdown-collapse {
-    width: 100%;
-  }
 }
 @media (width<400px) {
   .navigationBar {
@@ -462,17 +468,17 @@ p {
   }
   .navigationBar .nav-list-container .nav-icon-toggler {
     max-height: 70px;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
   .nav-items-container {
     top: 71px !important;
   }
   .logo-image {
-    width: 120px;
+    width: 105px;
   }
   .navigationBar .nav-icon-toggler p {
     height: 70px;
-    padding: 0rem 1.25rem;
+    padding: 0rem 0.6rem;
   }
   .navigationBar .header-search-bar {
     height: 2.3rem;

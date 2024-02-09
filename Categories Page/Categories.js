@@ -45,27 +45,26 @@ const mySwiper = new Swiper(".categories-swiper-container1", {
 
 //   navbar dropdown -----------------------------------------------------------------------------------
 //small screen
-const small_screen_cities_dropdown_button = document.getElementById(
-  "categories-id-collapse"
-);
-const dropdown_collapse = document.getElementById(
-  "categories-dropdown-collapse"
-);
+const small_screen_cities_dropdown_button = document.getElementById("categories-id-collapse");
+const dropdown_collapse = document.getElementById("categories-dropdown-collapse");
+
 small_screen_cities_dropdown_button.addEventListener("click", (e) => {
   e.preventDefault();
-  if (dropdown_collapse.style.visibility === "hidden") {
+  e.stopPropagation(); // Stop the event from propagating to the document
+
+  if (dropdown_collapse.style.visibility !== "visible") {
     dropdown_collapse.style.visibility = "visible";
     dropdown_collapse.style.opacity = "1";
-    console.log("s");
+    console.log("Dropdown shown");
   } else {
     dropdown_collapse.style.visibility = "hidden";
     dropdown_collapse.style.opacity = "0";
+    console.log("Dropdown hidden");
   }
 });
 
 document.addEventListener("click", (e) => {
-  const isClickInsideDropdown =
-    small_screen_cities_dropdown_button.contains(e.target) ||
+  const isClickInsideDropdown = small_screen_cities_dropdown_button.contains(e.target) ||
     dropdown_collapse.contains(e.target);
 
   if (!isClickInsideDropdown) {
@@ -73,7 +72,6 @@ document.addEventListener("click", (e) => {
     dropdown_collapse.style.opacity = "0";
   }
 });
-
 
 
 
@@ -154,24 +152,25 @@ document.addEventListener("click", (e) => {
 
 var navbarToggler = document.getElementById('navbar-toggler-id');
 var navbarDropdown = document.getElementById('navbar-toggler-items');
+var isDropdownVisible = false;
+
 // Toggle visibility when the toggler is clicked
 navbarToggler.addEventListener('click', event => {
   event.stopPropagation(); // Prevents the click event from reaching the document
-  navbarDropdown.style.visibility =
-    navbarDropdown.style.visibility === 'hidden' ? 'visible' : 'hidden';
-  navbarDropdown.style.opacity =
-    navbarDropdown.style.opacity === '0' ? '1' : '0';
+  isDropdownVisible = !isDropdownVisible; // Toggle the visibility state
+  navbarDropdown.style.visibility = isDropdownVisible ? 'visible' : 'hidden';
+  navbarDropdown.style.opacity = isDropdownVisible ? '1' : '0';
 });
+
 // Hide dropdown when clicking outside of it
 document.addEventListener('click', event => {
-  if (
-    navbarDropdown.style.visibility === 'visible' &&
-    !navbarDropdown.contains(event.target)
-  ) {
+  if (isDropdownVisible && !navbarDropdown.contains(event.target)) {
     navbarDropdown.style.visibility = 'hidden';
     navbarDropdown.style.opacity = '0';
+    isDropdownVisible = false; // Update the visibility state
   }
 });
+
 // Stop propagation when clicking inside the dropdown
 navbarDropdown.addEventListener('click', event => {
   event.stopPropagation(); // Prevents the click event from reaching the document

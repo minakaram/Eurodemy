@@ -81,6 +81,31 @@ document.addEventListener("click", (e) => {
 });
 
 
+var navbarToggler = document.getElementById('navbar-toggler-id');
+var navbarDropdown = document.getElementById('navbar-toggler-items');
+var isDropdownVisible = false;
+
+// Toggle visibility when the toggler is clicked
+navbarToggler.addEventListener('click', event => {
+  event.stopPropagation(); // Prevents the click event from reaching the document
+  isDropdownVisible = !isDropdownVisible; // Toggle the visibility state
+  navbarDropdown.style.visibility = isDropdownVisible ? 'visible' : 'hidden';
+  navbarDropdown.style.opacity = isDropdownVisible ? '1' : '0';
+});
+
+// Hide dropdown when clicking outside of it
+document.addEventListener('click', event => {
+  if (isDropdownVisible && !navbarDropdown.contains(event.target)) {
+    navbarDropdown.style.visibility = 'hidden';
+    navbarDropdown.style.opacity = '0';
+    isDropdownVisible = false; // Update the visibility state
+  }
+});
+
+// Stop propagation when clicking inside the dropdown
+navbarDropdown.addEventListener('click', event => {
+  event.stopPropagation(); // Prevents the click event from reaching the document
+});
 
 
 
