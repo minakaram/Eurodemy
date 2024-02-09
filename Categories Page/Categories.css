@@ -423,6 +423,10 @@ p {
     width: 100%;
 
   }
+  .logo-image {
+    width: 120px;
+    padding: 0.938rem 0rem 0.938rem 0;
+  }
 }
 @media (width<600px) {
   .navigationBar {
@@ -437,6 +441,7 @@ p {
     margin-right: 1px;
   }
   .logo-image {
+    width: 120px;
     padding: 0.938rem 0rem 0.938rem 0;
   }
   .changeTo-arabic-courses-box p {
