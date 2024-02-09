@@ -347,6 +347,12 @@ a {
   fill: var(--Primary-Primary) !important;
 }
 
+
+.navigationBar .nav-items-container .nav-toggler-item a{
+  text-decoration: none;
+  color: var(--Nuturals-N-1);
+}
+
 @media (1024px < width <1240px) {
   .logo-image {
     padding-right: 0.5rem;

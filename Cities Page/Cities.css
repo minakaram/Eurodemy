@@ -335,6 +335,12 @@ p {
   background-color: rgba(245, 227, 227, 0.2);
   border: 1px solid var(--Nuturals-N-6);
 }
+
+.navigationBar .nav-items-container .nav-toggler-item a {
+  text-decoration: none;
+  color: var(--Nuturals-N-1);
+}
+
 @media (1239px < width <1260px) {
   .navigationBar .nav-list-container ul li a {
     padding: 0px 1rem;

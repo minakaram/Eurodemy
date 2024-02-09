@@ -346,6 +346,12 @@ a {
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
 }
+
+.navigationBar .nav-items-container .nav-toggler-item a {
+  text-decoration: none;
+  color: var(--Nuturals-N-1);
+}
+
 @media (1239px < width < 1350px) {
   .navigationBar .nav-list-container ul li a {
     padding: 0px 0.7rem;
@@ -764,7 +770,7 @@ a {
   .eurodemy-offices-section {
     padding-bottom: 6rem;
   }
-  .selected-office-map{
+  .selected-office-map {
     min-height: 28rem;
   }
 }

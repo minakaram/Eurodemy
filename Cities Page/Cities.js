@@ -92,6 +92,35 @@ document.addEventListener("click", (e) => {
     console.log("o");
   }
 });
+
+
+
+
+var navbarToggler = document.getElementById('navbar-toggler-id');
+var navbarDropdown = document.getElementById('navbar-toggler-items');
+// Toggle visibility when the toggler is clicked
+navbarToggler.addEventListener('click', event => {
+  event.stopPropagation(); // Prevents the click event from reaching the document
+  navbarDropdown.style.visibility =
+    navbarDropdown.style.visibility === 'hidden' ? 'visible' : 'hidden';
+  navbarDropdown.style.opacity =
+    navbarDropdown.style.opacity === '0' ? '1' : '0';
+});
+// Hide dropdown when clicking outside of it
+document.addEventListener('click', event => {
+  if (
+    navbarDropdown.style.visibility === 'visible' &&
+    !navbarDropdown.contains(event.target)
+  ) {
+    navbarDropdown.style.visibility = 'hidden';
+    navbarDropdown.style.opacity = '0';
+  }
+});
+// Stop propagation when clicking inside the dropdown
+navbarDropdown.addEventListener('click', event => {
+  event.stopPropagation(); // Prevents the click event from reaching the document
+});
+
 //------------------------------------ cities slider---------------------------------
 let currentIndex = 0;
 
