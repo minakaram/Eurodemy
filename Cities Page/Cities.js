@@ -38,38 +38,70 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
-
 const cities_Button_small_Screen = document.getElementById("collapse-dropdown");
-const small_screen_dropdown = document.getElementById(
-  "cities-dropdown-collapse-id"
-);
+const small_screen_dropdown = document.getElementById("cities-dropdown-collapse-id");
+let isCopllaseDropdownVisible = false;
 
-cities_Button_small_Screen.addEventListener("click", () => {
-  const computedStyles = window.getComputedStyle(small_screen_dropdown);
+cities_Button_small_Screen.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
 
-  if (
-    computedStyles.visibility === "hidden" ||
-    computedStyles.visibility === ""
-  ) {
-    console.log("in");
+  if (!isCopllaseDropdownVisible) {
+    closeOtherDropdowns();
     small_screen_dropdown.style.visibility = "visible";
     small_screen_dropdown.style.opacity = "1";
+    isCopllaseDropdownVisible = true;
   } else {
     small_screen_dropdown.style.visibility = "hidden";
     small_screen_dropdown.style.opacity = "0";
-    console.log("no");
+    isCopllaseDropdownVisible = false;
   }
 });
 
+var navbarToggler = document.getElementById("navbar-toggler-id");
+var navbarDropdown = document.getElementById("navbar-toggler-items");
+let isNavbarDropdownVisible = false;
+
+navbarToggler.addEventListener("click", (event) => {
+  event.stopPropagation();
+
+  if (isNavbarDropdownVisible) {
+    navbarDropdown.style.visibility = "hidden";
+    navbarDropdown.style.opacity = "0";
+    isNavbarDropdownVisible = false;
+  } else {
+    closeOtherDropdowns();
+    navbarDropdown.style.visibility = "visible";
+    navbarDropdown.style.opacity = "1";
+    isNavbarDropdownVisible = true;
+  }
+});
+
+document.addEventListener("click", (event) => {
+  closeOtherDropdowns();
+});
+
+function closeOtherDropdowns() {
+  if (isCopllaseDropdownVisible) {
+    small_screen_dropdown.style.visibility = "hidden";
+    small_screen_dropdown.style.opacity = "0";
+    isCopllaseDropdownVisible = false;
+  }
+
+  if (isNavbarDropdownVisible) {
+    navbarDropdown.style.visibility = "hidden";
+    navbarDropdown.style.opacity = "0";
+    isNavbarDropdownVisible = false;
+  }
+}
 const cities_Nav_Button = document.getElementById("active-ul-list");
 const cities_Dropdown = document.getElementById("cities-dropdown-id");
 
 cities_Nav_Button.addEventListener("click", (e) => {
   e.preventDefault();
-  
+
   const computedStyles = window.getComputedStyle(cities_Dropdown);
-  
+
   if (computedStyles.visibility === "hidden") {
     console.log("in");
     cities_Dropdown.style.visibility = "visible";
@@ -91,34 +123,6 @@ document.addEventListener("click", (e) => {
     cities_Dropdown.style.opacity = "0";
     console.log("o");
   }
-});
-
-
-
-var navbarToggler = document.getElementById('navbar-toggler-id');
-var navbarDropdown = document.getElementById('navbar-toggler-items');
-var isDropdownVisible = false;
-
-// Toggle visibility when the toggler is clicked
-navbarToggler.addEventListener('click', event => {
-  event.stopPropagation(); // Prevents the click event from reaching the document
-  isDropdownVisible = !isDropdownVisible; // Toggle the visibility state
-  navbarDropdown.style.visibility = isDropdownVisible ? 'visible' : 'hidden';
-  navbarDropdown.style.opacity = isDropdownVisible ? '1' : '0';
-});
-
-// Hide dropdown when clicking outside of it
-document.addEventListener('click', event => {
-  if (isDropdownVisible && !navbarDropdown.contains(event.target)) {
-    navbarDropdown.style.visibility = 'hidden';
-    navbarDropdown.style.opacity = '0';
-    isDropdownVisible = false; // Update the visibility state
-  }
-});
-
-// Stop propagation when clicking inside the dropdown
-navbarDropdown.addEventListener('click', event => {
-  event.stopPropagation(); // Prevents the click event from reaching the document
 });
 
 //------------------------------------ cities slider---------------------------------

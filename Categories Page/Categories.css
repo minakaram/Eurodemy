@@ -349,7 +349,7 @@ p {
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
 }
-.navbar-home-item a{
+.navbar-home-item a {
   text-decoration: none;
   color: var(--Primary-Primary);
 }
@@ -418,10 +418,9 @@ p {
     width: 80%;
   }
 }
-@media(width<768px){
-  #categories-dropdown-collapse{
+@media (width<768px) {
+  #categories-dropdown-collapse {
     width: 100%;
-
   }
   .logo-image {
     width: 120px;
@@ -573,10 +572,10 @@ p {
 }
 @media (width<400px) {
   .heading-right-vector-abslute {
-    width: 13% !important;
+    width: 11% !important;
   }
   .heading-left-vector-abslute {
-    width: 13% !important;
+    width: 11% !important;
   }
 }
 

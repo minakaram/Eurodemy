@@ -80,8 +80,10 @@ p {
   align-items: center;
   width: 100%;
   padding: 0px 2.5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   max-height: 80px;
   color: var(--Nuturals-N-1);
@@ -175,6 +177,7 @@ p {
   display: none !important;
   margin-left: 1rem;
   position: relative;
+  overflow: hidden;
   height: 100% !important;
 }
 
@@ -490,27 +493,35 @@ p {
 .course-category-heading {
   position: relative;
   z-index: 10;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
 }
 .course-category-heading .flag-cities-abslute {
   position: absolute;
   right: 0;
-  top: 0%;
+  bottom: 60%;
 }
-.course-category-heading h1 {
+
+.course-category-heading .category-heading-container h1 {
   position: relative;
   width: 100%;
   text-align: center;
-  padding: 5.9rem 1rem;
 }
 
-.course-category-heading h1 .heading-left-vector-abslute {
+.course-category-heading
+  .category-heading-container
+  h1
+  .heading-left-vector-abslute {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
   width: 30%;
 }
-.course-category-heading h1 .heading-right-vector-abslute {
+.course-category-heading
+  .category-heading-container
+  h1
+  .heading-right-vector-abslute {
   width: 30%;
   position: absolute;
   top: 50%;
@@ -534,12 +545,6 @@ p {
   font-family: rethinkExtraBold-800;
 }
 @media (width<768px) {
-  .course-category-heading h1 {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    padding: 5.9rem 1rem;
-  }
   .heading-right-vector-abslute {
     width: 19% !important;
     top: 52% !important;
@@ -1127,6 +1132,7 @@ p {
   .cities-search-input input {
     /* align-self: flex-end; */
     width: 100%;
+    font-size: 14px;
   }
 }
 @media (width<400px) {
@@ -1135,6 +1141,11 @@ p {
   }
   .view-course-city p {
     padding: 15px;
+  }
+  .cities-search-input input {
+    /* align-self: flex-end; */
+    width: 100%;
+    font-size: 11px;
   }
 }
 
