@@ -110,7 +110,7 @@ navbarDropdown.addEventListener('click', event => {
 // swiper ---------------------------------------------------------------------------------------------
 
 var myStaffSwiper = new Swiper(".swiper-container1", {
-  initialSlide: 2,
+  initialSlide: 0,
   loop: false,
   pagination: {
     el: ".experience-swiper-pagination",
