@@ -221,7 +221,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   position: absolute;
   left: 0px;
-  top: 81px;
+  top:100%;
   background-color: white;
   width: 30rem;
   transition: 0.3s;
@@ -426,11 +426,13 @@ a {
     display: none;
   }
   .navigationBar .header-search-bar {
-    height: 3rem;
-    width: 3rem;
+    height: 3.6rem;
+    width: 3.6rem;
     margin-right: 5px;
   }
-
+  .changeTo-arabic-courses-box{
+    height: 3.6rem;
+  }
   .navigationBar .nav-items-container {
     width: 100vw;
     left: 50%;

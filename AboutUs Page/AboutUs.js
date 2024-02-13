@@ -1,18 +1,4 @@
-const allLink = document.querySelectorAll('a');
 
-allLink.forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    const href = link.getAttribute('href');
-
-    if (href === '#') {
-      window.scrollTo({
-        top: 0,
-        left: 100,
-        behavior: 'smooth',
-      });
-    }
-  });
-});
 
 //   navbar dropdown ----------------------------------------------------------------------------------
 

@@ -188,7 +188,9 @@ p {
 .logo-image {
   padding: 0.938rem 2rem 0.938rem 0;
 }
-
+.logo-image {
+  padding: 0.938rem 2rem 0.938rem 0;
+}
 .navigationBar .nav-list-container .nav-icon-toggler {
   display: none !important;
   margin-left: 1rem;
