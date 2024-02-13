@@ -479,8 +479,8 @@ a {
     justify-content: center;
     align-items: center;
   }
-  .hero-section{
-padding-bottom: 3rem;
+  .hero-section {
+    padding-bottom: 3rem;
   }
 }
 /* --------------------------------------------------hero section ------------------------------------- */
@@ -589,7 +589,7 @@ padding-bottom: 3rem;
 .hero-section .hero-social-icons .whatsapp-abslute:hover {
   opacity: 1;
 }
-@media screen and (max-width: 1025px) {
+@media (width< 1025px) {
   .hero-container {
     max-width: 90%;
     margin: auto;
@@ -599,7 +599,7 @@ padding-bottom: 3rem;
     width: 86%;
   }
 }
-@media (width<769px) {
+@media (width<768px) {
   .hero-social-icons {
     width: 100%;
     justify-content: space-evenly;
@@ -613,6 +613,44 @@ padding-bottom: 3rem;
   }
   .or-yellow {
     width: 50%;
+  }
+  .hero-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 4rem 0rem 3rem;
+  }
+  .header-first {
+    /* font-size: 80%; */
+    font-size: 2.3rem;
+  }
+  .experience-section{
+    max-width: 90% !important;
+    font-size: 90%;
+  }
+}
+@media (width<400px) {
+  .hero-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 2rem 0rem 3rem;
+    font-size: 96% !important;
+  }
+  .header-first {
+    /* font-size: 80%; */
+    font-size: 2rem !important;
+  }
+  .hero-social-icons {
+    padding: 0rem 1rem;
+  }
+  .available-jobs-container {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+  }
+  .submit-container button{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    width: 90%;
   }
 }
 /* ---------------------------------------------- available opportunities ------------------------------*/
