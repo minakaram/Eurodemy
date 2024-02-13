@@ -432,7 +432,7 @@ a {
     width: 3.6rem;
     margin-right: 5px;
   }
-  .changeTo-arabic-courses-box{
+  .changeTo-arabic-courses-box {
     height: 3.6rem;
   }
   .navigationBar .nav-items-container {
@@ -1278,6 +1278,32 @@ a {
   }
   .submit-container .right-side-submit {
     padding-left: 2rem;
+  }
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .name-phone-container
+    .name-container
+    input,
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .name-phone-container
+    .phone-container
+    input,
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .email-country-container
+    .email-container
+    input,
+  .tailored-form-section
+    .form-container
+    .contact-datails
+    .email-country-container
+    .country-container
+    input {
+    padding: 0.9rem 1.5rem 0.9rem 4.5rem;
   }
 }
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
