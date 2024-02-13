@@ -217,7 +217,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   position: absolute;
   left: 0px;
-  top: 81px;
+  top: 100%;
   background-color: white;
   width: 30rem;
   transition: 0.3s;
@@ -406,6 +406,9 @@ a {
   }
   #categories-dropdown-collapse {
     width: 80%;
+  }
+  html {
+    font-size: 80%;
   }
 }
 

@@ -188,9 +188,7 @@ p {
 .logo-image {
   padding: 0.938rem 2rem 0.938rem 0;
 }
-.logo-image {
-  padding: 0.938rem 2rem 0.938rem 0;
-}
+
 .navigationBar .nav-list-container .nav-icon-toggler {
   display: none !important;
   margin-left: 1rem;
@@ -399,6 +397,9 @@ p {
   }
   #categories-dropdown-collapse {
     width: 80%;
+  }
+  html {
+    font-size: 80%;
   }
 }
 
@@ -731,10 +732,12 @@ p {
   .vision-left-side {
     width: 100% !important;
     margin-bottom: 3rem;
+    padding-left: 2rem;
   }
   .vision-left-side p {
     width: 100% !important;
     margin-bottom: 1rem;
+
   }
   .vision-right-side {
     width: 100% !important;
