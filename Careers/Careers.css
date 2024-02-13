@@ -479,6 +479,9 @@ a {
     justify-content: center;
     align-items: center;
   }
+  .hero-section{
+padding-bottom: 3rem;
+  }
 }
 /* --------------------------------------------------hero section ------------------------------------- */
 .hero-section {
