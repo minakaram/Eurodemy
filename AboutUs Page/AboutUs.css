@@ -344,7 +344,7 @@ p {
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
 }
-.navigationBar .nav-items-container .nav-toggler-item a{
+.navigationBar .nav-items-container .nav-toggler-item a {
   text-decoration: none;
   color: var(--Nuturals-N-1);
 }
@@ -398,11 +398,16 @@ p {
   #categories-dropdown-collapse {
     width: 80%;
   }
-  html {
-    font-size: 80%;
+}
+@media (width<768px) {
+  #categories-dropdown-collapse {
+    width: 100%;
+  }
+  .logo-image {
+    width: 120px;
+    padding: 0.938rem 0rem 0.938rem 0;
   }
 }
-
 @media (width<600px) {
   .navigationBar {
     padding: 0 0.5rem;
@@ -565,7 +570,7 @@ p {
 }
 @media (768px < width<1025px) {
   .hero-section {
- height: auto;
+    height: auto;
   }
   .hero-section p {
     width: 80%;
@@ -737,7 +742,6 @@ p {
   .vision-left-side p {
     width: 100% !important;
     margin-bottom: 1rem;
-
   }
   .vision-right-side {
     width: 100% !important;
@@ -1017,7 +1021,6 @@ p {
     width: 90%;
   }
 }
-
 
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {

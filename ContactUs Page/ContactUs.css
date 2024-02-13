@@ -407,11 +407,16 @@ a {
   #categories-dropdown-collapse {
     width: 80%;
   }
-  html {
-    font-size: 80%;
+}
+@media (width<768px) {
+  #categories-dropdown-collapse {
+    width: 100%;
+  }
+  .logo-image {
+    width: 120px;
+    padding: 0.938rem 0rem 0.938rem 0;
   }
 }
-
 @media (width<600px) {
   .navigationBar {
     padding: 0 0.5rem;
@@ -431,12 +436,15 @@ a {
     display: none;
   }
   .navigationBar .header-search-bar {
-    height: 3.6rem;
-    width: 3.6rem;
+    height: 3rem;
+    width: 3rem;
     margin-right: 5px;
   }
+  .navigation-bar-right-side {
+    margin-left: 5px !important;
+  }
   .changeTo-arabic-courses-box {
-    height: 3.6rem;
+    height: 3rem;
   }
   .navigationBar .nav-items-container {
     width: 100vw;
@@ -1244,8 +1252,12 @@ a {
     width: 10px;
     height: 10px;
   }
-  html {
+  .form-main{
     font-size: 80%;
+  }
+  .tailored-form-section .fill-form-paragraph {
+width: 90%;
+margin: auto;
   }
 }
 @media (width<768px) {
