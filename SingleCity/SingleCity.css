@@ -1,0 +1,790 @@
+@font-face {
+  font-family: rubikRegular-400;
+  src: url(../Assets//Rubik/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: rubikMedium-500;
+  src: url(../Assets//Rubik/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: rubikSemiBold-600;
+  src: url(../Assets//Rubik/Rubik-SemiBold.ttf);
+}
+@font-face {
+  font-family: rubikBold-700;
+  src: url(../Assets//Rubik/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkRegular-400;
+  src: url(../Assets/Rethink_sans/RethinkSans-Regular.ttf);
+}
+@font-face {
+  font-family: rethinkMedium-500;
+  src: url(../Assets/Rethink_sans/RethinkSans-Medium.ttf);
+}
+@font-face {
+  font-family: rethinkBold-700;
+  src: url(../Assets/Rethink_sans/RethinkSans-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkExtraBold-800;
+  src: url(../Assets/Rethink_sans/RethinkSans-ExtraBold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Nuturals-N-1: #140000;
+  --Nuturals-N-2: #262121;
+  --Nuturals-N-3: #594e4e;
+  --Nuturals-N-7: #fcfcfc;
+  --Nuturals-N-6: #f2eded;
+  --Nuturals-White: #fff;
+  --Primary-Primary: #ad1519;
+  --Ternary-Ternary: #140000;
+  --NuturalsN-5: #bfb6b6;
+  --secondary: #fee1e1;
+  --Success-Success---Primary: #16ad38;
+  --Secondary-Secondary: #fabd00;
+}
+html {
+  font-size: 100%;
+}
+p {
+  margin-bottom: 0 !important;
+}
+.navbar-toggle-container {
+  width: 40px;
+  background-color: rgba(128, 128, 128, 0.589);
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fff;
+  color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--Primary-Primary);
+  border-radius: 0;
+  height: 80px;
+}
+
+/* --------------------------------------------- navbar -------------------------------------------------- */
+.navigationBar {
+  background-color: var(--Nuturals-White);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0px 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-height: 80px;
+  color: var(--Nuturals-N-1);
+  box-shadow: 0px 0px 5px 0px rgba(20, 0, 0, 0.16);
+}
+.navigationBar .nav-list-container {
+  margin: auto;
+}
+.navigationBar ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+  margin-right: 1rem;
+  align-self: center;
+}
+.navigationBar ul li {
+  height: 100%;
+  /* margin: 0px 2px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-list {
+  background-color: var(--secondary);
+}
+.active-list a {
+  color: var(--Primary-Primary) !important;
+}
+.navigationBar ul li a {
+  text-decoration: none;
+  color: var(--Nuturals-N-1);
+  text-align: center;
+  padding: 0px 1.4rem;
+  height: 5rem;
+  font-family: rubikRegular-400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 300ms;
+}
+
+.navigationBar ul li a:hover {
+  color: var(--Primary-Primary);
+}
+.navigationBar ul li a:hover path {
+  fill: var(--Primary-Primary) !important;
+}
+.navigationBar .header-search-bar {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 10px;
+}
+
+.navigationBar .changeTo-arabic-courses-box .arabic-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.changeTo-arabic-courses-box {
+  background-color: var(--Ternary-Ternary);
+  padding: 0.438rem 0.5rem 0.438rem 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  height: 3rem;
+}
+.arabic-course-txt {
+  color: var(--Nuturals-White);
+  font-family: rubikRegular-400;
+  font-size: 0.875rem;
+  margin: 0 !important;
+}
+.navigationBar .navigation-bar-right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end !important;
+  margin-left: auto;
+}
+.logo-image {
+  padding: 0.938rem 2rem 0.938rem 0;
+}
+.navigationBar .nav-list-container .nav-icon-toggler {
+  display: none !important;
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+  height: 100% !important;
+}
+
+.navigationBar .nav-icon-toggler p {
+  color: #ad1519;
+  height: 80px;
+  padding: 0rem 1.25rem;
+  text-align: center;
+  font-family: rethinkExtraBold-800;
+  background-color: var(--secondary);
+  line-height: 80px;
+}
+.navigationBar .nav-icon-toggler svg {
+  margin-left: 10px;
+  height: 25px;
+}
+/* toggler items */
+.navigationBar .nav-items-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  left: 0px;
+  top: 81px;
+  background-color: white;
+  width: 30rem;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.navigationBar .nav-items-container .nav-toggler-item {
+  padding: 20px 10px;
+  border: 0.7px solid rgba(105, 105, 105, 0.39);
+  text-align: center;
+}
+.navigationBar .nav-items-container .careers {
+  grid-column: span 2;
+  text-align: center;
+}
+.navigationBar .cities-dropdown-nav {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
+
+#cities-dropdown-collapse-id {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
+
+.navigationBar .cities-dropdown-nav .cities-dropdown-item {
+  padding: 1rem 3rem 10px 0.7rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border-right: 1px solid var(--NuturalsN-5); /* Add right border */
+  border-bottom: 1px solid var(--NuturalsN-5); /* Add bottom border */
+}
+.navigationBar .cities-dropdown-nav .cities-dropdown-item:hover {
+  color: var(--Nuturals-White);
+  background-color: var(--Primary-Primary);
+  cursor: pointer;
+}
+.navigationBar .cities-dropdown-nav::-webkit-scrollbar-thumb {
+  background-color: var(--Primary-Primary);
+  border-radius: 1px;
+  border: var(--Nuturals-N-6);
+  width: 10px;
+}
+.navigationBar .cities-dropdown-nav::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 1px;
+  background-color: rgba(245, 227, 227, 0.2);
+  border: 1px solid var(--Nuturals-N-6);
+}
+.navigationBar .categories-dropdown-nav {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
+#categories-dropdown-collapse {
+  position: absolute;
+  top: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--Nuturals-White);
+  border: 1px solid var(--NuturalsN-5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  overflow: auto;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  width: 50%;
+  transition: 0.3s;
+}
+.navigationBar .categories-dropdown-nav .categories-dropdown-item {
+  padding: 1rem 1rem 10px 0.7rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border-right: 1px solid var(--NuturalsN-5); /* Add right border */
+  border-bottom: 1px solid var(--NuturalsN-5); /* Add bottom border */
+}
+.navigationBar .categories-dropdown-nav .categories-dropdown-item:hover {
+  color: var(--Nuturals-White);
+  background-color: var(--Primary-Primary);
+  cursor: pointer;
+}
+.navigationBar .categories-dropdown-nav::-webkit-scrollbar-thumb {
+  background-color: var(--Primary-Primary);
+  border-radius: 1px;
+  border: var(--Nuturals-N-6);
+  width: 10px;
+}
+.navigationBar .categories-dropdown-nav::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 1px;
+  background-color: rgba(245, 227, 227, 0.2);
+  border: 1px solid var(--Nuturals-N-6);
+}
+
+.navigationBar .nav-items-container .nav-toggler-item a {
+  text-decoration: none;
+  color: var(--Nuturals-N-1);
+}
+
+@media (1239px < width <1260px) {
+  .navigationBar .nav-list-container ul li a {
+    padding: 0px 1rem;
+  }
+}
+@media (1024px < width <1240px) {
+  .logo-image {
+    padding-right: 0.5rem;
+    width: 148px;
+  }
+  .navigationBar {
+    /* padding: 0 0.8rem; */
+  }
+  .navigationBar .nav-list-container ul li {
+    /* margin: 0px 8px; */
+  }
+  .navigationBar .nav-list-container ul li a {
+    padding: 0px 0.5rem;
+  }
+  .navigationBar {
+    padding: 0px 1rem;
+  }
+}
+
+@media (width<1025px) {
+  .header-section {
+    height: 70vh;
+  }
+  .navigationBar .nav-list-container ul {
+    display: none;
+  }
+  .navigationBar {
+    justify-content: space-between;
+  }
+  .navigationBar .nav-icon-toggler p {
+    height: 80px;
+    padding: 0rem 1.25rem;
+  }
+  .navigationBar .nav-list-container .nav-icon-toggler {
+    display: flex !important;
+    margin-left: 1rem;
+    margin: auto;
+  }
+  .navbar-home-item {
+    max-height: 80px;
+  }
+  .navigationBar .header-search-bar {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 10px;
+  }
+  .navigationBar .nav-items-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navigation-bar-right-side {
+    margin-left: 0 !important;
+  }
+  .navigationBar .cities-dropdown-nav .cities-dropdown-item {
+    padding-right: 1.5rem;
+  }
+  #cities-dropdown-collapse-id {
+    width: 80%;
+  }
+}
+@media (width<600px) {
+  .navigationBar {
+    padding: 0 0.5rem;
+  }
+  .navigationBar .nav-icon-toggler p {
+    height: 80px;
+    padding: 0rem 1.25rem;
+  }
+  .navigationBar .nav-icon-toggler {
+    margin: 0 !important;
+    margin-right: 1px;
+  }
+  .logo-image {
+    padding: 0.938rem 0rem 0.938rem 0;
+  }
+  .changeTo-arabic-courses-box p {
+    display: none;
+  }
+  .navigationBar .header-search-bar {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .navigationBar .nav-items-container {
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #cities-dropdown-collapse-id {
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: hidden;
+  }
+}
+@media (width<400px) {
+  .navigationBar {
+    padding: 0 0.1rem;
+    max-height: 70px;
+    /* overflow: hidden; */
+  }
+  .navigationBar .nav-list-container .nav-icon-toggler {
+    max-height: 70px;
+    /* overflow: hidden; */
+  }
+  .nav-items-container {
+    top: 71px !important;
+  }
+  .logo-image {
+    width: 120px;
+  }
+  .navigationBar .nav-icon-toggler p {
+    height: 70px;
+    padding: 0rem 1.25rem;
+  }
+  .navigationBar .header-search-bar {
+    height: 2.3rem;
+    width: 2.3rem;
+    margin-right: 1px;
+  }
+  .changeTo-arabic-courses-box {
+    width: 2.3rem;
+    height: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-toggle-container {
+    height: 70px;
+  }
+  #cities-dropdown-collapse-id {
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: hidden;
+  }
+  .navigationBar .cities-dropdown-nav .cities-dropdown-item {
+    padding-right: 1rem;
+  }
+}
+
+
+/*-------------------------------------------- Business ethics -----------------------------------------------*/
+.business-ethics {
+  width: 80%;
+  margin: 6rem auto;
+  text-align: center;
+}
+.business-ethics .undeline-vector {
+  width: 100%;
+}
+.business-ethics h2 {
+  font-weight: 700;
+  color: black;
+  width: 100%;
+}
+.business-ethics p {
+  color: var(--Primary-Primary);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.business-ethics button {
+  width: 45%;
+  margin-top: 4rem;
+  padding: 1rem 0rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 1px solid var(--Nuturals-N-3);
+  background-color: var(--Nuturals-N-7);
+  display: none;
+}
+.business-ethics .apply-down-arrow {
+  display: none;
+}
+
+.job-details-container {
+  padding: 5rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-right: 5rem;
+}
+
+.job-details-container .job-information {
+  width: 60%;
+  padding-right: 2rem;
+}
+.job-details-container .job-information .available-opportunities-container,
+.job-details-container .job-information .job-description-container,
+.job-details-container .job-information .responsibilities-container,
+.job-details-container .job-information .qualifications-container,
+.job-details-container .job-information .benefits-container,
+.job-details-container .job-information .other-details-container {
+  margin-bottom: 4rem;
+}
+.job-details-container .job-information .available-opportunities-container h4,
+.job-details-container .job-information .job-description-container h4,
+.job-details-container .job-information .responsibilities-container h4,
+.job-details-container .job-information .qualifications-container h4,
+.job-details-container .job-information .benefits-container h4,
+.job-details-container .job-information .other-details-container h4 {
+  color: black;
+  border-bottom: 1px solid black;
+  flex: 1;
+  font-weight: bold;
+  padding: 7px 0px;
+  width: 100%;
+}
+.job-details-container
+  .job-information
+  .available-opportunities-container
+  .job-discriptive-paragraph,
+.job-details-container
+  .job-information
+  .job-description-container
+  .job-discriptive-paragraph,
+.job-details-container
+  .job-information
+  .responsibilities-container
+  .job-discriptive-paragraph,
+.job-details-container
+  .job-information
+  .qualifications-container
+  .job-discriptive-paragraph,
+.job-details-container
+  .job-information
+  .benefits-container
+  .job-discriptive-paragraph,
+.job-details-container
+  .job-information
+  .other-details-container
+  .job-discriptive-paragraph {
+  padding-left: 5rem;
+  margin-top: 1rem;
+  color: black;
+  width: 95%;
+}
+.job-details-container
+  .job-information
+  .available-opportunities-container
+  .job-discriptive-paragraph
+  span {
+  color: var(--Primary-Primary);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.job-information .yellow-vector {
+  margin-right: 10px;
+}
+.job-discriptive-paragraph i {
+  font-size: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+/* job apply */
+
+.job-apply {
+  width: 35%;
+  height: 100%;
+  border: 1px solid var(--Nuturals-N-3);
+  padding-bottom: 1rem;
+}
+.job-apply h5 {
+  background-color: black;
+  color: var(--Nuturals-White);
+  text-align: center;
+  padding: 1rem 0rem;
+}
+.job-apply .custom-input-container {
+  position: relative;
+  margin: 1rem 0rem;
+  margin: 2rem auto;
+  width: 90%;
+}
+.job-apply .custom-input-container span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--NuturalsN-5);
+  font-size: 0.8rem;
+}
+.job-apply .custom-input-container textarea {
+  width: 100%;
+  height: 130px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--Nuturals-N-7);
+  border: none;
+  outline: none;
+  border-left: 2px solid var(--Nuturals-N-3);
+  border-right: 2px solid var(--Nuturals-N-3);
+}
+.job-apply .custom-input-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.job-apply .custom-input-container input {
+  width: 100%;
+  padding: 0.7rem 4rem;
+  outline: none;
+  border: none;
+  border-right: 2px solid var(--Nuturals-N-3);
+  background-color: var(--Nuturals-N-7);
+  font-size: 0.8rem;
+}
+.job-apply .custom-cv-container,
+.job-apply .custom-cover-container {
+  position: relative;
+  margin: 1rem 0rem;
+  margin: 2rem auto;
+  width: 90%;
+}
+.job-apply .custom-cv-container input[type="file"],
+.job-apply .custom-cover-container input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.job-apply .custom-cv-container input[type="text"],
+.job-apply .custom-cover-container input[type="text"] {
+  width: 100%;
+  border: none;
+  border-right: 2px solid var(--Nuturals-N-2);
+  background-color: var(--Nuturals-N-7);
+  outline: none;
+  font-size: 0.9rem;
+  padding: 0.7rem 4rem;
+  font-size: 0.8rem;
+}
+
+.job-apply .custom-cv-container label,
+.job-apply .custom-cover-container label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+}
+
+.job-apply .custom-cv-container label img,
+.job-apply .custom-cover-container label img {
+  width: 90%;
+  cursor: pointer;
+}
+
+.job-apply .custom-cv-container .upload-image,
+.job-apply .custom-cover-container .upload-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.job-apply .custom-cover-container span {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--NuturalsN-5);
+  font-size: 0.8rem;
+}
+.job-apply button {
+  width: 60%;
+  display: block;
+  margin: auto;
+  border: none;
+  outline: none;
+  padding: 0.7rem;
+  color: var(--Nuturals-White);
+  background-color: var(--Nuturals-N-3);
+  font-weight: 600;
+}
+.form-pointer {
+  display: none;
+}
+@media (width<1025px) {
+  .job-details-container {
+    flex-direction: column;
+    padding-right: 0;
+    padding: 0rem 0rem 8rem;
+  }
+  .business-ethics {
+    width: 95%;
+  }
+  .business-ethics button {
+    display: inline-block;
+  }
+  .job-information .yellow-vector {
+    margin-left: -50px;
+  }
+  .business-ethics .apply-down-arrow {
+    display: inline-block;
+  }
+  .job-information {
+    width: 95% !important;
+  }
+  .job-information h4 {
+    width: 100%;
+  }
+  .job-apply {
+    width: 90%;
+    margin: auto;
+  }
+  .job-discriptive-paragraph {
+    padding-left: 1rem !important;
+    width: 100% !important;
+  }
+  .form-pointer {
+    display: block;
+  }
+}
+@media (width< 768px) {
+  .job-details-container {
+    padding-bottom: 7rem;
+  }
+  .job-information {
+    width: 100% !important;
+  }
+  .business-ethics button {
+    width: 90%;
+  }
+}
+@media (width<400px) {
+  .navigation-box-container {
+    justify-content: center;
+  }
+  .navigation-box {
+    margin-left: 0;
+  }
+  .business-ethics h2 {
+    font-size: 1.1rem;
+  }
+}
