@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="SingleCity.css">
-
-    <title>City Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="SingleCity.css">
+  <link rel="stylesheet" href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="jquery.min.js"></script>
+  <title>City Page</title>
 </head>
 
 <body>
@@ -193,19 +196,281 @@
       <div class="categories-dropdown-item">Sales Manager</div>
     </div>
   </nav>
-    <!--------------------------------------------- navigation box --------------------------------------------------->
-    <div class="navigation-box-container">
-        <div class="navigation-box">
-            <a class="anchor-back" href="../Careers/Careers.html"><img class="back-image" src="Assets/back-arrow.svg"
-                    alt="back" /></a>
-            <span class="careers-span"><a href="../Careers/Careers.html">Careers</a></span>
-            <img src="Assets/right-arrow.svg" alt="arrow" />
-            <span class="Opportunity-details">Opportunity details</span>
+  <!--------------------------------------------- navigation box --------------------------------------------------->
+  <div class="navigation-box-container">
+    <div class="navigation-box">
+      <a class="anchor-back" href="../Cities Page/Cities.html"><img class="back-image" src="Assets/back-arrow.svg"
+          alt="back" /></a>
+      <span class="careers-span"><a href="../Cities Page/Cities.html">Cities</a></span>
+      <img src="Assets/right-arrow.svg" alt="arrow" />
+      <span class="Opportunity-details">Madrid</span>
+    </div>
+  </div>
+  <!--------------------------------------------- hero section ----------------------------------------------------->
+  <div class="hero-section">
+    <div class="hero-left-side">
+      <h4>Courses in</h4>
+      <div class="hero-left-inner">
+        <h1>Madrid</h1>
+        <p>Madrid is one of our major centers for our courses and development trainings and other education
+          services, currently we have <span class="highlighted-red">40</span> available courses, and <span
+            class="highlighted-red">2</span> upcoming course on the way .</p>
+
+
+      </div>
+      <div class="download-container">
+        <button class="excel-download">Download Full courses list [Excel] <img src="Assets/download.svg"
+            alt="excel-download"></button>
+        <button class="pdf-download">Download Full courses list [PDF] <img src="Assets/download.svg"
+            alt="pdf-download"></button>
+      </div>
+    </div>
+    <div class="hero-right-side">
+      <img src="Assets/yellowRect.png" alt="yellow-rect" class="yellow-rect">
+      <img src="Assets/redRect.png" alt="red-rect" class="red-rect">
+      <img src="Assets/City-Image.png" alt="City-Image" class="city-image">
+    </div>
+  </div>
+  <div>
+    <img src="Assets/Seaparator.svg" class="w-100" alt="" loading="lazy">
+  </div>
+
+  <!----------------------------------------------- filteration-section --------------------------------------------->
+  <div class="filteration-section">
+    <div class="head-filteration">
+      <div class="left-side-search">
+        <img src="Assets/small-order-by.svg" alt="" class="small-order-by">
+        <div class="order-by"><span>Order By</span></div>
+        <div class="orderBy-dropdown">
+          <input type="text" class="textBox" placeholder="Filter by" readonly>
+          <div class="order-select">
+            <div onclick="show('Most wanted')">Most wanted</div>
+            <div onclick="show('Last Added')">Last Added</div>
+            <div onclick="show('Number of Courses')">Number of Courses</div>
+          </div>
         </div>
+      </div>
+      <div class="right-side-toggler">
+        <img src="Assets/rows-toggler.svg" alt="">
+        <img src="Assets/cards-selected-toggler.svg" alt="">
+      </div>
     </div>
 
+    <div class="main-filteration">
+      <div class="main-filteration-left">
+        <p class="courses-filter-paragraph">
+          Courses Filters
+          <img src="Assets/Hide.svg" alt="">
+        </p>
+        <div class="filter-input-box">
+          <div style="position: relative;overflow: hidden;" class="m-0 p-0">
+            <input type="text" placeholder="Search by course name">
+            <img src="Assets/search.svg" alt="">
+          </div>
+        </div>
 
-    <script src="SingleCity.js"></script>
+        <div class="filteration-items">
+          <div class="filterByCategories">
+            <div class="categories-filter-container" style="position: relative;">
+              <p class="filter-by-category-header">Category</p>
+              <img src="Assets/toggler-arrow.svg" alt="" class="toggler-arrow">
+            </div>
+            <div class="categories-filter-inner">
+              <div class="all-categories-search-checkbox">
+                <div class="categories-filter-input">
+                  <div style="position: relative;">
+                    <input type="text" name="" id="" placeholder="Category name">
+                    <img src="Assets/search.svg" alt="">
+                  </div>
+                </div>
+                <div class="all-cateogories-checkbox d-flex align-items-center">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <p class="all-categories-paragraph">All <span class="categoriesNumber">23</span> Categories</p>
+                  <span class="clear-categories">Clear</span>
+                </div>
+              </div>
+              <div class="categories-filter-items">
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Leadership</span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Management</span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Human Resource & Training</span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Administration and Secretarial</span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>IT, Telecommunication & Networking</span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Public Relations & communication skills</span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Customer Service, Sales & Marketing</span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Maintenance Planning, Process Engineering & Instrumentation </span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Security Management </span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Construction, Civil Engineering & Asset Management </span>
+                </div>
+                <div class="categories-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>Customer Service, Sales & Marketing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="other-filterations">
+            <div class="filterByDurations">
+              <div class="durations-filter-container">
+                <p class="filter-by-duration-header">Durations</p>
+                <img src="Assets/toggler-arrow.svg" alt="" class="toggler-arrow">
+              </div>
+            </div>
+            <div class="duration-filter-inner">
+              <div class="all-durations-checkbox d-flex align-items-center">
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <p class="all-categories-paragraph">All Durations</p>
+                <span class="clear-durations">Clear</span>
+              </div>
+              <div class="duration-filter-items">
+                <div class="duration-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>10 days</span>
+                </div>
+                <div class="duration-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>7 days</span>
+                </div>
+                <div class="duration-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>5 days</span>
+                </div>
+                <div class="duration-filter-item-container">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <span>3 days</span>
+                </div>
+              </div>
+            </div>
+            <div class="filterByStatus">
+              <div class="status-filter-container">
+                <p class="filter-by-status-header">Online || Classroom</p>
+                <img src="Assets/toggler-arrow.svg" alt="" class="toggler-arrow">
+              </div>
+            </div>
+            <div class="status-filter-items">
+              <div class="status-filter-item-container">
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Online</span>
+              </div>
+              <div class="status-filter-item-container">
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Classroom</span>
+              </div>
+            </div>
+            <div class="filterByAvailability">
+              <div class="availability-filter-container">
+                <p class="filter-by-availabiity-header">Availability</p>
+                <img src="Assets/toggler-arrow.svg" alt="" class="toggler-arrow">
+              </div>
+            </div>
+            <div class="availability-filter-items">
+              <div class="availability-filter-item-container">
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Ongoing</span>
+              </div>
+              <div class="availability-filter-item-container">
+                <label class="custom-checkbox">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>Upcomming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-filteration-right"></div>
+    </div>
+  </div>
+  <script src="SingleCity.js"></script>
 </body>
 
 </html>

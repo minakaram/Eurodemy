@@ -39,7 +39,9 @@ document.addEventListener("click", (e) => {
 });
 
 const cities_Button_small_Screen = document.getElementById("collapse-dropdown");
-const small_screen_dropdown = document.getElementById("cities-dropdown-collapse-id");
+const small_screen_dropdown = document.getElementById(
+  "cities-dropdown-collapse-id"
+);
 let isCopllaseDropdownVisible = false;
 
 cities_Button_small_Screen.addEventListener("click", (e) => {
@@ -123,4 +125,135 @@ document.addEventListener("click", (e) => {
     cities_Dropdown.style.opacity = "0";
     console.log("o");
   }
+});
+
+function show(option) {
+  document.querySelector(".textBox").value = option;
+}
+
+let orderByDropdown = document.querySelector(".orderBy-dropdown");
+orderByDropdown.addEventListener("click", () => {
+  orderByDropdown.classList.toggle("active");
+});
+
+document.addEventListener("click", (event) => {
+  const targetElement = event.target;
+  if (!orderByDropdown.contains(targetElement)) {
+    orderByDropdown.classList.remove("active");
+  }
+});
+
+// categories dropddown show --------------------------------------------------------------------------------------
+$(document).ready(function () {
+  $(".categories-filter-container").click(function () {
+    var selected = $(this);
+    var selectedP = selected.next();
+    selectedP.toggle();
+  });
+});
+
+// Get the elements
+const allCategoriesCheckbox = document.querySelector(
+  '.all-cateogories-checkbox input[type="checkbox"]'
+);
+const categoriesFilterItems = document.querySelectorAll(
+  '.categories-filter-item-container input[type="checkbox"]'
+);
+const clearCategoriesButton = document.querySelector(".clear-categories");
+
+// Check the "all categories" checkbox and all checkboxes inside "categories-filter-items" at the beginning
+allCategoriesCheckbox.checked = true;
+categoriesFilterItems.forEach((checkbox) => (checkbox.checked = true));
+
+// Listen for changes on the "all categories" checkbox
+allCategoriesCheckbox.addEventListener("change", function () {
+  const isChecked = this.checked;
+
+  // Update the checkboxes inside "categories-filter-items" based on the "all categories" checkbox state
+  categoriesFilterItems.forEach((checkbox) => (checkbox.checked = isChecked));
+});
+
+// Listen for changes on the checkboxes inside "categories-filter-items"
+categoriesFilterItems.forEach((checkbox) => {
+  checkbox.addEventListener("change", function () {
+    // Check if all checkboxes inside "categories-filter-items" are checked
+    const areAllChecked = Array.from(categoriesFilterItems).every(
+      (checkbox) => checkbox.checked
+    );
+
+    // Update the "all categories" checkbox based on the state of checkboxes inside "categories-filter-items"
+    allCategoriesCheckbox.checked = areAllChecked;
+  });
+});
+
+// Listen for click on the "Clear" button
+clearCategoriesButton.addEventListener("click", function () {
+  // Uncheck all checkboxes inside "categories-filter-items"
+  categoriesFilterItems.forEach((checkbox) => (checkbox.checked = false));
+
+  // Uncheck the "all categories" checkbox
+  allCategoriesCheckbox.checked = false;
+});
+
+// durations dropdown ----------------------------------------------------------------------------------
+
+$(document).ready(function () {
+  $(".filterByDurations").click(function () {
+    var selected = $(this);
+    var selectedP = selected.next();
+    selectedP.toggle();
+  });
+});
+
+const allDurationsCheckbox = document.querySelector(
+  '.all-durations-checkbox input[type="checkbox"]'
+);
+const durationFilterItems = document.querySelectorAll(
+  '.duration-filter-item-container input[type="checkbox"]'
+);
+const clearDurationsButton = document.querySelector(".clear-durations");
+
+allDurationsCheckbox.checked = true;
+durationFilterItems.forEach((checkbox) => (checkbox.checked = true));
+
+allDurationsCheckbox.addEventListener("change", function () {
+  const isChecked = this.checked;
+
+  durationFilterItems.forEach((checkbox) => (checkbox.checked = isChecked));
+});
+
+durationFilterItems.forEach((checkbox) => {
+  checkbox.addEventListener("change", function () {
+    const areAllChecked = Array.from(durationFilterItems).every(
+      (checkbox) => checkbox.checked
+    );
+
+    allDurationsCheckbox.checked = areAllChecked;
+  });
+});
+
+clearDurationsButton.addEventListener("click", function () {
+  // Uncheck all checkboxes inside "categories-filter-items"
+  durationFilterItems.forEach((checkbox) => (checkbox.checked = false));
+
+  // Uncheck the "all categories" checkbox
+  allDurationsCheckbox.checked = false;
+});
+
+//  Online Dropdown --------------------------------------------------------------------------------------
+$(document).ready(function () {
+  $(".filterByStatus").click(function () {
+    var selected = $(this);
+    var selectedP = selected.next();
+    selectedP.toggle();
+  });
+});
+
+// availability dropdown ---------------------------------------------------------------------------------
+$(document).ready(function () {
+  $(".filterByAvailability").click(function () {
+    var selected = $(this);
+    var selectedP = selected.next();
+    selectedP.toggle();
+  });
 });
