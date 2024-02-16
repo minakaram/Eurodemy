@@ -770,7 +770,7 @@ p {
   background-color: var(--Primary-Primary);
   color: var(--Nuturals-White);
 }
-.small-order-by{
+.small-order-by {
   display: none;
 }
 .filteration-section .main-filteration {
@@ -1080,15 +1080,15 @@ p {
     width: 46%;
     margin-top: 0 !important;
   }
-  .filteration-section .head-filteration .orderBy-dropdown{
+  .filteration-section .head-filteration .orderBy-dropdown {
     width: 300px;
   }
-  .custom-checkbox input:checked + .checkmark,
-.checkmark:hover {
-  background-color: transparent;
+  .checkmark,
+  .checkmark:hover {
+    background-color: transparent;
+  }
 }
-}
-@media(width<768px){
+@media (width<768px) {
   .filteration-items {
     flex-direction: column !important;
     justify-content: center;
@@ -1100,47 +1100,47 @@ p {
     width: 100%;
     margin-top: 0.5rem !important;
   }
-  .small-order-by{
+  .small-order-by {
     display: inline-block;
-    height: 50px
+    height: 50px;
   }
-  .order-by{
+  .order-by {
     display: none;
   }
 }
-@media(width < 500px){
-  .right-side-toggler{
+@media (width < 500px) {
+  .right-side-toggler {
     width: 20%;
     margin-left: 5px;
     display: flex;
     justify-content: center;
   }
-  .left-side-search{
+  .left-side-search {
     width: 80%;
   }
-  .right-side-toggler img{
+  .right-side-toggler img {
     width: 25px;
     height: 25px;
   }
-  .filteration-section .head-filteration .orderBy-dropdown{
+  .filteration-section .head-filteration .orderBy-dropdown {
     width: 200px;
     height: 40px;
   }
-  .filteration-section .head-filteration .orderBy-dropdown input{
+  .filteration-section .head-filteration .orderBy-dropdown input {
     padding-left: 10px;
   }
-  .filteration-section{
+  .filteration-section {
     padding: 7rem 0.5rem;
   }
-  .small-order-by{
+  .small-order-by {
     display: inline-block;
-    height: 40px
+    height: 40px;
   }
-  .filteration-section .head-filteration .orderBy-dropdown::before{
+  .filteration-section .head-filteration .orderBy-dropdown::before {
     top: 15px;
     right: 10px;
   }
-  .filteration-section .head-filteration .orderBy-dropdown .order-select{
+  .filteration-section .head-filteration .orderBy-dropdown .order-select {
     top: 40px;
   }
 }
