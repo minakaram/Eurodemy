@@ -728,7 +728,7 @@ p {
 
 .filteration-section .head-filteration .orderBy-dropdown.active::before {
   transform: rotate(-225deg) !important;
-  top: 22px !important;
+  top: 20px !important;
 }
 
 .filteration-section .head-filteration .orderBy-dropdown input {
