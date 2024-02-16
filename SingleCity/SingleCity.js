@@ -257,3 +257,161 @@ $(document).ready(function () {
     selectedP.toggle();
   });
 });
+
+//swiper -------------------------------------------------------------------------------------------------
+// const mySwiper = new Swiper(".swiper-container1", {
+//   // spaceBetween: 30,
+//   slidesPerView: 2,
+//   grid: {
+//     rows: 5,
+//   },
+//   loop: true,
+//   pagination: {
+//     el: ".swiper-pagination1",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   // on: {
+//   //   init: function () {
+//   //     const paginationContainer = document.querySelector(".swiper-pagination1");
+//   //     const maxVisibleDots = 4;
+
+//   //     const paginationDots = Array.from(paginationContainer.children);
+
+//   //     paginationDots.forEach((dot, index) => {
+//   //       if (index >= maxVisibleDots) {
+//   //         dot.style.display = "none";
+//   //       }
+//   //     });
+
+//   //     const svgDots = document.createElement("div");
+//   //     svgDots.style.display = "flex";
+//   //     svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
+//   //     <rect width="8" height="8" rx="1" fill="#F2EDED"/>
+//   //     <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
+//   //     <rect x="20" width="8" height="8" rx="1" fill="#F2EDED"/>
+//   //     <rect x="30" width="8" height="8" rx="1" fill="#F2EDED"/>
+//   //   </svg>`;
+//   //     paginationContainer.appendChild(svgDots);
+//   //   },
+//   // },
+//   breakpoints: {
+//     1400: {
+//       slidesPerView: 3,
+//       spaceBetween: 30,
+//       grid: {
+//         rows: 5,
+//       },
+//     },
+//     1025: {
+//       slidesPerView: 4,
+//     },
+//     768: {
+//       slidesPerView: 3,
+//       spaceBetween: 20,
+//       // grid: {
+//       //   rows: 2,
+//       // },
+//     },
+//     576: {
+//       slidesPerView: 1,
+//       spaceBetween: 70,
+//       // grid: {
+//       //   rows: 2,
+//       // },
+//     },
+//   },
+// });
+
+const mySwiper = new Swiper(".swiper-container1", {
+  spaceBetween: 0,
+  initialSlide: 2,
+  loop:true,
+  pagination: {
+    el: ".swiper-pagination1",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next", // CSS class or HTML element for next arrow
+    prevEl: ".swiper-button-prev", // CSS class or HTML element for prev arrow
+  },
+  breakpoints: {
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      grid: {
+        rows: 5,
+      },
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+
+      grid: {
+        rows: 5,
+      },
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 70,
+      grid: {
+        rows: 3,
+      },
+    },
+  },
+  on: {
+    init: function () {
+      const paginationContainer = document.querySelector(".swiper-pagination1");
+      const maxVisibleDots = 4;
+
+      const paginationDots = Array.from(paginationContainer.children);
+
+      paginationDots.forEach((dot, index) => {
+        if (index >= maxVisibleDots) {
+          dot.style.display = "none";
+        }
+      });
+
+      if (paginationDots.length > maxVisibleDots) {
+        const svgDots = document.createElement("div");
+        svgDots.style.display = "flex";
+        svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
+  <rect width="8" height="8" rx="1" fill="#F2EDED"/>
+  <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
+  <rect x="20" width="8" height="8" rx="1" fill="#F2EDED"/>
+  <rect x="30" width="8" height="8" rx="1" fill="#F2EDED"/>
+</svg>`;
+        paginationContainer.appendChild(svgDots);
+      }
+    },
+  },
+});
+mySwiper.on("slideChange", function () {
+  const activeSlideIndex = mySwiper.realIndex;
+  const paginationContainer = document.querySelector(".swiper-pagination1");
+  const maxVisibleDots = 4;
+
+  if (activeSlideIndex >= maxVisibleDots) {
+    const svgDots = paginationContainer.querySelector("svg");
+    if (svgDots) {
+      const rects = svgDots.querySelectorAll("rect");
+      rects.forEach((rect, index) => {
+        if (index < maxVisibleDots) {
+          rect.style.fill = "black";
+        }
+      });
+    }
+  } else {
+    const svgDots = paginationContainer.querySelector("svg");
+    if (svgDots) {
+      const rects = svgDots.querySelectorAll("rect");
+      rects.forEach((rect, index) => {
+        rect.style.fill = "#F2EDED";
+      });
+    }
+  }
+});

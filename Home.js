@@ -773,30 +773,7 @@ var swiper = new Swiper(".testimonialSwiper", {
     },
   },
 });
-// swiper.on("slideChange", function () {
-//   const activeSlideIndex = swiper.realIndex;
-//   console.log(activeSlideIndex);
-//   const paginationContainer = document.querySelector(".swiper-pagination2");
-//   const maxVisibleDots = 4;
 
-//   // console.log("Pagination Container:", paginationContainer);
-
-//   const g = paginationContainer.querySelector("div > svg > g");
-
-//   console.log("G Element:", g);
-
-//   if (activeSlideIndex >= maxVisibleDots) {
-//     if (g) {
-//       g.style.opacity = "1";
-//       console.log("Opacity set to 1");
-//     }
-//   } else {
-//     if (g) {
-//       g.style.opacity = "0.2";
-//       console.log("Opacity set to 0.2");
-//     }
-//   }
-// });
 
 function updateImageShow() {
   // Check if the screen width is larger than 1024 pixels

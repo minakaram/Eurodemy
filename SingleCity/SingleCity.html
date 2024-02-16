@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="SingleCity.css">
   <link rel="stylesheet" href="../bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="jquery.min.js"></script>
+  <script defer src="SingleCity.js"></script>
   <title>City Page</title>
 </head>
 
@@ -251,8 +253,8 @@
         </div>
       </div>
       <div class="right-side-toggler">
-        <img src="Assets/rows-toggler.svg" alt="">
-        <img src="Assets/cards-selected-toggler.svg" alt="">
+        <img src="Assets/rows-toggler.svg" alt="" title="Show as rows">
+        <img src="Assets/cards-selected-toggler.svg" alt="" title="show as cards">
       </div>
     </div>
 
@@ -467,10 +469,660 @@
           </div>
         </div>
       </div>
-      <div class="main-filteration-right"></div>
+      <div class="main-filteration-right">
+        <div class="filteration-boxes-container">
+          <div class="filteration-box">
+            <span class="filteration-box-span">Category : </span>All Categories
+            <img src="Assets/close.svg" alt="" title="Remove" class="mx-1">
+          </div>
+          <div class="filteration-box">
+            <span class="filteration-box-span">Duration : </span>10 Days
+            <img src="Assets/close.svg" alt="remove" title="Remove" class="mx-1">
+          </div>
+          <div class="filteration-box">
+            <span class="filteration-box-span">Duration : </span>7 Days
+            <img src="Assets/close.svg" alt="remove" title="Remove" class="mx-1">
+          </div>
+          <div class="filteration-box">
+            <span class="filteration-box-span">Status : </span>Online
+            <img src="Assets/close.svg" alt="remove" title="Remove" class="mx-1">
+          </div>
+          <div class="filteration-box">
+            <span class="filteration-box-span">Status : </span>Classroom
+            <img src="Assets/close.svg" alt="remove" title="Remove" class="mx-1">
+          </div>
+          <div class="filteration-box">
+            <span class="filteration-box-span">Availability : </span>Ongoing
+            <img src="Assets/close.svg" alt="remove" title="Remove" class="mx-1">
+          </div>
+          <div class="filteration-box">
+            <span class="filteration-box-span">Availability : </span>Upcomming
+            <img src="Assets/close.svg" alt="remove" title="Remove" class="mx-1">
+          </div>
+        </div>
+        <div class="filteration-result-container">
+          <div class="filteration-result-number">
+            <p>31 Search Result </p>
+            <img src="Assets/filter-close.svg" alt="">
+          </div>
+          <button class="pdf-download">Download Full courses list [PDF] <img src="Assets/download.svg"
+              alt="pdf-download"></button>
+        </div>
+        <div class="swiper swiper-container1">
+          <div class="swiper-wrapper">
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+            <div class="coming-training-card swiper-slide">
+              <div class="coming-training-card-header">
+                <img src="../Assets/Course Category Image.png" alt="Category Image.png"
+                  class="coming-training-card-img" />
+              </div>
+              <div class="coming-training-card-content">
+                <p class="card-paragraph">
+                  Building Personal Leadership Skills : Creating Stronger
+                  Relationships for a Stronger Organisation
+                </p>
+                <div class="card-date-container">
+                  <p>14 Aug, 2024</p>
+                  <img src="../Assets/duration.svg" alt="duration" />
+                  <p>18 Aug, 2024</p>
+                </div>
+                <div class="card-details-container">
+                  <p>Offline</p>
+                  <p class="card-details-city">Sharm Elshiekh</p>
+                  <p>4,950 $</p>
+                </div>
+              </div>
+              <div class="coming-training-card-footer">
+                <div class="right-arrow">
+                  <img src="../Assets/Right Arrow.svg" />
+                </div>
+                <div class="view-course-box d-flex">
+                  <p class="view-course-text">View Course</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination1"></div>
+          <div class="swiper-navigation ">
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <script src="SingleCity.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>
