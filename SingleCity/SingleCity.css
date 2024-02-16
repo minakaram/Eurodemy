@@ -1083,6 +1083,10 @@ p {
   .filteration-section .head-filteration .orderBy-dropdown{
     width: 300px;
   }
+  .custom-checkbox input:checked + .checkmark,
+.checkmark:hover {
+  background-color: transparent;
+}
 }
 @media(width<768px){
   .filteration-items {
