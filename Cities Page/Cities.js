@@ -39,7 +39,9 @@ document.addEventListener("click", (e) => {
 });
 
 const cities_Button_small_Screen = document.getElementById("collapse-dropdown");
-const small_screen_dropdown = document.getElementById("cities-dropdown-collapse-id");
+const small_screen_dropdown = document.getElementById(
+  "cities-dropdown-collapse-id"
+);
 let isCopllaseDropdownVisible = false;
 
 cities_Button_small_Screen.addEventListener("click", (e) => {
@@ -260,6 +262,7 @@ const fetchingCities = () => {
           .map(
             (city, index) => `
               <div class="cities-courses-card ${currentClasses[index]}">
+                <a style="height:100%;width:100%;text-decoration:none" href ="../SingleCity/SingleCity.html">
                 <img src="../Assets/cities/City2.png" class="cities-image-abslute" alt="" />
                 <img src="../Assets/cities/Overlay.png" class="cities-image-abslute" alt="" />
                 <div class="courses-city-details">
@@ -273,7 +276,8 @@ const fetchingCities = () => {
                       <img src="../Assets/Right Arrow - mini.svg" alt="view course" class="right-arrow-mini" />
                     </div>
                   </div>
-                </div>
+                  </div>
+                </a>
               </div>
           `
           )
