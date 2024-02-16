@@ -1121,6 +1121,7 @@ p {
   .right-side-toggler img {
     width: 25px;
     height: 25px;
+    margin-left: 5px;
   }
   .filteration-section .head-filteration .orderBy-dropdown {
     width: 200px;
