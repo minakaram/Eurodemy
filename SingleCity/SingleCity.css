@@ -1398,7 +1398,7 @@ p {
     
   }
   .filteration-result-container button{
-    width: 70% !important;
+    width: 100% !important;
     margin: auto;
     order: 0;
   }
