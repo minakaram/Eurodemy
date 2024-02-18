@@ -357,9 +357,13 @@ const recordsContainer = document.getElementById("records-container-id");
 cardsViewToggler.addEventListener("click", () => {
   cardsContainer.style.display = "block";
   recordsContainer.style.display = "none";
+  cardsViewToggler.src="./Assets/cards-selected-toggler.svg";
+  recordsViewToggler.src="./Assets/rows-toggler.svg"
 });
 
 recordsViewToggler.addEventListener("click", () => {
   recordsContainer.style.display = "flex";
   cardsContainer.style.display = "none";
+  recordsViewToggler.src="./Assets/rows-selected-toggler.svg";
+  cardsViewToggler.src="./Assets/cards-toggler.svg";
 });
