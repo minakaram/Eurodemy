@@ -321,11 +321,11 @@ p {
   z-index: 10000;
   visibility: hidden;
   opacity: 0;
-  width: 50%;
+  width: 100%;
   transition: 0.3s;
 }
 .navigationBar .cities-dropdown-nav .cities-dropdown-item {
-  padding: 1rem 3rem 10px 0.7rem;
+  padding: 1rem 2rem 10px 0.7rem;
   font-size: 0.8rem;
   text-transform: capitalize;
   border-right: 1px solid var(--NuturalsN-5); /* Add right border */
