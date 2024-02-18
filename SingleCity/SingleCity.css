@@ -30,7 +30,8 @@
   font-family: rethinkExtraBold-800;
   src: url(../Assets/Rethink_sans/RethinkSans-ExtraBold.ttf);
 }
-img {
+a {
+  text-decoration: none !important;
 }
 * {
   box-sizing: border-box;
@@ -1475,6 +1476,12 @@ p {
   align-items: center;
   padding: 0rem 1rem;
 }
+.rocords-courses-container .records-header-nav p {
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .rocords-courses-container .records-courses-items {
   overflow-y: auto;
   height: 1300px;
@@ -1492,7 +1499,9 @@ p {
 }
 
 .rocords-courses-container .records-header-nav p:first-child {
-  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .rocords-courses-container .records-courses-item {
   display: grid;
@@ -1566,7 +1575,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
 }
-.view-button {
+.records-courses-item .view-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1590,6 +1599,74 @@ p {
   border-color: var(--Nuturals-N-3);
   color: white;
   transition: 0.2s;
+}
+.pdf-download a {
+  color: var(--Nuturals-N-1);
+  width: 100%;
+  height: 100%;
+}
+.pdf-download:hover {
+  background-color: ghostwhite;
+}
+.pdf-download a:hover {
+  color: var(--Nuturals-N-1);
+}
+@media (max-width: 1024px) {
+  .rocords-courses-container .records-header-nav {
+    grid-template-columns: 38% 25% 20% auto;
+  }
+  .rocords-courses-container .records-courses-item {
+    grid-template-columns: 37% 46% 1fr;
+  }
+  .records-courses-item .view-button {
+    display: none !important;
+  }
+  .record-course-price img {
+    display: none;
+  }
+  .empty-p {
+    display: none !important;
+  }
+}
+@media (width<768px) {
+  .records-courses-items{
+    padding: 0.6rem 0.7rem;
+    border-left: 1px solid var(--Nuturals-N-4);
+    border-bottom: 1px solid var(--Nuturals-N-4);
+  }
+  .rocords-courses-container .records-header-nav{
+    display: none;
+  }
+  .rocords-courses-container .records-courses-item {
+    display: flex !important;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .rocords-courses-container .records-courses-item:hover{
+background-color: white;    
+  }
+  .course-name-item {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .rocords-courses-container .records-courses-item .record-item-status {
+    display: flex !important;
+    border-top: 1px solid var(--Nuturals-N-4);
+    border-bottom: 1px solid var(--Nuturals-N-4);
+    justify-content: space-between;
+    padding: 0;
+  }
+  .classroom-item{
+    width: 50%;
+  }
+  .date-container{
+    width: 50%;
+  }
+  .record-course-price{
+padding: 1rem;
+  }
 }
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {
