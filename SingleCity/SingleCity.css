@@ -1667,6 +1667,12 @@ background-color: white;
   .record-course-price{
 padding: 1rem;
   }
+  .date-container .left-slipter{
+    display: none;
+  }
+  .classroom-item img{
+    display: none;
+  }
 }
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {
