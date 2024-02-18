@@ -325,7 +325,7 @@ p {
   transition: 0.3s;
 }
 .navigationBar .cities-dropdown-nav .cities-dropdown-item {
-  padding: 1rem 2rem 10px 0.7rem;
+  padding: 1rem 1rem 10px 0.7rem;
   font-size: 0.8rem;
   text-transform: capitalize;
   border-right: 1px solid var(--NuturalsN-5); /* Add right border */
