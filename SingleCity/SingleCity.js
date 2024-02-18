@@ -123,7 +123,6 @@ document.addEventListener("click", (e) => {
   if (!isClickInsideDropdown) {
     cities_Dropdown.style.visibility = "hidden";
     cities_Dropdown.style.opacity = "0";
-    console.log("o");
   }
 });
 
@@ -259,77 +258,10 @@ $(document).ready(function () {
 });
 
 //swiper -------------------------------------------------------------------------------------------------
-// const mySwiper = new Swiper(".swiper-container1", {
-//   // spaceBetween: 30,
-//   slidesPerView: 2,
-//   grid: {
-//     rows: 5,
-//   },
-//   loop: true,
-//   pagination: {
-//     el: ".swiper-pagination1",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   // on: {
-//   //   init: function () {
-//   //     const paginationContainer = document.querySelector(".swiper-pagination1");
-//   //     const maxVisibleDots = 4;
-
-//   //     const paginationDots = Array.from(paginationContainer.children);
-
-//   //     paginationDots.forEach((dot, index) => {
-//   //       if (index >= maxVisibleDots) {
-//   //         dot.style.display = "none";
-//   //       }
-//   //     });
-
-//   //     const svgDots = document.createElement("div");
-//   //     svgDots.style.display = "flex";
-//   //     svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
-//   //     <rect width="8" height="8" rx="1" fill="#F2EDED"/>
-//   //     <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
-//   //     <rect x="20" width="8" height="8" rx="1" fill="#F2EDED"/>
-//   //     <rect x="30" width="8" height="8" rx="1" fill="#F2EDED"/>
-//   //   </svg>`;
-//   //     paginationContainer.appendChild(svgDots);
-//   //   },
-//   // },
-//   breakpoints: {
-//     1400: {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//       grid: {
-//         rows: 5,
-//       },
-//     },
-//     1025: {
-//       slidesPerView: 4,
-//     },
-//     768: {
-//       slidesPerView: 3,
-//       spaceBetween: 20,
-//       // grid: {
-//       //   rows: 2,
-//       // },
-//     },
-//     576: {
-//       slidesPerView: 1,
-//       spaceBetween: 70,
-//       // grid: {
-//       //   rows: 2,
-//       // },
-//     },
-//   },
-// });
-
 const mySwiper = new Swiper(".swiper-container1", {
   spaceBetween: 0,
   initialSlide: 2,
-  loop:true,
+  // loop:true,
   pagination: {
     el: ".swiper-pagination1",
     clickable: true,
@@ -414,4 +346,20 @@ mySwiper.on("slideChange", function () {
       });
     }
   }
+});
+
+// handle the courses view
+const cardsViewToggler = document.getElementById("cards-view-id");
+const recordsViewToggler = document.getElementById("records-view-id");
+const cardsContainer = document.getElementById("cards-container-id");
+const recordsContainer = document.getElementById("records-container-id");
+
+cardsViewToggler.addEventListener("click", () => {
+  cardsContainer.style.display = "block";
+  recordsContainer.style.display = "none";
+});
+
+recordsViewToggler.addEventListener("click", () => {
+  recordsContainer.style.display = "flex";
+  cardsContainer.style.display = "none";
 });
