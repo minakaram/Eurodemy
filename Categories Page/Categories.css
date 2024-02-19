@@ -426,6 +426,9 @@ p {
     width: 120px;
     padding: 0.938rem 0rem 0.938rem 0;
   }
+  .navigationBar .cities-dropdown-nav{
+    width: 100%;
+  }
 }
 @media (width<600px) {
   .navigationBar {

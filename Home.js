@@ -709,7 +709,7 @@ var swiper = new Swiper(".testimonialSwiper", {
   loop: true,
   autoplay: {
     delay: 5000,
-    reverseDirection: false, // Set the delay to 10 seconds (in milliseconds)
+    reverseDirection: true, // Set the delay to 10 seconds (in milliseconds)
   },
   pagination: {
     el: ".swiper-pagination2",

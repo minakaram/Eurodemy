@@ -343,7 +343,7 @@ p {
 .navigationBar ul li a:hover path {
   fill: var(--Primary-Primary) !important;
 }
-.navigationBar .nav-items-container .nav-toggler-item a{
+.navigationBar .nav-items-container .nav-toggler-item a {
   text-decoration: none;
   color: var(--Nuturals-N-1);
 }
@@ -396,6 +396,19 @@ p {
   }
   #categories-dropdown-collapse {
     width: 80%;
+  }
+}
+
+@media (width<768px) {
+  #categories-dropdown-collapse {
+    width: 100%;
+  }
+  .logo-image {
+    width: 120px;
+    padding: 0.938rem 0rem 0.938rem 0;
+  }
+  .navigationBar .cities-dropdown-nav {
+    width: 100%;
   }
 }
 
