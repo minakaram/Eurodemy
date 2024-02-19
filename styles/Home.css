@@ -73,6 +73,9 @@ a {
   color: inherit;
   cursor: pointer;
 }
+img {
+  pointer-events: none;
+}
 h1,
 h2,
 h3,
@@ -559,7 +562,7 @@ h6 {
   transform: translateX(-50%);
   color: var(--Nuturals-White);
 }
-.search-overlay-section .search-overlay-inner-container input[type="text"] {
+.search-overlay-section .search-overlay-inner-container input[type='text'] {
   background-color: transparent;
   border-radius: 1px;
   border: 0.5px solid var(--Nuturals-N-5, #bfb6b6);
@@ -672,7 +675,7 @@ h6 {
 }
 /* Show a checkmark when the checkbox is checked */
 .custom-checkbox input:checked + .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   left: 7px;
@@ -1484,7 +1487,7 @@ h6 {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: "Top Category";
+  content: 'Top Category';
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -1583,7 +1586,7 @@ h6 {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: "Top Category";
+  content: 'Top Category';
   position: absolute;
   top: 0;
   left: 0;
@@ -3369,7 +3372,7 @@ h6 {
     flex-direction: column;
     gap: 1rem;
   }
-  .map-contacts img[alt="line"] {
+  .map-contacts img[alt='line'] {
     display: none;
   }
   .office-container {
