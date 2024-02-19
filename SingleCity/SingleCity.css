@@ -80,7 +80,11 @@ p {
   border-radius: 0;
   height: 80px;
 }
-
+.flag{
+  position: absolute;
+  top: 80px;
+  right: 0px;
+}
 /* --------------------------------------------- navbar -------------------------------------------------- */
 .navigationBar {
   background-color: var(--Nuturals-White);
@@ -486,6 +490,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .flag{
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    z-index: -1;
   }
 }
 
