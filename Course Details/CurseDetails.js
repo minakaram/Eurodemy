@@ -126,23 +126,186 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
 // copy course code
 
 const copyButton = document.getElementById("copy-button-id");
 const coursCode = document.getElementById("course-code-id").innerText;
 
-
-
 copyButton.addEventListener("click", () => {
-    // Copy text to clipboard
-    navigator.clipboard.writeText(coursCode)
-    //   .then(() => {
-    //     console.log("Text copied to clipboard:", coursCode);
-    //     alert("Text copied to clipboard!");
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error copying text:", error);
-    //     alert("Error copying text. Please try again.");
-    //   });
+  // Copy text to clipboard
+  navigator.clipboard.writeText(coursCode);
+  //   .then(() => {
+  //     console.log("Text copied to clipboard:", coursCode);
+  //     alert("Text copied to clipboard!");
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error copying text:", error);
+  //     alert("Error copying text. Please try again.");
+  //   });
+});
+
+//navigation buttons ---------------------------------------------------------------------------------------
+
+$(document).ready(function () {
+  // Set the initial state
+  $("#about-header").addClass("active");
+  $(".about-inner").show();
+  $(".content-inner").hide();
+  $(".training-inner").hide();
+  // Handle click events
+  $("#about-header").click(function () {
+    if (!$(this).hasClass("active")) {
+      $(this).addClass("active");
+      $("#content-header, #training-header").removeClass("active");
+      $(".about-inner").show(); // Show the "About" section
+      $(".content-inner, .training-inner").hide(); // Hide other sections
+    }
   });
+
+  $("#content-header").click(function () {
+    if (!$(this).hasClass("active")) {
+      $(this).addClass("active");
+      $("#about-header, #training-header").removeClass("active");
+      $(".content-inner").show(); // Show the "Content" section
+      $(".about-inner, .training-inner").hide(); // Hide other sections
+    }
+  });
+
+  $("#training-header").click(function () {
+    if (!$(this).hasClass("active")) {
+      $(this).addClass("active");
+      $("#about-header, #content-header").removeClass("active");
+      $(".training-inner").show(); // Show the "Training Methodology" section
+      $(".about-inner, .content-inner").hide(); // Hide other sections
+    }
+  });
+});
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   // Get references to the elements
+//   var aboutHeader = document.getElementById("about-header");
+//   var contentHeader = document.getElementById("content-header");
+//   var trainingHeader = document.getElementById("training-header");
+//   var courseDetailsInner = document.querySelector(".course-details-inner");
+//   var aboutInner = document.querySelector(".about-inner");
+//   var contentInner = document.querySelector(".content-inner");
+//   var trainingInner = document.querySelector(".training-inner");
+
+//   // Set the initial state
+//   aboutHeader.classList.add("active");
+//   showSection(aboutInner);
+
+//   // Handle click events
+//   aboutHeader.addEventListener("click", function() {
+//     if (!aboutHeader.classList.contains("active")) {
+//       aboutHeader.classList.add("active");
+//       contentHeader.classList.remove("active");
+//       trainingHeader.classList.remove("active");
+//       showSection(aboutInner);
+//     }
+//   });
+
+//   contentHeader.addEventListener("click", function() {
+//     if (!contentHeader.classList.contains("active")) {
+//       aboutHeader.classList.remove("active");
+//       contentHeader.classList.add("active");
+//       trainingHeader.classList.remove("active");
+//       showSection(contentInner);
+//     }
+//   });
+
+//   trainingHeader.addEventListener("click", function() {
+//     if (!trainingHeader.classList.contains("active")) {
+//       aboutHeader.classList.remove("active");
+//       contentHeader.classList.remove("active");
+//       trainingHeader.classList.add("active");
+//       showSection(trainingInner);
+//     }
+//   });
+
+//   // Function to show a section and hide others
+//   function showSection(section) {
+//     aboutInner.style.display = "none";
+//     contentInner.style.display = "none";
+//     trainingInner.style.display = "none";
+//     section.style.display = "block";
+//   }
+// });
+
+
+// about drop downs --------------------------------------------------------------------------------------
+//  introduction Dropdown
+$(document).ready(function () {
+  $("#about-introduction-toggle").click(function () {
+    $(".about-introduction-content").slideToggle(function () {
+      $(".about-introduction .about-introduction-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+//seminar Dropdown
+
+$(document).ready(function () {
+  $("#about-seminar-toggle").click(function () {
+    $(".about-seminar-content").slideToggle(function () {
+      $(".about-Seminar-Objectives .about-seminar-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+// training methodology Dropdown
+$(document).ready(function () {
+  $("#about-training-toggle").click(function () {
+    $(".about-training-content").slideToggle(function () {
+      $(".about-training-methodology .about-training-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+//Organozational impact Dropdown
+$(document).ready(function () {
+  $("#about-organizational-toggle").click(function () {
+    $(".about-organizational-content").slideToggle(function () {
+      $(
+        ".about-organisational-impact .about-organizational-head h5"
+      ).toggleClass("remove-border");
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+// personal impact Dropdown
+$(document).ready(function () {
+  $("#about-personal-toggle").click(function () {
+    $(".about-personal-content").slideToggle(function () {
+      $(".about-personal-impact .about-personal-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+// attendance Dropdown
+$(document).ready(function () {
+  $("#about-attendance-toggle").click(function () {
+    $(".about-attendance-content").slideToggle(function () {
+      $(".about-attendance .about-attendance-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});

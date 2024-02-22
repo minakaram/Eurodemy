@@ -596,7 +596,6 @@ p {
 }
 .hero-section {
   padding: 2rem 0rem;
-  margin-bottom: 2rem;
 }
 .hero-header {
   padding: 3rem 0rem;
@@ -611,7 +610,7 @@ p {
   position: relative;
 }
 .hero-inner {
-  margin-top: -180px !important;
+  margin-top: -135px !important;
   width: 90%;
   margin: auto;
 }
@@ -977,6 +976,57 @@ p {
   margin-top: 3rem;
 }
 
+/* apply container */
+.apply-container {
+  width: 90%;
+  margin: 100px auto;
+  padding: 1rem;
+}
+.apply-container .apply-button {
+  background-image: url("Assets/apply-BG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 25%;
+  border: none;
+  color: white;
+  margin: auto;
+  display: block;
+  height: 52px;
+  font-family: rubikMedium-500;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.apply-container .apply-details-box {
+  padding: 1rem 0.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  border-left: 2px solid var(--Nuturals-N-3);
+  border-right: 2px solid var(--Nuturals-N-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.apply-container .apply-details-box button {
+  position: relative;
+  width: calc(100% / 3 - 0.5rem) !important;
+  margin-bottom: 0.5rem;
+  height: 44px;
+  background-color: var(--Nuturals-N-7);
+  border: 1px solid var(--Nuturals-N-4);
+  cursor: pointer;
+}
+.apply-container .apply-details-box button:hover {
+  background-color: var(--Nuturals-N-6);
+}
+.apply-container .apply-details-box button img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+}
 @media (width<1025px) {
   .course-code-section {
     justify-content: center;
@@ -1012,12 +1062,23 @@ p {
     .course-code-section
     .course-code-row2
     .attendance-box-container,
-  .hero-section .course-code-section .course-code-row2 .salary-box-container{
+  .hero-section .course-code-section .course-code-row2 .salary-box-container {
     width: 49%;
     height: 200px;
   }
-  .hero-section .course-code-section .course-code-row2 .salary-box-container .salary-box p{
+  .hero-section
+    .course-code-section
+    .course-code-row2
+    .salary-box-container
+    .salary-box
+    p {
     margin-top: 3rem;
+  }
+  .apply-container .apply-button {
+    width: 40%;
+  }
+  .apply-container .apply-details-box button {
+    width: calc(100% / 2 - 0.5rem) !important;
   }
 }
 @media (width<768px) {
@@ -1027,7 +1088,8 @@ p {
   .hero-section {
     font-size: 85%;
   }
-  .course-code-row1,.course-code-row2{
+  .course-code-row1,
+  .course-code-row2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1041,22 +1103,182 @@ p {
     width: 100% !important;
     height: 200px;
   }
-  .attendance-box-container{
+  .attendance-box-container {
     width: 100% !important;
   }
-  .salary-box-container{
+  .salary-box-container {
     width: 100% !important;
   }
-  .hero-section .course-code-section .course-code-box-container{
+  .hero-section .course-code-section .course-code-box-container {
     width: 100% !important;
   }
-  .code-box-left-bottom,.code-box-left-top,.code-box-right-bottom,.code-box-right-top{
+  .code-box-left-bottom,
+  .code-box-left-top,
+  .code-box-right-bottom,
+  .code-box-right-top {
     display: none;
   }
-  .course-code-section{
+  .course-code-section {
     gap: 0.5rem !important;
   }
-  .hero-inner{
+  .hero-inner {
     margin-top: -90px !important;
   }
+  .apply-container .apply-button {
+    width: 100%;
+  }
+  .apply-container .apply-details-box button {
+    width: 100% !important;
+  }
+}
+
+/*---------------------------------------- course details ----------------------------------------------------*/
+
+.course-details-section {
+  padding: 7rem 0rem 2rem;
+}
+.course-details-section .course-details-header {
+  text-align: center;
+  padding: 1rem;
+  margin: auto;
+  width: 40%;
+  margin-bottom: 4rem;
+}
+.course-details-section .course-details-header h1 {
+  font-family: rubikSemiBold-600;
+  font-size: 28px;
+}
+.course-details-section .course-details-header img {
+  width: 100%;
+}
+
+.course-details-nav-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+}
+.course-details-nav-box p {
+  width: 30%;
+  text-align: center;
+  font-family: rubikSemiBold-600;
+  padding: 0.5rem;
+  color: var(--Nuturals-N-4);
+}
+
+.course-details-nav-box p.active {
+  color: var(--Primary-Primary);
+  border-bottom: 2px solid var(--Primary-Primary);
+  /* transition: 0.4s;   */
+}
+.course-details-inner {
+  width: 90%;
+  padding: 1rem;
+  margin: 80px auto;
+}
+.course-details-inner .about-inner .about-introduction,
+.course-details-inner .about-inner .about-training-methodology,
+.course-details-inner .about-inner .about-personal-impact {
+  background-color: var(--Nuturals-N-7);
+  border-left: 5px solid var(--Nuturals-N-3);
+  margin-bottom: 2rem;
+}
+
+.course-details-inner .about-inner .about-Seminar-Objectives,
+.course-details-inner .about-inner .about-organisational-impact,
+.course-details-inner .about-inner .about-attendance {
+  background-color: var(--Nuturals-White);
+  border-left: 5px solid var(--Nuturals-N-3);
+  margin-bottom: 2rem;
+  box-shadow: 1px 1px 4px 1px var(--Nuturals-N-6);
+}
+.course-details-inner .about-inner .about-introduction-head,
+.course-details-inner .about-inner .about-seminar-head,
+.course-details-inner .about-inner .about-training-head,
+.course-details-inner .about-inner .about-organizational-head,
+.course-details-inner .about-inner .about-personal-head,
+.course-details-inner .about-inner .about-attendance-head {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 3rem 1rem 2rem;
+}
+.course-details-inner .about-inner .about-introduction-head .toggler,
+.course-details-inner .about-inner .about-seminar-head .toggler,
+.course-details-inner .about-inner .about-training-head .toggler,
+.course-details-inner .about-inner .about-organizational-head .toggler,
+.course-details-inner .about-inner .about-personal-head .toggler,
+.course-details-inner .about-inner .about-attendance-head .toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.course-details-inner .about-inner .about-introduction-head h5,
+.course-details-inner .about-inner .about-seminar-head h5,
+.course-details-inner .about-inner .about-training-head h5,
+.course-details-inner .about-inner .about-organizational-head h5,
+.course-details-inner .about-inner .about-personal-head h5,
+.course-details-inner .about-inner .about-attendance-head h5 {
+  border-bottom: 1px solid var(--Nuturals-N-3);
+  margin-left: 10px;
+  width: 100%;
+  padding: 4px;
+  font-family: rubikBold-700;
+}
+
+.course-details-inner
+  .about-inner
+  .about-introduction
+  .about-introduction-content,
+.course-details-inner
+  .about-inner
+  .about-Seminar-Objectives
+  .about-seminar-content,
+.course-details-inner
+  .about-inner
+  .about-training-methodology
+  .about-training-content,
+.course-details-inner
+  .about-inner
+  .about-organisational-impact
+  .about-organizational-content,
+.course-details-inner
+  .about-inner
+  .about-personal-impact
+  .about-personal-content,
+.course-details-inner .about-inner .about-attendance .about-attendance-content {
+  width: 90%;
+  margin: auto;
+  padding: 0.5rem;
+  color: var(--Nuturals-N-2);
+}
+
+.about-introduction-content p,
+.about-seminar-content p,
+.about-impact-content p,
+.about-organizational-content p,
+.about-personal-content p,
+.about-attendance-content p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: rethinkExtraBold-800;
+  font-size: 1rem;
+  margin-bottom: 0.3rem !important;
+  color: var(--Nuturals-N-2);
+}
+.about-inner p i {
+  font-size: 5px;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.remove-border {
+  border-bottom: none !important;
+  transition: 0.4s;
 }
