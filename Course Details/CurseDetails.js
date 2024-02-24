@@ -182,60 +182,6 @@ $(document).ready(function () {
 });
 
 
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   // Get references to the elements
-//   var aboutHeader = document.getElementById("about-header");
-//   var contentHeader = document.getElementById("content-header");
-//   var trainingHeader = document.getElementById("training-header");
-//   var courseDetailsInner = document.querySelector(".course-details-inner");
-//   var aboutInner = document.querySelector(".about-inner");
-//   var contentInner = document.querySelector(".content-inner");
-//   var trainingInner = document.querySelector(".training-inner");
-
-//   // Set the initial state
-//   aboutHeader.classList.add("active");
-//   showSection(aboutInner);
-
-//   // Handle click events
-//   aboutHeader.addEventListener("click", function() {
-//     if (!aboutHeader.classList.contains("active")) {
-//       aboutHeader.classList.add("active");
-//       contentHeader.classList.remove("active");
-//       trainingHeader.classList.remove("active");
-//       showSection(aboutInner);
-//     }
-//   });
-
-//   contentHeader.addEventListener("click", function() {
-//     if (!contentHeader.classList.contains("active")) {
-//       aboutHeader.classList.remove("active");
-//       contentHeader.classList.add("active");
-//       trainingHeader.classList.remove("active");
-//       showSection(contentInner);
-//     }
-//   });
-
-//   trainingHeader.addEventListener("click", function() {
-//     if (!trainingHeader.classList.contains("active")) {
-//       aboutHeader.classList.remove("active");
-//       contentHeader.classList.remove("active");
-//       trainingHeader.classList.add("active");
-//       showSection(trainingInner);
-//     }
-//   });
-
-//   // Function to show a section and hide others
-//   function showSection(section) {
-//     aboutInner.style.display = "none";
-//     contentInner.style.display = "none";
-//     trainingInner.style.display = "none";
-//     section.style.display = "block";
-//   }
-// });
-
-
 // about drop downs --------------------------------------------------------------------------------------
 //  introduction Dropdown
 $(document).ready(function () {
@@ -307,5 +253,129 @@ $(document).ready(function () {
       );
     });
     $(this).toggleClass("rotate-180");
+  });
+});
+
+
+// content Dropdowns -----------------------------------------------------------------------------------------
+//day1 dropdown
+$(document).ready(function () {
+  $("#content-day1-toggle").click(function () {
+    $(".content-day1-content").slideToggle(function () {
+      $(".content-day1 .content-day1-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+//day2 dropdown
+$(document).ready(function () {
+  $("#content-day2-toggle").click(function () {
+    $(".content-day2-content").slideToggle(function () {
+      $(".content-day2 .content-day2-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+//day3 dropdown
+$(document).ready(function () {
+  $("#content-day3-toggle").click(function () {
+    $(".content-day3-content").slideToggle(function () {
+      $(".content-day3 .content-day3-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+//day4 dropdown
+$(document).ready(function () {
+  $("#content-day4-toggle").click(function () {
+    $(".content-day4-content").slideToggle(function () {
+      $(".content-day4 .content-day4-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+//day5 dropdown
+$(document).ready(function () {
+  $("#content-day5-toggle").click(function () {
+    $(".content-day5-content").slideToggle(function () {
+      $(".content-day5 .content-day5-head h5").toggleClass(
+        "remove-border"
+      );
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+// Cities dropdown ----------------------------------------------------------------------------------
+
+$(document).ready(function () {
+  $(".filterByCity").click(function () {
+    var selected = $(this);
+    var selectedP = selected.next();
+    selectedP.toggle();
+  });
+});
+
+const allCitiesCheckbox = document.querySelector(
+  '.all-cities-checkbox input[type="checkbox"]'
+);
+const citiesFilterItems = document.querySelectorAll(
+  '.city-filter-item-container input[type="checkbox"]'
+);
+const clearCitiesButton = document.querySelector(".clear-cities");
+
+allCitiesCheckbox.checked = true;
+citiesFilterItems.forEach((checkbox) => (checkbox.checked = true));
+
+allCitiesCheckbox.addEventListener("change", function () {
+  const isChecked = this.checked;
+
+  citiesFilterItems.forEach((checkbox) => (checkbox.checked = isChecked));
+});
+
+citiesFilterItems.forEach((checkbox) => {
+  checkbox.addEventListener("change", function () {
+    const areAllChecked = Array.from(citiesFilterItems).every(
+      (checkbox) => checkbox.checked
+    );
+
+    allCitiesCheckbox.checked = areAllChecked;
+  });
+});
+
+clearCitiesButton.addEventListener("click", function () {
+  // Uncheck all checkboxes inside "categories-filter-items"
+  citiesFilterItems.forEach((checkbox) => (checkbox.checked = false));
+
+  // Uncheck the "all categories" checkbox
+  allCitiesCheckbox.checked = false;
+});
+
+
+
+
+//  Online Dropdown --------------------------------------------------------------------------------------
+$(document).ready(function () {
+  $(".filterByStatus").click(function () {
+    var selected = $(this);
+    var selectedP = selected.next();
+    selectedP.toggle();
+  });
+});
+
+// availability dropdown ---------------------------------------------------------------------------------
+$(document).ready(function () {
+  $(".filterByAvailability").click(function () {
+    var selected = $(this);
+    var selectedP = selected.next();
+    selectedP.toggle();
   });
 });
