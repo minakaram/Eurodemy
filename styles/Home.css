@@ -40,6 +40,7 @@
   padding: 0;
   margin: 0;
 }
+
 :root {
   --Nuturals-N-1: #140000;
   --Nuturals-N-2: #262121;
@@ -1640,6 +1641,9 @@ h6 {
 .top-courses-section .coming-training-card {
   border-bottom: 4px solid var(--Primary-Primary);
 }
+.top-courses-section .owl-item a{
+  color: black !important;
+} 
 .top-courses-section .owl-next,
 .top-courses-section .owl-prev {
   background-color: var(--Nuturals-N-6) !important;
@@ -3383,6 +3387,7 @@ h6 {
     width: 100%;
   }
 }
+
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {
   background-image: url(../Assets/Footer\ Bg.png);
