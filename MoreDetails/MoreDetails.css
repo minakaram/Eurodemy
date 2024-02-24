@@ -619,8 +619,9 @@ p {
   .hero-article-container {
     width: 90%;
     height: 20rem;
+    flex: auto;
     position: relative;
-    margin: 0% auto;
+    margin: -5rem auto 0;
     z-index: 2;
   }
 }
@@ -681,6 +682,7 @@ p {
   .vision-cards-container {
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 5rem;
   }
   .vision-card {
     padding: 1rem;
@@ -705,7 +707,7 @@ p {
   font-size: 1.75rem;
   color: var(--Ternary-Ternary);
 }
-.downRightVector {
+.downLeftVector {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -714,13 +716,17 @@ p {
 .more-details-main-container {
   display: flex;
   width: 90%;
+  height: 60rem;
   margin: 7.5rem auto;
   gap: 2rem;
 }
 .headlines-details-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
+}
+.centered-details-title-wrapper {
+  margin-top: 1rem;
 }
 .details-title {
   background-color: var(--Nuturals-N-6);
@@ -736,10 +742,27 @@ p {
 .more-details-inner-container {
   border: 1px solid var(--Nuturals-N-2);
   border-radius: 1px;
-  height: 61rem;
   width: 80%;
+  flex: 1;
   padding: 3rem 2rem;
   overflow-y: scroll;
+}
+.more-details-inner-container::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+.more-details-inner-container::-webkit-scrollbar-thumb {
+  background-color: #fabd00; /* Color of the scrollbar thumb */
+  border-radius: 1px; /* Border radius of the scrollbar thumb */
+}
+
+.more-details-inner-container::-webkit-scrollbar-track {
+  background: transparent; /* Background color of the scrollbar track */
+}
+
+.more-details-inner-container {
+  scrollbar-color: #fabd00 transparent; /* Color of the scrollbar thumb and track */
+  scrollbar-width: thin; /* Width of the scrollbar */
 }
 .detailsHeader {
   margin-bottom: 3rem;
@@ -747,7 +770,34 @@ p {
 .detailsArticle {
   line-height: 2.4;
 }
+@media screen and (max-width: 1025px) {
+  .more-details-main-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .headlines-details-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .centered-details-title-wrapper {
+    width: 32%;
+    margin: 1rem auto;
+  }
+  .more-details-inner-container {
+    width: 100%;
+  }
+  .more-details-section {
+    padding: 7rem 0 3rem;
+  }
+}
+@media screen and (max-width: 769px) {
+  .headlines-details-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .centered-details-title-wrapper {
+    width: 50%;
+  }
+}
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {
   background-image: url(../Assets/Footer\ Bg.png);
