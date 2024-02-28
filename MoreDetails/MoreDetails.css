@@ -62,6 +62,9 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+body img{
+  pointer-events: none;
+}
 p {
   margin-bottom: 0 !important;
 }
@@ -692,7 +695,7 @@ p {
 /* ------------------------------ more details section ------------------------- */
 
 .more-details-section {
-  padding: 12rem 0;
+  padding: 7rem 0;
   position: relative;
 }
 .more-details-heading {
@@ -716,7 +719,7 @@ p {
   display: flex;
   width: 90%;
   height: 60rem;
-  margin: 7.5rem auto;
+  margin: 5rem auto;
   gap: 2rem;
 
 }

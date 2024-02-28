@@ -129,6 +129,10 @@ a {
   transition: all 300ms;
   position: relative;
 }
+
+.navigationBar img {
+  pointer-events: none;
+}
 .navigationBar ul li a:hover .down-arrow-nav-absolute {
   opacity: 1;
 }

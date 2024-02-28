@@ -134,6 +134,7 @@ const coursCode = document.getElementById("course-code-id").innerText;
 copyButton.addEventListener("click", () => {
   // Copy text to clipboard
   navigator.clipboard.writeText(coursCode);
+  copyButton.innerHTML = `<img src="Assets/copy.svg" alt="">Copied`;
   //   .then(() => {
   //     console.log("Text copied to clipboard:", coursCode);
   //     alert("Text copied to clipboard!");
@@ -180,7 +181,6 @@ $(document).ready(function () {
     }
   });
 });
-
 
 // about drop downs --------------------------------------------------------------------------------------
 //  introduction Dropdown
@@ -256,65 +256,58 @@ $(document).ready(function () {
   });
 });
 
-
 // content Dropdowns -----------------------------------------------------------------------------------------
 //day1 dropdown
 $(document).ready(function () {
   $("#content-day1-toggle").click(function () {
     $(".content-day1-content").slideToggle(function () {
-      $(".content-day1 .content-day1-head h5").toggleClass(
-        "remove-border"
-      );
-    });
-    $(this).toggleClass("rotate-180");
-  });
-});
-//day2 dropdown
-$(document).ready(function () {
-  $("#content-day2-toggle").click(function () {
-    $(".content-day2-content").slideToggle(function () {
-      $(".content-day2 .content-day2-head h5").toggleClass(
-        "remove-border"
-      );
-    });
-    $(this).toggleClass("rotate-180");
-  });
-});
-//day3 dropdown
-$(document).ready(function () {
-  $("#content-day3-toggle").click(function () {
-    $(".content-day3-content").slideToggle(function () {
-      $(".content-day3 .content-day3-head h5").toggleClass(
-        "remove-border"
-      );
-    });
-    $(this).toggleClass("rotate-180");
-  });
-});
-//day4 dropdown
-$(document).ready(function () {
-  $("#content-day4-toggle").click(function () {
-    $(".content-day4-content").slideToggle(function () {
-      $(".content-day4 .content-day4-head h5").toggleClass(
-        "remove-border"
-      );
-    });
-    $(this).toggleClass("rotate-180");
-  });
-});
-//day5 dropdown
-$(document).ready(function () {
-  $("#content-day5-toggle").click(function () {
-    $(".content-day5-content").slideToggle(function () {
-      $(".content-day5 .content-day5-head h5").toggleClass(
-        "remove-border"
-      );
+      $(".content-day1 .content-day1-head h5").toggleClass("remove-border");
     });
     $(this).toggleClass("rotate-180");
   });
 });
 
-// Cities dropdown ----------------------------------------------------------------------------------
+//day2 dropdown
+$(document).ready(function () {
+  $("#content-day2-toggle").click(function () {
+    $(".content-day2-content").slideToggle(function () {
+      $(".content-day2 .content-day2-head h5").toggleClass("remove-border");
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+//day3 dropdown
+$(document).ready(function () {
+  $("#content-day3-toggle").click(function () {
+    $(".content-day3-content").slideToggle(function () {
+      $(".content-day3 .content-day3-head h5").toggleClass("remove-border");
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+//day4 dropdown
+$(document).ready(function () {
+  $("#content-day4-toggle").click(function () {
+    $(".content-day4-content").slideToggle(function () {
+      $(".content-day4 .content-day4-head h5").toggleClass("remove-border");
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+//day5 dropdown
+$(document).ready(function () {
+  $("#content-day5-toggle").click(function () {
+    $(".content-day5-content").slideToggle(function () {
+      $(".content-day5 .content-day5-head h5").toggleClass("remove-border");
+    });
+    $(this).toggleClass("rotate-180");
+  });
+});
+
+// Cities dropdown checkboxes -------------------------------------------------------------------------------
 
 $(document).ready(function () {
   $(".filterByCity").click(function () {
@@ -359,10 +352,7 @@ clearCitiesButton.addEventListener("click", function () {
   allCitiesCheckbox.checked = false;
 });
 
-
-
-
-//  Online Dropdown --------------------------------------------------------------------------------------
+//  Online Dropdown checkboxes ------------------------------------------------------------------------------------
 $(document).ready(function () {
   $(".filterByStatus").click(function () {
     var selected = $(this);
@@ -371,11 +361,102 @@ $(document).ready(function () {
   });
 });
 
-// availability dropdown ---------------------------------------------------------------------------------
+// availability dropdown checkboxes  ------------------------------------------------------------------------------
 $(document).ready(function () {
   $(".filterByAvailability").click(function () {
     var selected = $(this);
     var selectedP = selected.next();
     selectedP.toggle();
   });
+});
+
+//swiper recomemnded ----------------------------------------------------------------------------------------------
+const mySwiper = new Swiper(".swiper-container1", {
+  spaceBetween: 0,
+  initialSlide: 2,
+  // loop:true,
+  pagination: {
+    el: ".swiper-pagination1",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next", // CSS class or HTML element for next arrow
+    prevEl: ".swiper-button-prev", // CSS class or HTML element for prev arrow
+  },
+  breakpoints: {
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      grid: {
+        rows: 1,
+      },
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+
+      grid: {
+        rows: 2,
+      },
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 70,
+      grid: {
+        rows: 2,
+      },
+    },
+  },
+  on: {
+    init: function () {
+      const paginationContainer = document.querySelector(".swiper-pagination1");
+      const maxVisibleDots = 4;
+
+      const paginationDots = Array.from(paginationContainer.children);
+
+      paginationDots.forEach((dot, index) => {
+        if (index >= maxVisibleDots) {
+          dot.style.display = "none";
+        }
+      });
+
+      if (paginationDots.length > maxVisibleDots) {
+        const svgDots = document.createElement("div");
+        svgDots.style.display = "flex";
+        svgDots.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="38" height="8" viewBox="0 0 38 8" fill="none">
+  <rect width="8" height="8" rx="1" fill="#F2EDED"/>
+  <rect x="10" width="8" height="8" rx="1" fill="#F2EDED"/>
+  <rect x="20" width="8" height="8" rx="1" fill="#F2EDED"/>
+  <rect x="30" width="8" height="8" rx="1" fill="#F2EDED"/>
+</svg>`;
+        paginationContainer.appendChild(svgDots);
+      }
+    },
+  },
+});
+mySwiper.on("slideChange", function () {
+  const activeSlideIndex = mySwiper.realIndex;
+  const paginationContainer = document.querySelector(".swiper-pagination1");
+  const maxVisibleDots = 4;
+
+  if (activeSlideIndex >= maxVisibleDots) {
+    const svgDots = paginationContainer.querySelector("svg");
+    if (svgDots) {
+      const rects = svgDots.querySelectorAll("rect");
+      rects.forEach((rect, index) => {
+        if (index < maxVisibleDots) {
+          rect.style.fill = "black";
+        }
+      });
+    }
+  } else {
+    const svgDots = paginationContainer.querySelector("svg");
+    if (svgDots) {
+      const rects = svgDots.querySelectorAll("rect");
+      rects.forEach((rect, index) => {
+        rect.style.fill = "#F2EDED";
+      });
+    }
+  }
 });
