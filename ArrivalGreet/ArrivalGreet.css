@@ -178,6 +178,12 @@ p {
   opacity: 1;
 }
 
+@media(767px< width<1025px){
+  .hero-right-side{
+    width: 60%;
+  }
+}
+
 @media (width<768px) {
   .hero-section {
     flex-direction: column;
@@ -308,7 +314,7 @@ p {
   position: relative;
 }
 .tailored-form-section .form-container {
-  width: 80%;
+  width: 75%;
   background-color: white;
   border: 1px solid var(--Nuturals-N-3);
   margin: auto;
@@ -652,7 +658,7 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
 }
 
 .submit-container {
-  width: 80%;
+  width: 75%;
   margin-top: 15px;
   margin: auto;
 
@@ -917,10 +923,7 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
   width: 31%;
   padding-left: 2rem;
 }
-.contact-info-container {
-  width: 34%;
-  padding-left: 2rem;
-}
+
 .main-pages-container {
   margin-bottom: 4.813rem;
   width: 30%;
@@ -1061,11 +1064,6 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
     top: 66%;
   }
 }
-@media (1024px< width <1125px) {
-  .footer-content-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media screen and (max-width: 1125px) {
   .footer-contents-container .leftSide-footer,
   .footer-contents-container .rightSide-footer {
@@ -1095,9 +1093,6 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
   .rightSide-footer {
     padding: 0rem 3rem;
     gap: 1rem;
-  }
-  .contact-info-container {
-    padding-left: 0;
   }
   .footer-form-container {
     width: 70%;
