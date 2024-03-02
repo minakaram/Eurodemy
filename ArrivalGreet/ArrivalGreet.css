@@ -413,7 +413,7 @@ p {
   font-size: 0.9rem;
 }
 .contact-datails input[type='date'] {
-  padding-left: 8.5rem;
+  padding-left: 9rem;
 }
 .email-container.arrival-container input[type='date'] {
   padding-left: 9.5rem !important;
@@ -461,7 +461,7 @@ input[type='date']::-webkit-datetime-edit-year-field:focus {
   /* Remove default arrows */
   -moz-appearance: textfield;
   appearance: textfield;
-  padding-left: 11.5rem !important;
+  padding-left: 12rem !important;
   color: var(--Nuturals-N-4);
 }
 

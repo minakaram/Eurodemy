@@ -394,20 +394,6 @@ function initializeCarousel(carousel) {
       customDots.eq(i).find("span").css("margin", "0 2px");
     }
   }
-
-  //   let customDotsContainer = carousel.find(".owl-dots");
-  // let customDots = customDotsContainer.find(".owl-dot");
-  // let maxVisibleDots = 3; // Set the maximum number of visible dots
-
-  // if (customDots.length > maxVisibleDots) {
-  //   // Set the width and margin for the extra dots
-  //   for (let i = maxVisibleDots; i < customDots.length; i++) {
-  //     // Get the span inside the dot and set its style
-  //     let dotSpan = customDots.eq(i).find("span");
-  //     dotSpan.css("width", "10px");
-  //     dotSpan.css("margin", "0 2px"); // Set the margin to 2px
-  //   }
-  // }
 }
 
 initializeCarousel($(".carousel1"));
