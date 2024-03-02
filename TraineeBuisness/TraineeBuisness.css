@@ -301,8 +301,8 @@ p {
 }
 .vector-red-down-left {
   position: absolute;
-  right: 0;
   width: 15%;
+  right: 0;
 }
 .form-main {
   z-index: 10;
