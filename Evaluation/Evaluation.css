@@ -710,6 +710,19 @@ input[type='radio']:checked + .customCheckboxLabel::after {
   .submit-container .right-side-submit {
     padding-left: 2rem;
   }
+  .checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    justify-items: flex-start;
+    padding-left: 1rem;
+    row-gap: 1rem;
+  }
+  .custom-checkbox {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
 }
 @media (width<400px) {
   .contact-datails input {
