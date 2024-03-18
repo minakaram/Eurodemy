@@ -106,11 +106,13 @@ navbarDropdown.addEventListener("click", (event) => {
 // saerch overlay section ---------------------------------------------------------------------------------------
 $(document).ready(function () {
   $("#search-close-btn").click(function () {
+    console.log("aa");
     $("#search-overlay").fadeOut();
     $("#search-open-btn").show();
   });
   $("#search-open-btn").click(function () {
     // $(this).hide();
+    console.log("aa");
     $("#search-overlay").fadeIn();
   });
 });
@@ -384,7 +386,7 @@ function initializeCarousel(carousel) {
 
   let customDotsContainer = carousel.find(".owl-dots");
   let customDots = customDotsContainer.find(".owl-dot");
-  let maxVisibleDots = 3; // Set the maximum number of visible dots
+  let maxVisibleDots = 4; // Set the maximum number of visible dots
 
   if (customDots.length > maxVisibleDots) {
     // Set the width for the extra dots to 10px
@@ -759,7 +761,6 @@ var swiper = new Swiper(".testimonialSwiper", {
     },
   },
 });
-
 
 function updateImageShow() {
   // Check if the screen width is larger than 1024 pixels

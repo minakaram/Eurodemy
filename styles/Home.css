@@ -64,10 +64,10 @@ html {
   width: 100%;
 }
 body {
-  user-select: none;
+  /* user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
+  -ms-user-select: none; */
 }
 p {
   margin-bottom: 0 !important;
@@ -78,7 +78,7 @@ a {
   cursor: pointer;
 }
 img {
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 h1,
 h2,
@@ -154,7 +154,7 @@ h6 {
   align-items: center;
 }
 .navigationBar img {
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 .navigationBar ul li a {
   color: var(--Nuturals-White);
@@ -561,7 +561,7 @@ h6 {
   margin: 50px auto;
 }
 .search-overlay-section .search-overlay-inner-container {
-  width: 70%;
+  width: 80%;
   position: fixed;
   left: 50%;
   top: 0%;

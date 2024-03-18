@@ -1,0 +1,268 @@
+@font-face {
+  font-family: rubikRegular-400;
+  src: url(../Assets//Rubik/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: rubikMedium-500;
+  src: url(../Assets//Rubik/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: rubikSemiBold-600;
+  src: url(../Assets//Rubik/Rubik-SemiBold.ttf);
+}
+@font-face {
+  font-family: rubikBold-700;
+  src: url(../Assets//Rubik/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkRegular-400;
+  src: url(../Assets/Rethink_sans/RethinkSans-Regular.ttf);
+}
+@font-face {
+  font-family: rethinkMedium-500;
+  src: url(../Assets/Rethink_sans/RethinkSans-Medium.ttf);
+}
+@font-face {
+  font-family: rethinkBold-700;
+  src: url(../Assets/Rethink_sans/RethinkSans-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkExtraBold-800;
+  src: url(../Assets/Rethink_sans/RethinkSans-ExtraBold.ttf);
+}
+a {
+  text-decoration: none !important;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Nuturals-N-1: #140000;
+  --Nuturals-N-2: #262121;
+  --Nuturals-N-3: #594e4e;
+  --Nuturals-N-7: #fcfcfc;
+  --Nuturals-N-6: #f2eded;
+  --Nuturals-White: #fff;
+  --Primary-Primary: #ad1519;
+  --Ternary-Ternary: #140000;
+  --NuturalsN-5: #bfb6b6;
+  --Nuturals-N-4: #807070;
+  --secondary: #fee1e1;
+  --Success-Success---Primary: #16ad38;
+  --Secondary-Secondary: #fabd00;
+}
+html {
+  font-size: 100%;
+}
+body {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+p {
+  margin-bottom: 0 !important;
+}
+.navbar-toggle-container {
+  width: 40px;
+  background-color: rgba(128, 128, 128, 0.589);
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fff;
+  color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--Primary-Primary);
+  border-radius: 0;
+  height: 80px;
+}
+/*--------------------------------------- main-container -----------------------------------------------*/
+.main-container {
+  background-color: var(--Nuturals-White);
+}
+.main-box {
+  width: 70%;
+  margin: 100px auto;
+}
+.hero-section {
+  background-color: var(--Nuturals-N-2);
+  background-image: url("./Assets/BG\ Shapes.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+.heading-section {
+  padding-top: 5rem;
+}
+.heading-section .heading-p {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  font-size: 22px;
+  font-family: rubikSemiBold-600;
+  margin-bottom: 3rem;
+}
+.heading-section .heading-p img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heading-section p {
+  text-align: center;
+  font-family: rethinkMedium-500;
+  line-height: 40px;
+  padding: 0rem 1rem;
+}
+.months-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem 0rem;
+  margin-bottom: 2rem;
+}
+.months-row {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 1rem;
+}
+.months-container .months-row .months-item {
+  color: var(--Nuturals-White);
+  width: calc((100% - 2rem) / 3);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: rubikMedium-500;
+}
+.months-container .months-row:nth-child(odd) .months-item {
+  background-color: var(--Nuturals-N-3);
+}
+
+.months-container .months-row:nth-child(even) .months-item {
+  background-color: var(--Nuturals-N-1);
+}
+
+.footer {
+  background-color: var(--Nuturals-N-6);
+  position: relative;
+}
+.footer .social-icons {
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--NuturalsN-5);
+}
+
+.footer .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .contact-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  border-right: 1px solid var(--NuturalsN-5);
+}
+.footer .contact-left p {
+  width: 100%;
+}
+.footer .contact-left p a {
+  color: var(--Nuturals-N-1);
+  font-family: rethinkRegular-400;
+  text-align: left;
+  width: 100%;
+}
+.footer .contact-left .small a {
+  color: var(--NuturalsN-5);
+  font-family: rethinkRegular-400;
+  text-align: left;
+  font-size: 14px;
+}
+.footer .contact-right {
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+.footer .contact-right h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: rubikSemiBold-600;
+  font-size: 20px;
+  color: var(--Nuturals-N-3);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--Nuturals-White);
+  padding: 1rem 0rem;
+  width: 90%;
+}
+.footer .contact-right p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem !important;
+  font-family: rubikRegular-400;
+}
+.footer .contact-right p a {
+  color: var(--Nuturals-N-2);
+}
+.footer .rect{
+top: 0;
+left: 0;
+}
+@media (max-width: 1024px) {
+  .main-box {
+    width: 80%;
+  }
+}
+@media(max-width:768px){
+    .main-box{
+        width: 100%;
+        margin: 0;
+    }
+    .months-row{
+        width: 90%;
+    }
+    .months-item span{
+        padding: 0.5rem;
+        font-size: 13px;
+    }
+    .footer .contact-container{
+        flex-direction: column;
+    }
+    .footer .contact-right{
+        order: 0;
+        width: 100%;
+    }
+    .footer .contact-left{
+        order: 1;
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+    .footer .social-icons{
+        flex-wrap: wrap;
+        padding: 3rem 1rem;
+        gap: 1rem;
+    }
+    .heading-section .heading-p{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+    .heading-section .heading-p img{
+        width: 100%;
+    }
+}
