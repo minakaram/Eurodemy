@@ -155,11 +155,13 @@ CATEGORY_ARROW.addEventListener("click", () => {
 
   if (isDropdownVisible) {
     // Hide the dropdown
+    CATEGORY_ARROW.src = "Assets/down-arrow.svg";
     DROP_DOWN_CONTAINER.style.display = "none";
     // Clear the content of the dropdown when hiding it
     DROP_DOWN_CONTAINER.innerHTML = "";
   } else {
     // Show the dropdown
+    CATEGORY_ARROW.src = "./Assets/OverlayDownArrow.svg";
     CATEGORIES.forEach((category) => {
       DROP_DOWN_CONTAINER.innerHTML += `<div class="search-overlay-dropdown-item">
         ${category}

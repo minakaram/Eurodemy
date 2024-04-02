@@ -77,9 +77,6 @@ a {
   color: inherit;
   cursor: pointer;
 }
-img {
-  /* pointer-events: none; */
-}
 h1,
 h2,
 h3,
@@ -524,7 +521,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------- saerch overlay---------------------------------------------*/
+/*--------------------------------------------- search overlay---------------------------------------------*/
 
 .search-overlay-section {
   width: 100vw;
@@ -543,6 +540,31 @@ h6 {
     rgba(0, 0, 0, 0.93) 120%
   );
   backdrop-filter: blur(11px);
+}
+.courseNameSearch {
+  width: 100%;
+}
+.allSearchInputsContainer {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+.searchInputsLeftSide,
+.searchInputsRightSide {
+  width: 50%;
+  display: flex;
+  gap: 0.5rem;
+}
+.search-overlay-category-input {
+  width: 55%;
+}
+.search-overlay-cities-input {
+  width: 45%;
+}
+.search-overlay-duration-input,
+.search-overlay-years-input,
+.search-overlay-months-input {
+  width: calc((100% - 0.5rem) / 3);
 }
 .search-overlay-section .search-overlay-close-btn {
   position: fixed;
@@ -575,14 +597,14 @@ h6 {
   height: 3rem;
   color: var(--Nuturals-White);
   outline: none;
-  padding: 0rem 1rem;
+  padding: 0rem 1rem 0rem 0.5rem;
   width: 100%;
 }
 .search-overlay-abslute-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 1.5rem;
+  right: 0.7rem;
   cursor: pointer;
 }
 .search-overlay-category-input,
@@ -712,6 +734,46 @@ h6 {
 .search-overlay-section .search-button-overlay img {
   width: 20px;
   height: 20px;
+}
+.search-overlay-dropdown{
+margin-top:0.5rem
+}
+@media (max-width: 1024px) {
+  .allSearchInputsContainer {
+    flex-direction: column;
+  }
+  .searchInputsLeftSide,
+  .searchInputsRightSide {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .searchInputsLeftSide {
+    flex-direction: column;
+  }
+  .searchInputsRightSide {
+    flex-direction: column;
+  }
+  .search-overlay-category-input,
+  .search-overlay-cities-input,
+  .search-overlay-duration-input,
+  .search-overlay-years-input,
+  .search-overlay-months-input {
+    width: 100%;
+  }
+  .search-overlay-section h2 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  .search-overlay-section {
+    font-size: 80%;
+  }
+  .search-overlay-dropdown-item{
+    padding:1rem 2.8rem 1rem 0.5rem
+  }
+  .search-overlay-dropdown-item .custom-checkbox{
+    right: 1rem;
+  }
 }
 /*--------------------------------------------- hero section ----------------------------------------------*/
 .header-section {
@@ -946,7 +1008,7 @@ h6 {
 
 @media (width < 769px) {
   .header-section {
-    height: 70vh;
+    height: 90vh;
   }
   .searchCourseByName-hero-section-container {
     width: 90%;
