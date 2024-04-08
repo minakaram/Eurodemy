@@ -40,6 +40,7 @@
   --Nuturals-N-1: #140000;
   --Nuturals-N-2: #262121;
   --Nuturals-N-3: #594e4e;
+  --Nuturals-N-4: #807070;
   --Nuturals-N-7: #fcfcfc;
   --Nuturals-N-6: #f2eded;
   --Nuturals-White: #fff;
@@ -56,8 +57,13 @@ html {
 p {
   margin-bottom: 0 !important;
 }
+a {
+  text-decoration: none;
+  color: inherit !important;
+  cursor: pointer;
+}
 .navbar-toggle-container {
-  width: 40px;
+  width: 38px;
   background-color: rgba(128, 128, 128, 0.589);
   height: 100%;
 }
@@ -110,26 +116,19 @@ p {
   justify-content: center;
   align-items: center;
 }
-.active-list {
-  background-color: var(--secondary);
-}
-.active-list a {
-  color: var(--Primary-Primary) !important;
-  font-family: rubikSemiBold-600 !important;
-}
+
 .navigationBar ul li a {
-  text-decoration: none;
   color: var(--Nuturals-N-1);
   text-align: center;
+  font-family: rubikRegular-400;
   /* line-height: 80px; */
   padding: 0px 1.4rem;
   height: 80px;
-  font-family: rubikRegular-400;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   transition: all 300ms;
+  position: relative;
 }
 
 .navigationBar img {
@@ -138,20 +137,25 @@ p {
 .navigationBar ul li a:hover .down-arrow-nav-absolute {
   opacity: 1;
 }
-.down-arrow-nav {
-  margin-left: 1rem;
-}
+
 .down-arrow-nav-absolute {
   position: absolute;
   right: 1.4rem;
   opacity: 0;
   transition: all 300ms;
 }
-.navigationBar ul li a:hover {
-  color: var(--Primary-Primary);
+.active-list {
+  background-color: var(--secondary);
 }
-.navigationBar ul li a:hover path {
-  fill: var(--Primary-Primary) !important;
+.active-list a {
+  color: var(--Primary-Primary) !important;
+  font-family: rubikSemiBold-600 !important;
+}
+.navigationBar ul li a:hover {
+  color: var(--Primary-Primary) !important;
+}
+.down-arrow-nav {
+  margin-left: 1rem;
 }
 .navigationBar .header-search-bar {
   height: 3rem;
@@ -218,7 +222,7 @@ p {
   grid-template-columns: repeat(2, 1fr);
   position: absolute;
   left: 0px;
-  top: 100%;
+  top: 81px;
   background-color: white;
   width: 30rem;
   transition: 0.3s;
@@ -339,7 +343,7 @@ p {
   border: 1px solid var(--Nuturals-N-6);
 }
 .navigationBar ul li a svg {
-  margin-left: 10px !important  ;
+  margin-left: 10px;
 }
 .navigationBar ul li a svg path {
   transition: all 0.5s;
@@ -351,6 +355,7 @@ p {
   text-decoration: none;
   color: var(--Nuturals-N-1);
 }
+
 @media (1024px < width <1240px) {
   .logo-image {
     padding-right: 0.5rem;
@@ -360,7 +365,7 @@ p {
     padding: 0px 0.5rem;
   }
   .navigationBar {
-    padding: 0px 0.8rem;
+    padding: 0px 1rem;
   }
 }
 
@@ -400,19 +405,6 @@ p {
   }
   #categories-dropdown-collapse {
     width: 80%;
-  }
-}
-
-@media (width<768px) {
-  #categories-dropdown-collapse {
-    width: 100%;
-  }
-  .logo-image {
-    width: 120px;
-    padding: 0.938rem 0rem 0.938rem 0;
-  }
-  .navigationBar .cities-dropdown-nav {
-    width: 100%;
   }
 }
 
@@ -460,459 +452,146 @@ p {
     top: 71px !important;
   }
   .logo-image {
-    width: 120px;
+    width: 110px;
   }
   .navigationBar .nav-icon-toggler p {
     height: 80px;
-    padding: 0rem 1.25rem;
+    padding: 0rem 1rem;
   }
   .navigationBar .header-search-bar {
-    height: 2.3rem;
-    width: 2.3rem;
+    height: 2.2rem;
+    width: 2.2rem;
     margin-right: 1px;
   }
   .changeTo-arabic-courses-box {
-    width: 2.3rem;
-    height: 2.3rem;
+    width: 2.2rem;
+    height: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
 
-/*------------------------------------------- course category heading --------------------------------------------*/
-.course-category-heading {
+/* --------------------------------------------- navigation box --------------------------------------------- */
+.searchResult-section {
   position: relative;
-  z-index: 10;
-  padding-top: 10rem;
-  padding-bottom: 4rem;
 }
-.course-category-heading .flag-cities-abslute {
-  position: absolute;
-  right: 0;
-  bottom: 60%;
-}
-
-.course-category-heading .category-heading-container h1 {
-  position: relative;
-  width: 100%;
-  text-align: center;
-}
-
-.course-category-heading
-  .category-heading-container
-  h1
-  .heading-left-vector-abslute {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 30%;
-}
-.course-category-heading
-  .category-heading-container
-  h1
-  .heading-right-vector-abslute {
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-}
-.course-category-heading .cities-heading-paragraph {
-  font-family: rethinkRegular-400;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
-  color: var(--Nuturals-N-2);
-  text-align: center;
-  width: 73%;
+.searchResult-container {
+  width: 80%;
   margin: auto;
 }
-
-.hightlight-red {
-  color: var(--Primary-Primary);
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  font-family: rethinkExtraBold-800;
-}
-@media (width<768px) {
-  .heading-right-vector-abslute {
-    width: 19% !important;
-    top: 52% !important;
-  }
-  .heading-left-vector-abslute {
-    width: 19% !important;
-  }
-}
-@media (width<400px) {
-  .heading-right-vector-abslute {
-    width: 13% !important;
-  }
-  .heading-left-vector-abslute {
-    width: 13% !important;
-  }
-}
-/*------------------------------------------ cities and venues section ------------------------------------------ */
-.cities-venues-section {
-  padding: 7.5rem 0 5rem;
-  position: relative;
-}
-.vector-red-up-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.vector-red-down-left {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.cities-heading-paragraph {
-  font-family: rethinkRegular-400;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
-  color: var(--Nuturals-N-2);
-  text-align: center;
-  padding: 2rem 3rem;
-}
-.hightlight-red {
-  color: var(--Primary-Primary);
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  font-family: rethinkExtraBold-800;
-}
-.wrapper-container {
-  overflow: hidden;
-  position: relative;
-  width: 95%;
-  margin: 0 auto;
-}
-
-.cities-venues-section .wrapper-container .cities-wrapper {
-  display: flex !important;
-  transition: transform 0.5s ease-in-out;
-}
-.cities-venues-section .container-cards {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-  max-width: 85%;
-  justify-content: center;
-  justify-items: center;
-  margin: auto;
-  padding: 4rem 0;
-  min-width: 100%;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  padding: 60px;
-}
-
-.cities-image-abslute {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  vertical-align: middle;
-}
-.j,
-.h,
-.i,
-.g,
-.f,
-.k,
-.o,
-.m {
-  margin-top: -120px;
-}
-.cities-courses-card {
-  width: 100%;
-  height: 15rem;
+.navigation-box-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  color: var(--Nuturals-N-6);
-  position: relative;
-  font-family: rubikRegular-400;
 }
-.cities-courses-card:hover .courses-city-details,
-.cities-courses-card:hover {
-  background: rgba(38, 33, 33, 0.705);
-}
-.search-div-style:hover .courses-city-details,
-.search-div-style:hover {
-  background: rgba(38, 33, 33, 0.705);
-}
-.courses-city-details {
-  position: relative;
-  transition: 0.3s;
-  width: 100%;
-  height: 100%;
+.navigation-box {
+  margin-top: 105px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-}
-.order-by-toggler {
-  background-color: var(--Primary-Primary);
-  position: absolute;
-  left: 4rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: none;
-  z-index: 200;
-}
-.cities-courses-card .courses-city-average,
-.cities-courses-card .view-course-city,
-.online-courses-bookmark-content .view-course-city-bookmark {
-  opacity: 0;
-}
-.search-div-style .courses-city-average,
-.search-div-style .view-course-city,
-.online-courses-bookmark-content .view-course-city-bookmark {
-  opacity: 0;
-}
-.cities-courses-card:hover .courses-city-average,
-.cities-courses-card:hover .view-course-city,
-.online-courses-bookmark-content:hover .view-course-city-bookmark {
-  opacity: 1;
-}
-.search-div-style:hover .courses-city-average,
-.search-div-style:hover .view-course-city,
-.online-courses-bookmark-content:hover .view-course-city-bookmark {
-  opacity: 1;
-}
-.courses-city-details .courses-city {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: rubikMedium-500;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  color: var(--Nuturals-White);
-}
-.courses-avrg-view {
-  position: absolute;
-  width: 100%;
-  bottom: 0.5rem;
-}
-.courses-city-average {
-  font-family: rubikRegular-400;
-  font-size: 1rem;
-  line-height: 1rem;
-  padding: 1rem 0 2.125rem;
-  text-align: center;
-  color: var(--Nuturals-White);
-}
-.courses-city-details .view-course-city {
-  border-radius: 1px;
-  border: 0.25px solid rgba(191, 182, 182, 0.5);
-  background: rgba(255, 255, 255, 0);
-  font-size: 0.75rem;
-  height: 1.75rem;
-  position: relative;
-  bottom: 0;
-  cursor: pointer;
-  width: 70%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 10px;
-}
-.courses-city-details .view-course-city .right-arrow-mini {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 5px;
-}
-.online-courses-bookmark-content .view-course-city-bookmark {
-  border-radius: 1px;
-  border: 0.25px solid rgba(191, 182, 182, 0.5);
-  background: rgba(255, 255, 255, 0);
-  font-size: 0.75rem;
-  position: relative;
-  cursor: pointer;
-  width: 70%;
-  margin: 1rem auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.view-course-city p,
-.online-courses-bookmark-content .view-course-city-bookmark p {
-  padding: 0.5rem 1rem;
-  color: var(--Nuturals-N-6);
-}
-.container-container-cities {
-  max-width: 95%;
-  margin: 0 auto;
-}
-
-.b,
-.d {
-  margin-top: 120px;
-}
-.i,
-.g {
-  margin-top: 0px;
-}
-
-.online-courses-bookmark-box {
-  margin: auto;
-  position: relative;
-  z-index: 100;
+  /* gap: 1rem; */
   background-color: var(--Nuturals-N-7);
+  overflow: hidden;
+  min-height: 40px;
+  overflow: hidden;
+  padding-right: 10px;
 }
-.bookmark-icon {
-  position: absolute;
-  top: 0;
-  left: 0.438rem;
+.navigation-box span a {
+  color: var(--NuturalsN-5) !important;
 }
-.onlineCourse-bookmarkIcon {
-  margin-top: -170px;
-  border: 1px solid black;
+.navigation-box .Opportunity-details {
+  font-weight: 600;
+  margin-left: 1rem;
 }
-.cities-courses-card:hover > * {
-  color: var(--Nuturals-N-6);
+.navigation-box .back-image {
+  height: 100%;
 }
-.online-courses-bookmark-box .img-on-hover,
-.online-courses-bookmark-box .img-on-hover-cap,
-.on-hover-white-arrow {
-  opacity: 0;
-}
-.online-courses-bookmark-box:hover .img-on-hover,
-.online-courses-bookmark-box:hover .img-on-hover-cap {
-  opacity: 1;
-  z-index: 1;
-}
-
-.see-all-cities-div:hover {
-  color: var(--Nuturals-N-6);
-}
-
-.img-on-hover-cap {
-  position: absolute;
-  transform: translateX(-100%);
-}
-.online-courses-bookmark-box:hover {
-  background: var(--Nuturals-N-2);
-}
-.online-courses-bookmark-content {
+.navigation-box .careers-span {
+  border-left: 1px solid #807070;
+  height: 40px;
+  margin-left: 2px;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 1.5rem 0;
-  z-index: 10;
-  position: relative;
-  color: var(--Nuturals-N-2);
-}
-.online-course-img {
-  margin-top: 0.75rem;
-}
-.online-courses-bookmark-header {
-  font-family: rubikMedium-500;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  margin-bottom: 0.25rem;
-  padding: 0.938rem 0;
-}
-.online-courses-bookmark-content .online-courses-bookmark-txt {
-  line-height: 1rem;
-  font-family: rubikRegular-400;
-  font-size: 1rem;
-  margin-bottom: 2.125rem;
-}
-.navigation-cities {
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  max-width: 14.5rem;
   align-items: center;
-  padding: 3rem 0;
+  justify-content: center;
+  padding: 0px 10px;
+  /* margin-right: 0.5rem; */
 }
-.cities-button-prev,
-.cities-button-next {
-  background-color: var(--Nuturals-N-2);
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  cursor: pointer;
+.navigation-box .anchor-back {
+  height: 40px;
+}
+.topRightRedVector {
+  position: absolute;
+  right: 0;
+  width: 20%;
+}
+.bottomLeftVector {
+  position: absolute;
+  left: 0;
+  width: 20%;
+  bottom: -7%;
+}
+.searchResult-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 5rem 0 3rem 0rem;
+}
+.searchResultDetails {
+  border: 0.5px solid var(--Nuturals-N-4);
+  min-height: 2rem;
+  padding: 0.5rem 0.2rem 0.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 2px;
 }
-.pagination-container {
-  display: flex;
-  justify-content: center;
+.searchResultDetails p {
+  margin-right: 0.5rem;
+  font-family: rubikRegular-400;
+  font-size: 0.875rem;
+  color: var(--Nuturals-N-4);
 }
-
-.pagination-item {
-  width: 2.5rem;
-  height: 0.5rem;
-  border-radius: 3px;
-  background-color: var(--Nuturals-N-6);
-  margin: 0 0.4rem;
-  cursor: pointer;
-}
-
-.pagination-item.active {
-  background-color: var(--Nuturals-N-2);
-  border-radius: 3px;
-}
-.view-cities-venues {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1px;
-  text-align: center;
-  border: 0.5px solid var(--Nuturals-N-2);
-  background: var(--Nuturals-N-7);
-  backdrop-filter: blur(2.5px);
-  margin: auto;
-  width: 30%;
-  padding: 0.938rem 2.25rem;
-  position: relative;
-  cursor: pointer;
+.searchResultDetails p span {
   color: var(--Nuturals-N-2);
 }
-.view-cities-venues p {
-  text-align: end;
-  font-family: rubikMedium-500;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
+
+.course-search-lenght-container {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
 }
-.view-cities-venues svg {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+.course-search-lenght {
+  border: 0.5px solid var(--NuturalsN-5);
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: rethinkBold-700;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
-.view-cities-venues:hover {
-  color: var(--Nuturals-N-7);
-  background-color: var(--Nuturals-N-2);
-}
-.view-cities-venues:hover path {
-  fill: #fff !important;
-}
-.cities-venues-section .cities-search {
+/* ---------- */
+.courses-search {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
-  padding: 0px 4rem;
   position: relative;
 }
-.cities-venues-section .cities-search .left-side-search {
+.courses-search .left-side-search {
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cities-venues-section .cities-search .left-side-search .order-by {
+.courses-search .left-side-search .order-by {
   color: var(--Nuturals-White);
   background-color: var(--Primary-Primary);
   padding: 11px 20px;
 }
-.cities-venues-section .cities-search .left-side-search select {
+.courses-search .left-side-search select {
   width: 180px;
   border-radius: 1px;
   padding: 10px 15px;
@@ -920,225 +599,132 @@ p {
   border: 1px solid var(--Primary-Primary);
   color: var(--Primary-Primary);
   appearance: none; /* Remove default arrow in some browsers */
-  -webkit-appearance: none; /* Remove default arrow in Safari */
-  -moz-appearance: none; /* Remove default arrow in Firefox */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-image: url(../Assets/red-arrow.svg);
   position: relative;
 }
-.cities-venues-section .cities-search .left-side-search select option:hover {
-  background-color: var(--Primary-Primary);
-  color: var(--Nuturals-White);
+.courses-search .left-side-search select option {
+  background-color: transparent; /* Remove default background color */
+}
+.courses-search .left-side-search select option:hover {
+  background-color: var(
+    --Primary-Primary
+  ) !important; /* Change background color on hover */
+  color: var(--Nuturals-White); /* Change text color on hover */
 }
 
-.cities-venues-section .cities-search .left-side-search select:focus {
+.courses-search .left-side-search select:focus {
   border: 1px solid var(--Primary-Primary);
   box-shadow: none;
   outline: none !important;
 }
-.cities-search-input {
-  position: relative;
+/* ----- */
+.coming-training-card-container {
+  margin: 5rem auto 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: auto;
 }
-.cities-search-input input {
-  width: 30rem;
-  height: 3rem;
-  padding: 1rem;
-  outline: none;
-  border: 1px solid var(--NuturalsN-5);
+.coming-training-card {
+  padding: 0;
+  border-radius: 2px;
+  min-height: 23rem;
+  width: 18.75rem;
+  border-bottom: 4px solid var(--Nuturals-N-3);
+  background: var(--Nuturals-N-7);
+  font-size: 0.875rem;
+  transition: 500ms;
 }
-.cities-search-input img {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
+.coming-training-card:hover {
+  background: var(--Nuturals-N-6);
 }
-.search-div-style {
-  width: 20%;
-  height: 15rem;
-  position: relative;
-}
-
-.cities-search-container {
+.coming-training-card-header,
+.coming-training-card-img {
   width: 100%;
+}
+.coming-training-card-content {
+  text-align: center;
+}
+.coming-training-card-content .card-paragraph {
+  font-family: rubikMedium-500;
+  line-height: 1.313rem;
+  color: var(--Nuturals-N-3);
+  padding: 0.625rem 0.875rem;
+}
+.card-date-container,
+.card-details-container {
+  font-family: rethinkMedium-500;
+  display: flex;
+  padding: 0 1.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+}
+.card-date-container img {
+  width: 2.8rem !important;
+  height: 1rem;
+}
+.card-date-container p {
+  margin: 0;
+}
+.card-details-container {
+  padding: 1.125rem 0 0.813rem;
+}
+.card-date-container img {
+  width: 46px !important;
+  height: 16px !important;
+}
+.card-details-city {
+  border-left: 1px solid #ddd9d9;
+  border-right: 1px solid #ddd9d9;
+  padding: 0 0.625rem;
+}
+.card-details-container :nth-child(3) {
+  font-family: rethinkBold-700;
+  font-size: 1rem;
+}
+.coming-training-card-footer {
+  background-color: var(--Nuturals-N-3);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0rem;
+  opacity: 0;
+  padding: 0.8rem 0rem;
+  transition: 500ms;
+  margin-bottom: 0.313rem;
+  position: relative;
 }
-@media (767px < width <1025px) {
-  .cities-venues-section {
-    padding: 7.5rem 3rem 5rem;
-  }
-  .cities-venues-section .container-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 8px;
-    padding: 5rem 2rem;
-    max-width: 80%;
-  }
-  .b {
-    margin-top: -120px;
-  }
-  .d {
-    margin-top: -240px;
-    grid-column-start: 2;
-    grid-column-end: 2;
-  }
-  .f,
-  .i {
-    margin-top: -370px;
-  }
-  .h {
-    margin-bottom: 120px;
-  }
-  .e {
-    margin-bottom: 120px;
-    margin-top: -120px;
-  }
-  .g {
-    margin-top: -240px;
-  }
-  .c {
-    margin-bottom: 120px;
-  }
-  .j {
-    margin-top: -240px;
-  }
-  .l {
-    margin-top: -250px;
-  }
-  .o {
-    margin-top: -250px;
-  }
-  .onlineCourse-bookmarkIcon {
-    margin-top: -200px;
-    border: 1px solid black;
-  }
-  .cities-venues-section .wrapper-container .cities-wrapper {
-    padding-top: 7rem;
-  }
-  .cities-heading-paragraph {
-    padding: 4rem;
-  }
-  .view-cities-venues {
-    width: 60%;
-  }
-  .cities-courses-card .courses-city-average,
-  .cities-courses-card .view-course-city,
-  .online-courses-bookmark-content .view-course-city-bookmark {
-    opacity: 1;
-  }
-  .search-div-style .courses-city-average,
-  .search-div-style .view-course-city,
-  .online-courses-bookmark-content .view-course-city-bookmark {
-    opacity: 1;
-    color: var(--Nuturals-White);
-  }
-  .search-div-style {
-    width: 40%;
-    height: 15rem;
-    position: relative;
-  }
-  .cities-search {
-    padding: 0rem 0rem !important;
-  }
+.view-course-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: rubikRegular-400;
+  color: var(--Nuturals-White);
+  cursor: pointer;
 }
-
-@media (width<768px) {
-  .vector-red-down-left {
-    width: 150px;
-    height: 150px;
-  }
-  .cities-venues-section .container-cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .b,
-  .d,
-  .f,
-  .i,
-  .l,
-  .o,
-  .j,
-  .h,
-  .k,
-  .m {
-    margin: 0;
-  }
-
-  .onlineCourse-bookmarkIcon {
-    margin-top: -50px;
-    border: 1px solid black;
-  }
-  .view-cities-venues {
-    width: 90%;
-  }
-  .cities-button-prev,
-  .cities-button-next {
-    display: none;
-  }
-  .cities-venues-section .pagination-container {
-    margin: auto;
-  }
-  .cities-courses-card .courses-city-average,
-  .cities-courses-card .view-course-city,
-  .online-courses-bookmark-content .view-course-city-bookmark {
-    opacity: 1;
-  }
-  .search-div-style .courses-city-average,
-  .search-div-style .view-course-city,
-  .online-courses-bookmark-content .view-course-city-bookmark {
-    opacity: 1;
-    color: var(--Nuturals-White);
-  }
-  .vector-red-up-right {
-    width: 200px;
-    height: 200px;
-  }
-  .cities-heading-paragraph {
-    padding: 0.5rem 0;
-  }
-  .search-div-style {
-    width: 65%;
-    height: 15.5rem;
-    position: relative;
-  }
-  .order-by-toggler {
-    display: block !important;
-    left: 1rem;
-  }
-  .left-side-search {
-    display: none !important;
-  }
-  .cities-search {
-    padding: 0rem 0rem !important;
-    padding-right: 1rem !important;
-    justify-content: flex-end !important;
-  }
-  .cities-search-input {
-    align-self: flex-end;
-    width: 70%;
-  }
-  .cities-search-input input {
-    /* align-self: flex-end; */
-    width: 100%;
-    font-size: 14px;
-  }
+.view-course-box p {
+  margin: 0;
 }
-@media (width<400px) {
-  .view-cities-venues {
-    width: 99%;
-  }
-  .view-course-city p {
-    padding: 15px;
-  }
-  .cities-search-input input {
-    /* align-self: flex-end; */
-    width: 100%;
-    font-size: 11px;
-  }
+.coming-training-card-footer .right-arrow {
+  /* margin-left: 1rem; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+  right: 10px;
+  top: 30%;
 }
-
+.coming-training-card:hover .coming-training-card-footer {
+  opacity: 1;
+}
+.coming-training-card:hover .coming-training-card-content .card-paragraph {
+  font-family: rubikSemiBold-600;
+}
 /* ------------------------------------------------- FOOTER ---------------------------------------------- */
 .footer {
   background-image: url(../Assets/Footer\ Bg.png);

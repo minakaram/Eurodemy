@@ -80,7 +80,7 @@ p {
   border-radius: 0;
   height: 80px;
 }
-.flag{
+.flag {
   position: absolute;
   top: 80px;
   right: 0px;
@@ -365,7 +365,7 @@ p {
   text-decoration: none;
   color: var(--Nuturals-N-1);
 }
-.navigationBar .nav-items-container .nav-toggler-item a{
+.navigationBar .nav-items-container .nav-toggler-item a {
   font-family: rubikRegular-400;
 }
 @media (1024px < width <1320px) {
@@ -494,7 +494,7 @@ p {
     justify-content: center;
     align-items: center;
   }
-  .flag{
+  .flag {
     position: absolute;
     top: 70px;
     right: 0px;
@@ -747,7 +747,7 @@ p {
   z-index: 200;
 }
 .filteration-section .head-filteration .orderBy-dropdown::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 10px;
   height: 10px;
@@ -1026,7 +1026,7 @@ p {
 }
 /* Show a checkmark when the checkbox is checked */
 .custom-checkbox input:checked + .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   left: 6px;
@@ -1175,7 +1175,6 @@ p {
     width: 30%;
     margin-left: 5px;
     gap: 0 !important;
-
     display: flex;
     justify-content: center;
   }
