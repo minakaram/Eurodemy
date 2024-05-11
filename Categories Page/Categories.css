@@ -560,6 +560,117 @@ p {
   line-height: 1.875rem;
   font-family: rethinkExtraBold-800;
 }
+.categories-search-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0rem 0rem !important;
+  width: 86%;
+  margin: auto;
+  margin-top: 5rem;
+}
+.categories-search-dropdown .orderBy-dropdown.active::before {
+  transform: rotate(-225deg) !important;
+  top: 20px !important;
+}
+.categories-search-dropdown .orderBy-dropdown.active .order-select {
+  display: block;
+}
+.categories-search-dropdown .left-side-search {
+  display: flex;
+}
+
+.categories-search-dropdown .left-side-search .order-by {
+  color: var(--Nuturals-White);
+  background-color: var(--Primary-Primary);
+  padding: 11px 20px;
+}
+.orderBy-dropdown {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  z-index: 200;
+}
+.categories-search-dropdown .orderBy-dropdown::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--Primary-Primary);
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  right: 20px;
+  top: 17px;
+  z-index: 100;
+  transform: rotate(-45deg) !important;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.categories-search-dropdown .orderBy-dropdown.active::before {
+  transform: rotate(-225deg) !important;
+  top: 20px !important;
+}
+
+.categories-search-dropdown .orderBy-dropdown input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid var(--Primary-Primary);
+  padding: 12px 20px;
+  color: var(--Primary-Primary);
+  font-family: rubikMedium-500;
+  cursor: pointer;
+}
+.categories-search-dropdown .orderBy-dropdown input::placeholder {
+  color: var(--Primary-Primary);
+}
+.categories-search-dropdown .orderBy-dropdown .order-select {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  color: var(--Primary-Primary);
+  border: 1px solid var(--Primary-Primary);
+  border-top: none;
+  z-index: 200;
+  background-color: var(--Nuturals-White);
+}
+.categories-search-dropdown .orderBy-dropdown.active .order-select {
+  display: block;
+}
+.categories-search-dropdown .orderBy-dropdown .order-select div {
+  padding: 12px 20px;
+  cursor: pointer;
+}
+.categories-search-dropdown .orderBy-dropdown .order-select div:hover {
+  background-color: var(--Primary-Primary);
+  color: var(--Nuturals-White);
+}
+.small-order-by {
+  display: none;
+}
+.cities-search-input {
+  position: relative;
+}
+.cities-search-input input {
+  width: 30rem;
+  height: 3rem;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid var(--NuturalsN-5);
+}
+.cities-search-input img {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 @media (width<768px) {
   .course-category-heading h1 {
     position: relative;
@@ -574,6 +685,29 @@ p {
   .heading-left-vector-abslute {
     width: 19% !important;
   }
+  .categories-search-dropdown {
+    padding-right: 1rem !important;
+    justify-content: flex-end !important;
+  }
+  .cities-search-input {
+    align-self: flex-end;
+    width: 70%;
+  }
+  .cities-search-input input {
+    /* align-self: flex-end; */
+    width: 100%;
+    font-size: 14px;
+  }
+  .left-side-search {
+    width: 70%;
+  }
+  .small-order-by {
+    display: inline-block;
+    height: 50px;
+  }
+  .order-by {
+    display: none;
+  }
 }
 @media (width<400px) {
   .heading-right-vector-abslute {
@@ -582,9 +716,39 @@ p {
   .heading-left-vector-abslute {
     width: 11% !important;
   }
+  .cities-search-input input {
+    /* align-self: flex-end; */
+    width: 100%;
+    font-size: 11px;
+  }
+  .left-side-search {
+    width: 70%;
+  }
+  .orderBy-dropdown {
+    width: 200px;
+    height: 40px;
+  }
+  .categories-search-dropdown .orderBy-dropdown input {
+    padding-left: 10px;
+  }
+
+  .small-order-by {
+    display: inline-block;
+    height: 40px;
+  }
+  .categories-search-dropdown .orderBy-dropdown::before {
+    top: 15px;
+    right: 10px;
+  }
+  .categories-search-dropdown .orderBy-dropdown .order-select {
+    top: 40px;
+  }
+  .categories-search-dropdown .orderBy-dropdown {
+    font-size: 12px;
+  }
 }
 
-/*------------------------------------------ course cartegory section ------------------------------------------ */
+/*------------------------------------------ course category section ------------------------------------------ */
 .courses-category-section .swiper-container {
   width: 86%;
   overflow: hidden;
@@ -744,7 +908,7 @@ p {
   gap: 0.75rem;
 }
 .course-category-card.top-category-item::after {
-  content: "Top Category";
+  content: 'Top Category';
   font-family: rubikMedium-500;
   font-size: 0.875rem;
   display: flex;
@@ -843,7 +1007,7 @@ p {
   position: relative;
 }
 .courses-category-section .top-category-item::before {
-  content: "Top Category";
+  content: 'Top Category';
   position: absolute;
   top: 0;
   left: 0;

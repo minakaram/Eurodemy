@@ -1,0 +1,145 @@
+@font-face {
+  font-family: rubikRegular-400;
+  src: url(./Assets/Rubik/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: rubikMedium-500;
+  src: url(./Assets/Rubik/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: rubikSemiBold-600;
+  src: url(./Assets/Rubik/Rubik-SemiBold.ttf);
+}
+@font-face {
+  font-family: rubikBold-700;
+  src: url(./Assets/Rubik/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkRegular-400;
+  src: url(./Assets/Rethink_sans/RethinkSans-Regular.ttf);
+}
+@font-face {
+  font-family: rethinkMedium-500;
+  src: url(./Assets/Rethink_sans/RethinkSans-Medium.ttf);
+}
+@font-face {
+  font-family: rethinkBold-700;
+  src: url(./Assets/Rethink_sans/RethinkSans-Bold.ttf);
+}
+@font-face {
+  font-family: rethinkExtraBold-800;
+  src: url(./Assets/Rethink_sans/RethinkSans-ExtraBold.ttf);
+}
+a {
+  text-decoration: none !important;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Nuturals-N-1: #140000;
+  --Nuturals-N-2: #262121;
+  --Nuturals-N-3: #594e4e;
+  --Nuturals-N-7: #fcfcfc;
+  --Nuturals-N-6: #f2eded;
+  --Nuturals-White: #fff;
+  --Primary-Primary: #ad1519;
+  --Ternary-Ternary: #140000;
+  --NuturalsN-5: #bfb6b6;
+  --Nuturals-N-4: #807070;
+  --secondary: #fee1e1;
+  --Success-Success---Primary: #16ad38;
+  --Secondary-Secondary: #fabd00;
+}
+html {
+  font-size: 100%;
+}
+body {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+body img {
+  pointer-events: none;
+}
+p {
+  margin-bottom: 0 !important;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fff;
+  color: black;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--Primary-Primary);
+  border-radius: 0;
+  height: 80px;
+}
+/* --------------------------------HEADER --------------- */
+.logo-image-container {
+  position: relative;
+}
+.t-row-head {
+  background-color: var(--Nuturals-N-2);
+  height: 90vh;
+}
+.bg-image {
+  width: 100%;
+}
+.logo-image {
+  position: absolute;
+  width: 43%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+/* ------------------------- T BODY ---------------------- */
+.heading-container {
+  padding: 9rem 0 7rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading-secondary {
+  font-size: 1.25rem;
+  font-family: rubikBold-700;
+  color: var(--Ternary-Ternary);
+}
+.header-underline {
+  width: 30%;
+}
+/* --------------training information table ------------- */
+.training-information-table {
+  width: 95%;
+  margin: auto;
+}
+.t-body-training-information {
+  border: 1px solid var(--Nuturals-N-3);
+  height: 40rem;
+}
+.t-row-head-training-information {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.training-information-container {
+  border: 1px solid var(--Nuturals-N-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100px;
+  background-color: var(--Nuturals-White);
+  position: absolute;
+  top: 50;
+}
+.heading-teritary {
+  font-size: 1rem;
+  font-family: rubikRegular-400;
+  color: var(--Ternary-Ternary);
+}
