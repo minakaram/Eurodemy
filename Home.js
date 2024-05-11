@@ -183,11 +183,12 @@ CATEGORY_INPUT.addEventListener("input", (e) => {
   );
 
   if (inputValue === "") {
+    CATEGORY_ARROW.src = "Assets/down-arrow.svg";
     DROP_DOWN_CONTAINER.innerHTML = "";
     DROP_DOWN_CONTAINER.style.display = "none";
     return;
   }
-
+  CATEGORY_ARROW.src = "./Assets/OverlayDownArrow.svg";
   DROP_DOWN_CONTAINER.style.display = "block"; // Show the dropdown container
 
   DROP_DOWN_CONTAINER.innerHTML = ""; // Clear existing content
