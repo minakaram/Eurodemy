@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SendBrochureForm.css">
+    <title>Send Brochure</title>
+</head>
+
+<body>
+    <div class="overlay" id="overlay">
+        <div class="form-container">
+            <svg id="exit-btn" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="exit-btn" id="exit-btn">
+                <path d="M0 0H38C39.1046 0 40 0.895431 40 2V40H2C0.895431 40 0 39.1046 0 38V0Z" fill="#FEE1E1" />
+                <path
+                    d="M11.5736 13.3038C11.4543 13.1845 11.4543 12.991 11.5736 12.8717L12.87 11.5753C12.9893 11.456 13.1828 11.456 13.3021 11.5753L21.5125 19.7856C21.6318 19.905 21.6318 20.0984 21.5125 20.2178L20.2161 21.5141C20.0968 21.6334 19.9033 21.6334 19.784 21.5141L11.5736 13.3038Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M20.2161 21.5141C20.0968 21.6334 19.9033 21.6334 19.784 21.5141L18.4876 20.2177C18.3682 20.0984 18.3682 19.9049 18.4876 19.7856L26.6979 11.5753C26.8172 11.456 27.0107 11.456 27.13 11.5753L28.4264 12.8717C28.5457 12.991 28.5457 13.1845 28.4264 13.3038L20.2161 21.5141Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M11.5736 13.3038C11.4543 13.1845 11.4543 12.991 11.5736 12.8717L12.87 11.5753C12.9893 11.456 13.1828 11.456 13.3021 11.5753L21.5125 19.7856C21.6318 19.905 21.6318 20.0984 21.5125 20.2178L20.2161 21.5141C20.0968 21.6334 19.9033 21.6334 19.784 21.5141L11.5736 13.3038Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M20.2161 21.5141C20.0968 21.6334 19.9033 21.6334 19.784 21.5141L18.4876 20.2177C18.3682 20.0984 18.3682 19.9049 18.4876 19.7856L26.6979 11.5753C26.8172 11.456 27.0107 11.456 27.13 11.5753L28.4264 12.8717C28.5457 12.991 28.5457 13.1845 28.4264 13.3038L20.2161 21.5141Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M13.3022 28.4281C13.1828 28.5474 12.9894 28.5474 12.87 28.4281L11.5737 27.1317C11.4543 27.0124 11.4543 26.8189 11.5737 26.6996L19.784 18.4893C19.9033 18.3699 20.0968 18.3699 20.2161 18.4893L21.5125 19.7856C21.6318 19.905 21.6318 20.0984 21.5125 20.2178L13.3022 28.4281Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M21.5125 19.7856C21.6318 19.905 21.6318 20.0984 21.5125 20.2178L20.2161 21.5141C20.0968 21.6334 19.9033 21.6334 19.784 21.5141L11.5736 13.3038C11.4543 13.1845 11.4543 12.991 11.5736 12.8717L12.87 11.5753C12.9893 11.456 13.1828 11.456 13.3021 11.5753L21.5125 19.7856Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M13.3022 28.4281C13.1828 28.5474 12.9894 28.5474 12.87 28.4281L11.5737 27.1317C11.4543 27.0124 11.4543 26.8189 11.5737 26.6996L19.784 18.4893C19.9033 18.3699 20.0968 18.3699 20.2161 18.4893L21.5125 19.7856C21.6318 19.905 21.6318 20.0984 21.5125 20.2178L13.3022 28.4281Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M21.5125 19.7856C21.6318 19.905 21.6318 20.0984 21.5125 20.2178L20.2161 21.5141C20.0968 21.6334 19.9033 21.6334 19.784 21.5141L11.5736 13.3038C11.4543 13.1845 11.4543 12.991 11.5736 12.8717L12.87 11.5753C12.9893 11.456 13.1828 11.456 13.3021 11.5753L21.5125 19.7856Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M11.5737 26.6996C11.4543 26.8189 11.4543 27.0124 11.5737 27.1317L12.87 28.4281C12.9894 28.5474 13.1828 28.5474 13.3022 28.4281L21.5125 20.2178C21.6318 20.0984 21.6318 19.905 21.5125 19.7856L20.2161 18.4893C20.0968 18.3699 19.9033 18.3699 19.784 18.4893L11.5737 26.6996Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M20.2161 18.4893C20.0968 18.3699 19.9033 18.3699 19.784 18.4893L18.4876 19.7856C18.3682 19.9049 18.3682 20.0984 18.4876 20.2177L26.6978 28.428C26.8172 28.5474 27.0106 28.5474 27.13 28.428L28.4263 27.1317C28.5457 27.0124 28.5457 26.8189 28.4263 26.6996L20.2161 18.4893Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M11.5737 26.6996C11.4543 26.8189 11.4543 27.0124 11.5737 27.1317L12.87 28.4281C12.9894 28.5474 13.1828 28.5474 13.3022 28.4281L21.5125 20.2178C21.6318 20.0984 21.6318 19.905 21.5125 19.7856L20.2161 18.4893C20.0968 18.3699 19.9033 18.3699 19.784 18.4893L11.5737 26.6996Z"
+                    fill="#F52A2A" />
+                <path
+                    d="M20.2161 18.4893C20.0968 18.3699 19.9033 18.3699 19.784 18.4893L18.4876 19.7856C18.3682 19.9049 18.3682 20.0984 18.4876 20.2177L26.6978 28.428C26.8172 28.5474 27.0106 28.5474 27.13 28.428L28.4263 27.1317C28.5457 27.0124 28.5457 26.8189 28.4263 26.6996L20.2161 18.4893Z"
+                    fill="#F52A2A" />
+            </svg>
+            <form action="">
+                <div class="form-group">
+                    <h2>Sending course brochure to my e-mail</h2>
+                    <p class="form-text">
+                        Please fill in all the fields below and a link will be sent to your e-mail when you click it.
+                        You will be redirected to the download page.
+                    </p>
+                    <div class="form-inner">
+                        <div class="input-container">
+                            <div class="input-heading"><span>Candidate full name</span></div>
+                            <img src="../RegisterationForm/Assets/userName.svg" alt="">
+                            <div class="input-box">
+                                <input type="text" placeholder="Please type your triple name">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-heading"><span>Email</span></div>
+                            <img src="../RegisterationForm/Assets/userEmail.svg" alt="">
+                            <div class="input-box">
+                                <input type="email" placeholder="Please enter your email">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-heading"><span>Private phone number</span></div>
+                            <img src="../RegisterationForm/Assets/privateNumber.svg" alt="">
+                            <div class="input-box">
+                                <input type="number" placeholder="Enter private mobile number with the country key">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit-container">
+                        <div class="submit-container-inner">
+                            <div class="left-side-submit">
+                                <label class="custom-checkbox">
+                                    <input id="rights-checkmark" name="rights-checkmark" type="checkbox" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label for="rights-checkmark"> <span>I agree to the
+                                        <a class="highlighted-from-text" href="">property rights</a> &
+                                        <a class="highlighted-from-text" href="">terms of use</a>.
+                                    </span></label>
+                            </div>
+                            <div class="right-side-submit">
+                                <label class="custom-checkbox">
+                                    <input name="agreement" id="agreement" type="checkbox" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label for="agreement"><span>I agree to I agree to use data sent by me.</span></label>
+                            </div>
+                        </div>
+                        <button>
+                            <span>Apply & Join</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#exit-btn").click(function () {
+                $("#overlay").fadeOut();
+            })
+        })
+    </script>
+
+</body>
+
+</html>
