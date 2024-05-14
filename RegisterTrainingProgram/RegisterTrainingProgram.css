@@ -191,15 +191,33 @@ p {
   background-color: #f2eded;
 }
 .image-footer-container {
-  background-color: #16ad38;
   text-align: center;
-  gap: 3%;
   padding: 4rem 0;
 }
 .footer-icons-container {
   display: flex;
   flex-direction: row;
 }
-.footer-logo{
+.footer-logo {
   margin-right: 1rem;
+}
+.footer-row-first {
+  border-top: 1px solid var(--NuturalsN-5);
+}
+.footer-icons {
+  margin-right: 0.7rem;
+}
+.footer-row {
+  width: 80%;
+  margin: auto;
+  background-color: 'red';
+  border-right: 1px solid var(--NuturalsN-5);
+}
+.footer-cell {
+  padding: 1rem 0;
+}
+.foot-title {
+  font-size: 1rem;
+  font-family: rubikSemiBold-600;
+  color: var(--Nuturals-N-3);
 }
