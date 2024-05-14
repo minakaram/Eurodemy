@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="RegisterationForm.css">
-
-    <title>Registeration Form</title>
+    <link rel="stylesheet" href="CourseInquiries.css">
+    <title>Course Inquiries</title>
 </head>
 
 <body>
@@ -54,98 +53,53 @@
             </svg>
             <form action="">
                 <div class="form-group">
-                    <h2>Course Registration Form</h2>
+                    <h2>Course Inquiry</h2>
+                    <p class="form-text">
+                        Please provide us with your contacts with your inquiry, and we will answer it as soon as
+                        possible
+                    </p>
                     <div class="form-inner">
-                        <div class="group-heading">Candidate Data</div>
                         <div class="input-container">
                             <div class="input-heading"><span>Candidate full name</span></div>
-                            <img src="Assets/userName.svg" alt="">
+                            <img src="../RegisterationForm/Assets/userName.svg" alt="">
                             <div class="input-box">
                                 <input type="text" placeholder="Please type your triple name">
                             </div>
                         </div>
                         <div class="input-container">
                             <div class="input-heading"><span>Email</span></div>
-                            <img src="Assets/userEmail.svg" alt="">
+                            <img src="../RegisterationForm/Assets/userEmail.svg" alt="">
                             <div class="input-box">
                                 <input type="email" placeholder="Please enter your email">
                             </div>
                         </div>
                         <div class="input-container">
                             <div class="input-heading"><span>Private phone number</span></div>
-                            <img src="Assets/privateNumber.svg" alt="">
+                            <img src="../RegisterationForm/Assets/privateNumber.svg" alt="">
                             <div class="input-box">
                                 <input type="number" placeholder="Enter private mobile number with the country key">
                             </div>
                         </div>
                         <div class="input-container">
-                            <div class="input-heading"><span>Work phone number</span></div>
-                            <img src="Assets/privateNumber.svg" alt="">
-                            <div class="input-box">
-                                <input type="number" placeholder="Enter work mobile number with the country key">
-                                <span class="optional">Optional</span>
-                            </div>
-                        </div>
-                        <div class="input-container">
                             <div class="input-heading"><span>Country & City</span></div>
-                            <img src="Assets/country.svg" alt="">
+                            <img src="../RegisterationForm/Assets/country.svg" alt="">
                             <div class="input-box">
                                 <input type="text" placeholder="Country & City name">
                             </div>
                         </div>
                         <div class="input-container">
                             <div class="input-heading"><span>Company / Employer</span></div>
-                            <img src="Assets/empolyerName.svg" alt="">
+                            <img src="../RegisterationForm/Assets/empolyerName.svg" alt="">
                             <div class="input-box">
                                 <input type="text" placeholder="Employer name + type (ex:private sector)">
                             </div>
                         </div>
-                        <div class="input-container">
-                            <div class="input-heading"><span>Payment Method</span></div>
-                            <img src="Assets/paymentMethod.svg" alt="">
-                            <div class="input-box">
-                                <select name="" id="">
-                                    <option value="" disabled selected>Your Payment Method</option>
-                                    <option name="cash" value="Cash">Cash</option>
-                                    <option name="check" value="Check Certified">Check Certified</option>
-                                    <option name="bank" value="Bank Transfer">Bank Transfer</option>
-                                    <option name="card" value="Credit / Debit Card">Credit / Debit Card</option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
-                    <div class="form-inner" style="border-bottom: 1px solid black;">
-                        <div class="group-heading">Invoice Recipient Data</div>
-                        <div class="input-container">
-                            <div class="input-heading"><span>Recipient name</span></div>
-                            <img src="Assets/userName.svg" alt="">
-                            <div class="input-box">
-                                <input type="text" placeholder="Please type invoice recipient triple name">
-                                <span class="optional">Optional</span>
-                            </div>
-                        </div>
-                        <div class="input-container">
-                            <div class="input-heading"><span>Recipient phone number</span></div>
-                            <img src="Assets/privateNumber.svg" alt="">
-                            <div class="input-box">
-                                <input type="number" placeholder="Enter private mobile number with the country key">
-                                <span class="optional">Optional</span>
-                            </div>
-                        </div>
-                        <div class="input-container">
-                            <div class="input-heading"><span>Recipient email</span></div>
-                            <img src="Assets/userEmail.svg" alt="">
-                            <div class="input-box">
-                                <input type="email" placeholder="Please enter invoice recipient email">
-                            </div>
-                        </div>
-                        <div class="input-container">
-                            <div class="input-heading"><span>Work address details</span></div>
-                            <img src="Assets/location.svg" alt="">
-                            <div class="input-box">
-                                <input type="email" placeholder="Employer's name - Employer's address">
-                            </div>
-                        </div>
+                    <h3 class="form-text">
+                        Your Inquiry
+                    </h3>
+                    <div class="text-area">
+                        <textarea name="" id="" placeholder="Please write us here your inquiry mentioning all the details...."></textarea>
                     </div>
                     <div class="submit-container">
                         <div class="submit-container-inner">
@@ -189,6 +143,5 @@
     </script>
 
 </body>
-
 
 </html>
