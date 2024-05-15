@@ -174,14 +174,14 @@ p {
   color: var(--Nuturals-N-2);
   font-family: rethinkMedium-500;
   padding: 5rem 10rem;
-  text-align: justify;
+  text-align: center;
 }
-.successful {
-  color: var(--Success-Success---Primary);
+.training-information-paragraph {
   font-size: 1rem;
-  font-family: rethinkBold-700;
-  /* padding: 0 0.5rem; */
-  letter-spacing: 1px;
+  color: var(--Nuturals-N-2);
+  font-family: rethinkMedium-500;
+  padding: 5rem 10rem;
+  text-align: justify;
 }
 /* -------------------------------------------------FOOTER---------------------------------------- */
 .footer-table {

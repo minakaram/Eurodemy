@@ -174,14 +174,31 @@ p {
   color: var(--Nuturals-N-2);
   font-family: rethinkMedium-500;
   padding: 5rem 10rem;
+  text-align: center;
+}
+.training-information-paragraph {
+  font-size: 1rem;
+  color: var(--Nuturals-N-2);
+  font-family: rethinkMedium-500;
+  padding: 3rem 10rem;
   text-align: justify;
 }
-.successful {
-  color: var(--Success-Success---Primary);
-  font-size: 1rem;
-  font-family: rethinkBold-700;
-  /* padding: 0 0.5rem; */
-  letter-spacing: 1px;
+.download-button-container {
+  text-align: center;
+  padding: 2rem 0;
+}
+.download-button {
+  width: 30%;
+  padding: 1.5rem 0;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--Primary-Primary),
+    var(--Secondary-Secondary)
+  );
+  color: var(--Nuturals-White);
+  font-size: 1.2rem;
+  font-family: rubikMedium-500;
 }
 /* -------------------------------------------------FOOTER---------------------------------------- */
 .footer-table {
